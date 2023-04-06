@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                           
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray" android:tag="layout/layout_card_details_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/linearTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlack"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/collectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/questrial"
+                        android:padding="@dimen/margin_10"
+                        android:text="CARD DETAILS"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearTitle"
+                    android:layout_marginLeft="@dimen/margin_30"
+                    android:layout_marginTop="@dimen/margin_40"
+                    android:layout_marginRight="@dimen/margin_30"
+                    android:orientation="vertical">
+
+
+                    <com.woleapp.ui.widgets.CustomEditText
+                        android:id="@+id/etCVV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:background="@drawable/bg_rounded_white"
+                        android:digits="0123456789."
+                        android:fontFamily="@font/questrial"
+                        android:hint="CVV"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="14"
+                        android:nextFocusDown="@id/etEmail"
+                        android:padding="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <com.woleapp.ui.widgets.CustomEditText
+                        android:id="@+id/expiryDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:background="@drawable/bg_rounded_white"
+                        android:fontFamily="@font/questrial"
+                        android:hint="EXPIRY DATE"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:nextFocusDown="@id/etEmail"
+                        android:padding="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <Button
+                        android:id="@+id/btn_continue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:background="@drawable/ripple_theme"
+                        android:fontFamily="@font/questrial"
+                        android:minHeight="@dimen/margin_40"
+                        android:text="SUBMIT"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="bold" />
+                    <!-- <com.woleapp.ui.widgets.CustomEditText
+                         android:id="@+id/description"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/margin_15"
+                         android:background="@drawable/bg_rounded_white"
+                         android:fontFamily="@font/questrial"
+                         android:hint="@string/description"
+                         android:imeOptions="actionDone"
+                         android:inputType="text"
+                         android:nextFocusDown="@id/etEmail"
+                         android:padding="@dimen/margin_10"
+                         android:singleLine="true"
+                         android:textColor="@color/colorBlack"
+                         android:textColorHint="@color/colorBlack"
+                         android:textSize="@dimen/text_size_14sp" />-->
+
+
+
+                    <!--<TextView
+                        android:id="@+id/myTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />-->
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+         

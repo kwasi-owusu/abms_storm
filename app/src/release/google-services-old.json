@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "772223697378",
+    "firebase_url": "https://storm-98171.firebaseio.com",
+    "project_id": "storm-98171",
+    "storage_bucket": "storm-98171.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772223697378:android:b6096418c012582d",
+        "android_client_info": {
+          "package_name": "com.woleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772223697378-at626hls25eujlpmkau4aqjo9rjkqkl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIvsxSGe9iYsPF2kyHWityXubhYhi9eUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772223697378-at626hls25eujlpmkau4aqjo9rjkqkl7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

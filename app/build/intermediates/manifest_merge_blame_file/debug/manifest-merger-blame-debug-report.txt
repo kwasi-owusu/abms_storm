@@ -1,0 +1,505 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.bsystems"
+4    android:versionCode="90"
+5    android:versionName="1.6.90" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.VIBRATE" />
+11-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:7:5-66
+11-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:7:22-63
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:8:5-81
+12-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:8:22-78
+13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+13-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:9:5-74
+13-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:9:22-72
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:10:5-67
+14-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:10:22-64
+15    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+15-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:11:5-79
+15-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:11:22-76
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:12:5-79
+16-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:12:22-76
+17    <uses-permission android:name="android.permission.BLUETOOTH" />
+17-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:13:5-68
+17-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:13:22-65
+18    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+18-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:14:5-74
+18-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:14:22-71
+19
+20    <uses-feature android:name="android.hardware.camera" />
+20-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:16:5-60
+20-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:16:19-57
+21
+22    <!--
+23Starting with Android M, Bluetooth LE scanning in the background is
+24    blocked unless the app has one of the following two permissions
+25    viz. ACCESS_COARSE_LOCATION OR ACCESS_FINE_LOCATION
+26    -->
+27    <!--
+28In your Activity, before attempting to connect to bluetooth,
+29    call Activity's requestPermissions() method, which opens a
+30    system dialog to prompt the user for the permission.
+31    The permissions dialog opens in a different thread, so
+32    be sure to wait for the result before trying to connect to bluetooth.
+33    -->
+34    <!--
+35Override Activity's onRequestPermissionsResult() to handle
+36    the result. This method will really only need to do something
+37    if the user refused to grant the permission, to tell the user
+38    that the app can't do the bluetooth activity
+39    -->
+40    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+40-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:5-81
+40-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:22-78
+41    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+41-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:15:5-76
+41-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:15:22-73
+42    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+42-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:17:5-81
+42-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:17:22-78
+43    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+43-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:24:5-68
+43-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:24:22-65
+44    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+44-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:26:5-82
+44-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:26:22-79
+45    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+45-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:26:5-110
+45-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:26:22-107
+46
+47    <application
+47-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:38:5-151:19
+48        android:name="com.woleapp.util.StormApplication"
+48-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:39:9-46
+49        android:allowBackup="true"
+49-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:40:9-35
+50        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+50-->[androidx.core:core:1.3.2] C:\Users\Meshach\.gradle\caches\transforms-3\276804679e493f35ebb42d03b899fa76\transformed\core-1.3.2\AndroidManifest.xml:24:18-86
+51        android:debuggable="true"
+52        android:icon="@drawable/pp"
+52-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:41:9-36
+53        android:label="@string/app_name"
+53-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:42:9-41
+54        android:roundIcon="@drawable/pp"
+54-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:43:9-41
+55        android:supportsRtl="true"
+55-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:44:9-35
+56        android:testOnly="true"
+57        android:theme="@style/AppTheme"
+57-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:45:9-40
+58        android:usesCleartextTraffic="true" >
+58-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:46:9-44
+59        <activity
+59-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:48:9-52:58
+60            android:name="com.woleapp.ui.activity.SuccessActivity"
+60-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:49:13-56
+61            android:screenOrientation="locked"
+61-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:50:13-47
+62            android:theme="@style/AppTheme.NoActionBar"
+62-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:51:13-56
+63            android:windowSoftInputMode="adjustResize" />
+63-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:52:13-55
+64
+65        <provider
+66            android:name="androidx.core.content.FileProvider"
+66-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:55:13-62
+67            android:authorities="com.bsystems.provider"
+67-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:56:13-60
+68            android:exported="false"
+68-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:57:13-37
+69            android:grantUriPermissions="true" >
+69-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:58:13-47
+70            <meta-data
+70-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:59:13-61:58
+71                android:name="android.support.FILE_PROVIDER_PATHS"
+71-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:60:17-67
+72                android:resource="@xml/provider_paths" />
+72-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:61:17-55
+73        </provider>
+74
+75        <activity
+75-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:64:9-77:20
+76            android:name="com.woleapp.ui.activity.MainActivity"
+76-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:65:13-53
+77            android:label="@string/app_name"
+77-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:66:13-45
+78            android:screenOrientation="locked"
+78-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:67:13-47
+79            android:theme="@style/AppTheme.NoActionBar"
+79-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:68:13-56
+80            android:windowSoftInputMode="adjustResize" >
+80-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:69:13-55
+81
+82            <!-- <intent-filter> -->
+83            <!-- <action android:name="android.intent.action.MAIN"/> -->
+84
+85
+86            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+87            <!-- </intent-filter> -->
+88        </activity>
+89        <activity
+89-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:78:9-82:59
+90            android:name="com.woleapp.ui.activity.PaymentProgressActivity"
+90-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:79:13-64
+91            android:label="@string/app_name"
+91-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:80:13-45
+92            android:screenOrientation="locked"
+92-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:81:13-47
+93            android:theme="@style/AppTheme.NoActionBar" />
+93-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:82:13-56
+94        <activity
+94-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:83:9-97:20
+95            android:name="com.woleapp.ui.activity.HomeActivity"
+95-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:84:13-53
+96            android:label="@string/app_name"
+96-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:85:13-45
+97            android:launchMode="singleTop"
+97-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:86:13-43
+98            android:screenOrientation="locked"
+98-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:87:13-47
+99            android:theme="@style/AppTheme.NoActionBar"
+99-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:88:13-56
+100            android:windowSoftInputMode="adjustResize" >
+100-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:89:13-55
+101
+102            <!-- <intent-filter> -->
+103            <!-- <action android:name="android.intent.action.MAIN"/> -->
+104
+105
+106            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+107            <!-- </intent-filter> -->
+108        </activity>
+109        <activity
+109-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:99:9-108:20
+110            android:name="com.woleapp.ui.activity.SplashActivity"
+110-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:100:13-55
+111            android:label="@string/app_name"
+111-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:101:13-45
+112            android:theme="@style/AppTheme.NoActionBar" >
+112-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:102:13-56
+113            <intent-filter>
+113-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:103:13-107:29
+114                <action android:name="android.intent.action.MAIN" />
+114-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:104:17-69
+114-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:104:25-66
+115
+116                <category android:name="android.intent.category.LAUNCHER" />
+116-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:106:17-77
+116-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:106:27-74
+117            </intent-filter>
+118        </activity>
+119        <activity
+119-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:109:9-127:20
+120            android:name="com.woleapp.ui.activity.SignatureActivity"
+120-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:110:13-58
+121            android:configChanges="keyboardHidden|screenSize"
+121-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:111:13-62
+122            android:label="@string/app_name"
+122-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:112:13-45
+123            android:recreateOnConfigChanges="mcc"
+123-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:113:13-50
+124            android:theme="@style/AppTheme.NoActionBar" >
+124-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:114:13-56
+125
+126            <!-- android:configChanges = "orientation|keyboard|keyboardHidden|screenLayout|screenSize" -->
+127
+128
+129            <!-- android:recreateOnConfigChanges="" -->
+130
+131
+132            <!-- android:configChanges="orientation|screenSize|keyboardHidden" -->
+133
+134
+135            <!-- android:screenOrientation="landscape" -->
+136            <!-- android:configChanges="screenSize|orientation" -->
+137        </activity>
+138        <activity
+138-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:128:9-131:68
+139            android:name="com.woleapp.util.mobilevision.BarcodeCaptureActivity"
+139-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:129:13-69
+140            android:label="@string/app_name"
+140-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:130:13-45
+141            android:theme="@style/AppTheme.NoActionBar" />
+141-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:131:13-56
+142        <activity
+142-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:132:9-134:57
+143            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+143-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:133:13-76
+144            android:theme="@style/AppThemeActionBar1" />
+144-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:134:13-54
+145        <activity
+145-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:135:9-137:59
+146            android:name="com.woleapp.ui.activity.MarketPlaceActivity"
+146-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:136:13-60
+147            android:theme="@style/AppTheme.NoActionBar" />
+147-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:137:13-56
+148
+149        <service android:name="com.woleapp.service.MyFirebaseMessagingService" >
+149-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:139:9-143:19
+149-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:139:18-68
+150            <intent-filter>
+150-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:140:13-142:29
+151                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+151-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:17-78
+151-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:25-75
+152            </intent-filter>
+153        </service>
+154
+155        <meta-data
+155-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:145:9-147:60
+156            android:name="com.google.firebase.messaging.default_notification_icon"
+156-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:146:13-83
+157            android:resource="@drawable/ic_notification" />
+157-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:147:13-57
+158        <meta-data
+158-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:148:9-150:53
+159            android:name="com.google.firebase.messaging.default_notification_color"
+159-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:149:13-84
+160            android:resource="@color/colorAccent" />
+160-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:150:13-50
+161
+162        <provider
+162-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\b56c1ebe76fa36295c79d80343370baa\transformed\jetified-debug-db-1.0.6\AndroidManifest.xml:12:9-16:40
+163            android:name="com.amitshekhar.debug.DebugDBInitProvider"
+163-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\b56c1ebe76fa36295c79d80343370baa\transformed\jetified-debug-db-1.0.6\AndroidManifest.xml:13:13-69
+164            android:authorities="com.bsystems.DebugDBInitProvider"
+164-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\b56c1ebe76fa36295c79d80343370baa\transformed\jetified-debug-db-1.0.6\AndroidManifest.xml:14:13-71
+165            android:enabled="true"
+165-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\b56c1ebe76fa36295c79d80343370baa\transformed\jetified-debug-db-1.0.6\AndroidManifest.xml:15:13-35
+166            android:exported="false" />
+166-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\b56c1ebe76fa36295c79d80343370baa\transformed\jetified-debug-db-1.0.6\AndroidManifest.xml:16:13-37
+167
+168        <service
+168-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:20:9-22:72
+169            android:name="smartpesa.sdk.network.SpJobService"
+169-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:21:13-62
+170            android:permission="android.permission.BIND_JOB_SERVICE" />
+170-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:22:13-69
+171        <service
+171-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:23:9-30:19
+172            android:name="smartpesa.sdk.network.SpGcmJobService"
+172-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:24:13-65
+173            android:exported="true"
+173-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:25:13-36
+174            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" >
+174-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:26:13-93
+175            <intent-filter>
+175-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:27:13-29:29
+176                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+176-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:28:17-87
+176-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:28:25-84
+177            </intent-filter>
+178        </service>
+179        <service
+179-->[androidx.room:room-runtime:2.3.0-alpha03] C:\Users\Meshach\.gradle\caches\transforms-3\40fe2a87efa1e7fbb96758a327015709\transformed\room-runtime-2.3.0-alpha03\AndroidManifest.xml:25:9-28:40
+180            android:name="androidx.room.MultiInstanceInvalidationService"
+180-->[androidx.room:room-runtime:2.3.0-alpha03] C:\Users\Meshach\.gradle\caches\transforms-3\40fe2a87efa1e7fbb96758a327015709\transformed\room-runtime-2.3.0-alpha03\AndroidManifest.xml:26:13-74
+181            android:directBootAware="true"
+181-->[androidx.room:room-runtime:2.3.0-alpha03] C:\Users\Meshach\.gradle\caches\transforms-3\40fe2a87efa1e7fbb96758a327015709\transformed\room-runtime-2.3.0-alpha03\AndroidManifest.xml:27:13-43
+182            android:exported="false" />
+182-->[androidx.room:room-runtime:2.3.0-alpha03] C:\Users\Meshach\.gradle\caches\transforms-3\40fe2a87efa1e7fbb96758a327015709\transformed\room-runtime-2.3.0-alpha03\AndroidManifest.xml:28:13-37
+183        <service
+183-->[com.google.firebase:firebase-crashlytics:17.2.2] C:\Users\Meshach\.gradle\caches\transforms-3\319fc3dfed05283095814f1bddec9e3f\transformed\jetified-firebase-crashlytics-17.2.2\AndroidManifest.xml:13:9-19:19
+184            android:name="com.google.firebase.components.ComponentDiscoveryService"
+184-->[com.google.firebase:firebase-crashlytics:17.2.2] C:\Users\Meshach\.gradle\caches\transforms-3\319fc3dfed05283095814f1bddec9e3f\transformed\jetified-firebase-crashlytics-17.2.2\AndroidManifest.xml:14:13-84
+185            android:directBootAware="true"
+185-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\be85832bdb738bd42274380ca24bf4d0\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
+186            android:exported="false" >
+186-->[com.google.firebase:firebase-crashlytics:17.2.2] C:\Users\Meshach\.gradle\caches\transforms-3\319fc3dfed05283095814f1bddec9e3f\transformed\jetified-firebase-crashlytics-17.2.2\AndroidManifest.xml:15:13-37
+187            <meta-data
+187-->[com.google.firebase:firebase-crashlytics:17.2.2] C:\Users\Meshach\.gradle\caches\transforms-3\319fc3dfed05283095814f1bddec9e3f\transformed\jetified-firebase-crashlytics-17.2.2\AndroidManifest.xml:16:13-18:85
+188                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+188-->[com.google.firebase:firebase-crashlytics:17.2.2] C:\Users\Meshach\.gradle\caches\transforms-3\319fc3dfed05283095814f1bddec9e3f\transformed\jetified-firebase-crashlytics-17.2.2\AndroidManifest.xml:17:17-115
+189                android:value="com.google.firebase.components.ComponentRegistrar" />
+189-->[com.google.firebase:firebase-crashlytics:17.2.2] C:\Users\Meshach\.gradle\caches\transforms-3\319fc3dfed05283095814f1bddec9e3f\transformed\jetified-firebase-crashlytics-17.2.2\AndroidManifest.xml:18:17-82
+190            <meta-data
+190-->[com.google.firebase:firebase-messaging:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\841230b2dc1a15bd4d068ea8d406412d\transformed\jetified-firebase-messaging-21.0.0\AndroidManifest.xml:39:13-41:85
+191                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+191-->[com.google.firebase:firebase-messaging:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\841230b2dc1a15bd4d068ea8d406412d\transformed\jetified-firebase-messaging-21.0.0\AndroidManifest.xml:40:17-119
+192                android:value="com.google.firebase.components.ComponentRegistrar" />
+192-->[com.google.firebase:firebase-messaging:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\841230b2dc1a15bd4d068ea8d406412d\transformed\jetified-firebase-messaging-21.0.0\AndroidManifest.xml:41:17-82
+193            <meta-data
+193-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:32:13-34:85
+194                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+194-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:33:17-96
+195                android:value="com.google.firebase.components.ComponentRegistrar" />
+195-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:34:17-82
+196            <meta-data
+196-->[com.google.firebase:firebase-dynamic-links:19.1.1] C:\Users\Meshach\.gradle\caches\transforms-3\98adfb85ec50e950681b2e9445d7b40b\transformed\jetified-firebase-dynamic-links-19.1.1\AndroidManifest.xml:11:13-13:85
+197                android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar"
+197-->[com.google.firebase:firebase-dynamic-links:19.1.1] C:\Users\Meshach\.gradle\caches\transforms-3\98adfb85ec50e950681b2e9445d7b40b\transformed\jetified-firebase-dynamic-links-19.1.1\AndroidManifest.xml:12:17-133
+198                android:value="com.google.firebase.components.ComponentRegistrar" />
+198-->[com.google.firebase:firebase-dynamic-links:19.1.1] C:\Users\Meshach\.gradle\caches\transforms-3\98adfb85ec50e950681b2e9445d7b40b\transformed\jetified-firebase-dynamic-links-19.1.1\AndroidManifest.xml:13:17-82
+199            <meta-data
+199-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\Meshach\.gradle\caches\transforms-3\93653b53ccb441aa229ddb39584baa8c\transformed\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+200                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+200-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\Meshach\.gradle\caches\transforms-3\93653b53ccb441aa229ddb39584baa8c\transformed\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+201                android:value="com.google.firebase.components.ComponentRegistrar" />
+201-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\Meshach\.gradle\caches\transforms-3\93653b53ccb441aa229ddb39584baa8c\transformed\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+202            <meta-data
+202-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f81c56d985dd541fe84ae95596aa7a30\transformed\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:30:13-32:85
+203                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+203-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f81c56d985dd541fe84ae95596aa7a30\transformed\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:31:17-139
+204                android:value="com.google.firebase.components.ComponentRegistrar" />
+204-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f81c56d985dd541fe84ae95596aa7a30\transformed\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:32:17-82
+205            <meta-data
+205-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\Meshach\.gradle\caches\transforms-3\cd6b9f2185b277e40b086b4b8a88f3f8\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:17:13-19:85
+206                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+206-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\Meshach\.gradle\caches\transforms-3\cd6b9f2185b277e40b086b4b8a88f3f8\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:18:17-127
+207                android:value="com.google.firebase.components.ComponentRegistrar" />
+207-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\Meshach\.gradle\caches\transforms-3\cd6b9f2185b277e40b086b4b8a88f3f8\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:19:17-82
+208        </service>
+209
+210        <meta-data
+210-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\800817e8b4c952e0747c41c56d5b94fc\transformed\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:11:9-13:43
+211            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+211-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\800817e8b4c952e0747c41c56d5b94fc\transformed\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:12:13-84
+212            android:value="GlideModule" />
+212-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\800817e8b4c952e0747c41c56d5b94fc\transformed\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:13:13-40
+213        <!--
+214             FirebaseMessagingService performs security checks at runtime,
+215             but set to not exported to explicitly avoid allowing another app to call it.
+216        -->
+217        <service
+217-->[com.google.firebase:firebase-messaging:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\841230b2dc1a15bd4d068ea8d406412d\transformed\jetified-firebase-messaging-21.0.0\AndroidManifest.xml:28:9-35:19
+218            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+218-->[com.google.firebase:firebase-messaging:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\841230b2dc1a15bd4d068ea8d406412d\transformed\jetified-firebase-messaging-21.0.0\AndroidManifest.xml:29:13-82
+219            android:directBootAware="true"
+219-->[com.google.firebase:firebase-messaging:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\841230b2dc1a15bd4d068ea8d406412d\transformed\jetified-firebase-messaging-21.0.0\AndroidManifest.xml:30:13-43
+220            android:exported="false" >
+220-->[com.google.firebase:firebase-messaging:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\841230b2dc1a15bd4d068ea8d406412d\transformed\jetified-firebase-messaging-21.0.0\AndroidManifest.xml:31:13-37
+221            <intent-filter android:priority="-500" >
+221-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:140:13-142:29
+222                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+222-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:17-78
+222-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:25-75
+223            </intent-filter>
+224        </service>
+225
+226        <receiver
+226-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:37:9-44:20
+227            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+227-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:38:13-78
+228            android:exported="true"
+228-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:39:13-36
+229            android:permission="com.google.android.c2dm.permission.SEND" >
+229-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:40:13-73
+230            <intent-filter>
+230-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:41:13-43:29
+231                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+231-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:42:17-81
+231-->[com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:42:25-78
+232            </intent-filter>
+233        </receiver>
+234
+235        <service
+235-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\7d09c0f5193a78c12ed7038877f7d725\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:29:9-35:19
+236            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+236-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\7d09c0f5193a78c12ed7038877f7d725\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:30:13-103
+237            android:exported="false" >
+237-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\7d09c0f5193a78c12ed7038877f7d725\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:31:13-37
+238            <meta-data
+238-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\7d09c0f5193a78c12ed7038877f7d725\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:32:13-34:39
+239                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+239-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\7d09c0f5193a78c12ed7038877f7d725\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:33:17-94
+240                android:value="cct" />
+240-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\7d09c0f5193a78c12ed7038877f7d725\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:34:17-36
+241        </service>
+242
+243        <provider
+243-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\be85832bdb738bd42274380ca24bf4d0\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
+244            android:name="com.google.firebase.provider.FirebaseInitProvider"
+244-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\be85832bdb738bd42274380ca24bf4d0\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
+245            android:authorities="com.bsystems.firebaseinitprovider"
+245-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\be85832bdb738bd42274380ca24bf4d0\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
+246            android:directBootAware="true"
+246-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\be85832bdb738bd42274380ca24bf4d0\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
+247            android:exported="false"
+247-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\be85832bdb738bd42274380ca24bf4d0\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
+248            android:initOrder="100" />
+248-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\be85832bdb738bd42274380ca24bf4d0\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
+249
+250        <activity
+250-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\54a4d66a26502640d674e8f68f1a8346\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+251            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+251-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\54a4d66a26502640d674e8f68f1a8346\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+252            android:exported="false"
+252-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\54a4d66a26502640d674e8f68f1a8346\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+253            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+253-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\54a4d66a26502640d674e8f68f1a8346\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+254
+255        <receiver
+255-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:29:9-33:20
+256            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+256-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:30:13-85
+257            android:enabled="true"
+257-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:31:13-35
+258            android:exported="false" >
+258-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:32:13-37
+259        </receiver>
+260
+261        <service
+261-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:35:9-38:40
+262            android:name="com.google.android.gms.measurement.AppMeasurementService"
+262-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:36:13-84
+263            android:enabled="true"
+263-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:37:13-35
+264            android:exported="false" />
+264-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:38:13-37
+265        <service
+265-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:39:9-43:72
+266            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+266-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:40:13-87
+267            android:enabled="true"
+267-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:41:13-35
+268            android:exported="false"
+268-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:42:13-37
+269            android:permission="android.permission.BIND_JOB_SERVICE" />
+269-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:43:13-69
+270
+271        <meta-data
+271-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\888c7455a7c15fe91ea1a37632b39d07\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+272            android:name="com.google.android.gms.version"
+272-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\888c7455a7c15fe91ea1a37632b39d07\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+273            android:value="@integer/google_play_services_version" />
+273-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\888c7455a7c15fe91ea1a37632b39d07\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+274
+275        <provider
+275-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Meshach\.gradle\caches\transforms-3\d09c00202b5aa3eb9216c9a578f6fffa\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+276            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+276-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Meshach\.gradle\caches\transforms-3\d09c00202b5aa3eb9216c9a578f6fffa\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+277            android:authorities="com.bsystems.lifecycle-process"
+277-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Meshach\.gradle\caches\transforms-3\d09c00202b5aa3eb9216c9a578f6fffa\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+278            android:exported="false"
+278-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Meshach\.gradle\caches\transforms-3\d09c00202b5aa3eb9216c9a578f6fffa\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+279            android:multiprocess="true" />
+279-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Meshach\.gradle\caches\transforms-3\d09c00202b5aa3eb9216c9a578f6fffa\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+280
+281        <service
+281-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Meshach\.gradle\caches\transforms-3\8c93091f3a20a07a76bdf0102cbd9969\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:26:9-30:19
+282            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+282-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Meshach\.gradle\caches\transforms-3\8c93091f3a20a07a76bdf0102cbd9969\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:27:13-117
+283            android:exported="false"
+283-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Meshach\.gradle\caches\transforms-3\8c93091f3a20a07a76bdf0102cbd9969\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:28:13-37
+284            android:permission="android.permission.BIND_JOB_SERVICE" >
+284-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Meshach\.gradle\caches\transforms-3\8c93091f3a20a07a76bdf0102cbd9969\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:29:13-69
+285        </service>
+286
+287        <receiver
+287-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Meshach\.gradle\caches\transforms-3\8c93091f3a20a07a76bdf0102cbd9969\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:32:9-34:40
+288            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+288-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Meshach\.gradle\caches\transforms-3\8c93091f3a20a07a76bdf0102cbd9969\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:33:13-132
+289            android:exported="false" />
+289-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Meshach\.gradle\caches\transforms-3\8c93091f3a20a07a76bdf0102cbd9969\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:34:13-37
+290    </application>
+291
+292</manifest>

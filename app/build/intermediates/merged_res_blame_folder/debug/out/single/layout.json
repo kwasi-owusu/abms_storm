@@ -1,0 +1,338 @@
+[
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_dashboard.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_dashboard.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_card_details.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_card_details.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_transaction_status.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_transaction_status.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_card_webview.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_card_webview.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ebills_list.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\fragment_ebills_list.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_qr_registration.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_qr_registration.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_payment_card_successful.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_payment_card_successful.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_western_union.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_western_union.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_container.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_marketplace_container.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_payment_complete.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_payment_complete.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_power_or_electricity.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_power_or_electricity.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_school_fees.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_school_fees.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\qr_bottom_sheet_dialog.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\qr_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_product_list.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_marketplace_product_list.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_invoice_preview.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_invoice_preview.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_airtime_or_data.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_airtime_or_data.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_main.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_main.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cash_in_options.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_cash_in_options.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_add_inventory.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_add_inventory.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_transactions.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_transactions.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_item_description.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_marketplace_item_description.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ebills_webview.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\fragment_ebills_webview.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_ssnit.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_ssnit.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_select_user_type.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_select_user_type.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_payment_successful.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_payment_successful.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_fund_wallet.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_fund_wallet.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_internet_subscription.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_internet_subscription.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_sign_up.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sign_up.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cable_tv.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_cable_tv.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_utilities_status.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog_utilities_status.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_support.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog_support.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_ria.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_ria.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_passport.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_passport.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cash_in.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_cash_in.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_received_orders.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_marketplace_received_orders.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_invoice_preview.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_invoice_preview.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_moneygram.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_moneygram.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_transaction_success.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_transaction_success.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_transaction_list.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_transaction_list.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_dealer_item.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_marketplace_dealer_item.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_signature_2.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\activity_signature_2.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_bank_details.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_bank_details.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_qr_activation.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_qr_activation.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_payment_mode.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_payment_mode.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_verify_otp.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_verify_otp.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_payment_progress.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\activity_payment_progress.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_check_out_page.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_check_out_page.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_services_dropdown.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\item_services_dropdown.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_webview.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_webview.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_transaction.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_transaction.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_merchant.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_merchant.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_fragment_bluetooth_list.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog_fragment_bluetooth_list.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_sign_up_orig.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sign_up_orig.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_fines_bails.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_fines_bails.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_collections_new.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_collections_new.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_remittance.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\fragment_remittance.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_health_checker.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\fragment_health_checker.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_inventory_list.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_inventory_list.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_reset_password.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog_reset_password.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_agency_transaction.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\fragment_agency_transaction.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_camera.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_camera.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_collections.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_collections.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_agent.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_agent.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_verify_utility_payment.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_verify_utility_payment.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_inventory.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_inventory.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_item.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_marketplace_item.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_transaction_failure.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_transaction_failure.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_scan_to_pay.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_scan_to_pay.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_quick_transaction.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_quick_transaction.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\app_bar_main.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\app_bar_main.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_fragment_bluetooth_list_printer.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog_fragment_bluetooth_list_printer.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\splash.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\splash.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_login.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_login.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_home.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_home.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_store_dashboard.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_marketplace_store_dashboard.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_merchant_transaction_list_item.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_merchant_transaction_list_item.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_store.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_marketplace_store.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cashout.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_cashout.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cash_in_options_new.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_cash_in_options_new.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_inventory_orig.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_inventory_orig.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_home.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_marketplace_home.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_inventory_2.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_inventory_2.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_logout.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog_logout.xml"
+    }
+]

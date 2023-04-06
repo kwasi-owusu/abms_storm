@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                                  
+                                                           
+                                                              
+ 
+    
+
+                                           
+                                                           
+
+                 
+                                
+                                                     
+                 
+                             
+                                 
+
+                     
+                                        
+                                                                 
+
+           
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_gray" android:tag="layout/layout_item_list_transaction_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_white"
+                android:layout_marginTop="@dimen/margin_5"
+        >
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCalendar"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    android:elevation="3dp"
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="6dp"
+            >
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical">
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:background="@color/colorPrimary">
+                        <TextView
+                                android:id="@+id/tvMonth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:minEms="5"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:paddingLeft="@dimen/margin_10"
+                                android:paddingRight="@dimen/margin_10"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="9sp"
+                                android:fontFamily="@font/questrial"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                android:text="AUG"
+
+                        />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="vertical"
+                                  android:background="@color/lighterGray"
+                                  android:gravity="center">
+                        <TextView
+                                android:id="@+id/tvDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size_12sp"
+                                android:fontFamily="@font/questrial"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                android:text="15"
+                        />
+
+                        <TextView
+                                android:id="@+id/tvYear"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/text_margin_mini"
+                                android:layout_marginBottom="@dimen/text_margin_mini"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="9sp"
+                                android:fontFamily="@font/questrial"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                android:text="2019"
+                                android:gravity="center"
+                                android:minEms="5"
+                        />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!--<uk.co.deanwild.flowtextview.FlowTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/cardCalendar"
+                    android:layout_centerVertical="false"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:fontFamily="@font/questrial"
+                    android:textStyle="bold"
+                    android:text="@{inventory.product_nameSpn}">
+                &lt;!&ndash;android:layout_toLeftOf="@id/btnDetails"&ndash;&gt;
+
+
+                &lt;!&ndash;<TextView
+                        android:id="@+id/tvName"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:fontFamily="@font/questrial"
+                        android:textStyle="bold"
+                        android:text=""
+                />&ndash;&gt;
+                &lt;!&ndash;@{inventory.product_nameSpn}&ndash;&gt;
+                &lt;!&ndash;android:text="<html>kjdh kasdh kajsd ad adsasdasd asdddas das dasdhkj ashdkj hasdk haskj dhkashd klhasdkljhasd</html>"&ndash;&gt;
+
+                <Button
+                        android:id="@+id/btnDetails"
+                        android:drawableRight="@{isOpen? @drawable/arrow_up : @drawable/arrow_down_bigger}"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_4"
+                        android:drawablePadding="@dimen/text_margin_mini"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingRight="@dimen/text_margin_mini"
+                        android:minHeight="@dimen/margin_40"
+                        android:background="@drawable/ripple_theme_no_radius"
+                        android:textAllCaps="true"
+                        android:text="DETAILS"
+                        android:textSize="@dimen/text_size_11sp"
+                        android:textColor="@color/colorWhite"
+                        android:fontFamily="@font/questrial"
+                        android:textStyle="bold" />
+                &lt;!&ndash;android:drawableRight="@drawable/arrow_down_bigger"&ndash;&gt;
+
+                &lt;!&ndash;android:drawablePadding="@dimen/margin_5"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_5"&ndash;&gt;
+            </uk.co.deanwild.flowtextview.FlowTextView>-->
+
+
+            <!--<LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_toRightOf="@id/cardCalendar"
+                          android:layout_centerVertical="false"
+                          android:gravity="left"
+                          android:layout_marginLeft="@dimen/margin_5"
+                          >
+                &lt;!&ndash;android:layout_toLeftOf="@id/btnDetails"&ndash;&gt;
+
+                &lt;!&ndash;android:layout_marginRight="@dimen/margin_10"&ndash;&gt;
+                <TextView
+                        android:id="@+id/tvName"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:fontFamily="@font/questrial"
+                        android:textStyle="bold"
+                        android:singleLine="false"
+                        android:text="kjdh kasdh kajsd ad adsasdasd asdddas das dasdhkj ashdkj hasdk haskj dhkashd klhasdkljhasd"
+                />
+            </LinearLayout>-->
+
+            <!--@{inventory.product_name}-->
+
+            <!--android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10"-->
+
+            <!--android:layout_alignParentLeft="true"-->
+
+
+            <TextView
+                    android:id="@+id/tvName"
+                    android:layout_toRightOf="@id/cardCalendar"
+                    android:layout_toLeftOf="@id/btnDetails"
+                    android:layout_centerVertical="false"
+                    android:gravity="left"
+                    android:paddingTop="@dimen/text_margin_mini"
+                    android:paddingBottom="@dimen/text_margin_mini"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_12sp"
+                    android:fontFamily="@font/questrial"
+                    android:textStyle="bold"
+                    android:text="asdasdasdas da da sd asd as das dasd asd adsadasdasdasdasdasdsd ad "
+            />
+            <!--android:text="@{inventory.product_name}"-->
+
+            <TextView
+                    android:id="@+id/btnDetails"
+                    android:tag="binding_1"                                                           
+                    android:paddingTop="@dimen/text_margin_mini"
+                    android:paddingBottom="@dimen/text_margin_mini"
+                    android:drawablePadding="@dimen/text_margin_mini"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:textAllCaps="true"
+                                                                                
+                    android:textSize="@dimen/text_size_12sp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/questrial"
+                    android:textStyle="bold"/>
+            <!--android:drawableTint="@color/red"-->
+
+
+            <!--android:background="@drawable/ripple_theme_no_radius"-->
+
+            <!--<Button
+                    android:id="@+id/btnDetails"
+                    android:drawableRight="@{isOpen? @drawable/arrow_up : @drawable/arrow_down_bigger}"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/text_margin_mini"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:paddingRight="@dimen/text_margin_mini"
+                    android:minHeight="@dimen/margin_40"
+                    android:background="@drawable/ripple_theme_no_radius"
+                    android:textAllCaps="true"
+                    android:text="DETAILS"
+                    android:textSize="@dimen/text_size_11sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/questrial"
+                    android:textStyle="bold" />-->
+
+
+
+            <!--android:drawableRight="@drawable/arrow_down_bigger"-->
+
+            <!--android:drawablePadding="@dimen/margin_5"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_5"-->
+        </RelativeLayout>
+
+
+        <RelativeLayout
+                android:id="@+id/relativeDetails"
+                android:tag="binding_2"               
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_white"
+                android:layout_marginTop="@dimen/margin_5"
+        >
+            <!--, default=false-->
+            <!--android:visibility="@{isOpen? View.VISIBLE : View.GONE}"-->
+
+            <!--android:layout_marginBottom="@dimen/margin_5"-->
+            <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_12sp"
+                    android:fontFamily="@font/questrial"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:tag="binding_3"                  
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:layout_toLeftOf="@id/ivProduct"
+            />
+
+<!--            <TextView-->
+<!--                    android:id="@+id/tvColor"-->
+<!--                    android:layout_below="@id/tvCategory"-->
+<!--                    android:layout_marginTop="@dimen/padding_8"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_marginLeft="@dimen/margin_10"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="@dimen/text_size_12sp"-->
+<!--                    android:fontFamily="@font/questrial"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textAllCaps="true"-->
+<!--                    android:text="@{`COLOR:`+` `+inventory.color_name}"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:maxLines="2"-->
+<!--                    android:layout_toLeftOf="@id/ivProduct"-->
+<!--            />-->
+
+
+<!--            <TextView-->
+<!--                    android:id="@+id/tvSize"-->
+<!--                    android:layout_below="@id/tvCategory"-->
+<!--                    android:layout_marginTop="@dimen/padding_8"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_marginLeft="@dimen/margin_10"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="@dimen/text_size_12sp"-->
+<!--                    android:fontFamily="@font/questrial"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:textAllCaps="true"-->
+<!--                    android:text="@{`SIZE:`+` `+inventory.size}"-->
+<!--            />-->
+
+            <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_below="@id/tvCategory"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_12sp"
+                    android:fontFamily="@font/questrial"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:tag="binding_4"                             
+            />
+
+            <Button
+                    android:id="@+id/btnSell"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:layout_marginBottom="@dimen/padding_8"
+                    android:layout_below="@id/tvQuantity"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_30"
+                    android:paddingRight="@dimen/margin_30"
+                    android:minHeight="@dimen/margin_40"
+                    android:background="@drawable/ripple_theme_no_radius"
+                    android:textAllCaps="true"
+                    android:text="SELL"
+                    android:textSize="@dimen/text_size_13sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/questrial"
+                    android:textStyle="bold" />
+            <!--android:layout_below="@id/tvQuantity"-->
+
+            <ImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:layout_alignTop="@id/tvCategory"
+                    android:layout_width="160dp"
+                    android:layout_height="80dp"
+                    android:scaleType="fitEnd"
+                    android:layout_alignParentRight="true"
+                    android:tag="binding_5"              
+            />
+            <!--app:onClickAttachment="@{onClickAttachment}"-->
+
+            <!--android:src="@{inventory.image_path}"-->
+
+            <!--iimage_path="@{inventory.image_path}"-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+         

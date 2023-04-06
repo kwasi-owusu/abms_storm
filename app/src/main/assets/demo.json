@@ -1,0 +1,17 @@
+{
+  "Status": true,
+  "data": {
+    "agent_id": "67",
+    "netplus_id": "NetPlus-346819708",
+    "email": "contact@dheerajrijhwani.com",
+    "mobile_no": "9876543210",
+    "account_no": "9876541230",
+    "bvn_no": "987456321054",
+    "bank": "Diamond Bank",
+    "is_verified": "true",
+    "terminal_id": "999000",
+    "push_token": "cMxxkEyPavo:APA91bFyu-gZq2-AeS3XnsGAI6nzxc5CsFJO3i-9U3snE-ongZ-ZS4nk5DRqymLPQj_Mv7XAInoxTJO6uND2AxffcVclB3UW8MojuqD-EmW-rSa67zuhoe5FWU4K3U3RGFo7NLt1infv",
+    "0": true,
+    "amount": "201"
+  }
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/complete_icon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="64dp"
+            android:contentDescription="@android:string/ok"
+            android:src="@drawable/tick_new"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/payment_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/questrial"
+            android:text="@string/payment_successful"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@id/complete_icon"
+            app:layout_constraintStart_toStartOf="@id/complete_icon"
+            app:layout_constraintTop_toBottomOf="@id/complete_icon" />
+
+        <TextView
+            android:id="@+id/select_receipt_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/questrial"
+            android:text="@string/select_how_you_want_to_receive_your_receipt"
+            app:layout_constraintEnd_toEndOf="@id/payment_status"
+            app:layout_constraintStart_toStartOf="@id/payment_status"
+            app:layout_constraintTop_toBottomOf="@id/payment_status" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/ServicesInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:autofillHints="@string/hint_enter_email"
+            android:drawableStart="@drawable/mail"
+            android:drawablePadding="8dp"
+            android:hint="@string/hint_enter_email"
+            android:inputType="textEmailAddress"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@id/btn_send"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/select_receipt_method" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/colorPrimary"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:text="@string/SEND"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etEmail"
+            app:layout_constraintTop_toTopOf="@id/etEmail" />
+
+        <TextView
+            android:id="@+id/btn_back"
+            style="@style/ServicesInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/no_small"
+            android:drawablePadding="8dp"
+            android:text="@string/no_thanks_i_don_t_need_a_receipt_for_this_transaction"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@id/btn_send"
+            app:layout_constraintStart_toStartOf="@id/etEmail"
+            app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

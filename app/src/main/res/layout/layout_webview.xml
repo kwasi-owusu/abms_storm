@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <!--<com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    app:title="Payment"
+                    app:layout_scrollFlags="enterAlways"
+                    app:navigationIcon="?attr/homeAsUpIndicator">
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>-->
+
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:visibility="gone">
+            <!--android:layout_toRightOf="@+id/iv_logo"-->
+
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:src="?attr/homeAsUpIndicator"
+                android:tint="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/ivBack"
+                android:ellipsize="end"
+                android:fontFamily="@font/muli"
+                android:maxLines="1"
+                android:text="Payment"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+        <!--<com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.PopupOverlay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+        >
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:elevation="5dp"
+                    app:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:contentInsetRight="0dp"
+                    android:contentInsetLeft="0dp"
+                    android:contentInsetStart="0dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetRight="0dp"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetStartWithNavigation="0dp"
+                    android:contentInsetEndWithActions="0dp"
+            >
+                &lt;!&ndash;app:navigationIcon="?attr/homeAsUpIndicator"&ndash;&gt;
+
+                &lt;!&ndash;app:theme="@style/ThemeOverlay.AppCompat"&ndash;&gt;
+                &lt;!&ndash;app:popupTheme="@style/AppTheme.PopupOverlay"&ndash;&gt;
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                >
+
+                    <RelativeLayout
+                            android:id="@+id/rl_toolbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                        &lt;!&ndash;android:layout_toRightOf="@+id/iv_logo"&ndash;&gt;
+
+
+
+                        <TextView
+                                android:visibility="visible"
+                                android:layout_marginLeft="10dp"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/toolbar_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="Payment"
+                                android:layout_marginRight="8dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/muli"/>
+
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>-->
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:clickable="true" />
+
+    </LinearLayout>
+</layout>

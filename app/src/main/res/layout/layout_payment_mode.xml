@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <!--    xmlns:app="http://schemas.android.com/tools"-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:background="@drawable/ripple_gray"
+                    android:fontFamily="@font/questrial"
+                    android:minHeight="@dimen/margin_40"
+                    android:paddingLeft="@dimen/margin_35"
+                    android:paddingRight="@dimen/margin_35"
+                    android:text="@string/lbl_back"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/tvAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:fontFamily="@font/questrial"
+                    android:text="@string/hint_product_price"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_40"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvConvenienceFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:fontFamily="@font/questrial"
+                    android:text="Convenience Fee Included"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:fontFamily="@font/questrial"
+                    android:text="Choose a payment type below"
+                    android:textColor="@color/colorBack"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCashCollection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardElevation="3dp"
+                    custom:cardCornerRadius="2dp">
+                    <!--android:layout_marginLeft="@dimen/text_margin_mini"
+                    android:layout_marginRight="@dimen/text_margin_mini"-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_20">
+
+                        <TextView
+                            android:id="@+id/tvCashCollection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:fontFamily="@font/questrial"
+                            android:text="Cash Collection"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_toRightOf="@id/tvCashCollection"
+                            android:src="@drawable/cash_in_new" />
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:rotation="180"
+                            android:src="@drawable/back" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPosPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardElevation="3dp"
+                    custom:cardCornerRadius="2dp">
+                    <!--android:layout_marginLeft="@dimen/text_margin_mini"
+                    android:layout_marginRight="@dimen/text_margin_mini"-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_20">
+
+                        <TextView
+                            android:id="@+id/tvPosPayment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:fontFamily="@font/questrial"
+                            android:text="POS Payment"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_toRightOf="@id/tvPosPayment"
+                            android:src="@drawable/pos" />
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:rotation="180"
+                            android:src="@drawable/back" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardAccountTransfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardElevation="3dp"
+                    custom:cardCornerRadius="2dp">
+                    <!--android:layout_marginLeft="@dimen/text_margin_mini"
+                    android:layout_marginRight="@dimen/text_margin_mini"-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_20">
+
+                        <TextView
+                            android:id="@+id/tvAccTransfer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:fontFamily="@font/questrial"
+                            android:text="Account Transfer"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_toRightOf="@id/tvAccTransfer"
+                            android:src="@drawable/user" />
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:rotation="180"
+                            android:src="@drawable/back" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardAccountTransfer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardElevation="3dp"
+                    custom:cardCornerRadius="2dp">
+                    <!--android:layout_marginLeft="@dimen/text_margin_mini"
+                    android:layout_marginRight="@dimen/text_margin_mini"-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15">
+                        <!--                    android:paddingTop="@dimen/margin_15"-->
+                        <!--                    android:paddingBottom="@dimen/margin_15"-->
+
+                        <TextView
+                            android:id="@+id/tvAccTransfer1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:fontFamily="@font/questrial"
+                            android:text="Card Payment"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivMastercard"
+                            android:layout_width="@dimen/margin_50"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_toRightOf="@id/tvAccTransfer1"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/mastercard_logo" />
+
+                        <ImageView
+                            android:id="@+id/ivVisa"
+                            android:layout_width="@dimen/margin_50"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_toRightOf="@id/ivMastercard"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/visa_logo" />
+
+
+                        <!--<ImageView
+                                android:layout_toRightOf="@id/tvAccTransfer1"
+                                android:layout_width="@dimen/margin_60"
+                                android:layout_height="@dimen/margin_40"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/mastercard_visa_edit"/>-->
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:rotation="180"
+                            android:src="@drawable/back" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardQRPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardElevation="3dp"
+                    custom:cardCornerRadius="2dp">
+                    <!--android:layout_marginLeft="@dimen/text_margin_mini"
+                    android:layout_marginRight="@dimen/text_margin_mini"-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15">
+                        <!--                    android:paddingTop="@dimen/margin_15"-->
+                        <!--                    android:paddingBottom="@dimen/margin_15"-->
+
+                        <TextView
+                            android:id="@+id/tvQRPayment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:fontFamily="@font/questrial"
+                            android:text="QR Payment"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivMasterpass"
+                            android:layout_width="@dimen/margin_50"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_toRightOf="@id/tvQRPayment"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/masterpass" />
+
+                        <ImageView
+                            android:id="@+id/ivSeparator"
+                            android:layout_width="0.7dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/text_margin_mini"
+                            android:layout_marginRight="@dimen/text_margin_mini"
+                            android:layout_toRightOf="@id/ivMasterpass"
+                            android:scaleType="centerInside"
+                            android:src="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/ivQR"
+                            android:layout_width="@dimen/margin_50"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_toRightOf="@id/ivSeparator"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/qr" />
+
+
+                        <ImageView
+                            android:id="@+id/ivmVisa"
+                            android:layout_width="@dimen/margin_50"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_toRightOf="@id/ivQR"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/mvisa" />
+
+
+                        <!--<ImageView
+                                android:layout_toRightOf="@id/tvAccTransfer1"
+                                android:layout_width="@dimen/margin_60"
+                                android:layout_height="@dimen/margin_40"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/mastercard_visa_edit"/>-->
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:rotation="180"
+                            android:src="@drawable/back" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!--<ImageView
+                        android:id="@+id/ivQRCode"
+                        android:layout_marginTop="@dimen/margin_30"
+                        android:layout_gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/margin_100"
+                        android:scaleType="centerInside"
+                        />-->
+
+                <!--            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890,()@.-$/=+&amp;"-->
+                <!--            textMultiLine-->
+
+                <!--            <com.llollox.androidtoggleswitch.widgets.ToggleSwitch-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:gravity="center"-->
+                <!--                    app:textToggleLeft="Apple"-->
+                <!--                    app:textToggleRight="Lemon" />-->
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

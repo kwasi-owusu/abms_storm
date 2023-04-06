@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="banks1">
+
+        <item>Access Bank Plc</item>
+        <item>Citibank Nigeria Limited</item>
+        <item>Ecobank Nigeria Plc</item>
+        <item>Fidelity Bank Plc</item>
+        <item>First City Monument Bank Plc</item>
+        <item>First Bank of Nigeria Limited</item>
+        <item>Heritage Banking Company Ltd</item>
+        <item>Keystone Bank Ltd</item>
+        <item>Polaris Bank Ltd</item>
+        <item>Stanbic IBTC Bank Plc</item>
+        <item>Standard Chartered Bank</item>
+        <item>Sterling Bank Plc</item>
+        <item>Union Bank of Nigeria Plc</item>
+        <item>United Bank for Africa Plc</item>
+        <item>Unity Bank Plc</item>
+        <item>Wema Bank Plc</item>
+        <item>Zenith Bank Plc</item>
+    </string-array>
+
+    <string-array name="banks">
+        <item>Access Bank plc</item>
+        <item>Diamond Bank</item>
+        <item>Ecobank Nigeria</item>
+        <item>Enterprise Bank</item>
+        <item>Fidelity Bank</item>
+        <item>FIRSTBANK</item>
+        <item>First City Monument Bank Ltd</item>
+        <item>Guaranty Trust Bank PLC</item>
+        <item>Heritage Bank</item>
+        <item>Keystone Bank</item>
+        <item>Pocketmoni</item>
+        <item>Skye Bank Plc</item>
+        <item>STANBIC-IBTC BANK PLC</item>
+        <item>STANDARD CHARTERED</item>
+        <item>Sterling Bank</item>
+        <item>Union Bank</item>
+        <item>United Bank for Africa Plc</item>
+        <item>Unity Bank PLC</item>
+        <item>WEMA</item>
+        <item>Zenith International Bank Limited</item>
+    </string-array>
+
+    <string-array name="bank_codes">
+        <item>044</item>
+        <item>063</item>
+        <item>050</item>
+        <item>084</item>
+        <item>070</item>
+        <item>011</item>
+        <item>214</item>
+        <item>058</item>
+        <item>030</item>
+        <item>082</item>
+        <item>700</item>
+        <item>076</item>
+        <item>039</item>
+        <item>068</item>
+        <item>232</item>
+        <item>032</item>
+        <item>033</item>
+        <item>215</item>
+        <item>035</item>
+        <item>057</item>
+
+    </string-array>
+    <string-array name="quantity">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>25</item>
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+    </string-array>
+
+
+    <string-array name="states">
+        <item>Abia</item>
+        <item>Adamawa</item>
+        <item>Akwa Ibom</item>
+        <item>Anambra</item>
+        <item>Bauchi</item>
+        <item>Bayelsa</item>
+        <item>Benue</item>
+        <item>Borno</item>
+        <item>Cross River</item>
+        <item>Delta</item>
+        <item>Ebonyi</item>
+        <item>Enugu</item>
+        <item>Edo</item>
+        <item>Ekiti</item>
+        <item>Gombe</item>
+        <item>Imo</item>
+        <item>Jigawa</item>
+        <item>Kaduna</item>
+        <item>Kano</item>
+        <item>Katsina</item>
+        <item>Kebbi</item>
+        <item>Kogi</item>
+        <item>Kwara</item>
+        <item>Lagos</item>
+        <item>Nasarawa</item>
+        <item>Niger</item>
+        <item>Ogun</item>
+        <item>Ondo</item>
+        <item>Osun</item>
+        <item>Oyo</item>
+        <item>Plateau</item>
+        <item>Rivers</item>
+        <item>Sokoto</item>
+        <item>Taraba</item>
+        <item>Yobe</item>
+        <item>Zamfara</item>
+    </string-array>
+
+
+    <string-array name="categories">
+        <item>Accessories</item>
+        <item>Footwears</item>
+        <item>Innerwears</item>
+        <item>Leisurewears</item>
+        <item>Jeans</item>
+        <item>Shirts</item>
+        <item>Sports wear</item>
+        <item>T-Shirts</item>
+        <item>Trousers</item>
+        <item>Sunglasses</item>
+        <item>Watches</item>
+
+    </string-array>
+
+    <string-array name="colors">
+        <item>Accessories</item>
+        <item>Footwears</item>
+        <item>Innerwears</item>
+        <item>Leisurewears</item>
+        <item>Jeans</item>
+        <item>Shirts</item>
+        <item>Sports wear</item>
+        <item>T-Shirts</item>
+        <item>Trousers</item>
+        <item>Sunglasses</item>
+        <item>Watches</item>
+
+    </string-array>
+
+    <string-array name="idtype">
+
+        <item>National ID</item>
+    </string-array>
+
+    <string-array name="idcard">
+        <item>Ghana Card</item>
+    </string-array>
+
+    <string-array name="identification">
+        <item>Ghana Card</item>
+        <item>Voters ID</item>
+    </string-array>
+
+    <string-array name="channel">
+        <item>SELECT CHANNEL</item>
+    </string-array>
+    <string-array name="search_by">
+        <item>SEARCH BY</item>
+    </string-array>
+    <string-array name="cash_options">
+        <item>CASH IN</item>
+        <item>COLLECTIONS</item>
+    </string-array>
+    <string-array name="reference">
+        <item>If you have a bank account</item>
+        <item>If you do not have a bank account</item>
+    </string-array>
+
+    <string-array name="trans_purpose">
+        <item>MAINTENANCE</item>
+        <item>INVESTMENTS</item>
+        <item>HEALTH</item>
+        <item>EDUCATION</item>
+        <item>MORTGAGE</item>
+    </string-array>
+
+    <string-array name="network_type">
+        <item>MTN</item>
+        <item>VODAFONE</item>
+        <item>AIRTEL TIGO</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="marketplace"
+            type="com.woleapp.model.Marketplace" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp">
+
+            <ImageView
+                android:id="@+id/dealer_logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/store_name"
+                android:src="@drawable/s_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dealer_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/questrial"
+                android:text="@{marketplace.name}"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dealer_logo"
+                app:layout_constraintTop_toTopOf="@id/dealer_logo"
+                tools:text="Abbey and co." />
+
+            <TextView
+                android:id="@+id/dealer_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/questrial"
+                android:text="@{marketplace.description}"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/dealer_name"
+                app:layout_constraintStart_toStartOf="@id/dealer_name"
+                app:layout_constraintTop_toBottomOf="@id/dealer_name"
+                tools:text="Lorem ipsum dolor init" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

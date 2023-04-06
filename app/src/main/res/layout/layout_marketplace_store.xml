@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.woleapp.viewmodels.MarketplaceViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_background"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+
+            android:id="@+id/create_store_welcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/questrial"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@id/close_dialog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="" />
+
+        <ImageButton
+            android:id="@+id/close_dialog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/close"
+            android:padding="8dp"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_cancel_black_24dp" />
+
+        <ImageView
+            android:id="@+id/store_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/store_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/create_store_welcome"
+            app:srcCompat="@drawable/ic_picture_frame" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/store_name_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/store_logo">
+
+            <EditText
+                android:id="@+id/store_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="@string/store_name"
+                android:fontFamily="@font/questrial"
+                android:hint="@string/store_name"
+                android:inputType="text"
+                android:text="@={viewmodel.marketPlace.name}"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:layout_constraintStart_toStartOf="@id/store_name_wrapper"
+            app:layout_constraintTop_toBottomOf="@id/store_name_wrapper"
+            android:id="@+id/delivery_fee_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:text="@={viewmodel.marketPlace.deliveryFee}"
+                android:autofillHints="@string/delivery_fee"
+                android:hint="@string/delivery_fee"
+                android:inputType="numberDecimal"
+                android:id="@+id/delivery_fee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/store_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/store_description"
+            android:background="@drawable/services_edittext_background"
+            android:fontFamily="@font/questrial"
+            android:gravity="start|top"
+            android:hint="@string/store_description"
+            android:inputType="textMultiLine"
+            android:minLines="5"
+            android:padding="8dp"
+            android:text="@={viewmodel.marketPlace.description}"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            app:layout_constraintTop_toBottomOf="@id/delivery_fee_wrapper" />
+
+        <Button
+            android:id="@+id/create_store"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/questrial"
+            android:text="@string/create_store"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/store_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

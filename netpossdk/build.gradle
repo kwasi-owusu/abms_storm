@@ -1,0 +1,3 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('netpossdk-1.0.24.aar'))
+
