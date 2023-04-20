@@ -162,6 +162,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
         binding.cardExpiry.setVisibility(View.GONE);
         binding.readCard.setVisibility(View.GONE);
         binding.etFee.setVisibility(View.GONE);
+        binding.tvConvinienceFee.setVisibility(View.GONE);
         binding.linearCanvas.setVisibility(View.GONE);
         binding.linearCanvasMain.setVisibility(View.GONE);
 
@@ -235,11 +236,12 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
         } else if (v == binding.cardCollection) {
             String name = binding.payeeName.getText().toString().trim();
             String cvv = binding.etCVV.getText().toString().trim();
-            month = readResult.A.substring(2, 4);
-            year = readResult.A.substring(0, 2);
+            String readMonth = readResult.f;
+            String[] parts = readMonth.split("D");
+            month = parts[1].substring(2,4);
+            year = parts[1].substring(0, 2);
             String cardDateNew = month + "/" + year;
             processCardCollections(amount, name, cvv, readResult.d, cardDateNew);
-            //processCardCollections();
         }
     }
 
@@ -288,8 +290,6 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
         String availableBalance = SharedPrefManager.getBalanceDetails().getBalance();
         String name = binding.payeeName.getText().toString().trim();
         String cardCVV = binding.etCVV.getText().toString().trim();
-        String cardNumber = binding.cardNumber.getText().toString().trim();
-        String expiryDate = binding.cardExpiry.getText().toString().trim();
 
         amount = binding.etAmt.getText().toString();
         amount = amount.replace(currency_symbol, "").replaceAll(",", "");
@@ -316,13 +316,6 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
             binding.etCVV.setError("CVV number should be 3 digits", customErrorDrawable);
             binding.etCVV.requestFocus();
         }
-//        } else if (TextUtils.isEmpty(cardNumber)) {
-//            binding.cardNumber.setError("Please load card number", customErrorDrawable);
-//            binding.cardNumber.requestFocus();
-//        }else if (TextUtils.isEmpty(expiryDate)) {
-//            binding.cardExpiry.setError("Please load card expiry", customErrorDrawable);
-//            binding.cardExpiry.requestFocus();
-//        }
         else {
             readCard();
         }
@@ -371,50 +364,13 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
                     Log.e("TRANSACTION_ID_MOMO", "transaction response: " + transactionId);
                     addFragmentWithoutRemove(R.id.container_main, new TransactionStatusFragment(transactionId, token, name, number, ref, issuer, amount), TransactionStatusFragment.class.getSimpleName());
                     dismissProgressBar();
-                    //transactionStatus();
-                    //checkStatus();
                 }, err -> {
                     Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
                     dismissProgressBar();
                 });
-       /* Call<Response<Object>> call = retrofit.momoInit(jsonObject);
-        call.enqueue(new Callback<Response<Object>>() {
-            @Override
-            public void onResponse(Call<Response<Object>> call, Response<Response<Object>> response) {
-                if (response.code() != 200) {
-                    Toast.makeText(context, "Failed to process transaction", Toast.LENGTH_SHORT).show();
-                    Log.e("TRANSACTION COLLECTION", "transaction response: " + response);
-                    dismissProgressBar();
-                    return;
-                }
-                Object body = response.body();
-                JSONObject res = null;
-                try {
-                    res = new JSONObject(new Gson().toJson(body));
-                } catch (JSONException e) {
-                    throw new RuntimeException(e);
-                }
-                Log.e("TRANSACTION COLLECTION", "transaction response: " + response);
-                if (res.optString("success").equals("false")) {
-                    Toast.makeText(context, res.optString("message"), Toast.LENGTH_SHORT).show();
-                    dismissProgressBar();
-                    return;
-                }
-                addFragmentWithoutRemove(R.id.container_main, new PaymentSuccessfulFragment(), PaymentSuccessfulFragment.class.getSimpleName());
-                dismissProgressBar();
-            }
-
-            @Override
-            public void onFailure(Call<Response<Object>> call, Throwable t) {
-                Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
-                dismissProgressBar();
-            }
-        });*/
-
     }
 
     public void processCardCollections(String amnt, String name, String cardCvv, String cardNumber, String expiryDate) {
-        //  public void processCardCollections(){
         showProgressBar();
         String amount = amnt;
         String account_name = name;
@@ -516,60 +472,6 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
 
     }
 
-    public void transactionStatus() {
-        showProgressBar();
-        Disposable subscribed = retrofit.transactionStatus(transactionId)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                //.takeUntil()
-                .subscribe(ress -> {
-                    Object bodyy = ress.body();
-                    JSONObject responses = new JSONObject(new Gson().toJson(bodyy));
-                  /*  if (ress.code() != 200 ) {
-                        Toast.makeText(context, "Failed to process transaction", Toast.LENGTH_SHORT).show();
-                        dismissProgressBar();
-                        return;
-                    }*/
-                  //  Log.e("TRANSACTION_ID_Status", "transaction payload: " + responses.optString("success"));
-                    Log.e("TRANSACTION_Status_Load", "response body: " + responses);
-                   // Log.e("TRANSACTION_Status_Load", "transaction payload: " + response);
-                    Log.e("TransID", "TransID " + transactionId);
-                    Log.e("TransID", "TransID " + responses.optString("transactionId"));
-                   /* if (responses.optString("success").equals("false")) {
-                        Toast.makeText(context, responses.optString("message"), Toast.LENGTH_SHORT).show();
-                        dismissProgressBar();
-                        return;
-                    }*/
-
-                    timer = new Timer();
-                    timer.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            if (!responses.optString("status").equals("paid")) {
-                                Observable.interval(3, TimeUnit.SECONDS)
-                                        .observeOn(Schedulers.io())
-                                        .subscribeOn(AndroidSchedulers.mainThread())
-                                        .subscribe(count ->{
-                                            responses.optString("status").equals("paid");
-                                        });
-                                showProgressBar();
-                                Log.e("TRANSACTION_Status_Pend", "status " + responses.optString("status"));
-                            }
-                            else {
-                                Toast.makeText(context, "Please try again", Toast.LENGTH_SHORT).show();
-                                addFragmentWithoutRemove(R.id.container_main, new PaymentSuccessfulFragment(name,number,ref,issuer,amount), PaymentSuccessfulFragment.class.getSimpleName());
-                                timer.cancel();
-                                dismissProgressBar();
-                            }
-                        }
-                    }, 0, INTERVAL);
-
-                }, err -> {
-                    Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
-                    dismissProgressBar();
-                });
-    }
-
     private void readCard() {
 //        alertDialog.show();
         List<Integer> preferredModes = new ArrayList<>();
@@ -617,8 +519,6 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
 
                             CardData cardData = new CardData();
                             cardData.setCardNumber(readResult.d);
-                            // cardData.setExpiry(readResult.A);
-                            //cardData.setCvv(readResult.s);
                             cardData.setCardExpiryDate(readResult.A);
 
                             Log.e("cardDetails", cardData + " ");
@@ -639,12 +539,15 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
 
                     @Override
                     public void onComplete() {
-                        month = readResult.A.substring(2, 4);
-                        year = readResult.A.substring(0, 2);
+                        String readMonth = readResult.f;
+                        String[] parts = readMonth.split("D");
+                        month = parts[1].substring(2,4);
+                        year = parts[1].substring(0, 2);
                         binding.cardNumber.setText(readResult.d);
                         binding.cardExpiry.setText(month + "/" + year);
                         binding.readCard.setVisibility(View.GONE);
                         binding.cardCollection.setVisibility(View.VISIBLE);
+
                         //processCardCollections(amount, name, cvv, readResult.d,readResult.A);
 //                        alertDialog.dismiss();
                         //Toast.makeText(context, "Done Reading Card", Toast.LENGTH_LONG).show();

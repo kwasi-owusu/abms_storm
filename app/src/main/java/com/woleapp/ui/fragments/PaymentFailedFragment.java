@@ -42,6 +42,7 @@ public class PaymentFailedFragment extends BaseFragment implements View.OnClickL
     public void onClick(View v){
         if(v == binding.btnContinue){
             addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+         //   addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
         }
     }
 }

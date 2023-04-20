@@ -151,21 +151,7 @@ public class TransactionStatusFragment extends BaseFragment{
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
             .create(AgencyBankingService.class);
-
-    public static OkHttpClient getHttpClient(Context context, boolean addTokenInterceptor) {
-
-        OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-
-        builder.addInterceptor(interceptor);
-        if(addTokenInterceptor)
-            builder.addInterceptor(new TokenInterceptor());
-        builder.connectTimeout(2, TimeUnit.MINUTES);
-        final OkHttpClient okHttpClient = builder.build();
-
-        return okHttpClient;
-    }
+    
     private OkHttpClient getClient() {
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -201,89 +187,13 @@ public class TransactionStatusFragment extends BaseFragment{
         }
 
     }
-   /* private static final int TIMEOUT_MS = 30000;
-
-    private Handler mHandler = new Handler();
-    private Runnable mTimeoutRunnable = new Runnable() {
-        @Override
-        public void run() {
-            hideProgressBar();
-            // show timeout message or take other action
-        }
-    };
-    public void showTimeoutProgressBar() {
-        if (mProgressDialog != null && mProgressDialog.isShowing())
-            return;
-        mProgressDialog = ProgressDialog.show(context, null, null);
-        mProgressDialog.setContentView(R.layout.dialog_progress);
-        mProgressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        mProgressDialog.setCancelable(false);
-
- //       mHandler.postDelayed(mTimeoutRunnable, TIMEOUT_MS);
-    }
-
-    public void hideProgressBar() {
-        if (mProgressDialog != null && mProgressDialog.isShowing()) {
-            mProgressDialog.dismiss();
-            addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());
-
-        }
-
-        // Remove the timeout runnable
-        mHandler.removeCallbacks(mTimeoutRunnable, TIMEOUT_MS);
-    }*/
-
-
-   /* private static final long TIMEOUT_MS = 10000; // 10 seconds
-
-    private Handler mHandler = new Handler();
-    private boolean mProgressBarShown = false;
-
-    private Runnable mTimeoutRunnable = new Runnable() {
-        @Override
-        public void run() {
-            // If the progress bar is still showing, hide it
-            if (mProgressDialog != null && mProgressDialog.isShowing()) {
-                hideProgressBar();
-            }
-        }
-    };
-
-    public void showTimeoutProgressBar() {
-        if (mProgressBarShown) {
-            return;
-        }
-
-        mProgressDialog = ProgressDialog.show(context, null, null);
-        mProgressDialog.setContentView(R.layout.dialog_progress);
-        mProgressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        mProgressDialog.setCancelable(false);
-
-        // Start the timeout runnable
-        mHandler.postDelayed(mTimeoutRunnable, TIMEOUT_MS);
-
-        mProgressBarShown = true;
-    }
-
-    public void hideProgressBar() {
-        if (mProgressDialog != null && mProgressDialog.isShowing()) {
-            mProgressDialog.dismiss();
-            addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());
-
-        }
-
-        // Remove the timeout runnable
-        mHandler.removeCallbacks(mTimeoutRunnable);
-
-        mProgressBarShown = false;
-    }*/
     public void showTimeoutProgressBar(){
         if (mProgressDialog != null && mProgressDialog.isShowing())
             return;
         mProgressDialog = ProgressDialog.show(context, null, null);
         mProgressDialog.setContentView(R.layout.dialog_progress);
         mProgressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        mProgressDialog.setCancelable(true);
+        mProgressDialog.setCancelable(false);
     }
 
 }

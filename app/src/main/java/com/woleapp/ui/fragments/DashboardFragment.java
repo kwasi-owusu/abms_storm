@@ -199,29 +199,31 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
         serviceList.add(service);
         service = new Service(2, "CASH-OUT", R.drawable.cash_out_new);
         serviceList.add(service);
-        service = new Service(3, "FUND WALLET", R.drawable.fund_wallet_new);
+       // service = new Service(3, "FUND WALLET", R.drawable.fund_wallet_new);
+       // serviceList.add(service);
+        service = new Service(3, "VIEW TRANSACTIONS", R.drawable.trans);
         serviceList.add(service);
-        service = new Service(4, "VIEW TRANSACTIONS", R.drawable.trans);
+       // service = new Service(5, "PAY BILLS", R.drawable.bill);
+       // serviceList.add(service);
+       // service = new Service(6, "HEALTH CHECKER", R.drawable.ic_stethoscope);
+        // serviceList.add(service);
+        service = new Service(4, "COLLECTIONS", R.drawable.cash_in);
         serviceList.add(service);
-        service = new Service(5, "PAY BILLS", R.drawable.bill);
+        service = new Service(5, "REMITTANCES", R.drawable.remittance);
         serviceList.add(service);
-        service = new Service(6, "HEALTH CHECKER", R.drawable.ic_stethoscope);
+        service = new Service(6, "INSURANCE", R.drawable.insurance);
         serviceList.add(service);
-        service = new Service(7, "COLLECTIONS", R.drawable.cash_in);
+        service = new Service(7, "TICKETS", R.drawable.ticketss);
         serviceList.add(service);
-        service = new Service(8, "REMITTANCES", R.drawable.remittance);
+        service = new Service(8, "SSNIT", R.drawable.ssnit);
         serviceList.add(service);
-        service = new Service(9, "INSURANCE", R.drawable.insurance);
+        service = new Service(9, "LOCAL GOVERNMENT", R.drawable.localgov);
         serviceList.add(service);
-        service = new Service(10, "TICKETS", R.drawable.tickets);
+        service = new Service(10, "FINES & BAILS", R.drawable.fines);
         serviceList.add(service);
-        service = new Service(11, "SSNIT", R.drawable.ssnit);
+        service = new Service(11, "SCHOOL FEES", R.drawable.tuition);
         serviceList.add(service);
-        service = new Service(12, "LOCAL GOVERNMENT", R.drawable.localgov);
-        serviceList.add(service);
-        service = new Service(13, "FINES & BAILS", R.drawable.fines);
-        serviceList.add(service);
-        service = new Service(14, "SCHOOL FEES", R.drawable.tuition);
+        service = new Service(12, "FUNERAL DONATIONS", R.drawable.funeral);
         serviceList.add(service);
 //        if (user.getUser_level() == USER_LEVEL) {
 //            service = new Service(1, "CASH-IN / BANK TRANSFER", R.drawable.cash_in_new);
@@ -383,7 +385,7 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
 //                    cin.setArguments(b1);
                     //addFragmentWithoutRemove(R.id.container_main,cin,CashInFragment.class.getSimpleName());
                     addFragmentWithoutRemove(R.id.container_main, new CashoutFragment(), CashoutFragment.class.getSimpleName());
-                } else if (position == 2) {
+                } /*else if (position == 2) {
 
                     addFragmentWithoutRemove(R.id.container_main, new FundWalletFragment(), FundWalletFragment.class.getSimpleName());
 
@@ -391,7 +393,7 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
 
                     addFragmentWithoutRemove(R.id.container_main, new PayServicesFragment(), PayServicesFragment.class.getSimpleName());
 
-                } else if (position == 3) {
+                }*/ else if (position == 2) {
 
 //                    Bundle b1 = new Bundle();
                     //b1.putInt("transaction_type", Constants.TRANSACTION_CASH_IN);
@@ -402,34 +404,37 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
                     addFragmentWithoutRemove(R.id.container_main, new AgencyTransactionFragment(), AgencyTransactionFragment.class.getSimpleName());
 
                     //Toast.makeText(context,"This feature shall be available soon",Toast.LENGTH_SHORT).show();
-                } else if (position == 5) {
-                    addFragmentWithoutRemove(R.id.container_main, new HealthCheckerFragment(), HealthCheckerFragment.class.getSimpleName());
-                }
-                else if(position == 6){
+                } //else if (position == 5) {
+                    //addFragmentWithoutRemove(R.id.container_main, new HealthCheckerFragment(), HealthCheckerFragment.class.getSimpleName());
+               // }
+                else if(position == 3){
                     addFragmentWithoutRemove(R.id.container_main, new CollectionsNewFragment(), CollectionsNewFragment.class.getSimpleName());
                 }
-                else if(position == 7){
+                else if(position == 4){
                     addFragmentWithoutRemove(R.id.container_main, new RemittanceFragment(), RemittanceFragment.class.getSimpleName());
                 }
-                else if(position == 8){
+                else if(position == 5){
                     addFragmentWithoutRemove(R.id.container_main, new InsuranceFragment(), InsuranceFragment.class.getSimpleName());
                 }
-                else if(position == 9){
+                else if(position == 6){
                     //addFragmentWithoutRemove(R.id.container_main, new CameraFragment(), CameraFragment.class.getSimpleName());
                     addFragmentWithoutRemove(R.id.container_main, new TicketsFragment(), TicketsFragment.class.getSimpleName());
                    // addFragmentWithoutRemove(R.id.container_main, new PassportFragment(), PassportFragment.class.getSimpleName());
                 }
-                else if(position == 10){
+                else if(position == 7){
                     addFragmentWithoutRemove(R.id.container_main, new SSNITFragment(), SSNITFragment.class.getSimpleName());
                 }
-                else if(position == 11){
+                else if(position == 8){
                     addFragmentWithoutRemove(R.id.container_main, new LocalGovernmentFragment(), LocalGovernmentFragment.class.getSimpleName());
                 }
-                else if(position == 12){
+                else if(position == 9){
                     addFragmentWithoutRemove(R.id.container_main, new FinesBailsFragment(), FinesBailsFragment.class.getSimpleName());
                 }
-                else if(position == 13){
+                else if(position == 10){
                     addFragmentWithoutRemove(R.id.container_main, new SchoolFeesFragment(), SchoolFeesFragment.class.getSimpleName());
+                }
+                else if(position == 11){
+                    addFragmentWithoutRemove(R.id.container_main, new FuneralMerchantFragment(), FuneralMerchantFragment.class.getSimpleName());
                 }
                  else {
                     Toast.makeText(requireContext(), "More", Toast.LENGTH_SHORT).show();

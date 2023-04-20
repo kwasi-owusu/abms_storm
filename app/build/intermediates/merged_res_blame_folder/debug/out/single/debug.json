@@ -68,6 +68,10 @@
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\fragment_remittance_details.xml"
     },
     {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_searchable_spinner.xml.flat",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog_searchable_spinner.xml"
+    },
+    {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_view_category.xml.flat",
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\spinner_view_category.xml"
     },
@@ -154,6 +158,10 @@
     {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_agency_transaction_detail.xml.flat",
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\fragment_agency_transaction_detail.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_funeral_donations.xml.flat",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_funeral_donations.xml"
     },
     {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_verify_utility_payment.xml.flat",
@@ -266,6 +274,10 @@
     {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_reset.png.flat",
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable-xhdpi\\reset.png"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_events.jpg.flat",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\events.jpg"
     },
     {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_arrow_down_triangular.xml.flat",
@@ -748,6 +760,10 @@
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\temp_services_header.xml"
     },
     {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_funeral.jpg.flat",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\funeral.jpg"
+    },
+    {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_no.png.flat",
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable-xhdpi\\no.png"
     },
@@ -808,6 +824,10 @@
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\activity_signature_2.xml"
     },
     {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_keyboard_arrow_down_24.xml.flat",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\baseline_keyboard_arrow_down_24.xml"
+    },
+    {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_icon.png.flat",
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable-xhdpi\\icon.png"
     },
@@ -846,6 +866,10 @@
     {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bus_ticket.png.flat",
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\bus_ticket.png"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ticketss.png.flat",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\ticketss.png"
     },
     {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
@@ -1280,6 +1304,10 @@
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable-xhdpi\\mail_new.png"
     },
     {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sports.png.flat",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\sports.png"
+    },
+    {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tick.png.flat",
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\drawable-xhdpi\\tick.png"
     },
@@ -1374,6 +1402,10 @@
     {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_ebills_webview.xml.flat",
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\fragment_ebills_webview.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_merchant_sign_in.xml.flat",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_merchant_sign_in.xml"
     },
     {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_drawable_show_pwd.xml.flat",

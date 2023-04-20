@@ -10,7 +10,6 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.content.pm.ActivityInfo
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -23,7 +22,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.drawerlayout.widget.DrawerLayout
@@ -33,7 +31,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.bumptech.glide.manager.SupportRequestManagerFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.gson.Gson
-import com.google.gson.JsonObject
 import com.pixplicity.easyprefs.library.Prefs
 import com.woleapp.BuildConfig
 import com.woleapp.R
@@ -42,7 +39,6 @@ import com.woleapp.databinding.LayoutHomeBinding
 import com.woleapp.model.BaseResponse
 import com.woleapp.model.SalesOrder
 import com.woleapp.model.toFieldMap
-import com.woleapp.network.AgencyBankingAPIClient
 import com.woleapp.network.MerchantsApiClient
 import com.woleapp.network.StormAPIClient
 import com.woleapp.ui.fragments.*
@@ -190,7 +186,8 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             || currentFragment is SSNITFragment  || currentFragment is LocalGovernmentFragment  || currentFragment is FinesBailsFragment  || currentFragment is AgencyTransactionFragment
             || currentFragment is AgencyTransactionDetailFragment  || currentFragment is FundWalletFragment || currentFragment is CollectionsNewFragment
             || currentFragment is CardWebViewFragment || currentFragment is TransactionStatusFragment || currentFragment is PaymentFailedFragment || currentFragment is PaymentCardSuccessfulFragment
-            || currentFragment is SchoolFeesFragment || currentFragment is PassportFragment)
+            || currentFragment is SchoolFeesFragment || currentFragment is PassportFragment || currentFragment is FuneralMerchantFragment || currentFragment is FuneralDonationsFragment
+        )
             View.GONE
         else View.VISIBLE
     }

@@ -102,7 +102,7 @@ public class CardWebViewFragment extends BaseFragment{
         String iframeHtml = "<html><body>" + chqUrl + "</body></html>";
 
         binding.webView.loadData(iframeHtml, "text/html", "utf-8");
-      //  binding.webView.loadDataWithBaseURL(null, html, "text/html", "UTF-8",null);
+        //  binding.webView.loadDataWithBaseURL(null, html, "text/html", "UTF-8",null);
 
         binding.webView.setWebViewClient(new WebViewClient() {
             @Override
@@ -119,8 +119,8 @@ public class CardWebViewFragment extends BaseFragment{
             }
         });
 
-           // showProgressBar();
-        }
+        // showProgressBar();
+    }
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         context = getActivity();
@@ -128,7 +128,7 @@ public class CardWebViewFragment extends BaseFragment{
         return binding.getRoot();
     }
 
-        public void onClick(View v) {
+    public void onClick(View v) {
         if (v == binding.ivBack) {
             //addFragmentWithoutRemove(R.id.container_main, new PaymentSuccessfulFragment(), PaymentSuccessfulFragment.class.getSimpleName());
         }
@@ -136,11 +136,11 @@ public class CardWebViewFragment extends BaseFragment{
     private class AndroidInterface {
         @JavascriptInterface
         public void onFormSubmitted() {
-           // transactionStatus();
+            // transactionStatus();
         }
     }
     public void transactionStatus() {
-      //  showProgressBar();
+        //  showProgressBar();
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override

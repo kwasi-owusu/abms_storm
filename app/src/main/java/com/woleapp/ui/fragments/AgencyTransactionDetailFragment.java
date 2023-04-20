@@ -121,7 +121,7 @@ public class AgencyTransactionDetailFragment extends BaseFragment implements Vie
         Log.e("TAG", "bundle check: "+chqNum);
         switch (chqNum) {
             case "1":
-                AgencyBankingAPIClient.weeklyReports(payload, context).subscribe(res -> {
+               Disposable subscribe =  AgencyBankingAPIClient.weeklyReports(payload, context).subscribe(res -> {
                     if(res.code() != 200) {
                         Toast.makeText(context, "could not get transactions", Toast.LENGTH_SHORT).show();
                         dismissProgressBar();

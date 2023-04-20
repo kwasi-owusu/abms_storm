@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 import com.woleapp.R;
 import com.woleapp.model.Service;
 import com.woleapp.util.OnItemClickListener;
@@ -69,7 +71,11 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
                     }
                 });*/
 
-        holder.ivService.setImageResource(serviceList.get(position).getService_drawable());
+       // holder.ivService.setImageResource(serviceList.get(position).getService_drawable());
+        Glide.with(context)
+                .load(serviceList.get(position).getService_drawable())
+                .into(holder.ivService);
+
         holder.tvTitle.setText(serviceList.get(position).getService_name());
         if(isPayService)
         {

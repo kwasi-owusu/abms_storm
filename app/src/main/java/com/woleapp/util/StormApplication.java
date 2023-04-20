@@ -2,6 +2,7 @@ package com.woleapp.util;
 
 import static com.netpluspay.netpossdk.NetPosSdk.loadEmvParams;
 
+import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.pm.ApplicationInfo;
 import android.util.Log;
@@ -56,7 +57,8 @@ public class StormApplication extends MultiDexApplication {
         terminalParameters.setTerminalCapability("E06868");
         loadEmvParams(terminalParameters);
         NetPosSdk.loadProvidedCapksAndAids();
-        NetPosSdk.writeTpkKey(DeviceConfig.TPKIndex, "290bc46ef2043bb6d9a1579d980dbc10");
+        //NetPosSdk.writeTpkKey(DeviceConfig.TPKIndex, "290bc46ef2043bb6d9a1579d980dbc10");
+        NetPosSdk.writeTpkKey(DeviceConfig.TPKIndex, "290bc46ef2043bb6d9a1579d980dbc10", this);
         /*RxJavaPlugins.setErrorHandler(throwable -> {
             throwable.printStackTrace();
             Log.e("app", "" + throwable.getLocalizedMessage());

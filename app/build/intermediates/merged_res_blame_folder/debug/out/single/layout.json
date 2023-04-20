@@ -276,6 +276,10 @@
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_scan_to_pay.xml"
     },
     {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_merchant_sign_in.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_merchant_sign_in.xml"
+    },
+    {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_quick_transaction.xml",
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_quick_transaction.xml"
     },
@@ -330,6 +334,10 @@
     {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_inventory_2.xml",
         "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_inventory_2.xml"
+    },
+    {
+        "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_funeral_donations.xml",
+        "source": "D:\\Project\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_funeral_donations.xml"
     },
     {
         "merged": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_logout.xml",

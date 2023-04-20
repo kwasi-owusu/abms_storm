@@ -1921,6 +1921,7 @@ drawable arrow_up
 drawable avd_hide_password
 drawable avd_show_password
 drawable back
+drawable baseline_keyboard_arrow_down_24
 drawable bg_drop_down_rounded
 drawable bg_edittext
 drawable bg_rect_green_border
@@ -1995,6 +1996,7 @@ drawable edit_menu
 drawable edittext_bg
 drawable error
 drawable error_small
+drawable events
 drawable fastscroll__default_bubble
 drawable fastscroll__default_handle
 drawable fines
@@ -2495,6 +2497,7 @@ drawable flag_zimbabwe
 drawable flag_zm
 drawable flag_zw
 drawable fund_wallet_new
+drawable funeral
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable hide_password
@@ -2641,6 +2644,7 @@ drawable sp__mastercard_logo
 drawable sp__meps_logo
 drawable sp__unionpay_logo
 drawable sp__visa_logo
+drawable sports
 drawable ssnit
 drawable st_logo
 drawable test_custom_background
@@ -2648,6 +2652,7 @@ drawable tick
 drawable tick_new
 drawable ticket
 drawable tickets
+drawable ticketss
 drawable timer
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2841,6 +2846,7 @@ id all
 id already_have_an_account
 id always
 id amount
+id amountTv
 id amount_tv
 id amount_value
 id animateToEnd
@@ -2897,6 +2903,7 @@ id btn_continue
 id btn_delete
 id btn_edit
 id btn_login
+id btn_print
 id btn_send
 id btn_share
 id btn_submit
@@ -2930,6 +2937,7 @@ id cardView
 id cardViewRoot
 id card_fee
 id cashCollection
+id cashPayment
 id center
 id centerCrop
 id centerInside
@@ -3045,6 +3053,7 @@ id easeOut
 id editText_search
 id edit_button
 id edit_query
+id edit_text
 id edt_customer_name
 id email
 id email_edit
@@ -3212,6 +3221,7 @@ id list
 id listItems
 id listMode
 id list_item
+id list_view
 id listview_background_shape
 id loading_progress
 id logout_layout
@@ -3360,6 +3370,7 @@ id refresh_button
 id refresh_layout
 id relativeDetails
 id relativeDiscount
+id relativeEditButton
 id relativeLayout
 id relativeOptions
 id relativeParent
@@ -3795,6 +3806,7 @@ layout dialog_logout
 layout dialog_otp_success
 layout dialog_progress
 layout dialog_reset_password
+layout dialog_searchable_spinner
 layout dialog_support
 layout dialog_transparent
 layout dialog_utilities_status
@@ -3838,6 +3850,7 @@ layout layout_dashboard
 layout layout_fines_bails
 layout layout_full_width_code_picker
 layout layout_fund_wallet
+layout layout_funeral_donations
 layout layout_home
 layout layout_input
 layout layout_internet_subscription
@@ -3861,6 +3874,7 @@ layout layout_marketplace_received_orders
 layout layout_marketplace_store
 layout layout_marketplace_store_dashboard
 layout layout_merchant
+layout layout_merchant_sign_in
 layout layout_merchant_transaction_list_item
 layout layout_moneygram
 layout layout_passport

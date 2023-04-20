@@ -99,10 +99,8 @@ import timber.log.Timber;
 public class CashInFragment extends BaseFragment implements View.OnClickListener, Constants {
     Context context;
     private LayoutCashInBinding binding;
-
     AgencyUser user;
     Drawable customErrorDrawable;
-
     Signature mSignature;
     View signature_view;
     Bitmap bitmap;
@@ -672,7 +670,8 @@ public class CashInFragment extends BaseFragment implements View.OnClickListener
 
             @Override
             public void onFinish() {
-                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                printReceipt("test", depositor_payee, "test", "123", a_name, branchName, ref);
+             //   addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                 //Toast.makeText(context, "Printing job finished", Toast.LENGTH_SHORT).show();
             }
 

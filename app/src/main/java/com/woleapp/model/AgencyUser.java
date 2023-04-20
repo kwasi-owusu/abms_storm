@@ -22,7 +22,7 @@ public class AgencyUser {
 
     @SerializedName("id")
     @Expose
-    private Integer id;
+    private Long id;
 
     @SerializedName("user_level")
     @Expose
@@ -72,11 +72,11 @@ public class AgencyUser {
         return email;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 

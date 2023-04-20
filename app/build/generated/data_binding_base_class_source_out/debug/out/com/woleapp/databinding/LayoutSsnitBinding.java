@@ -4,6 +4,7 @@ package com.woleapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -17,6 +18,9 @@ import java.lang.Object;
 
 public abstract class LayoutSsnitBinding extends ViewDataBinding {
   @NonNull
+  public final EditText etAccountNo;
+
+  @NonNull
   public final LinearLayout linearTitle;
 
   @NonNull
@@ -26,8 +30,9 @@ public abstract class LayoutSsnitBinding extends ViewDataBinding {
   public final TextView tvTitle;
 
   protected LayoutSsnitBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      LinearLayout linearTitle, ScrollView scrollView, TextView tvTitle) {
+      EditText etAccountNo, LinearLayout linearTitle, ScrollView scrollView, TextView tvTitle) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.etAccountNo = etAccountNo;
     this.linearTitle = linearTitle;
     this.scrollView = scrollView;
     this.tvTitle = tvTitle;

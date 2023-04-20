@@ -317,6 +317,7 @@ public class CashoutFragment extends BaseFragment implements View.OnClickListene
                             Timber.d("CARD_DATA x==>%s", gson.toJson(readResult.x));
                             Timber.d("CARD_DATA y==>%s", gson.toJson(readResult.y));
                             Timber.d("CARD_DATA z==>%s", gson.toJson(readResult.z));
+                            Timber.d("CARD_DATA whole==>%s", gson.toJson(readResult));
                             // Timber.d("CARD_DATA I==>%s", gson.toJson(readResult.Z));
 
                             CardData cardData = new CardData();

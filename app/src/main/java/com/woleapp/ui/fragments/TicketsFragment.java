@@ -2,9 +2,13 @@ package com.woleapp.ui.fragments;
 
 import static com.woleapp.util.Constants.USER_LEVEL;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -62,12 +66,17 @@ public class TicketsFragment extends BaseFragment implements View.OnClickListene
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         gridRecyclerView = view.findViewById(R.id.remittanceItems);
+        //showProgressBar();
         populateCards();
     }
     public void populateCards() {
         serviceList = new ArrayList<>();
         Service service;
         service = new Service(1, "BUS TICKETS", R.drawable.bus_ticket);
+        serviceList.add(service);
+        service = new Service(2, "SPORTS EVENTS", R.drawable.sports);
+        serviceList.add(service);
+        service = new Service(3, "OTHER EVENTS", R.drawable.events);
         serviceList.add(service);
 
         setAnimation();
@@ -116,13 +125,13 @@ public class TicketsFragment extends BaseFragment implements View.OnClickListene
 
             if (user.getUser_level() == USER_LEVEL) {
                 if (position == 0) {
-//                    Bundle b1 = new Bundle();
-//                    b1.putInt("transaction_type", Constants.TRANSACTION_CASH_IN);
-//                    CashInOptionsFragment cin = new CashInOptionsFragment();
-//                    //CashInFragment cin = new CashInFragment();
-//                    cin.setArguments(b1);
-//                    addFragmentWithoutRemove(R.id.container_main, cin, CashInOptionsFragment.class.getSimpleName());
                     Toast.makeText(requireContext(), "Bus Tickets", Toast.LENGTH_SHORT).show();
+                }
+                else if(position == 1){
+                    Toast.makeText(requireContext(), "Sports Events", Toast.LENGTH_SHORT).show();
+                }
+                else if(position == 2){
+                    Toast.makeText(requireContext(), "Other Events", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -150,4 +159,34 @@ public class TicketsFragment extends BaseFragment implements View.OnClickListene
         });
         //binding.rvItems.setLayoutAnimation(animation);
     }
+
+    // Define the timeout duration in milliseconds
+    private static final int TIMEOUT_MS = 10000; // 10 seconds
+
+    // Declare the ProgressDialog and Handler objects
+    private ProgressDialog mProgressDialog;
+    private Handler mHandler;
+
+    // Method to show the progress bar
+   /* public void showProgressBar() {
+        if (mProgressDialog != null && mProgressDialog.isShowing())
+            return;
+        mProgressDialog = ProgressDialog.show(context, null, null);
+        mProgressDialog.setContentView(R.layout.dialog_progress);
+        mProgressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        mProgressDialog.setCancelable(false);
+        mHandler = new Handler();
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (mProgressDialog != null && mProgressDialog.isShowing()) {
+                    mProgressDialog.dismiss();
+                    addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());
+
+                }
+            }
+        }, TIMEOUT_MS);
+
+    }*/
+
 }

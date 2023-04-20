@@ -76,9 +76,7 @@ public class PaymentSuccessfulFragment extends BaseFragment implements View.OnCl
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         context = getActivity();
-        //user = SharedPrefManager.getInstance(context).getUser();
         binding = DataBindingUtil.inflate(inflater, R.layout.layout_payment_successful, container, false);
-        //((GPHMainActivity)getActivity()).createBackButton(job_title);
         return binding.getRoot();
     }
     public void onClick(View v){

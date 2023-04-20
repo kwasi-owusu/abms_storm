@@ -41,6 +41,7 @@ import com.woleapp.databinding.LayoutCollectionsNewBindingImpl;
 import com.woleapp.databinding.LayoutDashboardBindingImpl;
 import com.woleapp.databinding.LayoutFinesBailsBindingImpl;
 import com.woleapp.databinding.LayoutFundWalletBindingImpl;
+import com.woleapp.databinding.LayoutFuneralDonationsBindingImpl;
 import com.woleapp.databinding.LayoutHomeBindingImpl;
 import com.woleapp.databinding.LayoutInternetSubscriptionBindingImpl;
 import com.woleapp.databinding.LayoutInventoryListBindingImpl;
@@ -63,6 +64,7 @@ import com.woleapp.databinding.LayoutMarketplaceReceivedOrdersBindingImpl;
 import com.woleapp.databinding.LayoutMarketplaceStoreBindingImpl;
 import com.woleapp.databinding.LayoutMarketplaceStoreDashboardBindingImpl;
 import com.woleapp.databinding.LayoutMerchantBindingImpl;
+import com.woleapp.databinding.LayoutMerchantSignInBindingImpl;
 import com.woleapp.databinding.LayoutMerchantTransactionListItemBindingImpl;
 import com.woleapp.databinding.LayoutMoneygramBindingImpl;
 import com.woleapp.databinding.LayoutPassportBindingImpl;
@@ -170,107 +172,111 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_LAYOUTFUNDWALLET = 34;
 
-  private static final int LAYOUT_LAYOUTHOME = 35;
+  private static final int LAYOUT_LAYOUTFUNERALDONATIONS = 35;
 
-  private static final int LAYOUT_LAYOUTINTERNETSUBSCRIPTION = 36;
+  private static final int LAYOUT_LAYOUTHOME = 36;
 
-  private static final int LAYOUT_LAYOUTINVENTORYLIST = 37;
+  private static final int LAYOUT_LAYOUTINTERNETSUBSCRIPTION = 37;
 
-  private static final int LAYOUT_LAYOUTINVOICEPREVIEW = 38;
+  private static final int LAYOUT_LAYOUTINVENTORYLIST = 38;
 
-  private static final int LAYOUT_LAYOUTITEMLISTINVENTORY = 39;
+  private static final int LAYOUT_LAYOUTINVOICEPREVIEW = 39;
 
-  private static final int LAYOUT_LAYOUTITEMLISTINVENTORY2 = 40;
+  private static final int LAYOUT_LAYOUTITEMLISTINVENTORY = 40;
 
-  private static final int LAYOUT_LAYOUTITEMLISTINVENTORYORIG = 41;
+  private static final int LAYOUT_LAYOUTITEMLISTINVENTORY2 = 41;
 
-  private static final int LAYOUT_LAYOUTITEMLISTINVOICEPREVIEW = 42;
+  private static final int LAYOUT_LAYOUTITEMLISTINVENTORYORIG = 42;
 
-  private static final int LAYOUT_LAYOUTITEMLISTTRANSACTION = 43;
+  private static final int LAYOUT_LAYOUTITEMLISTINVOICEPREVIEW = 43;
 
-  private static final int LAYOUT_LAYOUTITEMLISTTRANSACTIONS = 44;
+  private static final int LAYOUT_LAYOUTITEMLISTTRANSACTION = 44;
 
-  private static final int LAYOUT_LAYOUTLOGIN = 45;
+  private static final int LAYOUT_LAYOUTITEMLISTTRANSACTIONS = 45;
 
-  private static final int LAYOUT_LAYOUTMAIN = 46;
+  private static final int LAYOUT_LAYOUTLOGIN = 46;
 
-  private static final int LAYOUT_LAYOUTMARKETPLACECONTAINER = 47;
+  private static final int LAYOUT_LAYOUTMAIN = 47;
 
-  private static final int LAYOUT_LAYOUTMARKETPLACEDEALERITEM = 48;
+  private static final int LAYOUT_LAYOUTMARKETPLACECONTAINER = 48;
 
-  private static final int LAYOUT_LAYOUTMARKETPLACEHOME = 49;
+  private static final int LAYOUT_LAYOUTMARKETPLACEDEALERITEM = 49;
 
-  private static final int LAYOUT_LAYOUTMARKETPLACEITEM = 50;
+  private static final int LAYOUT_LAYOUTMARKETPLACEHOME = 50;
 
-  private static final int LAYOUT_LAYOUTMARKETPLACEITEMDESCRIPTION = 51;
+  private static final int LAYOUT_LAYOUTMARKETPLACEITEM = 51;
 
-  private static final int LAYOUT_LAYOUTMARKETPLACEPRODUCTLIST = 52;
+  private static final int LAYOUT_LAYOUTMARKETPLACEITEMDESCRIPTION = 52;
 
-  private static final int LAYOUT_LAYOUTMARKETPLACERECEIVEDORDERS = 53;
+  private static final int LAYOUT_LAYOUTMARKETPLACEPRODUCTLIST = 53;
 
-  private static final int LAYOUT_LAYOUTMARKETPLACESTORE = 54;
+  private static final int LAYOUT_LAYOUTMARKETPLACERECEIVEDORDERS = 54;
 
-  private static final int LAYOUT_LAYOUTMARKETPLACESTOREDASHBOARD = 55;
+  private static final int LAYOUT_LAYOUTMARKETPLACESTORE = 55;
 
-  private static final int LAYOUT_LAYOUTMERCHANT = 56;
+  private static final int LAYOUT_LAYOUTMARKETPLACESTOREDASHBOARD = 56;
 
-  private static final int LAYOUT_LAYOUTMERCHANTTRANSACTIONLISTITEM = 57;
+  private static final int LAYOUT_LAYOUTMERCHANT = 57;
 
-  private static final int LAYOUT_LAYOUTMONEYGRAM = 58;
+  private static final int LAYOUT_LAYOUTMERCHANTSIGNIN = 58;
 
-  private static final int LAYOUT_LAYOUTPASSPORT = 59;
+  private static final int LAYOUT_LAYOUTMERCHANTTRANSACTIONLISTITEM = 59;
 
-  private static final int LAYOUT_LAYOUTPAYMENTCARDSUCCESSFUL = 60;
+  private static final int LAYOUT_LAYOUTMONEYGRAM = 60;
 
-  private static final int LAYOUT_LAYOUTPAYMENTCOMPLETE = 61;
+  private static final int LAYOUT_LAYOUTPASSPORT = 61;
 
-  private static final int LAYOUT_LAYOUTPAYMENTMODE = 62;
+  private static final int LAYOUT_LAYOUTPAYMENTCARDSUCCESSFUL = 62;
 
-  private static final int LAYOUT_LAYOUTPAYMENTSUCCESSFUL = 63;
+  private static final int LAYOUT_LAYOUTPAYMENTCOMPLETE = 63;
 
-  private static final int LAYOUT_LAYOUTPOWERORELECTRICITY = 64;
+  private static final int LAYOUT_LAYOUTPAYMENTMODE = 64;
 
-  private static final int LAYOUT_LAYOUTQRACTIVATION = 65;
+  private static final int LAYOUT_LAYOUTPAYMENTSUCCESSFUL = 65;
 
-  private static final int LAYOUT_LAYOUTQRREGISTRATION = 66;
+  private static final int LAYOUT_LAYOUTPOWERORELECTRICITY = 66;
 
-  private static final int LAYOUT_LAYOUTQUICKTRANSACTION = 67;
+  private static final int LAYOUT_LAYOUTQRACTIVATION = 67;
 
-  private static final int LAYOUT_LAYOUTRIA = 68;
+  private static final int LAYOUT_LAYOUTQRREGISTRATION = 68;
 
-  private static final int LAYOUT_LAYOUTSCANTOPAY = 69;
+  private static final int LAYOUT_LAYOUTQUICKTRANSACTION = 69;
 
-  private static final int LAYOUT_LAYOUTSCHOOLFEES = 70;
+  private static final int LAYOUT_LAYOUTRIA = 70;
 
-  private static final int LAYOUT_LAYOUTSELECTUSERTYPE = 71;
+  private static final int LAYOUT_LAYOUTSCANTOPAY = 71;
 
-  private static final int LAYOUT_LAYOUTSIGNUP = 72;
+  private static final int LAYOUT_LAYOUTSCHOOLFEES = 72;
 
-  private static final int LAYOUT_LAYOUTSIGNUPORIG = 73;
+  private static final int LAYOUT_LAYOUTSELECTUSERTYPE = 73;
 
-  private static final int LAYOUT_LAYOUTSSNIT = 74;
+  private static final int LAYOUT_LAYOUTSIGNUP = 74;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONFAILURE = 75;
+  private static final int LAYOUT_LAYOUTSIGNUPORIG = 75;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONLIST = 76;
+  private static final int LAYOUT_LAYOUTSSNIT = 76;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONSTATUS = 77;
+  private static final int LAYOUT_LAYOUTTRANSACTIONFAILURE = 77;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONSUCCESS = 78;
+  private static final int LAYOUT_LAYOUTTRANSACTIONLIST = 78;
 
-  private static final int LAYOUT_LAYOUTVERIFYOTP = 79;
+  private static final int LAYOUT_LAYOUTTRANSACTIONSTATUS = 79;
 
-  private static final int LAYOUT_LAYOUTVERIFYUTILITYPAYMENT = 80;
+  private static final int LAYOUT_LAYOUTTRANSACTIONSUCCESS = 80;
 
-  private static final int LAYOUT_LAYOUTWEBVIEW = 81;
+  private static final int LAYOUT_LAYOUTVERIFYOTP = 81;
 
-  private static final int LAYOUT_LAYOUTWESTERNUNION = 82;
+  private static final int LAYOUT_LAYOUTVERIFYUTILITYPAYMENT = 82;
 
-  private static final int LAYOUT_QRBOTTOMSHEETDIALOG = 83;
+  private static final int LAYOUT_LAYOUTWEBVIEW = 83;
 
-  private static final int LAYOUT_SPLASH = 84;
+  private static final int LAYOUT_LAYOUTWESTERNUNION = 84;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(84);
+  private static final int LAYOUT_QRBOTTOMSHEETDIALOG = 85;
+
+  private static final int LAYOUT_SPLASH = 86;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(86);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.activity_payment_progress, LAYOUT_ACTIVITYPAYMENTPROGRESS);
@@ -307,6 +313,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_dashboard, LAYOUT_LAYOUTDASHBOARD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_fines_bails, LAYOUT_LAYOUTFINESBAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_fund_wallet, LAYOUT_LAYOUTFUNDWALLET);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_funeral_donations, LAYOUT_LAYOUTFUNERALDONATIONS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_home, LAYOUT_LAYOUTHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_internet_subscription, LAYOUT_LAYOUTINTERNETSUBSCRIPTION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_inventory_list, LAYOUT_LAYOUTINVENTORYLIST);
@@ -329,6 +336,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_marketplace_store, LAYOUT_LAYOUTMARKETPLACESTORE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_marketplace_store_dashboard, LAYOUT_LAYOUTMARKETPLACESTOREDASHBOARD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_merchant, LAYOUT_LAYOUTMERCHANT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_merchant_sign_in, LAYOUT_LAYOUTMERCHANTSIGNIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_merchant_transaction_list_item, LAYOUT_LAYOUTMERCHANTTRANSACTIONLISTITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_moneygram, LAYOUT_LAYOUTMONEYGRAM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_passport, LAYOUT_LAYOUTPASSPORT);
@@ -569,6 +577,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for layout_fund_wallet is invalid. Received: " + tag);
       }
+      case  LAYOUT_LAYOUTFUNERALDONATIONS: {
+        if ("layout/layout_funeral_donations_0".equals(tag)) {
+          return new LayoutFuneralDonationsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_funeral_donations is invalid. Received: " + tag);
+      }
       case  LAYOUT_LAYOUTHOME: {
         if ("layout/layout_home_0".equals(tag)) {
           return new LayoutHomeBindingImpl(component, view);
@@ -659,12 +673,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for layout_marketplace_home is invalid. Received: " + tag);
       }
-      case  LAYOUT_LAYOUTMARKETPLACEITEM: {
-        if ("layout/layout_marketplace_item_0".equals(tag)) {
-          return new LayoutMarketplaceItemBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for layout_marketplace_item is invalid. Received: " + tag);
-      }
     }
     return null;
   }
@@ -672,6 +680,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
       View view, int internalId, Object tag) {
     switch(internalId) {
+      case  LAYOUT_LAYOUTMARKETPLACEITEM: {
+        if ("layout/layout_marketplace_item_0".equals(tag)) {
+          return new LayoutMarketplaceItemBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_marketplace_item is invalid. Received: " + tag);
+      }
       case  LAYOUT_LAYOUTMARKETPLACEITEMDESCRIPTION: {
         if ("layout/layout_marketplace_item_description_0".equals(tag)) {
           return new LayoutMarketplaceItemDescriptionBindingImpl(component, view);
@@ -707,6 +721,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           return new LayoutMerchantBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for layout_merchant is invalid. Received: " + tag);
+      }
+      case  LAYOUT_LAYOUTMERCHANTSIGNIN: {
+        if ("layout/layout_merchant_sign_in_0".equals(tag)) {
+          return new LayoutMerchantSignInBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_merchant_sign_in is invalid. Received: " + tag);
       }
       case  LAYOUT_LAYOUTMERCHANTTRANSACTIONLISTITEM: {
         if ("layout/layout_merchant_transaction_list_item_0".equals(tag)) {
@@ -963,7 +983,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(85);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(87);
 
     static {
       sKeys.put("layout/activity_payment_progress_0", com.woleapp.R.layout.activity_payment_progress);
@@ -1001,6 +1021,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/layout_dashboard_0", com.woleapp.R.layout.layout_dashboard);
       sKeys.put("layout/layout_fines_bails_0", com.woleapp.R.layout.layout_fines_bails);
       sKeys.put("layout/layout_fund_wallet_0", com.woleapp.R.layout.layout_fund_wallet);
+      sKeys.put("layout/layout_funeral_donations_0", com.woleapp.R.layout.layout_funeral_donations);
       sKeys.put("layout/layout_home_0", com.woleapp.R.layout.layout_home);
       sKeys.put("layout/layout_internet_subscription_0", com.woleapp.R.layout.layout_internet_subscription);
       sKeys.put("layout/layout_inventory_list_0", com.woleapp.R.layout.layout_inventory_list);
@@ -1023,6 +1044,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/layout_marketplace_store_0", com.woleapp.R.layout.layout_marketplace_store);
       sKeys.put("layout/layout_marketplace_store_dashboard_0", com.woleapp.R.layout.layout_marketplace_store_dashboard);
       sKeys.put("layout/layout_merchant_0", com.woleapp.R.layout.layout_merchant);
+      sKeys.put("layout/layout_merchant_sign_in_0", com.woleapp.R.layout.layout_merchant_sign_in);
       sKeys.put("layout/layout_merchant_transaction_list_item_0", com.woleapp.R.layout.layout_merchant_transaction_list_item);
       sKeys.put("layout/layout_moneygram_0", com.woleapp.R.layout.layout_moneygram);
       sKeys.put("layout/layout_passport_0", com.woleapp.R.layout.layout_passport);

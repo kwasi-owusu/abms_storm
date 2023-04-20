@@ -16,6 +16,7 @@ public class LayoutSsnitBindingImpl extends LayoutSsnitBinding  {
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.linearTitle, 1);
         sViewsWithIds.put(R.id.tvTitle, 2);
+        sViewsWithIds.put(R.id.etAccountNo, 3);
     }
     // views
     // variables
@@ -24,10 +25,11 @@ public class LayoutSsnitBindingImpl extends LayoutSsnitBinding  {
     // Inverse Binding Event Handlers
 
     public LayoutSsnitBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private LayoutSsnitBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (android.widget.EditText) bindings[3]
             , (android.widget.LinearLayout) bindings[1]
             , (android.widget.ScrollView) bindings[0]
             , (android.widget.TextView) bindings[2]

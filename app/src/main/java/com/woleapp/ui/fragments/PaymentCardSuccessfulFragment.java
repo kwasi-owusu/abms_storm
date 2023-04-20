@@ -201,8 +201,9 @@ public class PaymentCardSuccessfulFragment extends BaseFragment implements View.
 
             @Override
             public void onFinish() {
-                //  Toast.makeText(context, "Printing job finished", Toast.LENGTH_SHORT).show();
-                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                  Toast.makeText(context, "Printing job finished", Toast.LENGTH_SHORT).show();
+                  addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+              //  addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
             }
 
             @Override
