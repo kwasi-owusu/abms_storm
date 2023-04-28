@@ -8,6 +8,21 @@ import com.google.gson.annotations.SerializedName;
 @Entity(tableName = "agency_users")
 
 public class AgencyUser {
+    @SerializedName("merchID")
+    @Expose
+    private String merchID;
+
+    @SerializedName("merchantName")
+    @Expose
+    private String merchantName;
+
+    @SerializedName("apiKey")
+    @Expose
+    private String apiKey;
+
+    @SerializedName("merchToken")
+    @Expose
+    private String merchToken;
     @SerializedName("firstName")
     @Expose
     private String firstName;
@@ -126,5 +141,33 @@ public class AgencyUser {
 
     public String getToken() {
         return token;
+    }
+
+    public String getMerchToken() {
+        return merchToken;
+    }
+
+    public void setMerchToken(String merchToken) {
+        this.merchToken = merchToken;
+    }
+    public String getMerchID(){
+        return merchID;
+    }
+    public void setMerchID(String merchID){
+        this.merchID = merchID;
+    }
+    public String getApiKey(){
+        return apiKey;
+    }
+    public void setApiKey(String apiKey){
+        this.apiKey = apiKey;
+    }
+
+    public String getMerchantName() {
+        return merchantName;
+    }
+
+    public void setMerchantName(String merchantName) {
+        this.merchantName = merchantName;
     }
 }

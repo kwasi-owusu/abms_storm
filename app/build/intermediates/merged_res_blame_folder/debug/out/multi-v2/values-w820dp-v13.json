@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Project\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "outputFile": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\24fcda6cd75751545d754718b4c1b29b\\transformed\\jetified-androidtoggleswitch-1.2.2\\res\\values-w820dp-v13\\values-w820dp-v13.xml",

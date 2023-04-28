@@ -287,12 +287,13 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
             binding.etPwd.requestFocus();
         } else {
             if (ConnectivityReceiver.isConnected()) {
-                JsonObject jsonObject = new JsonObject();
-                jsonObject.addProperty("email", email);
-                jsonObject.addProperty("password", password);
+//                JsonObject jsonObject = new JsonObject();
+  //              jsonObject.addProperty("email", email);
+    //            jsonObject.addProperty("password", password);
 
 //                login(jsonObject);
-                agencyLogin(jsonObject);
+      //          agencyLogin(jsonObject);
+                merchantLogin(email, password);
             } else {
                 utilities.showDialogNoNetwork("You need an active internet connection to proceed. Would you like to enable it ?", getActivity());
             }
@@ -448,6 +449,56 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
 
     }
 
+    public void merchantLogin(String email, String Password){
+        showProgressBar();
+        String merchantEmail = email;
+        String merchantPassword = Password;
+
+        JsonObject loginDetails = new JsonObject();
+        loginDetails.addProperty("email", merchantEmail);
+        loginDetails.addProperty("password", merchantPassword);
+
+        Log.e("TRANSACTION_PAYLOAD", "transaction payload: " + loginDetails);
+        Disposable subscribe = AgencyBankingAPIClient
+                .agencyLogin(loginDetails, context)
+                .subscribe(res -> {
+                    if (res.code() != 200) {
+                        Toast.makeText(context, "Failed to process", Toast.LENGTH_SHORT).show();
+                        dismissProgressBar();
+                        return;
+                    }
+                    Object body = res.body();
+                    JSONObject response = new JSONObject(new Gson().toJson(body));
+                    Log.e("TRANSACTION_RESPONSE", "transaction response: " + response);
+                    if (response.optString("success").equals("false")){
+                        // if (response.optInt("code") != 112) {
+                        Toast.makeText(context, response.optString("message"), Toast.LENGTH_SHORT).show();
+                        dismissProgressBar();
+                        return;
+                    }
+                    //addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                    AgencyUser user = new AgencyUser();
+                    user.setMerchToken(response.optString("token"));
+                    user.setMerchID(response.optJSONObject("data").optJSONObject("merchantId").optString("_id"));
+                    user.setMerchantName(response.optJSONObject("data").optJSONObject("merchantId").optString("merchant_tradeName"));
+                    SharedPrefManager.setAgencyLoginStatus(true);
+
+                    SharedPrefManager.setAgencyUser(user);
+
+                    dismissProgressBar();
+                    Intent intent = new Intent(getActivity(), HomeActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    getActivity().finish();
+
+                    Log.e("TOKEN", "token " + response.optString("token"));
+                    Log.e("Response Body", "body " + response);
+                    Log.e("Merch ID", "merch id " + response.optJSONObject("data").optJSONObject("merchantId").optString("_id"));
+                }, err -> {
+                    Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
+                    dismissProgressBar();
+                });
+    }
     public void agencyLogin(JsonObject payload) {
         showProgressBar();
         Disposable subscribe = AgencyBankingAPIClient

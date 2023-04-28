@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                           
+
+    
+
+                                           
+
+                                                            
+
+                 
+                            
+                                                 
+
+                 
+                         
+                             
+
+                 
+                                    
+                                                          
+
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_gray"
+        android:orientation="vertical" android:tag="layout/layout_item_list_inventory_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@drawable/bg_rounded_white">
+
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="false"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toLeftOf="@id/btnDetails"
+                android:ellipsize="end"
+                android:fontFamily="@font/questrial"
+                android:gravity="left"
+                android:maxLines="2"
+                android:paddingTop="@dimen/padding_8"
+                android:paddingBottom="@dimen/padding_8"
+                android:tag="binding_1"                 
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_12sp"
+                android:textStyle="bold" />
+            <!--android:layout_toRightOf="@id/cardCalendar"-->
+            <TextView
+                android:id="@+id/btnDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:tag="binding_2"                                                           
+                android:drawablePadding="@dimen/text_margin_mini"
+                android:fontFamily="@font/questrial"
+                android:paddingTop="@dimen/text_margin_mini"
+                android:paddingBottom="@dimen/text_margin_mini"
+                android:text="Details"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_12sp"
+                android:textStyle="bold" />
+            <!--android:text="@{@string/lbl_currency_naira+inventory.price}"-->
+            <!--android:drawableTint="@color/red"-->
+
+
+            <!--android:background="@drawable/ripple_theme_no_radius"-->
+
+            <!--<Button
+                    android:id="@+id/btnDetails"
+                    android:drawableRight="@{isOpen? @drawable/arrow_up : @drawable/arrow_down_bigger}"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/text_margin_mini"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:paddingRight="@dimen/text_margin_mini"
+                    android:minHeight="@dimen/margin_40"
+                    android:background="@drawable/ripple_theme_no_radius"
+                    android:textAllCaps="true"
+                    android:text="DETAILS"
+                    android:textSize="@dimen/text_size_11sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/questrial"
+                    android:textStyle="bold" />-->
+
+
+            <!--android:drawableRight="@drawable/arrow_down_bigger"-->
+
+            <!--android:drawablePadding="@dimen/margin_5"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_5"-->
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:tag="binding_3"               
+            android:background="@drawable/bg_rounded_white">
+            <!--, default=false-->
+            <!--android:visibility="@{isOpen? View.VISIBLE : View.GONE}"-->
+
+            <!--android:layout_marginBottom="@dimen/margin_5"-->
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_toLeftOf="@id/ivProduct"
+                android:ellipsize="end"
+                android:fontFamily="@font/questrial"
+                android:maxLines="2"
+                android:tag="binding_4"                
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_12sp"
+                android:textStyle="bold" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tvColor"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/tvCategory"-->
+            <!--                android:layout_alignParentLeft="true"-->
+            <!--                android:layout_marginLeft="@dimen/margin_10"-->
+            <!--                android:layout_marginTop="@dimen/padding_8"-->
+            <!--                android:layout_toLeftOf="@id/ivProduct"-->
+            <!--                android:drawablePadding="@dimen/margin_5"-->
+            <!--                android:ellipsize="end"-->
+            <!--                android:fontFamily="@font/questrial"-->
+            <!--                android:maxLines="2"-->
+            <!--                android:text="@{`COLOR:`+` `+inventory.color_name}"-->
+            <!--                android:textAllCaps="true"-->
+            <!--                android:textColor="@color/colorBlack"-->
+            <!--                android:textSize="@dimen/text_size_12sp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:visibility="gone" />-->
+            <!--android:drawableTint="@{inventory.color_code}"-->
+            <!--android:drawableTint="@{inventory.color_code}"-->
+
+            <!--@{`COLOR:`+` `+inventory.color_name}
+            @{inventory.color_code}
+            android:drawableTint="#00FFFFF"-->
+
+            <!--<ImageView
+                    android:id="@+id/ivColor"
+                    android:layout_width="12dp"
+            android:layout_height="12dp"
+                       android:layout_below="@id/tvCategory"
+                       android:layout_marginTop="@dimen/padding_8"
+                       android:layout_toRightOf="@id/tvColor"
+                    android:layout_toLeftOf=""
+                    android:tint="@{inventory.color_code}"
+            />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tvSize"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/tvColor"-->
+            <!--                android:layout_alignParentLeft="true"-->
+            <!--                android:layout_marginLeft="@dimen/margin_10"-->
+            <!--                android:layout_marginTop="@dimen/padding_8"-->
+            <!--                android:fontFamily="@font/questrial"-->
+            <!--                android:singleLine="true"-->
+            <!--                android:text="@{`SIZE:`+` `+inventory.size}"-->
+            <!--                android:textAllCaps="true"-->
+            <!--                android:textColor="@color/colorBlack"-->
+            <!--                android:textSize="@dimen/text_size_12sp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:visibility="gone" />-->
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCategory"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/padding_8"
+                android:fontFamily="@font/questrial"
+                android:singleLine="true"
+                android:tag="binding_5"                             
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvQuantity"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/padding_8"
+                android:fontFamily="@font/questrial"
+                android:singleLine="true"
+                android:tag="binding_6"                                     
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_12sp"
+                android:textStyle="bold" />
+
+
+            <!--android:text="@{@string/lbl_currency_naira+inventory.price}"-->
+
+            <Button
+                android:id="@+id/btnSell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPrice"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_marginBottom="@dimen/padding_8"
+                android:background="@drawable/ripple_theme_no_radius"
+                android:fontFamily="@font/questrial"
+                android:minWidth="50dp"
+                android:minHeight="@dimen/margin_30"
+                android:tag="binding_7"                         
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:text="SELL"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_13sp"
+                android:textStyle="bold" />
+            <!--android:layout_below="@id/tvQuantity"-->
+
+            <ImageButton
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/btnSell"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_toRightOf="@id/btnSell"
+                android:background="?attr/selectableItemBackground"
+                android:minWidth="30dp"
+                android:minHeight="@dimen/margin_30"
+                android:tag="binding_8"                         
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <ImageButton
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/btnSell"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_toRightOf="@id/btn_edit"
+                android:background="?attr/selectableItemBackground"
+                android:minWidth="30dp"
+                android:minHeight="@dimen/margin_30"
+                android:tag="binding_9"                         
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_delete_forever" />
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/tvCategory"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_5"
+                android:scaleType="fitEnd" />
+            <!--app:onClickAttachment="@{onClickAttachment}"-->
+
+            <!--android:src="@{inventory.image_path}"-->
+
+            <!--iimage_path="@{inventory.image_path}"-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+         

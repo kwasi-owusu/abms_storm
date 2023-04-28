@@ -306,66 +306,6 @@
                 </LinearLayout>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardCollection"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/linearPrice"
-                    android:layout_marginTop="@dimen/margin_30"
-                    android:clickable="true"
-                    android:elevation="3dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/colorWhite"
-                    app:cardElevation="3dp"
-                    custom:cardCornerRadius="2dp">
-                    <!--android:layout_marginLeft="@dimen/text_margin_mini"
-                    android:layout_marginRight="@dimen/text_margin_mini"-->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/margin_15"
-                        android:orientation="horizontal"
-                        android:paddingTop="@dimen/margin_20"
-                        android:paddingBottom="@dimen/margin_20">
-
-                        <TextView
-                            android:id="@+id/tvCardCollection"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="20dp"
-                            android:fontFamily="@font/questrial"
-                            android:text="Card Payment"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="@dimen/text_size_14sp"
-                            android:textStyle="bold" />
-
-                        <ImageView
-                            android:id="@+id/firstimage"
-                            android:layout_width="100dp"
-                            android:layout_height="30dp"
-                            android:layout_toRightOf="@id/tvCardCollection"
-                            android:src="@drawable/mastercard_visa_edit" />
-
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="30dp"
-                            android:layout_toRightOf="@id/firstimage"
-                            android:src="@drawable/verve" />
-
-
-                        <ImageView
-                            android:layout_width="@dimen/margin_20"
-                            android:layout_height="@dimen/margin_20"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="@dimen/margin_15"
-                            android:rotation="180"
-                            android:src="@drawable/back" />
-
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
                     android:id="@+id/cashCollection"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -374,7 +314,7 @@
                     android:clickable="true"
                     android:elevation="3dp"
                     android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardBackgroundColor="@color/semi_transparent_gray"
                     app:cardElevation="3dp"
                     custom:cardCornerRadius="2dp">
                     <!--android:layout_marginLeft="@dimen/text_margin_mini"
@@ -426,7 +366,7 @@
                     android:clickable="true"
                     android:elevation="3dp"
                     android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardBackgroundColor="@color/semi_transparent_gray"
                     app:cardElevation="3dp"
                     custom:cardCornerRadius="2dp">
                     <!--android:layout_marginLeft="@dimen/text_margin_mini"
@@ -456,6 +396,65 @@
                             android:layout_height="@dimen/margin_20"
                             android:layout_toRightOf="@id/tvReadCard"
                             android:src="@drawable/ic_online_shopping" />
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:rotation="180"
+                            android:src="@drawable/back" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCollection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearPrice"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/semi_transparent_gray"
+                    app:cardElevation="3dp"
+                    custom:cardCornerRadius="2dp">
+                    <!--android:layout_marginLeft="@dimen/text_margin_mini"
+                    android:layout_marginRight="@dimen/text_margin_mini"-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_20">
+
+                        <TextView
+                            android:id="@+id/tvCardCollection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:fontFamily="@font/questrial"
+                            android:text="Card Payment"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/firstimage"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_toRightOf="@id/tvCardCollection"
+                            android:src="@drawable/mastercard_visa_edit" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_toRightOf="@id/firstimage"
+                            android:src="@drawable/verve" />
 
                         <ImageView
                             android:layout_width="@dimen/margin_20"

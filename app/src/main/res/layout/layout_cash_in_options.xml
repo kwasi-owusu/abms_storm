@@ -168,7 +168,7 @@
                     android:clickable="true"
                     android:elevation="3dp"
                     android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardBackgroundColor="@color/semi_transparent_gray"
                     app:cardElevation="3dp"
                     custom:cardCornerRadius="2dp">
                     <!--android:layout_marginLeft="@dimen/text_margin_mini"

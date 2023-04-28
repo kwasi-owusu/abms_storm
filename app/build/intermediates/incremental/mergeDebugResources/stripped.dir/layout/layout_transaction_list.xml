@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+                                                       
+                                                          
+                                                   
+    <!--    xmlns:app="http://schemas.android.com/tools"-->
+
+    
+
+                                           
+
+                 
+                            
+                             
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical" android:tag="layout/layout_transaction_list_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:id="@+id/linearHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/questrial"
+                android:padding="@dimen/margin_10"
+                android:text="@string/lbl_view_transactions"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/channel_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/services_edittext_background_disabled"
+            android:entries="@array/channel"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearHeader" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/search_by_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:background="@drawable/services_edittext_background_disabled"
+            android:entries="@array/search_by"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/channel_spinner" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_down_bigger"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/channel_spinner"
+            app:layout_constraintEnd_toEndOf="@id/channel_spinner"
+            app:layout_constraintTop_toTopOf="@id/channel_spinner" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_down_bigger"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/search_by_spinner"
+            app:layout_constraintEnd_toEndOf="@id/search_by_spinner"
+            app:layout_constraintTop_toTopOf="@id/search_by_spinner" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearHeader"
+            android:layout_marginLeft="@dimen/margin_40"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_40"
+            android:background="@drawable/bg_rounded_white"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789"
+            android:drawableRight="@drawable/search"
+            android:drawablePadding="@dimen/margin_10"
+            android:drawableTint="@color/colorBack"
+            android:fontFamily="@font/questrial"
+            android:hint="@string/hint_search_product"
+            android:imeOptions="actionDone"
+            android:inputType="text|textCapWords"
+            android:maxLength="60"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBack"
+            android:textSize="@dimen/text_size_14sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearHeader" />
+        <!--android:background="@drawable/bg_rounded_theme"-->
+
+
+        <LinearLayout
+            android:id="@+id/table_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/channel_spinner">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/services_edittext_background"
+                android:fontFamily="@font/questrial"
+                android:padding="8dp"
+                android:text="@string/sn"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/services_edittext_background"
+                android:fontFamily="@font/questrial"
+                android:padding="8dp"
+                android:text="@string/transaction_type"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/services_edittext_background"
+                android:fontFamily="@font/questrial"
+                android:padding="8dp"
+                android:text="@string/hint_customer_name"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/services_edittext_background"
+                android:fontFamily="@font/questrial"
+                android:padding="8dp"
+                android:text="@string/hint_amount"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/services_edittext_background"
+                android:fontFamily="@font/questrial"
+                android:padding="8dp"
+                android:text="@string/status"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvInventories"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/etSearch"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layoutAnimation="@anim/layout_animation_fall_down"
+            android:paddingBottom="@dimen/margin_10"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/table_header"
+            tools:listitem="@layout/layout_item_list_inventory" />
+
+
+        <TextView
+            android:id="@+id/tvNoResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/muli_light"
+            android:gravity="center"
+            android:text="You don't have any Inventories yet"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--<LinearLayout
+                android:id="@+id/linearNoResults"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+            <TextView
+                    android:id="@+id/tvNoResults"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:fontFamily="@font/muli_light"
+                    android:textColor="@color/colorBlack"
+                    android:text="No Results"
+            />
+
+
+
+        </LinearLayout>-->
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avloadingIndicatorView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:tag="binding_1"                                                
+            app:indicatorColor="@color/colorPrimary"
+            app:indicatorName="BallSpinFadeLoader"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

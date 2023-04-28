@@ -10,6 +10,7 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -33,12 +34,18 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.netpluspay.netpossdk.NetPosSdk;
+import com.pos.sdk.printer.POIPrinterManage;
+import com.pos.sdk.printer.models.BitmapPrintLine;
+import com.pos.sdk.printer.models.PrintLine;
+import com.pos.sdk.printer.models.TextPrintLine;
 import com.woleapp.R;
 import com.woleapp.databinding.LayoutCardWebviewBinding;
 import com.woleapp.model.MerchantTransaction;
 import com.woleapp.network.AgencyBankingService;
 import com.woleapp.network.MerchantsApiClient;
 import com.woleapp.network.StormAPIClient;
+import com.woleapp.util.SharedPrefManager;
 import com.woleapp.util.Utilities;
 import com.woleapp.viewmodels.PaymentViewModel;
 
@@ -56,6 +63,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import timber.log.Timber;
 
 public class CardWebViewFragment extends BaseFragment{
     Context context;
@@ -71,6 +79,7 @@ public class CardWebViewFragment extends BaseFragment{
     private String ref;
     private String issuer;
     private String amount;
+    private static String merchantName = SharedPrefManager.getAgencyUser().getMerchantName();
     public CardWebViewFragment(String cardTransactionId, String token, String name, String number, String ref, String issuer, String amount){
         this.cardTransactionId = cardTransactionId;
         this.token = token;
@@ -157,16 +166,17 @@ public class CardWebViewFragment extends BaseFragment{
                             Log.e("TransID", "TransID " + responses.optString("transactionId"));
                             ref = responses.optString("reference");
 
-                           /* if (ress.code() != 200) {
+                            if (ress.code() != 200) {
                                 Toast.makeText(context, "Failed to process transaction, Please try again", Toast.LENGTH_SHORT).show();
                                 addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                                 dismissProgressBar();
                                 return;
-                            }*/
+                            }
 
                             if (responses.optString("status").equals("paid")) {
                                 //addFragmentWithoutRemove(R.id.container_main, new PaymentSuccessfulFragment(name, number, ref, issuer, amount), PaymentSuccessfulFragment.class.getSimpleName());
-                                addFragmentWithoutRemove(R.id.container_main, new PaymentCardSuccessfulFragment(name,ref, amount), PaymentCardSuccessfulFragment.class.getSimpleName());
+                                printReceipt(ref);
+                                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                                 timer.cancel();
                                 dismissProgressBar();
                                 Log.e("TRANSACTION_Status_Paid", "paid " + responses.optString("status"));
@@ -178,7 +188,8 @@ public class CardWebViewFragment extends BaseFragment{
                                 Log.e("TRANSACTION_Status_Pend", "pending " + responses.optString("status"));
                             }
                             else if (responses.optString("status").equals("failed")) {
-                                addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());
+                                Toast.makeText(context, "Payment Failed", Toast.LENGTH_LONG).show();
+                                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                                 timer.cancel();
                                 dismissProgressBar();
                                 Log.e("TRANS_Status_Failed", "failed " + responses.optString("status"));
@@ -187,16 +198,264 @@ public class CardWebViewFragment extends BaseFragment{
                                 Toast.makeText(context, "Please try again", Toast.LENGTH_SHORT).show();
                                 timer.cancel();
                                 dismissProgressBar();
-                                addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());
+                                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                             }
                         }, err -> {
-                            //Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
+                            Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
                             dismissProgressBar();
                         });
             }
         }, 0, INTERVAL);
     }
 
+    private void printReceipt(String ref) {
+        POIPrinterManage printerManage = NetPosSdk.getPrinterManager(context);
+        printerManage.setLineSpace(2);
+        printerManage.setPrintGray(3000);
+        printerManage.cleanCache();
+
+        TextPrintLine textPrintLine = new TextPrintLine();
+        textPrintLine.setType(PrintLine.TEXT);
+        textPrintLine.setContent(merchantName);
+        textPrintLine.setBold(true);
+        textPrintLine.setItalic(false);
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(TextPrintLine.FONT_LARGE);
+
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("----------------------------------------------------" +
+                "--------------------------------------------");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent(" ");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Amount: " + "GH₵" +(amount));
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Ref No.: " + ref);
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Date: " + utilities.getTodaysDate());
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Time: " + utilities.getTodaysTime());
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent(" ");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Transaction Successful");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("--------------------------------------------------------------");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("THANK YOU");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Powered by Bsystems Limited");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("0302-254-340");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        Bitmap bitmap =
+                BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.bsystemslogo);
+        bitmap = Bitmap.createScaledBitmap(bitmap, 150, 100, false);
+
+        BitmapPrintLine bitmapPrintLine = new BitmapPrintLine();
+        bitmapPrintLine.setType(PrintLine.BITMAP);
+        bitmapPrintLine.setBitmap(bitmap);
+        bitmapPrintLine.setPosition(PrintLine.CENTER);
+
+        printerManage.addPrintLine(bitmapPrintLine);
+
+        printerManage.beginPrint(new POIPrinterManage.IPrinterListener() {
+            @Override
+            public void onError(int i, String s) {
+                Timber.e("Printer error with code " + i + " and message" + s);
+                Toast.makeText(context, "Printer Error", Toast.LENGTH_SHORT).show();
+                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+            }
+
+            @Override
+            public void onFinish() {
+               // printSecondReceipt(ref);
+                Toast.makeText(context, "Printing job finished", Toast.LENGTH_SHORT).show();
+                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                 // addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+            }
+
+            @Override
+            public void onStart() {
+                Toast.makeText(context, "Printing job started", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    private void printSecondReceipt(String ref) {
+        POIPrinterManage printerManage = NetPosSdk.getPrinterManager(context);
+        printerManage.setLineSpace(2);
+        printerManage.setPrintGray(3000);
+        printerManage.cleanCache();
+
+        TextPrintLine textPrintLine = new TextPrintLine();
+        textPrintLine.setType(PrintLine.TEXT);
+        textPrintLine.setContent(merchantName);
+        textPrintLine.setBold(true);
+        textPrintLine.setItalic(false);
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(TextPrintLine.FONT_LARGE);
+
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("----------------------------------------------------" +
+                "--------------------------------------------");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent(" ");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Amount: " + "GH₵" +(amount));
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Ref No.: " + ref);
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Date: " + utilities.getTodaysDate());
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Time: " + utilities.getTodaysTime());
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent(" ");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Transaction Successful");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("--------------------------------------------------------------");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("THANK YOU");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Powered by Bsystems Limited");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("0302-254-340");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        Bitmap bitmap =
+                BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.bsystemslogo);
+        bitmap = Bitmap.createScaledBitmap(bitmap, 150, 100, false);
+
+        BitmapPrintLine bitmapPrintLine = new BitmapPrintLine();
+        bitmapPrintLine.setType(PrintLine.BITMAP);
+        bitmapPrintLine.setBitmap(bitmap);
+        bitmapPrintLine.setPosition(PrintLine.CENTER);
+
+        printerManage.addPrintLine(bitmapPrintLine);
+
+        printerManage.beginPrint(new POIPrinterManage.IPrinterListener() {
+            @Override
+            public void onError(int i, String s) {
+                Timber.e("Printer error with code " + i + " and message" + s);
+                Toast.makeText(context, "Printer Error", Toast.LENGTH_SHORT).show();
+                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+            }
+
+            @Override
+            public void onFinish() {
+                Toast.makeText(context, "Printing job finished", Toast.LENGTH_SHORT).show();
+                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                //  addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+            }
+
+            @Override
+            public void onStart() {
+                Toast.makeText(context, "Printing job started", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
     private AgencyBankingService transRetrofit = new Retrofit.Builder()
             .baseUrl("https://peoplespay.com.gh")
             .client(getClient())

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" android:tag="layout/layout_agent_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:id="@+id/linearFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorBlack"
+                android:theme="@style/InputLayout">
+                <!--                android:textColorHint="@color/text_color_gray_dark"-->
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/questrial"
+                    android:hint="@string/hint_name"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLength="60"
+                    android:nextFocusDown="@id/etEmail"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputUname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/colorBlack"
+                android:theme="@style/InputLayout">
+                <!--                android:textColorHint="@color/text_color_gray_dark"-->
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:digits="abcdefghijklmnopqrstuvwxyz0123456789._@"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/questrial"
+                    android:hint="@string/hint_email_caps"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:nextFocusDown="@id/etPwd"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/black"
+                android:theme="@style/InputLayout"
+                app:passwordToggleEnabled="false"
+                app:passwordToggleTint="@color/colorBlack">
+                <!--            app:passwordToggleDrawable="@drawable/password_selector"-->
+                <!--            android:layout_marginTop="5dp"-->
+                <EditText
+                    android:id="@+id/etPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:fontFamily="@font/questrial"
+                    android:hint="@string/hint_create_password"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/etConfirmPwd"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="15sp" />
+                <!--            android:drawablePadding="5dp"-->
+                <!--                com.google.android.material.textfield.TextInputEditText-->
+                <!--                android:inputType="textPassword"-->
+
+                <!--<com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_user_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_pwd"
+                    android:hint="   Password"
+                    android:inputType="textPassword"
+                    android:nextFocusDown="@id/btn_login"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:fontFamily="@font/muli_light"
+                    android:textSize="20sp" />-->
+
+                <!--<EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_user_pwd"
+                    android:drawableLeft="@drawable/ic_pwd"
+                    android:hint="   Password"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:nextFocusDown="@id/btn_login"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="20sp" />-->
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputConfirmPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/black"
+                android:theme="@style/InputLayout"
+                app:passwordToggleEnabled="false"
+                app:passwordToggleTint="@color/colorBlack">
+                <!--            app:passwordToggleDrawable="@drawable/password_selector"-->
+                <!--            android:layout_marginTop="5dp"-->
+
+                <EditText
+                    android:id="@+id/etConfirmPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/questrial"
+                    android:hint="@string/hint_re_enter_password"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/etPhone"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="15sp" />
+                <!--                com.google.android.material.textfield.TextInputEditText-->
+                <!--                android:inputType="textPassword"-->
+
+                <!--<com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_user_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_pwd"
+                    android:hint="   Password"
+                    android:inputType="textPassword"
+                    android:nextFocusDown="@id/btn_login"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:fontFamily="@font/muli_light"
+                    android:textSize="20sp" />-->
+
+                <!--<EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_user_pwd"
+                    android:drawableLeft="@drawable/ic_pwd"
+                    android:hint="   Password"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:nextFocusDown="@id/btn_login"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="20sp" />-->
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--        <LinearLayout-->
+            <!--                android:id="@+id/linearMerchantView"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="vertical">-->
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                    android:id="@+id/textInputPwd"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="10dp"-->
+            <!--                    android:textColorHint="@android:color/black"-->
+            <!--                    app:passwordToggleEnabled="false"-->
+            <!--                    app:passwordToggleTint="@color/colorBlack"-->
+            <!--                    android:theme="@style/InputLayout">-->
+
+            <!--                <EditText-->
+            <!--                        android:id="@+id/etPwd"-->
+            <!--                        android:background="@drawable/edittext_bg"-->
+            <!--                        android:drawableRight="@drawable/drawable_pwd"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:drawablePadding="8dp"-->
+            <!--                        android:hint="@string/hint_enter_password"-->
+            <!--                        android:inputType="text"-->
+            <!--                        android:fontFamily="@font/questrial"-->
+            <!--                        android:nextFocusDown="@id/etConfirmPwd"-->
+            <!--                        android:singleLine="true"-->
+            <!--                        android:textColor="@android:color/black"-->
+            <!--                        android:textColorHint="@android:color/black"-->
+            <!--                        android:textSize="15sp"-->
+            <!--                />-->
+            <!--                &lt;!&ndash;                com.google.android.material.textfield.TextInputEditText&ndash;&gt;-->
+            <!--                &lt;!&ndash;                android:inputType="textPassword"&ndash;&gt;-->
+
+            <!--                &lt;!&ndash;<com.google.android.material.textfield.TextInputEditText-->
+            <!--                    android:id="@+id/et_user_pwd"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:drawableLeft="@drawable/ic_pwd"-->
+            <!--                    android:hint="   Password"-->
+            <!--                    android:inputType="textPassword"-->
+            <!--                    android:nextFocusDown="@id/btn_login"-->
+            <!--                    android:singleLine="true"-->
+            <!--                    android:textColor="@android:color/black"-->
+            <!--                    android:textColorHint="@android:color/black"-->
+            <!--                    android:fontFamily="@font/muli_light"-->
+            <!--                    android:textSize="20sp" />&ndash;&gt;-->
+
+            <!--                &lt;!&ndash;<EditText-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:id="@+id/et_user_pwd"-->
+            <!--                    android:drawableLeft="@drawable/ic_pwd"-->
+            <!--                    android:hint="   Password"-->
+            <!--                    android:singleLine="true"-->
+            <!--                    android:inputType="textPassword"-->
+            <!--                    android:nextFocusDown="@id/btn_login"-->
+            <!--                    android:textColor="@android:color/black"-->
+            <!--                    android:textColorHint="@android:color/black"-->
+            <!--                    android:textSize="20sp" />&ndash;&gt;-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                    android:id="@+id/textInputConfirmPwd"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="10dp"-->
+            <!--                    android:textColorHint="@android:color/black"-->
+            <!--                    app:passwordToggleEnabled="false"-->
+            <!--                    app:passwordToggleTint="@color/colorBlack"-->
+            <!--                    android:theme="@style/InputLayout">-->
+
+            <!--                <EditText-->
+            <!--                        android:id="@+id/etConfirmPwd"-->
+            <!--                        android:background="@drawable/edittext_bg"-->
+            <!--                        android:drawableRight="@drawable/drawable_pwd"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:drawablePadding="8dp"-->
+            <!--                        android:hint="@string/hint_re_enter_password"-->
+            <!--                        android:inputType="text"-->
+            <!--                        android:fontFamily="@font/questrial"-->
+            <!--                        android:nextFocusDown="@id/btn_login"-->
+            <!--                        android:singleLine="true"-->
+            <!--                        android:textColor="@android:color/black"-->
+            <!--                        android:textColorHint="@android:color/black"-->
+            <!--                        android:textSize="15sp"-->
+            <!--                />-->
+            <!--                &lt;!&ndash;                com.google.android.material.textfield.TextInputEditText&ndash;&gt;-->
+            <!--                &lt;!&ndash;                android:inputType="textPassword"&ndash;&gt;-->
+
+            <!--                &lt;!&ndash;<com.google.android.material.textfield.TextInputEditText-->
+            <!--                    android:id="@+id/et_user_pwd"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:drawableLeft="@drawable/ic_pwd"-->
+            <!--                    android:hint="   Password"-->
+            <!--                    android:inputType="textPassword"-->
+            <!--                    android:nextFocusDown="@id/btn_login"-->
+            <!--                    android:singleLine="true"-->
+            <!--                    android:textColor="@android:color/black"-->
+            <!--                    android:textColorHint="@android:color/black"-->
+            <!--                    android:fontFamily="@font/muli_light"-->
+            <!--                    android:textSize="20sp" />&ndash;&gt;-->
+
+            <!--                &lt;!&ndash;<EditText-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:id="@+id/et_user_pwd"-->
+            <!--                    android:drawableLeft="@drawable/ic_pwd"-->
+            <!--                    android:hint="   Password"-->
+            <!--                    android:singleLine="true"-->
+            <!--                    android:inputType="textPassword"-->
+            <!--                    android:nextFocusDown="@id/btn_login"-->
+            <!--                    android:textColor="@android:color/black"-->
+            <!--                    android:textColorHint="@android:color/black"-->
+            <!--                    android:textSize="20sp" />&ndash;&gt;-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+            <!--        </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/linearAgentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/colorBlack"
+                    android:theme="@style/InputLayout">
+                    <!--                android:textColorHint="@color/text_color_gray_dark"-->
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/questrial"
+                        android:hint="@string/hint_phone_caps"
+                        android:inputType="number"
+                        android:maxLength="14"
+                        android:nextFocusDown="@id/etAccNumber"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputAccNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/colorBlack"
+                    android:theme="@style/InputLayout">
+                    <!--                android:textColorHint="@color/text_color_gray_dark"-->
+
+                    <EditText
+                        android:id="@+id/etAccNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/questrial"
+                        android:hint="@string/hint_account_no"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:nextFocusDown="@id/spnBank"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_bg">
+                    <!--<com.woleapp.ui.widgets.CustomSpinner1
+                            android:id="@+id/spnBank"
+                            android:prompt="@string/hint_choose_bank_caps"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="15sp"
+                    />-->
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spnBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:prompt="@string/hint_choose_bank_caps"
+                        android:spinnerMode="dropdown"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="15sp" />
+                    <!--                android:entries="@array/banks"-->
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputBVNNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/colorBlack"
+                    android:theme="@style/InputLayout">
+                    <!--                android:textColorHint="@color/text_color_gray_dark"-->
+
+                    <EditText
+                        android:id="@+id/etBVNNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/questrial"
+                        android:hint="@string/hint_bvn_no"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                    android:id="@+id/textInputBank"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:textColorHint="@color/colorBlack"-->
+            <!--                    android:theme="@style/InputLayout">-->
+            <!--            <com.woleapp.ui.widgets.CustomSpinner1-->
+            <!--                    android:id="@+id/spnQuestion"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:spinnerMode="dropdown"-->
+            <!--                    android:textColorHint="@color/colorBlack"-->
+            <!--                    android:textSize="@dimen/text_size_14sp"-->
+            <!--            />-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/txt_forgot_pwd"-->
+            <!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+            <!--                android:clickable="true"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="right"-->
+            <!--                android:layout_marginTop="16dp"-->
+            <!--                android:text="FORGOT PASSWORD?"-->
+            <!--                android:paddingTop="3dp"-->
+            <!--                android:paddingBottom="3dp"-->
+            <!--                android:textColor="@color/colorBlack"-->
+            <!--                android:fontFamily="@font/questrial"-->
+            <!--                android:textSize="13sp" />-->
+
+        </LinearLayout>
+    </FrameLayout>
+         

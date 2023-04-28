@@ -20,7 +20,7 @@ import retrofit2.http.Path;
 
 public interface AgencyBankingService {
 
-    @POST("api/auth/login")
+    @POST("/peoplepay/merchants/login")
     Observable<Response<Object>> agencyLogin(@Body JsonObject payload);
 
     @POST("api/auth/change_password")

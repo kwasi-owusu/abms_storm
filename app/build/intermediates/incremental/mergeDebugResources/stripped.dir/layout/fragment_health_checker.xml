@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+
+                 
+                            
+                                                                   
+           
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar" android:tag="layout/fragment_health_checker_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/health_checker_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:contentDescription="@string/health_checker"
+                android:paddingHorizontal="@dimen/margin_12"
+                android:src="@drawable/ic_health_checker"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/header_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_light"
+                app:layout_constraintEnd_toEndOf="@id/health_checker_header"
+                app:layout_constraintStart_toStartOf="@id/health_checker_header"
+                app:layout_constraintTop_toBottomOf="@id/health_checker_header" />
+
+            <TextView
+                android:id="@+id/note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="@dimen/margin_12"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="@dimen/padding_8"
+                android:text="@string/health_checker_please_fill_form"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header_line" />
+
+            <View
+                android:id="@+id/note_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_light"
+                app:layout_constraintEnd_toEndOf="@id/note"
+                app:layout_constraintStart_toStartOf="@id/note"
+                app:layout_constraintTop_toBottomOf="@id/note" />
+
+            <TextView
+                android:id="@+id/type_of_case_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:text="@string/type_of_case"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/note_line" />
+
+            <TextView
+                android:id="@+id/type_of_case_note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:text="@string/select_if_new_or_follow_up"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/type_of_case_header" />
+
+
+            <RadioGroup
+                android:id="@+id/new_or_follow_up_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/type_of_case_note"
+                app:layout_constraintTop_toBottomOf="@id/type_of_case_note">
+
+                <RadioButton
+                    android:id="@+id/new_case"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_1"                                                
+                                                                                             
+                    android:text="@string/new_case" />
+
+                <RadioButton
+                    android:id="@+id/follow_up_case"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_4"
+                    android:tag="binding_2"                                                 
+                                                                                              
+                    android:text="@string/follow_up_case" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/follow_up_code"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="@string/follow_up_code"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/type_of_case_note"
+                app:layout_constraintStart_toStartOf="@id/new_or_follow_up_option"
+                app:layout_constraintTop_toBottomOf="@id/new_or_follow_up_option">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="binding_3"                                       />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/customers_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:gravity="center_horizontal"
+                android:text="@string/customer_s_details"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/follow_up_code" />
+
+            <TextView
+                android:id="@+id/customer_details_case_note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:text="@string/please_fill_select_the_correct_customer_detail_below"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customers_details" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/last_name"
+                app:layout_constraintEnd_toEndOf="@id/type_of_case_note"
+                app:layout_constraintStart_toStartOf="@id/type_of_case_note"
+                app:layout_constraintTop_toBottomOf="@id/customer_details_case_note">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:tag="binding_4"                                  />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:hint="@string/first_name"
+                app:layout_constraintEnd_toEndOf="@id/type_of_case_note"
+                app:layout_constraintStart_toStartOf="@id/type_of_case_note"
+                app:layout_constraintTop_toBottomOf="@id/lastname">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="binding_5"                                   />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dateofbirth"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:hint="@string/date_of_birth"
+                app:layout_constraintEnd_toEndOf="@id/type_of_case_note"
+                app:layout_constraintStart_toStartOf="@id/type_of_case_note"
+                app:layout_constraintTop_toBottomOf="@id/firstname">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:tag="binding_6"                                     />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/telephone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:hint="@string/phone_number"
+                app:layout_constraintEnd_toEndOf="@id/type_of_case_note"
+                app:layout_constraintStart_toStartOf="@id/type_of_case_note"
+                app:layout_constraintTop_toBottomOf="@id/dateofbirth">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:tag="binding_7"                               />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/gender_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:text="@string/sex"
+                app:layout_constraintStart_toStartOf="@id/type_of_case_note"
+                app:layout_constraintTop_toBottomOf="@id/telephone" />
+
+            <RadioGroup
+                android:id="@+id/gender_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/gender_header"
+                app:layout_constraintTop_toBottomOf="@id/gender_header">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_8"                                    
+                                                                                 
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_4"
+                    android:tag="binding_9"                                      
+                                                                                   
+                    android:text="@string/female" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/communication_method_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:text="@string/preferred_means_of_communication"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gender_option" />
+
+            <TextView
+                android:id="@+id/communication_method_note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:text="@string/please_select_customer_s_preferred_way_to_communicate_with_consultant"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/communication_method_header" />
+
+            <RadioGroup
+                android:id="@+id/communication_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/gender_header"
+                app:layout_constraintTop_toBottomOf="@id/communication_method_note">
+
+                <RadioButton
+                    android:id="@+id/sms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_10"                               
+                                                                             
+                    android:text="@string/via_sms" />
+
+                <RadioButton
+                    android:id="@+id/phone_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_4"
+                    android:tag="binding_11"                                 
+                                                                               
+                    android:text="@string/via_phone_call" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue"
+                android:tag="binding_12"                           
+                android:paddingHorizontal="48dp"
+                android:text="@string/pay_submit"
+                android:textColor="@android:color/white"
+                                                              
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/communication_option"
+                tools:ignore="UnusedAttribute" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:elevation="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/submit_button"
+                app:layout_constraintEnd_toEndOf="@id/submit_button"
+                app:layout_constraintTop_toTopOf="@id/submit_button"
+                android:tag="binding_13"                           
+                tools:targetApi="lollipop" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+         

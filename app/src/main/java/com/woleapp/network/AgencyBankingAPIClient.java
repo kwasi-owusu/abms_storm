@@ -129,11 +129,11 @@ public class AgencyBankingAPIClient {
 //        return agencyPPay;
 ////    }
     //if using token, add it to the arguments
-    public static Observable<Response<Object>> agencyLogin(JsonObject payload, Context context) {
-        return AgencyBankingAPIClient.createDefault(context).agencyLogin(payload)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
-    }
+public static Observable<Response<Object>> agencyLogin(JsonObject payload, Context context) {
+    return AgencyBankingAPIClient.createPPay(context).agencyLogin(payload)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread());
+}
 
     public static Observable<Response<Object>> changePassword(JsonObject payload, Context context) {
         return AgencyBankingAPIClient.createDefault(context).changePassword(payload)

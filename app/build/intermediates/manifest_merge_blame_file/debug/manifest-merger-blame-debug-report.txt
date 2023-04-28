@@ -6,38 +6,38 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
-8-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+8-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+9-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.VIBRATE" />
-11-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:7:5-66
-11-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:7:22-63
+11-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:7:5-66
+11-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:7:22-63
 12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-12-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:8:5-81
-12-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:8:22-78
+12-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:8:5-81
+12-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:8:22-78
 13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-13-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:9:5-74
-13-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:9:22-72
+13-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:9:5-74
+13-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:9:22-72
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:10:5-67
-14-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:10:22-64
+14-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:10:5-67
+14-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:10:22-64
 15    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-15-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:11:5-79
-15-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:11:22-76
+15-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:11:5-79
+15-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:11:22-76
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:12:5-79
-16-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:12:22-76
+16-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:12:5-79
+16-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:12:22-76
 17    <uses-permission android:name="android.permission.BLUETOOTH" />
-17-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:13:5-68
-17-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:13:22-65
+17-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:13:5-68
+17-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:13:22-65
 18    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-18-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:14:5-74
-18-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:14:22-71
+18-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:14:5-74
+18-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:14:22-71
 19
 20    <uses-feature android:name="android.hardware.camera" />
-20-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:16:5-60
-20-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:16:19-57
+20-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:16:5-60
+20-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:16:19-57
 21
 22    <!--
 23Starting with Android M, Bluetooth LE scanning in the background is
@@ -58,8 +58,8 @@
 38    that the app can't do the bluetooth activity
 39    -->
 40    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-40-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:5-81
-40-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:22-78
+40-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:5-81
+40-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:22-78
 41    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 41-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:15:5-76
 41-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:15:22-73
@@ -77,67 +77,67 @@
 45-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\d942c11f03f1e78832e324209cd39df5\transformed\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:26:22-107
 46
 47    <application
-47-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:38:5-151:19
+47-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:38:5-151:19
 48        android:name="com.woleapp.util.StormApplication"
-48-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:39:9-46
+48-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:39:9-46
 49        android:allowBackup="true"
-49-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:40:9-35
+49-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:40:9-35
 50        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 50-->[androidx.core:core:1.3.2] C:\Users\Meshach\.gradle\caches\transforms-3\276804679e493f35ebb42d03b899fa76\transformed\core-1.3.2\AndroidManifest.xml:24:18-86
 51        android:debuggable="true"
 52        android:icon="@drawable/pp"
-52-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:41:9-36
+52-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:41:9-36
 53        android:label="@string/app_name"
-53-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:42:9-41
+53-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:42:9-41
 54        android:roundIcon="@drawable/pp"
-54-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:43:9-41
+54-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:43:9-41
 55        android:supportsRtl="true"
-55-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:44:9-35
+55-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:44:9-35
 56        android:testOnly="true"
 57        android:theme="@style/AppTheme"
-57-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:45:9-40
+57-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:45:9-40
 58        android:usesCleartextTraffic="true" >
-58-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:46:9-44
+58-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:46:9-44
 59        <activity
-59-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:48:9-52:58
+59-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:48:9-52:58
 60            android:name="com.woleapp.ui.activity.SuccessActivity"
-60-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:49:13-56
+60-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:49:13-56
 61            android:screenOrientation="locked"
-61-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:50:13-47
+61-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:50:13-47
 62            android:theme="@style/AppTheme.NoActionBar"
-62-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:51:13-56
+62-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:51:13-56
 63            android:windowSoftInputMode="adjustResize" />
-63-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:52:13-55
+63-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:52:13-55
 64
 65        <provider
 66            android:name="androidx.core.content.FileProvider"
-66-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:55:13-62
+66-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:55:13-62
 67            android:authorities="com.bsystems.provider"
-67-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:56:13-60
+67-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:56:13-60
 68            android:exported="false"
-68-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:57:13-37
+68-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:57:13-37
 69            android:grantUriPermissions="true" >
-69-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:58:13-47
+69-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:58:13-47
 70            <meta-data
-70-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:59:13-61:58
+70-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:59:13-61:58
 71                android:name="android.support.FILE_PROVIDER_PATHS"
-71-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:60:17-67
+71-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:60:17-67
 72                android:resource="@xml/provider_paths" />
-72-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:61:17-55
+72-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:61:17-55
 73        </provider>
 74
 75        <activity
-75-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:64:9-77:20
+75-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:64:9-77:20
 76            android:name="com.woleapp.ui.activity.MainActivity"
-76-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:65:13-53
+76-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:65:13-53
 77            android:label="@string/app_name"
-77-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:66:13-45
+77-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:66:13-45
 78            android:screenOrientation="locked"
-78-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:67:13-47
+78-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:67:13-47
 79            android:theme="@style/AppTheme.NoActionBar"
-79-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:68:13-56
+79-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:68:13-56
 80            android:windowSoftInputMode="adjustResize" >
-80-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:69:13-55
+80-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:69:13-55
 81
 82            <!-- <intent-filter> -->
 83            <!-- <action android:name="android.intent.action.MAIN"/> -->
@@ -147,29 +147,29 @@
 87            <!-- </intent-filter> -->
 88        </activity>
 89        <activity
-89-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:78:9-82:59
+89-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:78:9-82:59
 90            android:name="com.woleapp.ui.activity.PaymentProgressActivity"
-90-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:79:13-64
+90-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:79:13-64
 91            android:label="@string/app_name"
-91-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:80:13-45
+91-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:80:13-45
 92            android:screenOrientation="locked"
-92-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:81:13-47
+92-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:81:13-47
 93            android:theme="@style/AppTheme.NoActionBar" />
-93-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:82:13-56
+93-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:82:13-56
 94        <activity
-94-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:83:9-97:20
+94-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:83:9-97:20
 95            android:name="com.woleapp.ui.activity.HomeActivity"
-95-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:84:13-53
+95-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:84:13-53
 96            android:label="@string/app_name"
-96-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:85:13-45
+96-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:85:13-45
 97            android:launchMode="singleTop"
-97-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:86:13-43
+97-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:86:13-43
 98            android:screenOrientation="locked"
-98-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:87:13-47
+98-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:87:13-47
 99            android:theme="@style/AppTheme.NoActionBar"
-99-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:88:13-56
+99-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:88:13-56
 100            android:windowSoftInputMode="adjustResize" >
-100-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:89:13-55
+100-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:89:13-55
 101
 102            <!-- <intent-filter> -->
 103            <!-- <action android:name="android.intent.action.MAIN"/> -->
@@ -179,36 +179,36 @@
 107            <!-- </intent-filter> -->
 108        </activity>
 109        <activity
-109-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:99:9-108:20
+109-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:99:9-108:20
 110            android:name="com.woleapp.ui.activity.SplashActivity"
-110-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:100:13-55
+110-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:100:13-55
 111            android:label="@string/app_name"
-111-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:101:13-45
+111-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:101:13-45
 112            android:theme="@style/AppTheme.NoActionBar" >
-112-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:102:13-56
+112-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:102:13-56
 113            <intent-filter>
-113-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:103:13-107:29
+113-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:103:13-107:29
 114                <action android:name="android.intent.action.MAIN" />
-114-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:104:17-69
-114-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:104:25-66
+114-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:104:17-69
+114-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:104:25-66
 115
 116                <category android:name="android.intent.category.LAUNCHER" />
-116-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:106:17-77
-116-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:106:27-74
+116-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:106:17-77
+116-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:106:27-74
 117            </intent-filter>
 118        </activity>
 119        <activity
-119-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:109:9-127:20
+119-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:109:9-127:20
 120            android:name="com.woleapp.ui.activity.SignatureActivity"
-120-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:110:13-58
+120-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:110:13-58
 121            android:configChanges="keyboardHidden|screenSize"
-121-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:111:13-62
+121-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:111:13-62
 122            android:label="@string/app_name"
-122-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:112:13-45
+122-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:112:13-45
 123            android:recreateOnConfigChanges="mcc"
-123-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:113:13-50
+123-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:113:13-50
 124            android:theme="@style/AppTheme.NoActionBar" >
-124-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:114:13-56
+124-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:114:13-56
 125
 126            <!-- android:configChanges = "orientation|keyboard|keyboardHidden|screenLayout|screenSize" -->
 127
@@ -223,49 +223,49 @@
 136            <!-- android:configChanges="screenSize|orientation" -->
 137        </activity>
 138        <activity
-138-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:128:9-131:68
+138-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:128:9-131:68
 139            android:name="com.woleapp.util.mobilevision.BarcodeCaptureActivity"
-139-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:129:13-69
+139-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:129:13-69
 140            android:label="@string/app_name"
-140-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:130:13-45
+140-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:130:13-45
 141            android:theme="@style/AppTheme.NoActionBar" />
-141-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:131:13-56
+141-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:131:13-56
 142        <activity
-142-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:132:9-134:57
+142-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:132:9-134:57
 143            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-143-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:133:13-76
+143-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:133:13-76
 144            android:theme="@style/AppThemeActionBar1" />
-144-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:134:13-54
+144-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:134:13-54
 145        <activity
-145-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:135:9-137:59
+145-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:135:9-137:59
 146            android:name="com.woleapp.ui.activity.MarketPlaceActivity"
-146-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:136:13-60
+146-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:136:13-60
 147            android:theme="@style/AppTheme.NoActionBar" />
-147-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:137:13-56
+147-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:137:13-56
 148
 149        <service android:name="com.woleapp.service.MyFirebaseMessagingService" >
-149-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:139:9-143:19
-149-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:139:18-68
+149-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:139:9-143:19
+149-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:139:18-68
 150            <intent-filter>
-150-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:140:13-142:29
+150-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:140:13-142:29
 151                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-151-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:17-78
-151-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:25-75
+151-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:17-78
+151-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:25-75
 152            </intent-filter>
 153        </service>
 154
 155        <meta-data
-155-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:145:9-147:60
+155-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:145:9-147:60
 156            android:name="com.google.firebase.messaging.default_notification_icon"
-156-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:146:13-83
+156-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:146:13-83
 157            android:resource="@drawable/ic_notification" />
-157-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:147:13-57
+157-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:147:13-57
 158        <meta-data
-158-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:148:9-150:53
+158-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:148:9-150:53
 159            android:name="com.google.firebase.messaging.default_notification_color"
-159-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:149:13-84
+159-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:149:13-84
 160            android:resource="@color/colorAccent" />
-160-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:150:13-50
+160-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:150:13-50
 161
 162        <provider
 162-->[com.amitshekhar.android:debug-db:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\b56c1ebe76fa36295c79d80343370baa\transformed\jetified-debug-db-1.0.6\AndroidManifest.xml:12:9-16:40
@@ -378,10 +378,10 @@
 220            android:exported="false" >
 220-->[com.google.firebase:firebase-messaging:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\841230b2dc1a15bd4d068ea8d406412d\transformed\jetified-firebase-messaging-21.0.0\AndroidManifest.xml:31:13-37
 221            <intent-filter android:priority="-500" >
-221-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:140:13-142:29
+221-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:140:13-142:29
 222                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-222-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:17-78
-222-->D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:25-75
+222-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:17-78
+222-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:25-75
 223            </intent-filter>
 224        </service>
 225

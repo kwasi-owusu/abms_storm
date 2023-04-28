@@ -137,7 +137,7 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
         String name = user.getFirstName();
 //        String name = email.substring(0, email.indexOf('@'));
         /*activity.setUserName(user.getName());*/
-        activity.setUserName(name);
+        activity.setUserName("Test");
         activity.setAvailableBalance(String.valueOf(user.getUserBranch()));
         ((HomeActivity) getActivity()).setTitleWithNoNavigation("Dashboard");
     }
@@ -369,7 +369,7 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
 
             /*Toast.makeText(context,"This feature shall be available soon",Toast.LENGTH_SHORT).show();*/
 
-            if (user.getUser_level() == USER_LEVEL) {
+            if (2 == USER_LEVEL) {
                 if (position == 0) {
                    Bundle b1 = new Bundle();
                     b1.putInt("transaction_type", Constants.TRANSACTION_CASH_IN);

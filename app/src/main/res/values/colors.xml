@@ -98,6 +98,7 @@
     <color name="light_green">#77CF7B </color>
     <color name="listing_progress">#ff8080 </color>
 
-    <color name="bg_gray">#e9e9e7</color>
+    <color name="bgg_gray">#e9e9e7</color>
+    <color name="bg_gray">#FFFFFF</color>
     <color name="text_color_grey">#a0a0a0</color>
 </resources>

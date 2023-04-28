@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+
+
+  <com.woleapp.util.mobilevision.ui.camera.CameraSourcePreview
+      android:id="@+id/preview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/semi_transparent_white">
+
+    <com.woleapp.util.mobilevision.ui.camera.GraphicOverlay
+        android:id="@+id/graphicOverlay"
+        android:layout_margin="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+  </com.woleapp.util.mobilevision.ui.camera.CameraSourcePreview>
+
+
+
+  <com.woleapp.util.mobilevision.ScannerOverlay
+      android:id="@+id/scannerOverlay"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/semi_transparent"
+      android:layout_centerInParent="true"
+      app:line_color="#cc1313"
+      app:line_speed="6"
+      app:line_width="4"
+      app:square_height="260"
+      app:square_width="260" />
+
+  <!--<ImageView-->
+      <!--android:id="@+id/ivScanner"-->
+      <!--android:visibility="invisible"-->
+      <!--android:layout_width="260dp"-->
+      <!--android:layout_height="260dp"-->
+      <!--android:layout_centerInParent="true"-->
+      <!--android:src="@drawable/camera_corners"/>-->
+  <!--android:background="@color/semi_transparent"-->
+  <!--#44000000-->
+  <!--<ImageView-->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="match_parent"-->
+      <!--android:id="@+id/imageView"-->
+      <!--android:src="@drawable/icon"-->
+      <!--android:scaleType="fitStart" />-->
+
+  <!--<ImageView-->
+      <!--android:id="@+id/scannerOutline"-->
+      <!--android:layout_centerVertical="true"-->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="240dp"-->
+      <!--android:layout_margin="30dp"-->
+      <!--android:background="@drawable/myrect"-->
+      <!--/>-->
+
+  <!--<ImageView-->
+      <!--android:id="@+id/scannerBar"-->
+      <!--android:layout_margin="30dp"-->
+      <!--android:layout_centerVertical="true"-->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="2dp"-->
+      <!--android:background="@drawable/bar"-->
+      <!--android:visibility="invisible"/>-->
+</RelativeLayout>

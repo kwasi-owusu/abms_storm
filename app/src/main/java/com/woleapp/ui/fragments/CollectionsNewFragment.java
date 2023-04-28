@@ -157,6 +157,9 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
         binding.readCard.setOnClickListener(this);
         binding.tvRetake.setOnClickListener(this);
 
+        binding.cashCollection.setVisibility(View.VISIBLE);
+        binding.cardCollection.setVisibility(View.GONE);
+        binding.readCard.setVisibility(View.GONE);
         binding.etCVV.setVisibility(View.GONE);
         binding.cardNumber.setVisibility(View.GONE);
         binding.cardExpiry.setVisibility(View.GONE);
@@ -185,7 +188,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
                     binding.readCard.setVisibility(View.GONE);
                 } else if (binding.cardPayment.isChecked()) {
                     binding.cashCollection.setVisibility(View.GONE);
-                    binding.cardCollection.setVisibility(View.VISIBLE);
+                    binding.cardCollection.setVisibility(View.GONE);
                     binding.etCVV.setVisibility(View.VISIBLE);
                     binding.accountNumber.setVisibility(View.GONE);
                     binding.networkSpinner.setVisibility(View.GONE);
@@ -206,13 +209,13 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
         processToken();
 
 
-        int agencyID = SharedPrefManager.getAgencyUser().getAgencyID();
+       // int agencyID = SharedPrefManager.getAgencyUser().getAgencyID();
 
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("agency_ID", agencyID);
+       // JsonObject jsonObject = new JsonObject();
+   //     jsonObject.addProperty("agency_ID", agencyID);
 
-        getAgencyDetails(jsonObject);
-        Log.e("RES_CODE", "Payload: " + jsonObject);
+     //   getAgencyDetails(jsonObject);
+       // Log.e("RES_CODE", "Payload: " + jsonObject);
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -248,7 +251,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
     public void validateCashCollections() {
         Float convenienceFee = SharedPrefManager.getTransfeeConvenienceFee();
 
-        String availableBalance = SharedPrefManager.getBalanceDetails().getBalance();
+       // String availableBalance = SharedPrefManager.getBalanceDetails().getBalance();
          name = binding.payeeName.getText().toString().trim();
          number = binding.accountNumber.getText().toString().trim();
          issuer = networkType.toLowerCase();
@@ -268,9 +271,9 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
             // binding.etAmt.setError("Amount should be between \u20A610 and \u20A6100000", customErrorDrawable);
             binding.etAmt.setError("Amount should be between " + currency_symbol + 0 + " and " + currency_symbol + 100000, customErrorDrawable);
             binding.etAmt.requestFocus();
-        } else if (Double.parseDouble(amount) + convenienceFee > Double.parseDouble(availableBalance)) {
-            binding.etAmt.setError("Insufficient balance to proceed", customErrorDrawable);
-            binding.etAmt.requestFocus();
+       // } else if (Double.parseDouble(amount) + convenienceFee > Double.parseDouble(availableBalance)) {
+         //   binding.etAmt.setError("Insufficient balance to proceed", customErrorDrawable);
+           // binding.etAmt.requestFocus();
         } else if (networkType == null || networkType.isEmpty()) {
             Toast.makeText(context, "Please select Network type", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(number)) {
@@ -287,7 +290,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
     public void validateCardCollections() {
         Float convenienceFee = SharedPrefManager.getTransfeeConvenienceFee();
 
-        String availableBalance = SharedPrefManager.getBalanceDetails().getBalance();
+       // String availableBalance = SharedPrefManager.getBalanceDetails().getBalance();
         String name = binding.payeeName.getText().toString().trim();
         String cardCVV = binding.etCVV.getText().toString().trim();
 
@@ -306,9 +309,9 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
             // binding.etAmt.setError("Amount should be between \u20A610 and \u20A6100000", customErrorDrawable);
             binding.etAmt.setError("Amount should be between " + currency_symbol + 0 + " and " + currency_symbol + 100000, customErrorDrawable);
             binding.etAmt.requestFocus();
-        } else if (Double.parseDouble(amount) + convenienceFee > Double.parseDouble(availableBalance)) {
-            binding.etAmt.setError("Insufficient balance to proceed", customErrorDrawable);
-            binding.etAmt.requestFocus();
+       // } else if (Double.parseDouble(amount) + convenienceFee > Double.parseDouble(availableBalance)) {
+         //   binding.etAmt.setError("Insufficient balance to proceed", customErrorDrawable);
+           // binding.etAmt.requestFocus();
         } else if (TextUtils.isEmpty(cardCVV)) {
             binding.etCVV.setError("Please enter CVV number", customErrorDrawable);
             binding.etCVV.requestFocus();
@@ -364,6 +367,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
                     Log.e("TRANSACTION_ID_MOMO", "transaction response: " + transactionId);
                     addFragmentWithoutRemove(R.id.container_main, new TransactionStatusFragment(transactionId, token, name, number, ref, issuer, amount), TransactionStatusFragment.class.getSimpleName());
                     dismissProgressBar();
+                    //transactionStatus();
                 }, err -> {
                     Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
                     dismissProgressBar();
@@ -433,6 +437,9 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
 
     public void processToken() {
         showProgressBar();
+//        String merchantID = "63b59e41530aeeaec59a045f";
+  //      String apikey = "93064247-4668-4c73-ac43-4dcc28773a86";
+
         String merchantID = "63b59e41530aeeaec59a045f";
         String apikey = "93064247-4668-4c73-ac43-4dcc28773a86";
 

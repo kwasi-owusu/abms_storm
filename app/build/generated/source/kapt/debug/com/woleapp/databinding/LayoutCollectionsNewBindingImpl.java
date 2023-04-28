@@ -35,13 +35,13 @@ public class LayoutCollectionsNewBindingImpl extends LayoutCollectionsNewBinding
         sViewsWithIds.put(R.id.tvSign, 19);
         sViewsWithIds.put(R.id.tvRetake, 20);
         sViewsWithIds.put(R.id.linearCanvas, 21);
-        sViewsWithIds.put(R.id.cardCollection, 22);
-        sViewsWithIds.put(R.id.tvCardCollection, 23);
-        sViewsWithIds.put(R.id.firstimage, 24);
-        sViewsWithIds.put(R.id.cashCollection, 25);
-        sViewsWithIds.put(R.id.tvCashCollection, 26);
-        sViewsWithIds.put(R.id.readCard, 27);
-        sViewsWithIds.put(R.id.tvReadCard, 28);
+        sViewsWithIds.put(R.id.cashCollection, 22);
+        sViewsWithIds.put(R.id.tvCashCollection, 23);
+        sViewsWithIds.put(R.id.readCard, 24);
+        sViewsWithIds.put(R.id.tvReadCard, 25);
+        sViewsWithIds.put(R.id.cardCollection, 26);
+        sViewsWithIds.put(R.id.tvCardCollection, 27);
+        sViewsWithIds.put(R.id.firstimage, 28);
     }
     // views
     // variables
@@ -55,16 +55,16 @@ public class LayoutCollectionsNewBindingImpl extends LayoutCollectionsNewBinding
     private LayoutCollectionsNewBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (android.widget.EditText) bindings[13]
-            , (androidx.cardview.widget.CardView) bindings[22]
+            , (androidx.cardview.widget.CardView) bindings[26]
             , (android.widget.EditText) bindings[16]
             , (android.widget.EditText) bindings[15]
             , (android.widget.RadioButton) bindings[7]
-            , (androidx.cardview.widget.CardView) bindings[25]
+            , (androidx.cardview.widget.CardView) bindings[22]
             , (android.widget.TextView) bindings[3]
             , (com.woleapp.ui.widgets.CustomEditText) bindings[8]
             , (android.widget.EditText) bindings[14]
             , (android.widget.EditText) bindings[9]
-            , (android.widget.ImageView) bindings[24]
+            , (android.widget.ImageView) bindings[28]
             , (android.widget.LinearLayout) bindings[21]
             , (android.widget.RelativeLayout) bindings[18]
             , (android.widget.LinearLayout) bindings[4]
@@ -72,15 +72,15 @@ public class LayoutCollectionsNewBindingImpl extends LayoutCollectionsNewBinding
             , (android.widget.RadioButton) bindings[6]
             , (android.widget.LinearLayout) bindings[11]
             , (com.woleapp.ui.widgets.CustomEditText) bindings[10]
-            , (androidx.cardview.widget.CardView) bindings[27]
+            , (androidx.cardview.widget.CardView) bindings[24]
             , (android.widget.RelativeLayout) bindings[1]
             , (android.widget.ScrollView) bindings[0]
             , (androidx.appcompat.widget.AppCompatSpinner) bindings[12]
             , (android.widget.RadioGroup) bindings[5]
+            , (android.widget.TextView) bindings[27]
             , (android.widget.TextView) bindings[23]
-            , (android.widget.TextView) bindings[26]
             , (android.widget.TextView) bindings[17]
-            , (android.widget.TextView) bindings[28]
+            , (android.widget.TextView) bindings[25]
             , (android.widget.TextView) bindings[20]
             , (android.widget.TextView) bindings[19]
             );

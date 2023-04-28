@@ -8,9 +8,9 @@
     <!--     android:thickness="14dp" -->
     <!-- android:thickness="10dp" -->
 
-    <solid android:color="@color/grid_item_bg"/>
+    <solid android:color="@color/colorWhite"/>
     <stroke android:width="2dp"
-    android:color="@color/grid_item_bg"></stroke>
+    android:color="@color/colorWhite"></stroke>
 <corners android:radius="3dp"/>
     <size
         android:height="50dp"

@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:54:9-62:20
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:54:9-62:20
 	android:grantUriPermissions
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:58:13-47
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:58:13-47
 	android:authorities
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:56:13-60
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:56:13-60
 	android:exported
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:57:13-37
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:57:13-37
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:55:13-62
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:55:13-62
 manifest
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
 MERGED from [androidx.databinding:databinding-adapters:4.2.0] C:\Users\Meshach\.gradle\caches\transforms-3\877271f368fb217e7abf50f51d1a80ee\transformed\databinding-adapters-4.2.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:4.2.0] C:\Users\Meshach\.gradle\caches\transforms-3\4d3c32072f5b51c4348e252d0ef30329\transformed\databinding-runtime-4.2.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.amitshekhar.android:debug-db:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\b56c1ebe76fa36295c79d80343370baa\transformed\jetified-debug-db-1.0.6\AndroidManifest.xml:2:1-19:12
@@ -55,7 +55,7 @@ MERGED from [com.orhanobut:logger:2.2.0] C:\Users\Meshach\.gradle\caches\transfo
 MERGED from [com.github.piasy.BigImageViewer:GlideImageViewFactory:1.5.7] C:\Users\Meshach\.gradle\caches\transforms-3\415bf7a2b4a6d0379b3bea137cbac8d9\transformed\jetified-GlideImageViewFactory-1.5.7\AndroidManifest.xml:25:1-34:12
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Meshach\.gradle\caches\transforms-3\6f8814b618211df46b7840e2ecbd184d\transformed\jetified-glide-4.12.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.gms:play-services-gcm:17.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\6d8b27ddd6a786cc87f5d32559cbb7eb\transformed\jetified-play-services-gcm-17.0.0\AndroidManifest.xml:17:1-28:12
-MERGED from [:netpossdk] D:\Project\agency_netpos_integration\netpossdk\build\.transforms\1fa7e501ac766a2bd5d709ae32691777\transformed\netpossdk-1.0.30\AndroidManifest.xml:2:1-11:12
+MERGED from [:netpossdk] C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\netpossdk\build\.transforms\c11524240d34e9e83c1afe6378bda343\transformed\netpossdk-1.0.30\AndroidManifest.xml:2:1-11:12
 MERGED from [com.pixplicity.easyprefs:library:1.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\1300b4670d7b7572d5eb8a0653f2c0cc\transformed\jetified-library-1.9.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\Meshach\.gradle\caches\transforms-3\7edb7ac91bc60bae91513bf4a8116d6c\transformed\jetified-timber-4.7.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\Meshach\.gradle\caches\transforms-3\93653b53ccb441aa229ddb39584baa8c\transformed\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:15:1-34:12
@@ -153,39 +153,39 @@ MERGED from [com.facebook.fresco:nativeimagetranscoder:1.13.0] C:\Users\Meshach\
 MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\Meshach\.gradle\caches\transforms-3\5ce0eb26c084be03d9cfcf099a0538e5\transformed\jetified-imagepipeline-base-1.13.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\Meshach\.gradle\caches\transforms-3\0e6579bc7efeb547c18c648ae6b8cb9a\transformed\jetified-fbcore-1.13.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\Meshach\.gradle\caches\transforms-3\8dc3d727b412d8bf96d20372e77e658c\transformed\jetified-soloader-0.6.0\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
 	package
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:4:5-26
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:4:5-26
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:1-153:12
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.VIBRATE
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:7:5-66
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:7:5-66
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:7:22-63
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:7:22-63
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:8:5-81
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:8:22-78
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:9:5-74
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:9:5-74
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:9:22-72
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:9:22-72
 uses-permission#android.permission.INTERNET
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:10:5-67
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:10:5-67
 MERGED from [com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:11:5-67
 MERGED from [com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:11:5-67
 MERGED from [com.amitshekhar.android:debug-db-base:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\26192ea612e9ecb61a23ab64d107355e\transformed\jetified-debug-db-base-1.0.6\AndroidManifest.xml:29:5-67
@@ -217,13 +217,13 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:
 MERGED from [com.github.piasy.BigImageViewer:BigImageViewer:1.5.7] C:\Users\Meshach\.gradle\caches\transforms-3\f6b6ff5a1e28a8486070320f1db0f21c\transformed\jetified-BigImageViewer-1.5.7\AndroidManifest.xml:34:5-67
 MERGED from [com.github.piasy.BigImageViewer:BigImageViewer:1.5.7] C:\Users\Meshach\.gradle\caches\transforms-3\f6b6ff5a1e28a8486070320f1db0f21c\transformed\jetified-BigImageViewer-1.5.7\AndroidManifest.xml:34:5-67
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:10:22-64
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:10:22-64
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:11:5-79
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:11:22-76
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:11:22-76
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:12:5-79
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:12:5-79
 MERGED from [com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:14:5-79
 MERGED from [com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:14:5-79
 MERGED from [com.google.firebase:firebase-iid:21.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\f02f12cf262012847126d440b427b471\transformed\jetified-firebase-iid-21.0.0\AndroidManifest.xml:22:5-79
@@ -247,37 +247,37 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Meshach\.gradle\caches\transforms-3\8c93091f3a20a07a76bdf0102cbd9969\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Meshach\.gradle\caches\transforms-3\8c93091f3a20a07a76bdf0102cbd9969\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:12:22-76
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:12:22-76
 uses-permission#android.permission.BLUETOOTH
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:13:5-68
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:13:5-68
 MERGED from [com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:12:5-68
 MERGED from [com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:12:5-68
 MERGED from [com.smartpesa:scanner:1.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\567de70904e9587686ec073da3a22a28\transformed\jetified-scanner-1.3.1\AndroidManifest.xml:11:5-68
 MERGED from [com.smartpesa:scanner:1.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\567de70904e9587686ec073da3a22a28\transformed\jetified-scanner-1.3.1\AndroidManifest.xml:11:5-68
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:13:22-65
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:13:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:14:5-74
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:14:5-74
 MERGED from [com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:16:5-74
 MERGED from [com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:16:5-74
 MERGED from [com.smartpesa:scanner:1.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\567de70904e9587686ec073da3a22a28\transformed\jetified-scanner-1.3.1\AndroidManifest.xml:13:5-74
 MERGED from [com.smartpesa:scanner:1.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\567de70904e9587686ec073da3a22a28\transformed\jetified-scanner-1.3.1\AndroidManifest.xml:13:5-74
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:14:22-71
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:14:22-71
 uses-feature#android.hardware.camera
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:16:5-60
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:16:5-60
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:16:19-57
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:16:19-57
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:5-81
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:5-81
 MERGED from [com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:13:5-81
 MERGED from [com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\067d45874a476bdbcd7fc22854048dd6\transformed\sdk-3.2.8\AndroidManifest.xml:13:5-81
 MERGED from [com.smartpesa:scanner:1.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\567de70904e9587686ec073da3a22a28\transformed\jetified-scanner-1.3.1\AndroidManifest.xml:12:5-81
 MERGED from [com.smartpesa:scanner:1.3.1] C:\Users\Meshach\.gradle\caches\transforms-3\567de70904e9587686ec073da3a22a28\transformed\jetified-scanner-1.3.1\AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:22-78
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:22-78
 application
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:38:5-151:19
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:38:5-151:19
 MERGED from [com.amitshekhar.android:debug-db:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\b56c1ebe76fa36295c79d80343370baa\transformed\jetified-debug-db-1.0.6\AndroidManifest.xml:11:5-17:19
 MERGED from [com.amitshekhar.android:debug-db:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\b56c1ebe76fa36295c79d80343370baa\transformed\jetified-debug-db-1.0.6\AndroidManifest.xml:11:5-17:19
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Meshach\.gradle\caches\transforms-3\66b3d3903e8e9b3578d5e2f0ca4cf93d\transformed\material-1.2.1\AndroidManifest.xml:22:5-20
@@ -377,145 +377,145 @@ MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\Meshach\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.2] C:\Users\Meshach\.gradle\caches\transforms-3\276804679e493f35ebb42d03b899fa76\transformed\core-1.3.2\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:44:9-35
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:44:9-35
 	android:label
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:42:9-41
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:42:9-41
 	tools:ignore
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:47:9-48
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:47:9-48
 	android:roundIcon
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:43:9-41
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:43:9-41
 	android:icon
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:41:9-36
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:41:9-36
 	android:allowBackup
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:40:9-35
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:40:9-35
 	android:theme
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:45:9-40
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:45:9-40
 	android:usesCleartextTraffic
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:46:9-44
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:46:9-44
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:39:9-46
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:39:9-46
 activity#com.woleapp.ui.activity.SuccessActivity
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:48:9-52:58
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:48:9-52:58
 	android:screenOrientation
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:50:13-47
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:50:13-47
 	android:windowSoftInputMode
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:52:13-55
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:52:13-55
 	android:theme
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:51:13-56
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:51:13-56
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:49:13-56
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:49:13-56
 activity#com.woleapp.ui.activity.MainActivity
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:64:9-77:20
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:64:9-77:20
 	android:screenOrientation
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:67:13-47
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:67:13-47
 	android:label
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:66:13-45
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:66:13-45
 	android:windowSoftInputMode
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:69:13-55
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:69:13-55
 	android:theme
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:68:13-56
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:68:13-56
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:65:13-53
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:65:13-53
 activity#com.woleapp.ui.activity.PaymentProgressActivity
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:78:9-82:59
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:78:9-82:59
 	android:screenOrientation
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:81:13-47
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:81:13-47
 	android:label
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:80:13-45
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:80:13-45
 	android:theme
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:82:13-56
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:82:13-56
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:79:13-64
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:79:13-64
 activity#com.woleapp.ui.activity.HomeActivity
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:83:9-97:20
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:83:9-97:20
 	android:screenOrientation
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:87:13-47
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:87:13-47
 	android:label
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:85:13-45
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:85:13-45
 	android:launchMode
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:86:13-43
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:86:13-43
 	android:windowSoftInputMode
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:89:13-55
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:89:13-55
 	android:theme
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:88:13-56
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:88:13-56
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:84:13-53
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:84:13-53
 activity#com.woleapp.ui.activity.SplashActivity
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:99:9-108:20
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:99:9-108:20
 	android:label
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:101:13-45
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:101:13-45
 	android:theme
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:102:13-56
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:102:13-56
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:100:13-55
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:100:13-55
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:103:13-107:29
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:103:13-107:29
 action#android.intent.action.MAIN
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:104:17-69
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:104:17-69
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:104:25-66
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:104:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:106:17-77
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:106:17-77
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:106:27-74
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:106:27-74
 activity#com.woleapp.ui.activity.SignatureActivity
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:109:9-127:20
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:109:9-127:20
 	android:label
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:112:13-45
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:112:13-45
 	android:recreateOnConfigChanges
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:113:13-50
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:113:13-50
 	android:configChanges
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:111:13-62
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:111:13-62
 	android:theme
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:114:13-56
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:114:13-56
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:110:13-58
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:110:13-58
 activity#com.woleapp.util.mobilevision.BarcodeCaptureActivity
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:128:9-131:68
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:128:9-131:68
 	android:label
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:130:13-45
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:130:13-45
 	android:theme
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:131:13-56
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:131:13-56
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:129:13-69
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:129:13-69
 activity#com.theartofdev.edmodo.cropper.CropImageActivity
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:132:9-134:57
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:132:9-134:57
 	android:theme
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:134:13-54
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:134:13-54
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:133:13-76
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:133:13-76
 activity#com.woleapp.ui.activity.MarketPlaceActivity
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:135:9-137:59
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:135:9-137:59
 	android:theme
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:137:13-56
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:137:13-56
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:136:13-60
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:136:13-60
 service#com.woleapp.service.MyFirebaseMessagingService
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:139:9-143:19
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:139:9-143:19
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:139:18-68
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:139:18-68
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:140:13-142:29
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:140:13-142:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:17-78
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:17-78
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:25-75
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:141:25-75
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:145:9-147:60
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:145:9-147:60
 	android:resource
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:147:13-57
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:147:13-57
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:146:13-83
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:146:13-83
 meta-data#com.google.firebase.messaging.default_notification_color
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:148:9-150:53
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:148:9-150:53
 	android:resource
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:150:13-50
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:150:13-50
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:149:13-84
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:149:13-84
 uses-sdk
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:4.2.0] C:\Users\Meshach\.gradle\caches\transforms-3\877271f368fb217e7abf50f51d1a80ee\transformed\databinding-adapters-4.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:databinding-adapters:4.2.0] C:\Users\Meshach\.gradle\caches\transforms-3\877271f368fb217e7abf50f51d1a80ee\transformed\databinding-adapters-4.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:databinding-runtime:4.2.0] C:\Users\Meshach\.gradle\caches\transforms-3\4d3c32072f5b51c4348e252d0ef30329\transformed\databinding-runtime-4.2.0\AndroidManifest.xml:20:5-44
@@ -596,8 +596,8 @@ MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Meshach\.gradle\ca
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Meshach\.gradle\caches\transforms-3\6f8814b618211df46b7840e2ecbd184d\transformed\jetified-glide-4.12.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.android.gms:play-services-gcm:17.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\6d8b27ddd6a786cc87f5d32559cbb7eb\transformed\jetified-play-services-gcm-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-gcm:17.0.0] C:\Users\Meshach\.gradle\caches\transforms-3\6d8b27ddd6a786cc87f5d32559cbb7eb\transformed\jetified-play-services-gcm-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [:netpossdk] D:\Project\agency_netpos_integration\netpossdk\build\.transforms\1fa7e501ac766a2bd5d709ae32691777\transformed\netpossdk-1.0.30\AndroidManifest.xml:7:5-9:41
-MERGED from [:netpossdk] D:\Project\agency_netpos_integration\netpossdk\build\.transforms\1fa7e501ac766a2bd5d709ae32691777\transformed\netpossdk-1.0.30\AndroidManifest.xml:7:5-9:41
+MERGED from [:netpossdk] C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\netpossdk\build\.transforms\c11524240d34e9e83c1afe6378bda343\transformed\netpossdk-1.0.30\AndroidManifest.xml:7:5-9:41
+MERGED from [:netpossdk] C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\netpossdk\build\.transforms\c11524240d34e9e83c1afe6378bda343\transformed\netpossdk-1.0.30\AndroidManifest.xml:7:5-9:41
 MERGED from [com.pixplicity.easyprefs:library:1.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\1300b4670d7b7572d5eb8a0653f2c0cc\transformed\jetified-library-1.9.0\AndroidManifest.xml:8:5-10:41
 MERGED from [com.pixplicity.easyprefs:library:1.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\1300b4670d7b7572d5eb8a0653f2c0cc\transformed\jetified-library-1.9.0\AndroidManifest.xml:8:5-10:41
 MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\Meshach\.gradle\caches\transforms-3\7edb7ac91bc60bae91513bf4a8116d6c\transformed\jetified-timber-4.7.1\AndroidManifest.xml:5:5-43
@@ -792,24 +792,24 @@ MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\Meshach\.gradle\caches\
 MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\Meshach\.gradle\caches\transforms-3\0e6579bc7efeb547c18c648ae6b8cb9a\transformed\jetified-fbcore-1.13.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\Meshach\.gradle\caches\transforms-3\8dc3d727b412d8bf96d20372e77e658c\transformed\jetified-soloader-0.6.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\Meshach\.gradle\caches\transforms-3\8dc3d727b412d8bf96d20372e77e658c\transformed\jetified-soloader-0.6.0\AndroidManifest.xml:7:5-9:41
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
-INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.birbit:android-priority-jobqueue:2.0.1] C:\Users\Meshach\.gradle\caches\transforms-3\639a2d09852faf62e61d05bb04712d2c\transformed\jetified-android-priority-jobqueue-2.0.1\AndroidManifest.xml:11:9-152
 	android:targetSdkVersion
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:59:13-61:58
+ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:59:13-61:58
 	android:resource
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:61:17-55
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:61:17-55
 	android:name
-		ADDED from D:\Project\agency_netpos_integration\app\src\main\AndroidManifest.xml:60:17-67
+		ADDED from C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:60:17-67
 provider#com.amitshekhar.debug.DebugDBInitProvider
 ADDED from [com.amitshekhar.android:debug-db:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\b56c1ebe76fa36295c79d80343370baa\transformed\jetified-debug-db-1.0.6\AndroidManifest.xml:12:9-16:40
 	android:enabled
