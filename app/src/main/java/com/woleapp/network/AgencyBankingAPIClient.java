@@ -73,7 +73,7 @@ public class AgencyBankingAPIClient {
         if(agencyPPay == null) {
             agencyPPay = new Retrofit.Builder()
                     .baseUrl(BASE_URL_2)
-                    .client(getHttpClient(context, false))
+                    .client(getHttpClient(context, true))
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build()
@@ -92,6 +92,8 @@ public class AgencyBankingAPIClient {
         if(addTokenInterceptor)
             builder.addInterceptor(new TokenInterceptor());
         builder.connectTimeout(2, TimeUnit.MINUTES);
+        builder.readTimeout(2, TimeUnit.MINUTES);
+        builder.writeTimeout(2, TimeUnit.MINUTES);
         final OkHttpClient okHttpClient = builder.build();
 
         return okHttpClient;

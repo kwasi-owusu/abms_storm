@@ -42,18 +42,20 @@ public class PaymentSuccessfulFragment extends BaseFragment implements View.OnCl
     private Timer timer;
     private final int INTERVAL = 1500;
     private static int SPLASH_TIME_OUT = 1500;
-    String branchName = SharedPrefManager.getBranchDetails().getBranchName();
-    String a_name = SharedPrefManager.getAgencyDetails().getAgencyName();
+//    String branchName = SharedPrefManager.getBranchDetails().getBranchName();
+  //  String a_name = SharedPrefManager.getAgencyDetails().getAgencyName();
     private String name;
     private String number;
     private String ref;
     private String issuer;
     private String amount;
-    public PaymentSuccessfulFragment(String name, String number, String ref, String issuer, String amount){
-        this.name = name;
-        this.number = number;
+    private static String merchantName = SharedPrefManager.getAgencyUser().getMerchantName();
+  //  public PaymentSuccessfulFragment(String name, String number, String ref, String issuer, String amount){
+  public PaymentSuccessfulFragment(String ref, String amount){
+      //  this.name = name;
+       // this.number = number;
         this.ref = ref;
-        this.issuer = issuer;
+       // this.issuer = issuer;
         this.amount = amount;
     }
 
@@ -71,6 +73,8 @@ public class PaymentSuccessfulFragment extends BaseFragment implements View.OnCl
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding.btnContinue.setOnClickListener(this);
+        binding.btnMerchant.setOnClickListener(this);
+        binding.btnHome.setOnClickListener(this);
     }
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -82,34 +86,29 @@ public class PaymentSuccessfulFragment extends BaseFragment implements View.OnCl
     public void onClick(View v){
         if(v == binding.btnContinue){
             //addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
-            printReceipt(name,number,ref,issuer,amount);
+            printReceipt(ref,amount);
+        }
+        else if(v == binding.btnMerchant){
+            printSecondReceipt(ref, amount);
+        }
+        else if (v == binding.btnHome){
+            addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
         }
     }
-    private void printReceipt(String CustomerName, String CustomerNumber, String ref, String issuer, String amnt) {
+    private void printReceipt( String ref, String amnt) {
         POIPrinterManage printerManage = NetPosSdk.getPrinterManager(context);
         printerManage.setLineSpace(2);
         printerManage.setPrintGray(3000);
         printerManage.cleanCache();
 
-        Bitmap bitmap =
-                BitmapFactory.decodeResource(context.getResources(),
-                        R.drawable.bsystemslogo);
-        bitmap = Bitmap.createScaledBitmap(bitmap, 150, 100, false);
-
-        BitmapPrintLine bitmapPrintLine = new BitmapPrintLine();
-        bitmapPrintLine.setType(PrintLine.BITMAP);
-        bitmapPrintLine.setBitmap(bitmap);
-        bitmapPrintLine.setPosition(PrintLine.CENTER);
-
         TextPrintLine textPrintLine = new TextPrintLine();
         textPrintLine.setType(PrintLine.TEXT);
-        textPrintLine.setContent("Agency Banking");
+        textPrintLine.setContent(merchantName);
         textPrintLine.setBold(true);
         textPrintLine.setItalic(false);
         textPrintLine.setPosition(PrintLine.CENTER);
         textPrintLine.setSize(TextPrintLine.FONT_LARGE);
 
-        printerManage.addPrintLine(bitmapPrintLine);
         printerManage.addPrintLine(textPrintLine);
 
         textPrintLine.setContent("----------------------------------------------------" +
@@ -118,25 +117,7 @@ public class PaymentSuccessfulFragment extends BaseFragment implements View.OnCl
         textPrintLine.setBold(false);
         printerManage.addPrintLine(textPrintLine);
 
-        textPrintLine.setContent(utilities.getTodaysDate() + "    " + utilities.getTodaysTime());
-        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
-        textPrintLine.setPosition(PrintLine.CENTER);
-        textPrintLine.setBold(false);
-        printerManage.addPrintLine(textPrintLine);
-
         textPrintLine.setContent(" ");
-        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
-        textPrintLine.setBold(false);
-        printerManage.addPrintLine(textPrintLine);
-
-        textPrintLine.setContent("Ref No.: " + ref);
-        textPrintLine.setPosition(PrintLine.LEFT);
-        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
-        textPrintLine.setBold(false);
-        printerManage.addPrintLine(textPrintLine);
-
-        textPrintLine.setContent("Transaction Type: COLLECTION");
-        textPrintLine.setPosition(PrintLine.LEFT);
         textPrintLine.setSize(textPrintLine.FONT_NORMAL);
         textPrintLine.setBold(false);
         printerManage.addPrintLine(textPrintLine);
@@ -147,31 +128,19 @@ public class PaymentSuccessfulFragment extends BaseFragment implements View.OnCl
         textPrintLine.setBold(false);
         printerManage.addPrintLine(textPrintLine);
 
-        textPrintLine.setContent("Network Issuer " + issuer);
+        textPrintLine.setContent("Ref No.: " + ref);
         textPrintLine.setPosition(PrintLine.LEFT);
         textPrintLine.setSize(textPrintLine.FONT_NORMAL);
         textPrintLine.setBold(false);
         printerManage.addPrintLine(textPrintLine);
 
-        textPrintLine.setContent("Phone Number " + CustomerNumber);
+        textPrintLine.setContent("Date: " + utilities.getTodaysDate());
         textPrintLine.setPosition(PrintLine.LEFT);
         textPrintLine.setSize(textPrintLine.FONT_NORMAL);
         textPrintLine.setBold(false);
         printerManage.addPrintLine(textPrintLine);
 
-        textPrintLine.setContent("Customer Name: " + CustomerName);
-        textPrintLine.setPosition(PrintLine.LEFT);
-        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
-        textPrintLine.setBold(false);
-        printerManage.addPrintLine(textPrintLine);
-
-        textPrintLine.setContent("Agent Name: " + a_name);
-        textPrintLine.setPosition(PrintLine.LEFT);
-        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
-        textPrintLine.setBold(false);
-        printerManage.addPrintLine(textPrintLine);
-
-        textPrintLine.setContent("Branch Name: " + branchName);
+        textPrintLine.setContent("Time: " + utilities.getTodaysTime());
         textPrintLine.setPosition(PrintLine.LEFT);
         textPrintLine.setSize(textPrintLine.FONT_NORMAL);
         textPrintLine.setBold(false);
@@ -182,7 +151,7 @@ public class PaymentSuccessfulFragment extends BaseFragment implements View.OnCl
         textPrintLine.setBold(false);
         printerManage.addPrintLine(textPrintLine);
 
-        textPrintLine.setContent("Transaction Successful");
+        textPrintLine.setContent("Payment Successful");
         textPrintLine.setPosition(PrintLine.CENTER);
         textPrintLine.setSize(textPrintLine.FONT_NORMAL);
         textPrintLine.setBold(false);
@@ -215,18 +184,152 @@ public class PaymentSuccessfulFragment extends BaseFragment implements View.OnCl
         textPrintLine.setItalic(true);
         printerManage.addPrintLine(textPrintLine);
 
+        Bitmap bitmap =
+                BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.bsystemslogo);
+        bitmap = Bitmap.createScaledBitmap(bitmap, 150, 100, false);
+
+        BitmapPrintLine bitmapPrintLine = new BitmapPrintLine();
+        bitmapPrintLine.setType(PrintLine.BITMAP);
+        bitmapPrintLine.setBitmap(bitmap);
+        bitmapPrintLine.setPosition(PrintLine.CENTER);
+
+        printerManage.addPrintLine(bitmapPrintLine);
+
         printerManage.beginPrint(new POIPrinterManage.IPrinterListener() {
             @Override
             public void onError(int i, String s) {
                 Timber.e("Printer error with code " + i + " and message" + s);
                 Toast.makeText(context, "Printer Error", Toast.LENGTH_SHORT).show();
-                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+               // addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
             }
 
             @Override
             public void onFinish() {
-                //  Toast.makeText(context, "Printing job finished", Toast.LENGTH_SHORT).show();
-                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                  Toast.makeText(context, "Printing job finished", Toast.LENGTH_SHORT).show();
+                //addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+            }
+
+            @Override
+            public void onStart() {
+                Toast.makeText(context, "Printing job started", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+    private void printSecondReceipt(String ref, String amnt) {
+        POIPrinterManage printerManage = NetPosSdk.getPrinterManager(context);
+        printerManage.setLineSpace(2);
+        printerManage.setPrintGray(3000);
+        printerManage.cleanCache();
+
+        TextPrintLine textPrintLine = new TextPrintLine();
+        textPrintLine.setType(PrintLine.TEXT);
+        textPrintLine.setContent(merchantName);
+        textPrintLine.setBold(true);
+        textPrintLine.setItalic(false);
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(TextPrintLine.FONT_LARGE);
+
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("----------------------------------------------------" +
+                "--------------------------------------------");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent(" ");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Amount: " + "GH₵" +(amount));
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Ref No.: " + ref);
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Date: " + utilities.getTodaysDate());
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Time: " + utilities.getTodaysTime());
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent(" ");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Payment Successful");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("--------------------------------------------------------------");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("THANK YOU");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Powered by Bsystems Limited");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("0302-254-340");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        Bitmap bitmap =
+                BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.bsystemslogo);
+        bitmap = Bitmap.createScaledBitmap(bitmap, 150, 100, false);
+
+        BitmapPrintLine bitmapPrintLine = new BitmapPrintLine();
+        bitmapPrintLine.setType(PrintLine.BITMAP);
+        bitmapPrintLine.setBitmap(bitmap);
+        bitmapPrintLine.setPosition(PrintLine.CENTER);
+
+        printerManage.addPrintLine(bitmapPrintLine);
+
+        printerManage.beginPrint(new POIPrinterManage.IPrinterListener() {
+            @Override
+            public void onError(int i, String s) {
+                Timber.e("Printer error with code " + i + " and message" + s);
+                Toast.makeText(context, "Printer Error", Toast.LENGTH_SHORT).show();
+                //addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+            }
+
+            @Override
+            public void onFinish() {
+                  Toast.makeText(context, "Printing job finished", Toast.LENGTH_SHORT).show();
+              //  addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
             }
 
             @Override

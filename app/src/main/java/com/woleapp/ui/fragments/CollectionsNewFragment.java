@@ -347,8 +347,18 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
         Log.e("TRANSACTION_PAYLOAD", "transaction payload: " + jsonObject);
 
         Disposable subscribe = retrofit.momoInit(jsonObject)
+               // .doOnSubscribe(disposable -> showProgressBar())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
+              //  .onErrorResumeNext(throwable -> {
+                //    Log.e("ErrorM", "error " + throwable.getMessage());
+                  //  dismissProgressBar();
+                   // return Observable.empty();
+               // })
+                //.doOnError(throwable -> {
+                  //  Log.e("ErrorM", "error " + throwable.getMessage());
+                   // dismissProgressBar();
+               // })
                 .subscribe(res -> {
                     if (res.code() != 200) {
                         Toast.makeText(context, "Failed to process transaction", Toast.LENGTH_SHORT).show();
@@ -371,6 +381,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
                 }, err -> {
                     Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
                     dismissProgressBar();
+                    Log.e("Error", "error " + err.getMessage());
                 });
     }
 
@@ -431,15 +442,13 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
                 }, err -> {
                     Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
                     dismissProgressBar();
+                    Log.e("Error", "error " + err.getMessage());
                 });
 
     }
 
     public void processToken() {
         showProgressBar();
-//        String merchantID = "63b59e41530aeeaec59a045f";
-  //      String apikey = "93064247-4668-4c73-ac43-4dcc28773a86";
-
         String merchantID = "63b59e41530aeeaec59a045f";
         String apikey = "93064247-4668-4c73-ac43-4dcc28773a86";
 
@@ -474,6 +483,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
                     dismissProgressBar();
                 }, err -> {
                     Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
+                    addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                     dismissProgressBar();
                 });
 
@@ -599,7 +609,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
 
         RxTextView.afterTextChangeEvents(this.binding.etAmt)
                 .skip(1)
-                .debounce(1000, TimeUnit.MILLISECONDS)
+                .debounce(1300, TimeUnit.MILLISECONDS)
                 //.toFlowable(BackpressureStrategy.BUFFER)
                 .cache()
                 .filter(textViewTextChangeEvent -> this.binding.etAmt.hasFocus())
@@ -658,13 +668,6 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
 
     }
 
-    private AgencyBankingService transRetrofit = new Retrofit.Builder()
-            .baseUrl("https://peoplespay.com.gh")
-            .client(getHttpClient(context, false))
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build()
-            .create(AgencyBankingService.class);
     private AgencyBankingService retrofit = new Retrofit.Builder()
             .baseUrl("https://peoplespay.com.gh")
             .client(getClient())
@@ -683,6 +686,8 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
         if(addTokenInterceptor)
             builder.addInterceptor(new TokenInterceptor());
         builder.connectTimeout(2, TimeUnit.MINUTES);
+        builder.readTimeout(2, TimeUnit.MINUTES);
+        builder.writeTimeout(2, TimeUnit.MINUTES);
         final OkHttpClient okHttpClient = builder.build();
 
         return okHttpClient;
@@ -701,10 +706,11 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
             Request request = original.newBuilder()
                     .addHeader("Authorization", "Bearer " + token)
                     .build();
-
             return chain.proceed(request);
         });
-
+        builder.connectTimeout(2, TimeUnit.MINUTES);
+        builder.readTimeout(2, TimeUnit.MINUTES);
+        builder.writeTimeout(2, TimeUnit.MINUTES);
         return builder.build();
     }
 
@@ -748,6 +754,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
 
                 }, err -> {
                     Toast.makeText(context, "An unexpected error occured", Toast.LENGTH_LONG).show();
+                    Log.e("ErrorTimeout", "error " + err.getMessage());
                 });
     }
 

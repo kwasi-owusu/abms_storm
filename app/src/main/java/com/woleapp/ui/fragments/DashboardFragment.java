@@ -371,20 +371,22 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
 
             if (2 == USER_LEVEL) {
                 if (position == 0) {
-                   Bundle b1 = new Bundle();
-                    b1.putInt("transaction_type", Constants.TRANSACTION_CASH_IN);
-                    CashInOptionsFragment cin = new CashInOptionsFragment();
-                    //CashInFragment cin = new CashInFragment();
-                    cin.setArguments(b1);
-                    addFragmentWithoutRemove(R.id.container_main, cin, CashInOptionsFragment.class.getSimpleName());
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+//                   Bundle b1 = new Bundle();
+//                    b1.putInt("transaction_type", Constants.TRANSACTION_CASH_IN);
+//                    CashInOptionsFragment cin = new CashInOptionsFragment();
+//                    //CashInFragment cin = new CashInFragment();
+//                    cin.setArguments(b1);
+//                    addFragmentWithoutRemove(R.id.container_main, cin, CashInOptionsFragment.class.getSimpleName());
                     //addFragmentWithoutRemove(R.id.container_main, new CashInOptionsNewFragment(), CashInOptionsNewFragment.class.getSimpleName());
                 } else if (position == 1) {
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
 //                    Bundle b1 = new Bundle();
 //                    b1.putInt("transaction_type", Constants.TRANSACTION_CASH_OUT);
 //                    FundWalletFragment cin = new FundWalletFragment();
 //                    cin.setArguments(b1);
                     //addFragmentWithoutRemove(R.id.container_main,cin,CashInFragment.class.getSimpleName());
-                    addFragmentWithoutRemove(R.id.container_main, new CashoutFragment(), CashoutFragment.class.getSimpleName());
+                  //  addFragmentWithoutRemove(R.id.container_main, new CashoutFragment(), CashoutFragment.class.getSimpleName());
                 } /*else if (position == 2) {
 
                     addFragmentWithoutRemove(R.id.container_main, new FundWalletFragment(), FundWalletFragment.class.getSimpleName());
@@ -394,14 +396,14 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
                     addFragmentWithoutRemove(R.id.container_main, new PayServicesFragment(), PayServicesFragment.class.getSimpleName());
 
                 }*/ else if (position == 2) {
-
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
 //                    Bundle b1 = new Bundle();
                     //b1.putInt("transaction_type", Constants.TRANSACTION_CASH_IN);
 //                    TransactionsFragment cin = new TransactionsFragment();
                     //CashInFragment cin = new CashInFragment();
 //                    cin.setArguments(b1);
 //                    addFragmentWithoutRemove(R.id.container_main, cin, TransactionsFragment.class.getSimpleName());
-                    addFragmentWithoutRemove(R.id.container_main, new AgencyTransactionFragment(), AgencyTransactionFragment.class.getSimpleName());
+                ///    addFragmentWithoutRemove(R.id.container_main, new AgencyTransactionFragment(), AgencyTransactionFragment.class.getSimpleName());
 
                     //Toast.makeText(context,"This feature shall be available soon",Toast.LENGTH_SHORT).show();
                 } //else if (position == 5) {
@@ -411,30 +413,38 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
                     addFragmentWithoutRemove(R.id.container_main, new CollectionsNewFragment(), CollectionsNewFragment.class.getSimpleName());
                 }
                 else if(position == 4){
-                    addFragmentWithoutRemove(R.id.container_main, new RemittanceFragment(), RemittanceFragment.class.getSimpleName());
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                  //  addFragmentWithoutRemove(R.id.container_main, new RemittanceFragment(), RemittanceFragment.class.getSimpleName());
                 }
                 else if(position == 5){
-                    addFragmentWithoutRemove(R.id.container_main, new InsuranceFragment(), InsuranceFragment.class.getSimpleName());
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                  //  addFragmentWithoutRemove(R.id.container_main, new InsuranceFragment(), InsuranceFragment.class.getSimpleName());
                 }
                 else if(position == 6){
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
                     //addFragmentWithoutRemove(R.id.container_main, new CameraFragment(), CameraFragment.class.getSimpleName());
-                    addFragmentWithoutRemove(R.id.container_main, new TicketsFragment(), TicketsFragment.class.getSimpleName());
+                   // addFragmentWithoutRemove(R.id.container_main, new TicketsFragment(), TicketsFragment.class.getSimpleName());
                    // addFragmentWithoutRemove(R.id.container_main, new PassportFragment(), PassportFragment.class.getSimpleName());
                 }
                 else if(position == 7){
-                    addFragmentWithoutRemove(R.id.container_main, new SSNITFragment(), SSNITFragment.class.getSimpleName());
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                   // addFragmentWithoutRemove(R.id.container_main, new SSNITFragment(), SSNITFragment.class.getSimpleName());
                 }
                 else if(position == 8){
-                    addFragmentWithoutRemove(R.id.container_main, new LocalGovernmentFragment(), LocalGovernmentFragment.class.getSimpleName());
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                   // addFragmentWithoutRemove(R.id.container_main, new LocalGovernmentFragment(), LocalGovernmentFragment.class.getSimpleName());
                 }
                 else if(position == 9){
-                    addFragmentWithoutRemove(R.id.container_main, new FinesBailsFragment(), FinesBailsFragment.class.getSimpleName());
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                    // addFragmentWithoutRemove(R.id.container_main, new FinesBailsFragment(), FinesBailsFragment.class.getSimpleName());
                 }
                 else if(position == 10){
-                    addFragmentWithoutRemove(R.id.container_main, new SchoolFeesFragment(), SchoolFeesFragment.class.getSimpleName());
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                    // addFragmentWithoutRemove(R.id.container_main, new SchoolFeesFragment(), SchoolFeesFragment.class.getSimpleName());
                 }
                 else if(position == 11){
-                    addFragmentWithoutRemove(R.id.container_main, new FuneralMerchantFragment(), FuneralMerchantFragment.class.getSimpleName());
+                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                    //   addFragmentWithoutRemove(R.id.container_main, new FuneralMerchantFragment(), FuneralMerchantFragment.class.getSimpleName());
                 }
                  else {
                     Toast.makeText(requireContext(), "More", Toast.LENGTH_SHORT).show();

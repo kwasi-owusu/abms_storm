@@ -19,12 +19,21 @@ public abstract class LayoutPaymentSuccessfulBinding extends ViewDataBinding {
   public final Button btnContinue;
 
   @NonNull
+  public final Button btnHome;
+
+  @NonNull
+  public final Button btnMerchant;
+
+  @NonNull
   public final ImageView ivTick;
 
   protected LayoutPaymentSuccessfulBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, Button btnContinue, ImageView ivTick) {
+      int _localFieldCount, Button btnContinue, Button btnHome, Button btnMerchant,
+      ImageView ivTick) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnContinue = btnContinue;
+    this.btnHome = btnHome;
+    this.btnMerchant = btnMerchant;
     this.ivTick = ivTick;
   }
 

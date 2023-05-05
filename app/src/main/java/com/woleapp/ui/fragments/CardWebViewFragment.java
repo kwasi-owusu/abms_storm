@@ -53,6 +53,7 @@ import org.json.JSONObject;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -148,6 +149,7 @@ public class CardWebViewFragment extends BaseFragment{
             // transactionStatus();
         }
     }
+    private boolean isReceiptPrinted = false;
     public void transactionStatus() {
         //  showProgressBar();
         timer = new Timer();
@@ -174,11 +176,14 @@ public class CardWebViewFragment extends BaseFragment{
                             }
 
                             if (responses.optString("status").equals("paid")) {
-                                //addFragmentWithoutRemove(R.id.container_main, new PaymentSuccessfulFragment(name, number, ref, issuer, amount), PaymentSuccessfulFragment.class.getSimpleName());
-                                printReceipt(ref);
-                                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                               // addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                                 timer.cancel();
                                 dismissProgressBar();
+                                addFragmentWithoutRemove(R.id.container_main, new PaymentCardSuccessfulFragment(ref, amount), PaymentCardSuccessfulFragment.class.getSimpleName());
+                              //  if (!isReceiptPrinted) {
+                                //    printReceipt(ref);
+                                  //  isReceiptPrinted = true;
+                                //}
                                 Log.e("TRANSACTION_Status_Paid", "paid " + responses.optString("status"));
                                 //break;
                             }
@@ -189,9 +194,10 @@ public class CardWebViewFragment extends BaseFragment{
                             }
                             else if (responses.optString("status").equals("failed")) {
                                 Toast.makeText(context, "Payment Failed", Toast.LENGTH_LONG).show();
-                                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                              //  addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                                 timer.cancel();
                                 dismissProgressBar();
+                                addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());
                                 Log.e("TRANS_Status_Failed", "failed " + responses.optString("status"));
                             }
                             else {
@@ -203,6 +209,7 @@ public class CardWebViewFragment extends BaseFragment{
                         }, err -> {
                             Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
                             dismissProgressBar();
+                            Log.e("Error", "error " + err.getMessage());
                         });
             }
         }, 0, INTERVAL);
@@ -264,7 +271,7 @@ public class CardWebViewFragment extends BaseFragment{
         textPrintLine.setBold(false);
         printerManage.addPrintLine(textPrintLine);
 
-        textPrintLine.setContent("Transaction Successful");
+        textPrintLine.setContent("Payment Successful");
         textPrintLine.setPosition(PrintLine.CENTER);
         textPrintLine.setSize(textPrintLine.FONT_NORMAL);
         textPrintLine.setBold(false);
@@ -314,13 +321,14 @@ public class CardWebViewFragment extends BaseFragment{
             public void onError(int i, String s) {
                 Timber.e("Printer error with code " + i + " and message" + s);
                 Toast.makeText(context, "Printer Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Payment Successful", Toast.LENGTH_LONG).show();
                 addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
             }
 
             @Override
             public void onFinish() {
-               // printSecondReceipt(ref);
-                Toast.makeText(context, "Printing job finished", Toast.LENGTH_SHORT).show();
+             //   printSecondReceipt(ref);
+                Toast.makeText(context, "Payment Successful", Toast.LENGTH_LONG).show();
                 addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                  // addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
             }
@@ -481,6 +489,9 @@ public class CardWebViewFragment extends BaseFragment{
             return chain.proceed(request);
         });
 
+        builder.connectTimeout(2, TimeUnit.MINUTES);
+        builder.readTimeout(2, TimeUnit.MINUTES);
+        builder.writeTimeout(2, TimeUnit.MINUTES);
         return builder.build();
     }
     public void showProgressBar() {

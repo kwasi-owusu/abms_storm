@@ -81,6 +81,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding = DataBindingUtil.setContentView(this, R.layout.layout_home)
         this.context = this.applicationContext;
         Log.e("TAG", BuildConfig.BASE_URL_STORM)
+        dismissProgressBar()
 //        val token = SharedPrefManager.getUserToken();
 //
 //        if (token == null || token.isEmpty() || JWTHelper.isExpired(token)) {

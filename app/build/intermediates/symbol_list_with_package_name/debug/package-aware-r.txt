@@ -2904,7 +2904,9 @@ id btn_back
 id btn_continue
 id btn_delete
 id btn_edit
+id btn_home
 id btn_login
+id btn_merchant
 id btn_print
 id btn_send
 id btn_share

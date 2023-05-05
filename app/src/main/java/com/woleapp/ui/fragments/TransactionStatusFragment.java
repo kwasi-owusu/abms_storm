@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -37,6 +38,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
+import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
@@ -83,7 +85,7 @@ public class TransactionStatusFragment extends BaseFragment{
        Log.e("TransId", "TransId" + transactionId);
         Log.e("Amount", "Amount" + amount);
 
-        showTimeoutProgressBar();
+        //showTimedProgressBar();
         transactionStatus();
 
     }
@@ -99,6 +101,7 @@ public class TransactionStatusFragment extends BaseFragment{
         return binding.getRoot();
     }
 
+    private boolean isReceiptPrinted = false;
     public void transactionStatus() {
         showTimeoutProgressBar();
         timer = new Timer();
@@ -108,6 +111,10 @@ public class TransactionStatusFragment extends BaseFragment{
                 Disposable subscribe = transRetrofit.transactionStatus(transactionId)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
+                        .onErrorResumeNext(throwable -> {
+                            Log.e("ErrorM", "error " + throwable.getMessage());
+                            return Observable.empty();
+                        })
                         .subscribe( res ->{
                             Object body = res.body();
                             JSONObject responses = new JSONObject(new Gson().toJson(body));
@@ -124,24 +131,29 @@ public class TransactionStatusFragment extends BaseFragment{
                                 return;
                             }
                             if (responses.optString("status").equals("paid")) {
-                                // addFragmentWithoutRemove(R.id.container_main, new PaymentSuccessfulFragment(name, number, ref, issuer, amount), PaymentSuccessfulFragment.class.getSimpleName());
-                                printReceipt(ref,amount);
-                                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                              //  addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                                 timer.cancel();
                                 dismissProgressBar();
+                                //if (!isReceiptPrinted) {
+                                  //  printReceipt(ref, amount);
+                                   // isReceiptPrinted = true;
+                                //}
+                                 addFragmentWithoutRemove(R.id.container_main, new PaymentSuccessfulFragment(ref, amount), PaymentSuccessfulFragment.class.getSimpleName());
                                 Log.e("TRANSACTION_Status_Paid", "paid " + responses.optString("status"));
-                                //break;
                             }
                             else if (responses.optString("status").equals("pending")) {
-                                // timer.cancel();
+                                // timer.cancel()
+                                //isTransactionPending = true;
                                 showTimeoutProgressBar();
                                 //showProgressBar();
                                 Log.e("TRANSACTION_Status_Pend", "pending " + responses.optString("status"));
                             }
                            else if (responses.optString("status").equals("failed")) {
+                               // addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
                                 timer.cancel();
-                                addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());                                timer.cancel();
                                 dismissProgressBar();
+                                addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());
+                                Toast.makeText(context, "Payment Failed", Toast.LENGTH_LONG).show();
                                 Log.e("TRANS_Status_Failed", "failed " + responses.optString("status"));
                             }
                             else {
@@ -152,12 +164,141 @@ public class TransactionStatusFragment extends BaseFragment{
                             }
                         }, err -> {
                             Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
-                           // dismissProgressBar();
+                            Log.e("Error", "error " + err.getMessage());
+                             dismissProgressBar();
                         });
+
             }
         }, 0, INTERVAL);
     }
     private void printReceipt( String ref, String amnt) {
+        POIPrinterManage printerManage = NetPosSdk.getPrinterManager(context);
+        printerManage.setLineSpace(2);
+        printerManage.setPrintGray(3000);
+        printerManage.cleanCache();
+
+        TextPrintLine textPrintLine = new TextPrintLine();
+        textPrintLine.setType(PrintLine.TEXT);
+        textPrintLine.setContent(merchantName);
+        textPrintLine.setBold(true);
+        textPrintLine.setItalic(false);
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(TextPrintLine.FONT_LARGE);
+
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("----------------------------------------------------" +
+                "--------------------------------------------");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent(" ");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Amount: " + "GH₵" +(amount));
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Ref No.: " + ref);
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Date: " + utilities.getTodaysDate());
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Time: " + utilities.getTodaysTime());
+        textPrintLine.setPosition(PrintLine.LEFT);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent(" ");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Payment Successful");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("--------------------------------------------------------------");
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("THANK YOU");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("Powered by Bsystems Limited");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        textPrintLine.setContent("0302-254-340");
+        textPrintLine.setPosition(PrintLine.CENTER);
+        textPrintLine.setSize(textPrintLine.FONT_NORMAL);
+        textPrintLine.setBold(false);
+        textPrintLine.setItalic(true);
+        printerManage.addPrintLine(textPrintLine);
+
+        Bitmap bitmap =
+                BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.bsystemslogo);
+        bitmap = Bitmap.createScaledBitmap(bitmap, 150, 100, false);
+
+        BitmapPrintLine bitmapPrintLine = new BitmapPrintLine();
+        bitmapPrintLine.setType(PrintLine.BITMAP);
+        bitmapPrintLine.setBitmap(bitmap);
+        bitmapPrintLine.setPosition(PrintLine.CENTER);
+
+        printerManage.addPrintLine(bitmapPrintLine);
+
+        printerManage.beginPrint(new POIPrinterManage.IPrinterListener() {
+            @Override
+            public void onError(int i, String s) {
+                Timber.e("Printer error with code " + i + " and message" + s);
+                Toast.makeText(context, "Printer Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Payment Successful", Toast.LENGTH_LONG).show();
+                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+            }
+
+            @Override
+            public void onFinish() {
+                //  Toast.makeText(context, "Printing job finished", Toast.LENGTH_SHORT).show();
+             //   printSecondReceipt(ref, amount);
+                Toast.makeText(context, "Payment Successful", Toast.LENGTH_LONG).show();
+                addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                 //addFragmentWithoutRemove(R.id.container_main, new PaymentSuccessfulFragment(number, amount), PaymentSuccessfulFragment.class.getSimpleName());
+            }
+
+            @Override
+            public void onStart() {
+                Toast.makeText(context, "Printing job started", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    private void printSecondReceipt( String ref, String amnt) {
         POIPrinterManage printerManage = NetPosSdk.getPrinterManager(context);
         printerManage.setLineSpace(2);
         printerManage.setPrintGray(3000);
@@ -305,6 +446,9 @@ public class TransactionStatusFragment extends BaseFragment{
             return chain.proceed(request);
         });
 
+        builder.connectTimeout(2, TimeUnit.MINUTES);
+        builder.readTimeout(2, TimeUnit.MINUTES);
+        builder.writeTimeout(2, TimeUnit.MINUTES);
         return builder.build();
     }
 
@@ -333,5 +477,85 @@ public class TransactionStatusFragment extends BaseFragment{
         mProgressDialog.show();
         mProgressDialog.setCancelable(false);
     }
+    public void showTimeProgressBar(boolean hideOnFinish) {
+        if (mProgressDialog != null && mProgressDialog.isShowing())
+            return;
+        mProgressDialog = new ProgressDialog(context);
+        mProgressDialog.setMessage("Checking Payment Status"); // Setting Message
+        mProgressDialog.setTitle("Status"); // Setting Title
+        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        mProgressDialog.setMax(10000); // Set the maximum progress to 30 seconds
+        mProgressDialog.show();
+        mProgressDialog.setCancelable(false);
+
+        long millisInFuture = 10000; // 30 seconds in milliseconds
+        new CountDownTimer(millisInFuture, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                // Update the progress dialog with the remaining time
+                int secondsRemaining = (int) millisUntilFinished / 1000;
+                mProgressDialog.setProgress(10000 - (int) millisUntilFinished);
+                mProgressDialog.setMessage("Checking Payment Status\nTime remaining: " + secondsRemaining + " seconds");
+            }
+
+            @Override
+            public void onFinish() {
+                if (mProgressDialog != null && mProgressDialog.isShowing()) {
+                    mProgressDialog.dismiss();
+                    mProgressDialog = null;
+                    // Hide the progress dialog and show the dashboard fragment only if the transaction is still pending
+                 //   if (isTransactionPending) {
+                   //     addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                   // }
+                }
+            }
+        }.start();
+        if (hideOnFinish) {
+            // If hideOnFinish is true, hide the progress dialog when the timer finishes
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (mProgressDialog != null && mProgressDialog.isShowing()) {
+                        mProgressDialog.dismiss();
+                        mProgressDialog = null;
+                    }
+                }
+            }, millisInFuture);
+        }
+    }
+
+    public void showTimedProgressBar() {
+        if (mProgressDialog != null && mProgressDialog.isShowing())
+            return;
+        mProgressDialog = new ProgressDialog(context);
+        mProgressDialog.setMessage("Checking Payment Status"); // Setting Message
+        mProgressDialog.setTitle("Status"); // Setting Title
+        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        mProgressDialog.show();
+        mProgressDialog.setCancelable(false);
+
+        long millisInFuture = 60000;
+        new CountDownTimer(millisInFuture, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                int secondsRemaining = (int) millisUntilFinished / 1000;
+                mProgressDialog.setProgress(10000 - (int) millisUntilFinished);
+                mProgressDialog.setMessage("Checking Payment Status\nTime remaining: " + secondsRemaining + " seconds");
+            }
+
+            @Override
+            public void onFinish() {
+                if (mProgressDialog != null && mProgressDialog.isShowing()) {
+                    mProgressDialog.dismiss();
+                    mProgressDialog = null;
+                    Toast.makeText(context, "Payment failed", Toast.LENGTH_LONG).show();
+                   // addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                    addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());
+                    timer.cancel();
+                }
+            }
+        }.start();
+    }
+
 
 }

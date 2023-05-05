@@ -2903,7 +2903,9 @@ int id btn_back 0x7f0a00d5
 int id btn_continue 0x7f0a00d6
 int id btn_delete 0x7f0a00d7
 int id btn_edit 0x7f0a00d8
+int id btn_home 0x7f0a03fe
 int id btn_login 0x7f0a00d9
+int id btn_merchant 0x7f0a03fd
 int id btn_print 0x7f0a00da
 int id btn_send 0x7f0a00db
 int id btn_share 0x7f0a00dc

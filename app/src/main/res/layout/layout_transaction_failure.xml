@@ -36,7 +36,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/margin_20"
                     android:fontFamily="@font/questrial"
-                    android:text="Transaction Unsuccessful"
+                    android:text="Payment Failed"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/text_size_25"
                     android:textStyle="normal"

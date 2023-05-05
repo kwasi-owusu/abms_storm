@@ -16,6 +16,8 @@ public class LayoutPaymentSuccessfulBindingImpl extends LayoutPaymentSuccessfulB
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.ivTick, 1);
         sViewsWithIds.put(R.id.btn_continue, 2);
+        sViewsWithIds.put(R.id.btn_merchant, 3);
+        sViewsWithIds.put(R.id.btn_home, 4);
     }
     // views
     @NonNull
@@ -26,11 +28,13 @@ public class LayoutPaymentSuccessfulBindingImpl extends LayoutPaymentSuccessfulB
     // Inverse Binding Event Handlers
 
     public LayoutPaymentSuccessfulBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private LayoutPaymentSuccessfulBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (android.widget.Button) bindings[2]
+            , (android.widget.Button) bindings[4]
+            , (android.widget.Button) bindings[3]
             , (android.widget.ImageView) bindings[1]
             );
         this.mboundView0 = (android.widget.ScrollView) bindings[0];
