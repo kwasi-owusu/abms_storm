@@ -431,7 +431,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
                     cardTransactionId= response.optString("transactionId");
                     Bundle bundle = new Bundle();
                     bundle.putString("url", response.optString("redirectUrl"));
-                    CardWebViewFragment redirecting = new CardWebViewFragment(cardTransactionId,token,name,number,ref,issuer,amount);
+                    CardWebViewFragment redirecting = new CardWebViewFragment(cardTransactionId,token,name,ref,amount);
                     redirecting.setArguments(bundle);
                     replaceFragmentWithBack(R.id.container_main, redirecting, CardWebViewFragment.class.getSimpleName());
                     //addFragmentWithoutRemove(R.id.container_main, new CardWebViewFragment(), CardWebViewFragment.class.getSimpleName());

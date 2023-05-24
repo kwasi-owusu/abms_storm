@@ -4,12 +4,9 @@ package com.woleapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -26,10 +23,13 @@ import java.lang.Object;
 
 public abstract class LayoutFuneralDonationsBinding extends ViewDataBinding {
   @NonNull
+  public final CustomEditText accountName;
+
+  @NonNull
   public final EditText accountNumber;
 
   @NonNull
-  public final Button btnPrint;
+  public final LinearLayout accountSpinner;
 
   @NonNull
   public final CardView cardCollection;
@@ -41,13 +41,7 @@ public abstract class LayoutFuneralDonationsBinding extends ViewDataBinding {
   public final EditText cardNumber;
 
   @NonNull
-  public final RadioButton cardPayment;
-
-  @NonNull
   public final CardView cashCollection;
-
-  @NonNull
-  public final RadioButton cashPayment;
 
   @NonNull
   public final TextView collectionTitle;
@@ -62,25 +56,13 @@ public abstract class LayoutFuneralDonationsBinding extends ViewDataBinding {
   public final ImageView firstimage;
 
   @NonNull
-  public final LinearLayout linearCanvas;
-
-  @NonNull
-  public final RelativeLayout linearCanvasMain;
-
-  @NonNull
   public final LinearLayout linearPrice;
 
   @NonNull
   public final LinearLayout linearTitle;
 
   @NonNull
-  public final RadioButton momo;
-
-  @NonNull
   public final LinearLayout networkSpinner;
-
-  @NonNull
-  public final CustomEditText payeeName;
 
   @NonNull
   public final CardView readCard;
@@ -92,10 +74,10 @@ public abstract class LayoutFuneralDonationsBinding extends ViewDataBinding {
   public final ScrollView scrollView;
 
   @NonNull
-  public final AppCompatSpinner spnNetworkType;
+  public final AppCompatSpinner spnAccountType;
 
   @NonNull
-  public final RadioGroup transtype;
+  public final AppCompatSpinner spnNetworkType;
 
   @NonNull
   public final TextView tvCardCollection;
@@ -110,52 +92,42 @@ public abstract class LayoutFuneralDonationsBinding extends ViewDataBinding {
   public final TextView tvReadCard;
 
   @NonNull
-  public final TextView tvRetake;
-
-  @NonNull
-  public final TextView tvSign;
+  public final CustomEditText uid;
 
   protected LayoutFuneralDonationsBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, EditText accountNumber, Button btnPrint, CardView cardCollection,
-      EditText cardExpiry, EditText cardNumber, RadioButton cardPayment, CardView cashCollection,
-      RadioButton cashPayment, TextView collectionTitle, CustomEditText etAmt, EditText etCVV,
-      ImageView firstimage, LinearLayout linearCanvas, RelativeLayout linearCanvasMain,
-      LinearLayout linearPrice, LinearLayout linearTitle, RadioButton momo,
-      LinearLayout networkSpinner, CustomEditText payeeName, CardView readCard,
-      RelativeLayout relativeOptions, ScrollView scrollView, AppCompatSpinner spnNetworkType,
-      RadioGroup transtype, TextView tvCardCollection, TextView tvCashCollection,
-      TextView tvConvinienceFee, TextView tvReadCard, TextView tvRetake, TextView tvSign) {
+      int _localFieldCount, CustomEditText accountName, EditText accountNumber,
+      LinearLayout accountSpinner, CardView cardCollection, EditText cardExpiry,
+      EditText cardNumber, CardView cashCollection, TextView collectionTitle, CustomEditText etAmt,
+      EditText etCVV, ImageView firstimage, LinearLayout linearPrice, LinearLayout linearTitle,
+      LinearLayout networkSpinner, CardView readCard, RelativeLayout relativeOptions,
+      ScrollView scrollView, AppCompatSpinner spnAccountType, AppCompatSpinner spnNetworkType,
+      TextView tvCardCollection, TextView tvCashCollection, TextView tvConvinienceFee,
+      TextView tvReadCard, CustomEditText uid) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.accountName = accountName;
     this.accountNumber = accountNumber;
-    this.btnPrint = btnPrint;
+    this.accountSpinner = accountSpinner;
     this.cardCollection = cardCollection;
     this.cardExpiry = cardExpiry;
     this.cardNumber = cardNumber;
-    this.cardPayment = cardPayment;
     this.cashCollection = cashCollection;
-    this.cashPayment = cashPayment;
     this.collectionTitle = collectionTitle;
     this.etAmt = etAmt;
     this.etCVV = etCVV;
     this.firstimage = firstimage;
-    this.linearCanvas = linearCanvas;
-    this.linearCanvasMain = linearCanvasMain;
     this.linearPrice = linearPrice;
     this.linearTitle = linearTitle;
-    this.momo = momo;
     this.networkSpinner = networkSpinner;
-    this.payeeName = payeeName;
     this.readCard = readCard;
     this.relativeOptions = relativeOptions;
     this.scrollView = scrollView;
+    this.spnAccountType = spnAccountType;
     this.spnNetworkType = spnNetworkType;
-    this.transtype = transtype;
     this.tvCardCollection = tvCardCollection;
     this.tvCashCollection = tvCashCollection;
     this.tvConvinienceFee = tvConvinienceFee;
     this.tvReadCard = tvReadCard;
-    this.tvRetake = tvRetake;
-    this.tvSign = tvSign;
+    this.uid = uid;
   }
 
   @NonNull

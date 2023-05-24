@@ -196,7 +196,6 @@ public static Observable<Response<Object>> agencyLogin(JsonObject payload, Conte
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
-
     public static Observable<Response<Object>> pPayInit(JsonObject payload, Context context) {
         return AgencyBankingAPIClient.createPPay(context).pPayInit(payload)
                 .subscribeOn(Schedulers.io())

@@ -91,6 +91,7 @@ array identification
 array idtype
 array network_type
 array network_types
+array payment_type
 array quantity
 array reference
 array search_by
@@ -1989,6 +1990,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable donate
 drawable drawable_mail
 drawable drawable_pwd
 drawable drawable_show_pwd
@@ -2805,7 +2807,9 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id accountName
 id accountNumber
+id accountSpinner
 id account_id
 id account_id__details_value
 id account_id_details
@@ -2907,7 +2911,6 @@ id btn_edit
 id btn_home
 id btn_login
 id btn_merchant
-id btn_print
 id btn_send
 id btn_share
 id btn_submit
@@ -2941,7 +2944,6 @@ id cardView
 id cardViewRoot
 id card_fee
 id cashCollection
-id cashPayment
 id center
 id centerCrop
 id centerInside
@@ -3466,6 +3468,7 @@ id sold_by
 id spacer
 id spline
 id split_action_bar
+id spnAccountType
 id spnBank
 id spnBankLayout
 id spnCategory
@@ -3687,6 +3690,7 @@ id txt_forgot_pwd
 id txt_login
 id type_of_case_header
 id type_of_case_note
+id uid
 id unchecked
 id uniform
 id unlabeled
@@ -3970,6 +3974,7 @@ layout spinner_view_drop_down
 layout spinner_view_id_type
 layout spinner_view_network_type
 layout spinner_view_padding
+layout spinner_view_payment_mode
 layout spinner_view_quantity
 layout spinner_view_ref_type
 layout spinner_view_state

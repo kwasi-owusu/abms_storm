@@ -85,7 +85,7 @@
     <string name="hint_depositor">DEPOSITOR</string>
     <string name="hint_choose_id_type">SELECT ID</string>
     <string name="hint_choose_network">SELECT NETWORK TYPE</string>
-    <string name="hint_choose_trans_type">SELECT TRANSACTION</string>
+    <string name="hint_choose_trans_type">SELECT MODE OF PAYMENT</string>
     <string name="hint_choose_ref_type">SELECT REFERENCE</string>
     <string name="hint_choose_purpose_trans">PURPOSE OF TRANSACTION</string>
     <string name="hint_choose_school">SELECT SCHOOL</string>

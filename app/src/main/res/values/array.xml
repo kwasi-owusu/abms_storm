@@ -198,4 +198,9 @@
         <item>AIRTEL TIGO</item>
     </string-array>
 
+    <string-array name="payment_type">
+        <item>MOMO</item>
+        <item>CARD</item>
+    </string-array>
+
 </resources>

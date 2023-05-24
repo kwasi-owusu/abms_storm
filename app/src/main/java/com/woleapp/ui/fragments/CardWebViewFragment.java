@@ -81,13 +81,11 @@ public class CardWebViewFragment extends BaseFragment{
     private String issuer;
     private String amount;
     private static String merchantName = SharedPrefManager.getAgencyUser().getMerchantName();
-    public CardWebViewFragment(String cardTransactionId, String token, String name, String number, String ref, String issuer, String amount){
+    public CardWebViewFragment(String cardTransactionId, String token, String name, String ref, String amount){
         this.cardTransactionId = cardTransactionId;
         this.token = token;
         this.name = name;
-        this.number = number;
         this.ref = ref;
-        this.issuer = issuer;
         this.amount = amount;
     }
 

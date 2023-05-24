@@ -17,32 +17,26 @@ public class LayoutFuneralDonationsBindingImpl extends LayoutFuneralDonationsBin
         sViewsWithIds.put(R.id.relativeOptions, 1);
         sViewsWithIds.put(R.id.linearTitle, 2);
         sViewsWithIds.put(R.id.collectionTitle, 3);
-        sViewsWithIds.put(R.id.transtype, 4);
-        sViewsWithIds.put(R.id.momo, 5);
-        sViewsWithIds.put(R.id.cardPayment, 6);
-        sViewsWithIds.put(R.id.cashPayment, 7);
-        sViewsWithIds.put(R.id.linearPrice, 8);
-        sViewsWithIds.put(R.id.etAmt, 9);
-        sViewsWithIds.put(R.id.payeeName, 10);
-        sViewsWithIds.put(R.id.networkSpinner, 11);
-        sViewsWithIds.put(R.id.spnNetworkType, 12);
-        sViewsWithIds.put(R.id.accountNumber, 13);
-        sViewsWithIds.put(R.id.etCVV, 14);
-        sViewsWithIds.put(R.id.cardNumber, 15);
-        sViewsWithIds.put(R.id.cardExpiry, 16);
-        sViewsWithIds.put(R.id.tvConvinienceFee, 17);
-        sViewsWithIds.put(R.id.linearCanvasMain, 18);
-        sViewsWithIds.put(R.id.tvSign, 19);
-        sViewsWithIds.put(R.id.tvRetake, 20);
-        sViewsWithIds.put(R.id.linearCanvas, 21);
-        sViewsWithIds.put(R.id.btn_print, 22);
-        sViewsWithIds.put(R.id.cardCollection, 23);
-        sViewsWithIds.put(R.id.tvCardCollection, 24);
-        sViewsWithIds.put(R.id.firstimage, 25);
-        sViewsWithIds.put(R.id.cashCollection, 26);
-        sViewsWithIds.put(R.id.tvCashCollection, 27);
-        sViewsWithIds.put(R.id.readCard, 28);
-        sViewsWithIds.put(R.id.tvReadCard, 29);
+        sViewsWithIds.put(R.id.linearPrice, 4);
+        sViewsWithIds.put(R.id.uid, 5);
+        sViewsWithIds.put(R.id.etAmt, 6);
+        sViewsWithIds.put(R.id.accountSpinner, 7);
+        sViewsWithIds.put(R.id.spnAccountType, 8);
+        sViewsWithIds.put(R.id.accountName, 9);
+        sViewsWithIds.put(R.id.networkSpinner, 10);
+        sViewsWithIds.put(R.id.spnNetworkType, 11);
+        sViewsWithIds.put(R.id.accountNumber, 12);
+        sViewsWithIds.put(R.id.cardNumber, 13);
+        sViewsWithIds.put(R.id.cardExpiry, 14);
+        sViewsWithIds.put(R.id.etCVV, 15);
+        sViewsWithIds.put(R.id.tvConvinienceFee, 16);
+        sViewsWithIds.put(R.id.cardCollection, 17);
+        sViewsWithIds.put(R.id.tvCardCollection, 18);
+        sViewsWithIds.put(R.id.firstimage, 19);
+        sViewsWithIds.put(R.id.cashCollection, 20);
+        sViewsWithIds.put(R.id.tvCashCollection, 21);
+        sViewsWithIds.put(R.id.readCard, 22);
+        sViewsWithIds.put(R.id.tvReadCard, 23);
     }
     // views
     // variables
@@ -51,40 +45,34 @@ public class LayoutFuneralDonationsBindingImpl extends LayoutFuneralDonationsBin
     // Inverse Binding Event Handlers
 
     public LayoutFuneralDonationsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 30, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 24, sIncludes, sViewsWithIds));
     }
     private LayoutFuneralDonationsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.EditText) bindings[13]
-            , (android.widget.Button) bindings[22]
-            , (androidx.cardview.widget.CardView) bindings[23]
-            , (android.widget.EditText) bindings[16]
-            , (android.widget.EditText) bindings[15]
-            , (android.widget.RadioButton) bindings[6]
-            , (androidx.cardview.widget.CardView) bindings[26]
-            , (android.widget.RadioButton) bindings[7]
-            , (android.widget.TextView) bindings[3]
             , (com.woleapp.ui.widgets.CustomEditText) bindings[9]
+            , (android.widget.EditText) bindings[12]
+            , (android.widget.LinearLayout) bindings[7]
+            , (androidx.cardview.widget.CardView) bindings[17]
             , (android.widget.EditText) bindings[14]
-            , (android.widget.ImageView) bindings[25]
-            , (android.widget.LinearLayout) bindings[21]
-            , (android.widget.RelativeLayout) bindings[18]
-            , (android.widget.LinearLayout) bindings[8]
+            , (android.widget.EditText) bindings[13]
+            , (androidx.cardview.widget.CardView) bindings[20]
+            , (android.widget.TextView) bindings[3]
+            , (com.woleapp.ui.widgets.CustomEditText) bindings[6]
+            , (android.widget.EditText) bindings[15]
+            , (android.widget.ImageView) bindings[19]
+            , (android.widget.LinearLayout) bindings[4]
             , (android.widget.LinearLayout) bindings[2]
-            , (android.widget.RadioButton) bindings[5]
-            , (android.widget.LinearLayout) bindings[11]
-            , (com.woleapp.ui.widgets.CustomEditText) bindings[10]
-            , (androidx.cardview.widget.CardView) bindings[28]
+            , (android.widget.LinearLayout) bindings[10]
+            , (androidx.cardview.widget.CardView) bindings[22]
             , (android.widget.RelativeLayout) bindings[1]
             , (android.widget.ScrollView) bindings[0]
-            , (androidx.appcompat.widget.AppCompatSpinner) bindings[12]
-            , (android.widget.RadioGroup) bindings[4]
-            , (android.widget.TextView) bindings[24]
-            , (android.widget.TextView) bindings[27]
-            , (android.widget.TextView) bindings[17]
-            , (android.widget.TextView) bindings[29]
-            , (android.widget.TextView) bindings[20]
-            , (android.widget.TextView) bindings[19]
+            , (androidx.appcompat.widget.AppCompatSpinner) bindings[8]
+            , (androidx.appcompat.widget.AppCompatSpinner) bindings[11]
+            , (android.widget.TextView) bindings[18]
+            , (android.widget.TextView) bindings[21]
+            , (android.widget.TextView) bindings[16]
+            , (android.widget.TextView) bindings[23]
+            , (com.woleapp.ui.widgets.CustomEditText) bindings[5]
             );
         this.scrollView.setTag(null);
         setRootTag(root);

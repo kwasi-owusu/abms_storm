@@ -73,8 +73,10 @@ public interface AgencyBankingService {
 
     @POST("/peoplepay/hub/collectmoney/card")
     Observable<Response<Object>> cardInit(@Body JsonObject payload);
-
     @GET("/peoplepay/issuers/get")
     Observable<Response<Object>> getBankList();
+    @POST("/peoplepay/donations/collections")
+    Observable<Response<Object>> donationCollections(@Body JsonObject payload);
+
 
 }

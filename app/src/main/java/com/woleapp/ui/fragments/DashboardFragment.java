@@ -223,7 +223,7 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
         serviceList.add(service);
         service = new Service(11, "SCHOOL FEES", R.drawable.tuition);
         serviceList.add(service);
-        service = new Service(12, "FUNERAL DONATIONS", R.drawable.funeral);
+        service = new Service(12, "DONATIONS", R.drawable.donate);
         serviceList.add(service);
 //        if (user.getUser_level() == USER_LEVEL) {
 //            service = new Service(1, "CASH-IN / BANK TRANSFER", R.drawable.cash_in_new);
@@ -443,8 +443,8 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
                     // addFragmentWithoutRemove(R.id.container_main, new SchoolFeesFragment(), SchoolFeesFragment.class.getSimpleName());
                 }
                 else if(position == 11){
-                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
-                    //   addFragmentWithoutRemove(R.id.container_main, new FuneralMerchantFragment(), FuneralMerchantFragment.class.getSimpleName());
+                   // Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                       addFragmentWithoutRemove(R.id.container_main, new FuneralDonationsFragment(), FuneralDonationsFragment.class.getSimpleName());
                 }
                  else {
                     Toast.makeText(requireContext(), "More", Toast.LENGTH_SHORT).show();
