@@ -85,6 +85,8 @@ array banks1
 array cash_options
 array categories
 array channel
+array choose_gender
+array choose_marital_status
 array colors
 array idcard
 array identification
@@ -311,6 +313,7 @@ attr chipStyle
 attr chipSurfaceColor
 attr circleCrop
 attr circleRadius
+attr clearOnDoubleClick
 attr clickAction
 attr closeIcon
 attr closeIconEnabled
@@ -808,6 +811,9 @@ attr passwordToggleTint
 attr passwordToggleTintMode
 attr pathMotionArc
 attr path_percent
+attr penColor
+attr penMaxWidth
+attr penMinWidth
 attr percentHeight
 attr percentWidth
 attr percentX
@@ -1081,6 +1087,7 @@ attr useCompatPadding
 attr useMaterialThemeColors
 attr use_flash
 attr values
+attr velocityFilterWeight
 attr verticalOffset
 attr viewAspectRatio
 attr viewInflaterClass
@@ -1952,6 +1959,7 @@ drawable bubble2
 drawable bubble_round
 drawable bubble_small
 drawable bus_ticket
+drawable button_background
 drawable card_view
 drawable cash_in
 drawable cash_in_new
@@ -1960,6 +1968,8 @@ drawable cash_out_new
 drawable cash_payment
 drawable ccp_ic_arrow_drop_down
 drawable check_mark
+drawable circle_active
+drawable circle_inactive
 drawable clipboard
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -2632,6 +2642,7 @@ drawable ripple_theme_no_radius
 drawable ripple_white
 drawable s_logo
 drawable sample_qr
+drawable sanlam
 drawable schoolfees
 drawable search
 drawable search_icon
@@ -2652,6 +2663,7 @@ drawable sports
 drawable ssnit
 drawable st_logo
 drawable test_custom_background
+drawable text_field_rounded
 drawable tick
 drawable tick_new
 drawable ticket
@@ -2842,6 +2854,7 @@ id add
 id add_product
 id add_to_cart
 id address
+id addressDetails
 id adjust_height
 id adjust_width
 id agencyTransactionDetailsRecycler
@@ -2873,6 +2886,9 @@ id barrier
 id baseline
 id beginOnFirstDraw
 id beginning
+id ben_contactNumber
+id ben_firstName
+id ben_surname
 id bill_package
 id biller_list
 id blocking
@@ -2908,9 +2924,15 @@ id btn_back
 id btn_continue
 id btn_delete
 id btn_edit
+id btn_getStarted
 id btn_home
+id btn_joinNow
 id btn_login
 id btn_merchant
+id btn_next
+id btn_nextMain
+id btn_previous
+id btn_previousPage
 id btn_send
 id btn_share
 id btn_submit
@@ -2919,6 +2941,7 @@ id business_address
 id business_name
 id buttonPanel
 id button_cancel
+id buttons_container
 id bvn
 id cache_measures
 id camera_button
@@ -2961,6 +2984,9 @@ id chip3
 id chip_group
 id choose_payment_method
 id chronometer
+id circleActive
+id circleInactive1
+id circleInactive2
 id city
 id citySentFrom
 id city_edit
@@ -2979,6 +3005,7 @@ id complete_icon
 id confirm_button
 id confirm_mobile_number
 id confirm_password
+id contactNumber
 id contactTelNumber
 id container
 id container_main
@@ -3010,6 +3037,7 @@ id customer_details_case_note
 id customers_details
 id cut
 id daily
+id danger_hazard
 id dark
 id dataBinding
 id data_or_airtime_spinner
@@ -3063,6 +3091,7 @@ id edit_text
 id edt_customer_name
 id email
 id email_edit
+id employmentDetails
 id empty_view
 id end
 id end_padder
@@ -3104,6 +3133,10 @@ id expand_activities_button
 id expanded_menu
 id expiryDate
 id fade
+id familyContactNumber
+id familyDateOfBirth
+id familyFirstName
+id familySurname
 id fastscroll
 id fee
 id fee_value
@@ -3131,6 +3164,8 @@ id forever
 id fragment_container_view_tag
 id gender_header
 id gender_option
+id getStarted
+id ghanaCard
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
@@ -3307,6 +3342,7 @@ id oval
 id package_spinner
 id package_value
 id packed
+id pageNumber
 id parallax
 id parent
 id parentFrame
@@ -3328,11 +3364,14 @@ id payment_status
 id peekHeight
 id pending
 id percent
+id personalDetails
 id phone_call
 id phone_edit
 id phone_number
 id pin
 id planValidityOptions
+id policy
+id policyTitle
 id pos_fee
 id position
 id postCode
@@ -3454,6 +3493,8 @@ id showHome
 id showTitle
 id signUpButton
 id signUpLayout
+id signature_pad
+id signature_pad_container
 id sin
 id skipCollapsed
 id slide
@@ -3508,6 +3549,7 @@ id submenuarrow
 id submit_area
 id submit_button
 id summary
+id surname
 id swipe_refresh
 id switchButton
 id switch_la
@@ -3594,6 +3636,8 @@ id tvAmount
 id tvAmtRatePerUnitHeader
 id tvAvailableBalance
 id tvAvailableBalanceTitle
+id tvBank
+id tvBeneficiary
 id tvCardCollection
 id tvCashCollection
 id tvCategory
@@ -3899,6 +3943,7 @@ layout layout_qr_registration
 layout layout_quick_transaction
 layout layout_recycler_country_tile
 layout layout_ria
+layout layout_sanlam
 layout layout_scan_to_pay
 layout layout_school_fees
 layout layout_select_user_type
@@ -3959,6 +4004,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout page_indicator_layout
 layout qr_bottom_sheet_dialog
 layout qr_generation_page
 layout row
@@ -3969,9 +4015,11 @@ layout select_dialog_singlechoice_material
 layout spinner_view
 layout spinner_view_bank
 layout spinner_view_category
+layout spinner_view_choose_gender
 layout spinner_view_color
 layout spinner_view_drop_down
 layout spinner_view_id_type
+layout spinner_view_marital_status
 layout spinner_view_network_type
 layout spinner_view_padding
 layout spinner_view_payment_mode
@@ -4206,7 +4254,9 @@ string hint_amount
 string hint_brief_note
 string hint_bvn_no
 string hint_choose_bank_caps
+string hint_choose_gender
 string hint_choose_id_type
+string hint_choose_marital_status
 string hint_choose_network
 string hint_choose_purpose_trans
 string hint_choose_quantity
@@ -5365,6 +5415,7 @@ styleable SearchableSpinner hintText
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
 styleable SignInButton buttonSize colorScheme scopeUris
+styleable SignaturePad clearOnDoubleClick penColor penMaxWidth penMinWidth velocityFilterWeight
 styleable SimpleDraweeView actualImageResource actualImageScaleType actualImageUri backgroundImage fadeDuration failureImage failureImageScaleType overlayImage placeholderImage placeholderImageScaleType pressedStateOverlayImage progressBarAutoRotateInterval progressBarImage progressBarImageScaleType retryImage retryImageScaleType roundAsCircle roundBottomEnd roundBottomLeft roundBottomRight roundBottomStart roundTopEnd roundTopLeft roundTopRight roundTopStart roundWithOverlayColor roundedCornerRadius roundingBorderColor roundingBorderPadding roundingBorderWidth viewAspectRatio
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius tickColor tickColorActive tickColorInactive trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle

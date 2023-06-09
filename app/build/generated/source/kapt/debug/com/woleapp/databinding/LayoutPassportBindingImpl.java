@@ -14,31 +14,35 @@ public class LayoutPassportBindingImpl extends LayoutPassportBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.rl_toolbar, 1);
-        sViewsWithIds.put(R.id.ivBack, 2);
-        sViewsWithIds.put(R.id.toolbar_title, 3);
-        sViewsWithIds.put(R.id.webView, 4);
+        sViewsWithIds.put(R.id.buttons_container, 1);
+        sViewsWithIds.put(R.id.tvSign, 2);
+        sViewsWithIds.put(R.id.tvRetake, 3);
+        sViewsWithIds.put(R.id.signature_pad_container, 4);
+        sViewsWithIds.put(R.id.signature_pad, 5);
+        sViewsWithIds.put(R.id.linearCanvas, 6);
+        sViewsWithIds.put(R.id.btn_continue, 7);
     }
     // views
-    @NonNull
-    private final android.widget.LinearLayout mboundView0;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public LayoutPassportBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
     }
     private LayoutPassportBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.ImageView) bindings[2]
+            , (android.widget.Button) bindings[7]
             , (android.widget.RelativeLayout) bindings[1]
+            , (android.widget.LinearLayout) bindings[6]
+            , (android.widget.ScrollView) bindings[0]
+            , (com.github.gcacace.signaturepad.views.SignaturePad) bindings[5]
+            , (android.widget.RelativeLayout) bindings[4]
             , (android.widget.TextView) bindings[3]
-            , (android.webkit.WebView) bindings[4]
+            , (android.widget.TextView) bindings[2]
             );
-        this.mboundView0 = (android.widget.LinearLayout) bindings[0];
-        this.mboundView0.setTag(null);
+        this.scrollView.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

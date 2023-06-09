@@ -153,10 +153,10 @@ public class CashInOptionsFragment extends BaseFragment implements View.OnClickL
         addTextChangeListener();
         Bundle b1 = getArguments();
 
-        int agencyID = SharedPrefManager.getAgencyUser().getAgencyID();
+     //   int agencyID = SharedPrefManager.getAgencyUser().getAgencyID();
 
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("agency_ID", agencyID);
+       // jsonObject.addProperty("agency_ID", agencyID);
 
         getAgencyDetails(jsonObject);
         Log.e("RES_CODE", "Payload: " + jsonObject);
@@ -299,8 +299,8 @@ public class CashInOptionsFragment extends BaseFragment implements View.OnClickL
 //
 //        } else
         //calling getAvailableBalance of shared preferences here
-//        String availableBalance = "1200";
-        String availableBalance = SharedPrefManager.getBalanceDetails().getBalance();
+        String availableBalance = "1200";
+//        String availableBalance = SharedPrefManager.getBalanceDetails().getBalance();
         if (v == binding.cardCashCollection) {
             amount = binding.etAmt.getText().toString();
             amount = amount.replace(currency_symbol, "").replaceAll(",", "");

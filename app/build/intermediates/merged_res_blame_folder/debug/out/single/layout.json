@@ -48,6 +48,10 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_invoice_preview.xml"
     },
     {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_sanlam.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sanlam.xml"
+    },
+    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_check_out_page.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_check_out_page.xml"
     },
@@ -62,6 +66,10 @@
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\qr_bottom_sheet_dialog.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\qr_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\page_indicator_layout.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\page_indicator_layout.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_merchant.xml",

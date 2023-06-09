@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/transactionCardItem"
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="3dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtTransactionId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Transaction ID"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtTransactionIdValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Transaction ID Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtTransactionCat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Category"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtTransactionCatValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Category Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtProductCat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Product Category"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtProductCatValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Product Category Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Product Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtProductNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Product Name Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtBranchName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Branch Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtBranchNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Branch Name Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtOfficer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Officer"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtOfficerValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Officer Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtTransactionAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Transaction Amount"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtTransactionAmountValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Transaction Amount Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Customer Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtCustomerNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Customer Name Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtAccountNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Account Number"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtAccountNumberValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="YEAR"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtIDType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="ID Type"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtIDTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="ID Type Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtIDNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="ID Number"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtIDNumberValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="ID Number Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtTransactionDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Transaction Date"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtTransactionDateValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Transaction Date Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtDepositorPayee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Depositor Payee"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtDepositorPayeeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Depositor Payee Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtAgencyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Agency Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtAgencyNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:text="Agency Name Value"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

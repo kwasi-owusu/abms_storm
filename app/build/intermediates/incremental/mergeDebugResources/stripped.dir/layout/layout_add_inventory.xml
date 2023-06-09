@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+                                                       
+                                                           
+    <!--    xmlns:app="http://schemas.android.com/tools"-->
+
+    
+
+                                           
+
+                 
+                            
+                                                 
+
+                 
+                         
+                             
+           
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite" android:tag="layout/layout_add_inventory_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBlack"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/questrial"
+                    android:padding="@dimen/margin_10"
+                    android:text="@string/lbl_add_inventory"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_width="190dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:visibility="gone"
+
+                    />
+                <!--android:visibility="@{isOpen? View.VISIBLE : View.GONE}"
+                android:src="@{inventory.image_path}"-->
+
+
+                <Button
+                    android:id="@+id/btnUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:background="@drawable/ripple_white"
+                    android:fontFamily="@font/questrial"
+                    android:minHeight="@dimen/margin_40"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:text="@string/lbl_upload"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.4dp"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:background="@color/lightGray" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_40"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_40"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/etProductName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rounded_white"
+                        android:fontFamily="@font/questrial"
+                        android:hint="@string/hint_product_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textCapWords"
+                        android:maxLength="60"
+                        android:nextFocusDown="@id/etPrice"
+                        android:padding="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_40"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_40"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:background="@drawable/bg_rounded_white">
+
+                    <!--<com.woleapp.ui.widgets.CustomSpinnerPadding
+                            android:id="@+id/spnQuantity"
+                            android:prompt="@string/hint_choose_quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp"
+                    />-->
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spnCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:prompt="@string/hint_choose_quantity"
+                        android:spinnerMode="dropdown"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <!--android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"-->
+                    <!--                    android:padding="@dimen/margin_10"-->
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_40"
+                android:orientation="vertical">
+
+                <!--<EditText
+                        android:id="@+id/etProductName"
+                        android:maxLength="60"
+                        android:background="@drawable/bg_rounded_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_10"
+                        android:hint="@string/hint_product_name"
+                        android:inputType="text|textCapWords"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:nextFocusDown="@id/etPrice"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:fontFamily="@font/questrial"
+                />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal">
+
+                    <!--<TextView
+                            android:visibility="visible"
+                            android:id="@+id/tvPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rounded_white"
+                            android:padding="@dimen/margin_10"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:fontFamily="@font/questrial"
+                            android:textStyle="bold"
+                            android:text="Price"
+                            android:textAllCaps="true"
+                    />-->
+                    <EditText
+                        android:id="@+id/etPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rounded_light_gray"
+                        android:digits="0123456789."
+                        android:fontFamily="@font/questrial"
+                        android:hint="PRICE"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLength="10"
+                        android:nextFocusDown="@id/etSize"
+                        android:padding="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rounded_light_gray"
+                        android:fontFamily="@font/questrial"
+                        android:padding="@dimen/margin_10"
+                        android:text="Quantity"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <!--<com.woleapp.ui.widgets.CustomSpinnerPadding
+                                android:id="@+id/spnQuantity"
+                                android:prompt="@string/hint_choose_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:spinnerMode="dropdown"
+                                android:textColorHint="@color/colorBlack"
+                                android:textSize="@dimen/text_size_14sp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="1dp"
+                        />-->
+
+                        <EditText
+                            android:id="@+id/spnQuantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:inputType="number"
+                            android:layout_marginBottom="1dp"
+                            android:hint="@string/_1"
+                            android:textSize="@dimen/text_size_14sp" />
+
+                        <!--android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"-->
+                        <!--                    android:padding="@dimen/margin_10"-->
+
+                    </LinearLayout>
+
+                    <!--                android:entries="@array/banks"-->
+
+                    <!--<EditText
+                            android:id="@+id/etPrice"
+                            android:maxLength="10"
+                            android:background="@drawable/bg_rounded_white"
+                            android:padding="@dimen/margin_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_product_price"
+                            android:inputType="text|textCapWords"
+                            android:digits="0123456789."
+                            android:nextFocusDown="@id/etEmail"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:fontFamily="@font/questrial"
+                    />-->
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:visibility="visible">
+
+
+                    <EditText
+                        android:id="@+id/etSize"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="0.50"
+                        android:background="@drawable/bg_rounded_white"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789-"
+                        android:fontFamily="@font/questrial"
+                        android:hint="SIZE"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:nextFocusDown="@id/etNote"
+                        android:padding="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp" />
+                    <!--android:inputType="text|textCapWords"-->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="0.50"
+                        android:background="@drawable/bg_rounded_white">
+
+
+                        <!--<TextView
+                                android:visibility="visible"
+                                android:id="@+id/tvQuantity1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_rounded_light_gray"
+                                android:padding="@dimen/margin_10"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_size_14sp"
+                                android:fontFamily="@font/questrial"
+                                android:textStyle="bold"
+                                android:text="Quantity"
+                                android:textAllCaps="true"
+                                android:drawableRight="@android:drawable/btn_dropdown"
+                        />-->
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spnColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:dropDownWidth="wrap_content"
+                            android:prompt="@string/hint_choose_quantity"
+                            android:spinnerMode="dropdown"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:background="@drawable/bg_rounded_white"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="top"
+                    android:hint="@string/hint_description"
+                    android:imeOptions="actionDone"
+                    android:inputType="text|textCapWords|textMultiLine"
+                    android:minLines="5"
+                    android:maxLines="7"
+                    android:maxLength="300"
+                    android:padding="@dimen/margin_10"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="@dimen/text_size_14sp" />
+                <!--            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890,()@.-$/=+&amp;"-->
+                <!--            textMultiLine-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardToggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:elevation="5dp"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardElevation="5dp"
+                        custom:cardCornerRadius="15dp">
+                        <!--                    app:cardCornerRadius="15dp"-->
+
+                        <!--                android:layout_marginRight="15dp"-->
+                        <!--android:layout_marginLeft="@dimen/text_margin_small"-->
+                        <!--android:layout_marginTop="@dimen/text_margin_small"-->
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:id="@+id/btn_continue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:layout_marginBottom="@dimen/margin_15"
+                        android:background="@drawable/ripple_theme"
+                        android:fontFamily="@font/questrial"
+                        android:minHeight="@dimen/margin_40"
+                        android:text="SAVE"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <!--            <com.llollox.androidtoggleswitch.widgets.ToggleSwitch-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:gravity="center"-->
+                <!--                    app:textToggleLeft="Apple"-->
+                <!--                    app:textToggleRight="Lemon" />-->
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+         

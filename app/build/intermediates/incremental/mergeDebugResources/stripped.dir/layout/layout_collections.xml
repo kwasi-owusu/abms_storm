@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                           
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray" android:tag="layout/layout_collections_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/linearTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_gray"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/collectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/questrial"
+                        android:padding="@dimen/margin_10"
+                        android:text="@string/collectionHeader"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearTitle"
+                    android:layout_marginLeft="@dimen/margin_30"
+                    android:layout_marginTop="@dimen/margin_40"
+                    android:layout_marginRight="@dimen/margin_30"
+                    android:orientation="vertical">
+
+
+                    <com.woleapp.ui.widgets.CustomEditText
+                        android:id="@+id/etAmt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:background="@drawable/bg_rounded_white"
+                        android:digits="0123456789."
+                        android:fontFamily="@font/questrial"
+                        android:hint="@string/hint_amount"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="14"
+                        android:nextFocusDown="@id/etEmail"
+                        android:padding="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <com.woleapp.ui.widgets.CustomEditText
+                        android:id="@+id/payeeName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:background="@drawable/bg_rounded_white"
+                        android:fontFamily="@font/questrial"
+                        android:hint="@string/name"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:nextFocusDown="@id/etEmail"
+                        android:padding="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                   <!-- <com.woleapp.ui.widgets.CustomEditText
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:background="@drawable/bg_rounded_white"
+                        android:fontFamily="@font/questrial"
+                        android:hint="@string/description"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:nextFocusDown="@id/etEmail"
+                        android:padding="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp" />-->
+
+
+
+                    <EditText
+                        android:id="@+id/etFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:background="@drawable/bg_rounded_white"
+                        android:digits="0123456789."
+                        android:fontFamily="@font/questrial"
+                        android:hint="@string/hint_amount"
+                        android:inputType="numberDecimal"
+                        android:maxLength="10"
+                        android:nextFocusDown="@id/etEmail"
+                        android:padding="@dimen/margin_10"
+                        android:singleLine="true"
+                        android:text="&#x20A6; 100"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <TextView
+                        android:id="@+id/tvConvinienceFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/questrial"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="@string/lbl_convinience_fee"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!--<TextView
+                        android:id="@+id/myTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />-->
+
+
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCashCollection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearPrice"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardElevation="3dp"
+                    custom:cardCornerRadius="2dp">
+                    <!--android:layout_marginLeft="@dimen/text_margin_mini"
+                    android:layout_marginRight="@dimen/text_margin_mini"-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_20">
+
+                        <TextView
+                            android:id="@+id/tvCashCollection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:fontFamily="@font/questrial"
+                            android:text="Cash Collection"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_toRightOf="@id/tvCashCollection"
+                            android:src="@drawable/cash_in" />
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:rotation="180"
+                            android:src="@drawable/back" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+         

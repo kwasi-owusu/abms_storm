@@ -737,15 +737,6 @@ public class CashInFragment extends BaseFragment implements View.OnClickListener
         mContent.addView(mSignature, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         //binding.linearNext.setEnabled(false);
         hasSigned = false;
-//        mClear = (Button) dialog.findViewById(R.id.clear);
-//        mGetSign = (Button) dialog.findViewById(R.id.getsign);
-//        mGetSign.setEnabled(false);
-//        mCancel = (Button) dialog.findViewById(R.id.cancel);
-
-//        LinearLayout temp = mContent;
-//        temp.setBackgroundResource(0);
-//        signature_view = temp;
-//        signature_view.layout();
 
         signature_view = mContent; // Original
 
@@ -840,27 +831,6 @@ public class CashInFragment extends BaseFragment implements View.OnClickListener
         super.onPrepareOptionsMenu(menu);
 
         menu.clear();
-
-//        menu.findItem(R.id.action_edit).setVisible(true);
-//        menu.findItem(R.id.action_search).setVisible(false);
-        //menu.removeItem(R.id.action_search);//clear();
-
-        /*if(showDeleteMenu)
-        {
-            menu.findItem(R.id.action_search).setVisible(false);
-            menu.removeItem(R.id.action_search);//clear();
-        }
-        else
-        {
-            menu.clear();
-
-//            menu.removeItem(R.id.action_search);//clear();
-//            menu.removeItem(R.id.action_search);//clear();
-//
-//            menu.findItem(R.id.action_search).setVisible(false);
-//
-//            menu.findItem(R.id.action_search).setVisible(false);
-        }*/
 
     }
 

@@ -225,6 +225,8 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
         serviceList.add(service);
         service = new Service(12, "DONATIONS", R.drawable.donate);
         serviceList.add(service);
+        service = new Service(13, "SANLAM INSURANCE", R.drawable.sanlam);
+        serviceList.add(service);
 //        if (user.getUser_level() == USER_LEVEL) {
 //            service = new Service(1, "CASH-IN / BANK TRANSFER", R.drawable.cash_in_new);
 //            serviceList.add(service);
@@ -371,14 +373,14 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
 
             if (2 == USER_LEVEL) {
                 if (position == 0) {
-                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
-//                   Bundle b1 = new Bundle();
-//                    b1.putInt("transaction_type", Constants.TRANSACTION_CASH_IN);
-//                    CashInOptionsFragment cin = new CashInOptionsFragment();
+                  //  Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                   Bundle b1 = new Bundle();
+                    b1.putInt("transaction_type", Constants.TRANSACTION_CASH_IN);
+                    CashInOptionsFragment cin = new CashInOptionsFragment();
 //                    //CashInFragment cin = new CashInFragment();
-//                    cin.setArguments(b1);
-//                    addFragmentWithoutRemove(R.id.container_main, cin, CashInOptionsFragment.class.getSimpleName());
-                    //addFragmentWithoutRemove(R.id.container_main, new CashInOptionsNewFragment(), CashInOptionsNewFragment.class.getSimpleName());
+                    cin.setArguments(b1);
+                   addFragmentWithoutRemove(R.id.container_main, cin, CashInOptionsFragment.class.getSimpleName());
+             //       addFragmentWithoutRemove(R.id.container_main, new CashInOptionsNewFragment(), CashInOptionsNewFragment.class.getSimpleName());
                 } else if (position == 1) {
                     Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
 //                    Bundle b1 = new Bundle();
@@ -396,7 +398,7 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
                     addFragmentWithoutRemove(R.id.container_main, new PayServicesFragment(), PayServicesFragment.class.getSimpleName());
 
                 }*/ else if (position == 2) {
-                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
 //                    Bundle b1 = new Bundle();
                     //b1.putInt("transaction_type", Constants.TRANSACTION_CASH_IN);
 //                    TransactionsFragment cin = new TransactionsFragment();
@@ -421,10 +423,10 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
                   //  addFragmentWithoutRemove(R.id.container_main, new InsuranceFragment(), InsuranceFragment.class.getSimpleName());
                 }
                 else if(position == 6){
-                    Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
                     //addFragmentWithoutRemove(R.id.container_main, new CameraFragment(), CameraFragment.class.getSimpleName());
                    // addFragmentWithoutRemove(R.id.container_main, new TicketsFragment(), TicketsFragment.class.getSimpleName());
-                   // addFragmentWithoutRemove(R.id.container_main, new PassportFragment(), PassportFragment.class.getSimpleName());
+                    addFragmentWithoutRemove(R.id.container_main, new PassportFragment(), PassportFragment.class.getSimpleName());
                 }
                 else if(position == 7){
                     Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
@@ -445,6 +447,10 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
                 else if(position == 11){
                    // Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
                        addFragmentWithoutRemove(R.id.container_main, new FuneralDonationsFragment(), FuneralDonationsFragment.class.getSimpleName());
+                }
+                else if(position == 12){
+                    // Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
+                    addFragmentWithoutRemove(R.id.container_main, new SanlamFragment(), SanlamFragment.class.getSimpleName());
                 }
                  else {
                     Toast.makeText(requireContext(), "More", Toast.LENGTH_SHORT).show();

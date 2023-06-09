@@ -76,6 +76,14 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable-xhdpi\\mail.png"
     },
     {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_view_marital_status.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\spinner_view_marital_status.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_page_indicator_layout.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\page_indicator_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_cash_in.xml.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_cash_in.xml"
     },
@@ -198,6 +206,10 @@
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_agency_transaction.xml.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\fragment_agency_transaction.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_view_choose_gender.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\spinner_view_choose_gender.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_activate_store.xml.flat",
@@ -454,6 +466,10 @@
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_fragment_bluetooth_list_printer.xml.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog_fragment_bluetooth_list_printer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circle_active.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\circle_active.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_marketplace_received_orders.xml.flat",
@@ -832,6 +848,10 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\bg_white_rect.xml"
     },
     {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sanlam.png.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\sanlam.png"
+    },
+    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_item_list_transactions.xml.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_transactions.xml"
     },
@@ -854,6 +874,10 @@
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_donate.png.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\donate.png"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circle_inactive.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\circle_inactive.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_drop_down_category.xml.flat",
@@ -888,6 +912,10 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_western_union.xml"
     },
     {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_sanlam.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sanlam.xml"
+    },
+    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_refresh.xml.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\ic_refresh.xml"
     },
@@ -918,6 +946,10 @@
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_vtu.png.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable-xhdpi\\vtu.png"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_text_field_rounded.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\text_field_rounded.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
@@ -1418,6 +1450,10 @@
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_whatsapp.xml.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\ic_whatsapp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_background.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\button_background.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_mastercard.png.flat",

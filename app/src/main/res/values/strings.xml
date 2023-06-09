@@ -74,6 +74,8 @@
     <string name="hint_select_state">SELECT STATE</string>
     <string name="hint_select_color">COLOR</string>
 
+    <string name="hint_choose_gender">CHOOSE GENDER</string>
+    <string name="hint_choose_marital_status">CHOOSE MARITAL STATUS</string>
     <string name="hint_choose_bank_caps">SELECT BANK</string>
     <string name="hint_choose_reference">SELECT REFERENCE TYPE</string>
     <string name="hint_choose_transaction_purpose">PURPOSE OF TRANSACTION</string>

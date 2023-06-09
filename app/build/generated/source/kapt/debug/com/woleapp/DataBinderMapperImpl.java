@@ -77,6 +77,7 @@ import com.woleapp.databinding.LayoutQrActivationBindingImpl;
 import com.woleapp.databinding.LayoutQrRegistrationBindingImpl;
 import com.woleapp.databinding.LayoutQuickTransactionBindingImpl;
 import com.woleapp.databinding.LayoutRiaBindingImpl;
+import com.woleapp.databinding.LayoutSanlamBindingImpl;
 import com.woleapp.databinding.LayoutScanToPayBindingImpl;
 import com.woleapp.databinding.LayoutSchoolFeesBindingImpl;
 import com.woleapp.databinding.LayoutSelectUserTypeBindingImpl;
@@ -91,6 +92,7 @@ import com.woleapp.databinding.LayoutVerifyOtpBindingImpl;
 import com.woleapp.databinding.LayoutVerifyUtilityPaymentBindingImpl;
 import com.woleapp.databinding.LayoutWebviewBindingImpl;
 import com.woleapp.databinding.LayoutWesternUnionBindingImpl;
+import com.woleapp.databinding.PageIndicatorLayoutBindingImpl;
 import com.woleapp.databinding.QrBottomSheetDialogBindingImpl;
 import com.woleapp.databinding.SplashBindingImpl;
 import java.lang.IllegalArgumentException;
@@ -244,39 +246,43 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_LAYOUTRIA = 70;
 
-  private static final int LAYOUT_LAYOUTSCANTOPAY = 71;
+  private static final int LAYOUT_LAYOUTSANLAM = 71;
 
-  private static final int LAYOUT_LAYOUTSCHOOLFEES = 72;
+  private static final int LAYOUT_LAYOUTSCANTOPAY = 72;
 
-  private static final int LAYOUT_LAYOUTSELECTUSERTYPE = 73;
+  private static final int LAYOUT_LAYOUTSCHOOLFEES = 73;
 
-  private static final int LAYOUT_LAYOUTSIGNUP = 74;
+  private static final int LAYOUT_LAYOUTSELECTUSERTYPE = 74;
 
-  private static final int LAYOUT_LAYOUTSIGNUPORIG = 75;
+  private static final int LAYOUT_LAYOUTSIGNUP = 75;
 
-  private static final int LAYOUT_LAYOUTSSNIT = 76;
+  private static final int LAYOUT_LAYOUTSIGNUPORIG = 76;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONFAILURE = 77;
+  private static final int LAYOUT_LAYOUTSSNIT = 77;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONLIST = 78;
+  private static final int LAYOUT_LAYOUTTRANSACTIONFAILURE = 78;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONSTATUS = 79;
+  private static final int LAYOUT_LAYOUTTRANSACTIONLIST = 79;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONSUCCESS = 80;
+  private static final int LAYOUT_LAYOUTTRANSACTIONSTATUS = 80;
 
-  private static final int LAYOUT_LAYOUTVERIFYOTP = 81;
+  private static final int LAYOUT_LAYOUTTRANSACTIONSUCCESS = 81;
 
-  private static final int LAYOUT_LAYOUTVERIFYUTILITYPAYMENT = 82;
+  private static final int LAYOUT_LAYOUTVERIFYOTP = 82;
 
-  private static final int LAYOUT_LAYOUTWEBVIEW = 83;
+  private static final int LAYOUT_LAYOUTVERIFYUTILITYPAYMENT = 83;
 
-  private static final int LAYOUT_LAYOUTWESTERNUNION = 84;
+  private static final int LAYOUT_LAYOUTWEBVIEW = 84;
 
-  private static final int LAYOUT_QRBOTTOMSHEETDIALOG = 85;
+  private static final int LAYOUT_LAYOUTWESTERNUNION = 85;
 
-  private static final int LAYOUT_SPLASH = 86;
+  private static final int LAYOUT_PAGEINDICATORLAYOUT = 86;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(86);
+  private static final int LAYOUT_QRBOTTOMSHEETDIALOG = 87;
+
+  private static final int LAYOUT_SPLASH = 88;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(88);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.activity_payment_progress, LAYOUT_ACTIVITYPAYMENTPROGRESS);
@@ -349,6 +355,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_qr_registration, LAYOUT_LAYOUTQRREGISTRATION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_quick_transaction, LAYOUT_LAYOUTQUICKTRANSACTION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_ria, LAYOUT_LAYOUTRIA);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_sanlam, LAYOUT_LAYOUTSANLAM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_scan_to_pay, LAYOUT_LAYOUTSCANTOPAY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_school_fees, LAYOUT_LAYOUTSCHOOLFEES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_select_user_type, LAYOUT_LAYOUTSELECTUSERTYPE);
@@ -363,6 +370,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_verify_utility_payment, LAYOUT_LAYOUTVERIFYUTILITYPAYMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_webview, LAYOUT_LAYOUTWEBVIEW);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_western_union, LAYOUT_LAYOUTWESTERNUNION);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.page_indicator_layout, LAYOUT_PAGEINDICATORLAYOUT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.qr_bottom_sheet_dialog, LAYOUT_QRBOTTOMSHEETDIALOG);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.splash, LAYOUT_SPLASH);
   }
@@ -800,6 +808,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for layout_ria is invalid. Received: " + tag);
       }
+      case  LAYOUT_LAYOUTSANLAM: {
+        if ("layout/layout_sanlam_0".equals(tag)) {
+          return new LayoutSanlamBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_sanlam is invalid. Received: " + tag);
+      }
       case  LAYOUT_LAYOUTSCANTOPAY: {
         if ("layout/layout_scan_to_pay_0".equals(tag)) {
           return new LayoutScanToPayBindingImpl(component, view);
@@ -884,6 +898,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for layout_western_union is invalid. Received: " + tag);
       }
+      case  LAYOUT_PAGEINDICATORLAYOUT: {
+        if ("layout/page_indicator_layout_0".equals(tag)) {
+          return new PageIndicatorLayoutBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for page_indicator_layout is invalid. Received: " + tag);
+      }
       case  LAYOUT_QRBOTTOMSHEETDIALOG: {
         if ("layout/qr_bottom_sheet_dialog_0".equals(tag)) {
           return new QrBottomSheetDialogBindingImpl(component, view);
@@ -956,8 +976,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   @Override
   public List<DataBinderMapper> collectDependencies() {
-    ArrayList<DataBinderMapper> result = new ArrayList<DataBinderMapper>(1);
+    ArrayList<DataBinderMapper> result = new ArrayList<DataBinderMapper>(2);
     result.add(new androidx.databinding.library.baseAdapters.DataBinderMapperImpl());
+    result.add(new com.github.gcacace.signaturepad.DataBinderMapperImpl());
     return result;
   }
 
@@ -983,7 +1004,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(87);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(89);
 
     static {
       sKeys.put("layout/activity_payment_progress_0", com.woleapp.R.layout.activity_payment_progress);
@@ -1057,6 +1078,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/layout_qr_registration_0", com.woleapp.R.layout.layout_qr_registration);
       sKeys.put("layout/layout_quick_transaction_0", com.woleapp.R.layout.layout_quick_transaction);
       sKeys.put("layout/layout_ria_0", com.woleapp.R.layout.layout_ria);
+      sKeys.put("layout/layout_sanlam_0", com.woleapp.R.layout.layout_sanlam);
       sKeys.put("layout/layout_scan_to_pay_0", com.woleapp.R.layout.layout_scan_to_pay);
       sKeys.put("layout/layout_school_fees_0", com.woleapp.R.layout.layout_school_fees);
       sKeys.put("layout/layout_select_user_type_0", com.woleapp.R.layout.layout_select_user_type);
@@ -1071,6 +1093,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/layout_verify_utility_payment_0", com.woleapp.R.layout.layout_verify_utility_payment);
       sKeys.put("layout/layout_webview_0", com.woleapp.R.layout.layout_webview);
       sKeys.put("layout/layout_western_union_0", com.woleapp.R.layout.layout_western_union);
+      sKeys.put("layout/page_indicator_layout_0", com.woleapp.R.layout.page_indicator_layout);
       sKeys.put("layout/qr_bottom_sheet_dialog_0", com.woleapp.R.layout.qr_bottom_sheet_dialog);
       sKeys.put("layout/splash_0", com.woleapp.R.layout.splash);
     }
