@@ -31,8 +31,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+//import com.google.firebase.iid.FirebaseInstanceId;
+//import com.google.firebase.iid.InstanceIdResult;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -107,7 +107,7 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         binding.signUpLayout.etConfirmPwd.setTransformationMethod(new PasswordTransformationMethod());
 
         setListeners();
-        getFCMToken();
+        //getFCMToken();
     }
 
     public void setSpinner() {
@@ -264,19 +264,19 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
 
     }
 
-    public void getFCMToken() {
-        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(getActivity(), new OnSuccessListener<InstanceIdResult>() {
-            @Override
-            public void onSuccess(InstanceIdResult instanceIdResult) {
-                String notificationID = instanceIdResult.getToken();
-                Log.e("newToken", notificationID + "--");
-                SharedPrefManager.saveDeviceToken(notificationID);
-
-
-            }
-        });
-
-    }
+//    public void getFCMToken() {
+//        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(getActivity(), new OnSuccessListener<InstanceIdResult>() {
+//            @Override
+//            public void onSuccess(InstanceIdResult instanceIdResult) {
+//                String notificationID = instanceIdResult.getToken();
+//                Log.e("newToken", notificationID + "--");
+//                SharedPrefManager.saveDeviceToken(notificationID);
+//
+//
+//            }
+//        });
+//
+//    }
 
     public void validateInputsAndProceed() {
         String businessName = binding.signUpLayout.etName.getText().toString().trim();

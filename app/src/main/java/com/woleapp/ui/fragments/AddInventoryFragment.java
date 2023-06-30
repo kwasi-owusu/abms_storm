@@ -37,7 +37,7 @@ import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.jakewharton.rxbinding3.widget.RxTextView;
 import com.jakewharton.rxbinding3.widget.TextViewTextChangeEvent;
-import com.theartofdev.edmodo.cropper.CropImage;
+//import com.theartofdev.edmodo.cropper.CropImage;
 import com.woleapp.R;
 import com.woleapp.adapters.CustomSpinner;
 import com.woleapp.adapters.NothingSelectedSpinnerAdapter;
@@ -69,7 +69,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
-import id.zelory.compressor.Compressor;
+//import id.zelory.compressor.Compressor;
 import io.reactivex.Observable;
 import io.reactivex.Single;
 import io.reactivex.SingleObserver;
@@ -364,32 +364,32 @@ public class AddInventoryFragment extends BaseMarketplaceFragment implements Vie
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
-            CropImage.ActivityResult result = CropImage.getActivityResult(data);
-            if (resultCode == RESULT_OK) {
-                Uri resultUri = result.getUri();
-
-                image_path = resultUri.getPath();
-                Log.e("path", "path" + image_path);
-                Log.e("resultUri", resultUri.toString());
-
-                binding.ivProduct.setImageURI(resultUri);
-                binding.ivProduct.setVisibility(View.VISIBLE);
-
-            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
-                Exception error = result.getError();
-                Log.e("Error", error.toString());
-            }
-        }
+//        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+//            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+//            if (resultCode == RESULT_OK) {
+//                Uri resultUri = result.getUri();
+//
+//                image_path = resultUri.getPath();
+//                Log.e("path", "path" + image_path);
+//                Log.e("resultUri", resultUri.toString());
+//
+//                binding.ivProduct.setImageURI(resultUri);
+//                binding.ivProduct.setVisibility(View.VISIBLE);
+//
+//            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+//                Exception error = result.getError();
+//                Log.e("Error", error.toString());
+//            }
+//        }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onClick(View v) {
         if (v == binding.btnUpload) {
-            CropImage.activity().setFixAspectRatio(true)
-                    .setAspectRatio(2, 1) //16:9
-                    .start(context, this);
+//            CropImage.activity().setFixAspectRatio(true)
+//                    .setAspectRatio(2, 1) //16:9
+//                    .start(context, this);
         } else if (v == binding.btnContinue) {
             hideKeyBoard();
             validateInputsAndProceed();
@@ -511,32 +511,32 @@ public class AddInventoryFragment extends BaseMarketplaceFragment implements Vie
                 String inventory_path = UtilsAndExtensionsKt.getFilePath(requireActivity(), product_name, extension);
                 Log.e("inventory_img_path", inventory_path + "--");
                 File sourceFile = new File(image_path);
-                final Observable<MultipartBody.Part> encoderObservable = new Compressor(requireContext())
-                        .setQuality(50)
-                        .compressToFileAsFlowable(sourceFile)
-                        .subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .toObservable()
-                        .flatMap(file -> UtilsAndExtensionsKt.saveAndGetMultipart("product_image",file, new File(inventory_path)));
-                Single.fromObservable(encoderObservable)
-                        .subscribe(new SingleObserver<MultipartBody.Part>() {
-                            @Override
-                            public void onSubscribe(Disposable d) {
-                                showProgressDialog();
-                            }
-
-                            @Override
-                            public void onSuccess(MultipartBody.Part s) {
-                                setValues(product_name, note, price, s);
-                            }
-
-                            @Override
-                            public void onError(Throwable e) {
-                                Log.e("tag", e.getLocalizedMessage());
-                                Toast.makeText(requireContext(), "Error: " + e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                                hideProgressDialog();
-                            }
-                        });
+//                final Observable<MultipartBody.Part> encoderObservable = new Compressor(requireContext())
+//                        .setQuality(50)
+//                        .compressToFileAsFlowable(sourceFile)
+//                        .subscribeOn(Schedulers.io())
+//                        .observeOn(AndroidSchedulers.mainThread())
+//                        .toObservable()
+//                        .flatMap(file -> UtilsAndExtensionsKt.saveAndGetMultipart("product_image",file, new File(inventory_path)));
+//                Single.fromObservable(encoderObservable)
+//                        .subscribe(new SingleObserver<MultipartBody.Part>() {
+//                            @Override
+//                            public void onSubscribe(Disposable d) {
+//                                showProgressDialog();
+//                            }
+//
+//                            @Override
+//                            public void onSuccess(MultipartBody.Part s) {
+//                                setValues(product_name, note, price, s);
+//                            }
+//
+//                            @Override
+//                            public void onError(Throwable e) {
+//                                Log.e("tag", e.getLocalizedMessage());
+//                                Toast.makeText(requireContext(), "Error: " + e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+//                                hideProgressDialog();
+//                            }
+//                        });
                 //return true;
             } else {
                 utilities.showDialogNoNetwork("You need an active internet connection to proceed. Would you like to enable it ?", getActivity());

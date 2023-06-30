@@ -113,17 +113,41 @@ public final class BillerDao_Impl implements BillerDao {
               _tmpId = _cursor.getInt(_cursorIndexOfId);
             }
             final String _tmpService_type;
-            _tmpService_type = _cursor.getString(_cursorIndexOfServiceType);
+            if (_cursor.isNull(_cursorIndexOfServiceType)) {
+              _tmpService_type = null;
+            } else {
+              _tmpService_type = _cursor.getString(_cursorIndexOfServiceType);
+            }
             final String _tmpBiller_name;
-            _tmpBiller_name = _cursor.getString(_cursorIndexOfBillerName);
+            if (_cursor.isNull(_cursorIndexOfBillerName)) {
+              _tmpBiller_name = null;
+            } else {
+              _tmpBiller_name = _cursor.getString(_cursorIndexOfBillerName);
+            }
             final String _tmpBiller_code;
-            _tmpBiller_code = _cursor.getString(_cursorIndexOfBillerCode);
+            if (_cursor.isNull(_cursorIndexOfBillerCode)) {
+              _tmpBiller_code = null;
+            } else {
+              _tmpBiller_code = _cursor.getString(_cursorIndexOfBillerCode);
+            }
             final String _tmpOperation;
-            _tmpOperation = _cursor.getString(_cursorIndexOfOperation);
+            if (_cursor.isNull(_cursorIndexOfOperation)) {
+              _tmpOperation = null;
+            } else {
+              _tmpOperation = _cursor.getString(_cursorIndexOfOperation);
+            }
             final String _tmpStatus;
-            _tmpStatus = _cursor.getString(_cursorIndexOfStatus);
+            if (_cursor.isNull(_cursorIndexOfStatus)) {
+              _tmpStatus = null;
+            } else {
+              _tmpStatus = _cursor.getString(_cursorIndexOfStatus);
+            }
             final String _tmpVerification_status;
-            _tmpVerification_status = _cursor.getString(_cursorIndexOfVerificationStatus);
+            if (_cursor.isNull(_cursorIndexOfVerificationStatus)) {
+              _tmpVerification_status = null;
+            } else {
+              _tmpVerification_status = _cursor.getString(_cursorIndexOfVerificationStatus);
+            }
             _item = new Biller(_tmpId,_tmpService_type,_tmpBiller_name,_tmpBiller_code,_tmpOperation,_tmpStatus,_tmpVerification_status);
             _result.add(_item);
           }
@@ -172,17 +196,41 @@ public final class BillerDao_Impl implements BillerDao {
               _tmpId = _cursor.getInt(_cursorIndexOfId);
             }
             final String _tmpService_type;
-            _tmpService_type = _cursor.getString(_cursorIndexOfServiceType);
+            if (_cursor.isNull(_cursorIndexOfServiceType)) {
+              _tmpService_type = null;
+            } else {
+              _tmpService_type = _cursor.getString(_cursorIndexOfServiceType);
+            }
             final String _tmpBiller_name;
-            _tmpBiller_name = _cursor.getString(_cursorIndexOfBillerName);
+            if (_cursor.isNull(_cursorIndexOfBillerName)) {
+              _tmpBiller_name = null;
+            } else {
+              _tmpBiller_name = _cursor.getString(_cursorIndexOfBillerName);
+            }
             final String _tmpBiller_code;
-            _tmpBiller_code = _cursor.getString(_cursorIndexOfBillerCode);
+            if (_cursor.isNull(_cursorIndexOfBillerCode)) {
+              _tmpBiller_code = null;
+            } else {
+              _tmpBiller_code = _cursor.getString(_cursorIndexOfBillerCode);
+            }
             final String _tmpOperation;
-            _tmpOperation = _cursor.getString(_cursorIndexOfOperation);
+            if (_cursor.isNull(_cursorIndexOfOperation)) {
+              _tmpOperation = null;
+            } else {
+              _tmpOperation = _cursor.getString(_cursorIndexOfOperation);
+            }
             final String _tmpStatus;
-            _tmpStatus = _cursor.getString(_cursorIndexOfStatus);
+            if (_cursor.isNull(_cursorIndexOfStatus)) {
+              _tmpStatus = null;
+            } else {
+              _tmpStatus = _cursor.getString(_cursorIndexOfStatus);
+            }
             final String _tmpVerification_status;
-            _tmpVerification_status = _cursor.getString(_cursorIndexOfVerificationStatus);
+            if (_cursor.isNull(_cursorIndexOfVerificationStatus)) {
+              _tmpVerification_status = null;
+            } else {
+              _tmpVerification_status = _cursor.getString(_cursorIndexOfVerificationStatus);
+            }
             _item = new Biller(_tmpId,_tmpService_type,_tmpBiller_name,_tmpBiller_code,_tmpOperation,_tmpStatus,_tmpVerification_status);
             _result.add(_item);
           }
@@ -238,17 +286,41 @@ public final class BillerDao_Impl implements BillerDao {
               _tmpId = _cursor.getInt(_cursorIndexOfId);
             }
             final String _tmpService_type;
-            _tmpService_type = _cursor.getString(_cursorIndexOfServiceType);
+            if (_cursor.isNull(_cursorIndexOfServiceType)) {
+              _tmpService_type = null;
+            } else {
+              _tmpService_type = _cursor.getString(_cursorIndexOfServiceType);
+            }
             final String _tmpBiller_name;
-            _tmpBiller_name = _cursor.getString(_cursorIndexOfBillerName);
+            if (_cursor.isNull(_cursorIndexOfBillerName)) {
+              _tmpBiller_name = null;
+            } else {
+              _tmpBiller_name = _cursor.getString(_cursorIndexOfBillerName);
+            }
             final String _tmpBiller_code;
-            _tmpBiller_code = _cursor.getString(_cursorIndexOfBillerCode);
+            if (_cursor.isNull(_cursorIndexOfBillerCode)) {
+              _tmpBiller_code = null;
+            } else {
+              _tmpBiller_code = _cursor.getString(_cursorIndexOfBillerCode);
+            }
             final String _tmpOperation;
-            _tmpOperation = _cursor.getString(_cursorIndexOfOperation);
+            if (_cursor.isNull(_cursorIndexOfOperation)) {
+              _tmpOperation = null;
+            } else {
+              _tmpOperation = _cursor.getString(_cursorIndexOfOperation);
+            }
             final String _tmpStatus;
-            _tmpStatus = _cursor.getString(_cursorIndexOfStatus);
+            if (_cursor.isNull(_cursorIndexOfStatus)) {
+              _tmpStatus = null;
+            } else {
+              _tmpStatus = _cursor.getString(_cursorIndexOfStatus);
+            }
             final String _tmpVerification_status;
-            _tmpVerification_status = _cursor.getString(_cursorIndexOfVerificationStatus);
+            if (_cursor.isNull(_cursorIndexOfVerificationStatus)) {
+              _tmpVerification_status = null;
+            } else {
+              _tmpVerification_status = _cursor.getString(_cursorIndexOfVerificationStatus);
+            }
             _item = new Biller(_tmpId,_tmpService_type,_tmpBiller_name,_tmpBiller_code,_tmpOperation,_tmpStatus,_tmpVerification_status);
             _result.add(_item);
           }

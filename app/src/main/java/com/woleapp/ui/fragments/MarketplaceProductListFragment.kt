@@ -15,8 +15,8 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.pixplicity.easyprefs.library.Prefs
-import com.theartofdev.edmodo.cropper.CropImage
-import com.theartofdev.edmodo.cropper.CropImageView
+//import com.theartofdev.edmodo.cropper.CropImage
+//import com.theartofdev.edmodo.cropper.CropImageView
 import com.woleapp.R
 import com.woleapp.adapters.MarketplaceProductAdapter
 import com.woleapp.databinding.LayoutMarketplaceProductListBinding
@@ -60,8 +60,8 @@ class MarketplaceProductListFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View {
         marketplace = if (arguments != null) {
-            if (arguments!!.containsKey(MARKETPLACE_STORE))
-                Parcels.unwrap(arguments!!.getParcelable(MARKETPLACE_STORE))
+            if (requireArguments().containsKey(MARKETPLACE_STORE))
+                Parcels.unwrap(requireArguments().getParcelable(MARKETPLACE_STORE))
             else
                 SharedPrefManager.getMerchantStore()
         } else {
@@ -80,14 +80,14 @@ class MarketplaceProductListFragment : BaseFragment() {
                 viewmodel = viewModel
             }
 
-        storeBinding.storeLogo.setOnClickListener {
-            CropImage.activity()
-                .setGuidelines(CropImageView.Guidelines.ON_TOUCH)
-                .setGuidelinesColor(ContextCompat.getColor(requireContext(), R.color.colorPrimary))
-                .setAspectRatio(4, 3)
-                .setAutoZoomEnabled(true)
-                .start(requireContext(), this)
-        }
+//        storeBinding.storeLogo.setOnClickListener {
+//            CropImage.activity()
+//                .setGuidelines(CropImageView.Guidelines.ON_TOUCH)
+//                .setGuidelinesColor(ContextCompat.getColor(requireContext(), R.color.colorPrimary))
+//                .setAspectRatio(4, 3)
+//                .setAutoZoomEnabled(true)
+//                .start(requireContext(), this)
+//        }
         marketplaceAdapter = MarketplaceProductAdapter {
             it.deliveryFee = if (marketplace.deliveryFee.isEmpty()) 0f else marketplace.deliveryFee.toFloat()
             it.storeName = marketplace.name

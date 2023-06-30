@@ -147,7 +147,7 @@ public final class TransactionsDao_Impl implements TransactionsDao {
     return new DataSource.Factory<Integer, Transactions>() {
       @Override
       public LimitOffsetDataSource<Transactions> create() {
-        return new LimitOffsetDataSource<Transactions>(__db, _statement, false , "transactions") {
+        return new LimitOffsetDataSource<Transactions>(__db, _statement, false, true , "transactions") {
           @Override
           protected List<Transactions> convertRows(Cursor cursor) {
             final int _cursorIndexOfTId = CursorUtil.getColumnIndexOrThrow(cursor, "tId");
@@ -169,25 +169,53 @@ public final class TransactionsDao_Impl implements TransactionsDao {
               _tmpTId = cursor.getInt(_cursorIndexOfTId);
               _item.setTId(_tmpTId);
               final String _tmpId;
-              _tmpId = cursor.getString(_cursorIndexOfId);
+              if (cursor.isNull(_cursorIndexOfId)) {
+                _tmpId = null;
+              } else {
+                _tmpId = cursor.getString(_cursorIndexOfId);
+              }
               _item.setId(_tmpId);
               final String _tmpTransaction_id;
-              _tmpTransaction_id = cursor.getString(_cursorIndexOfTransactionId);
+              if (cursor.isNull(_cursorIndexOfTransactionId)) {
+                _tmpTransaction_id = null;
+              } else {
+                _tmpTransaction_id = cursor.getString(_cursorIndexOfTransactionId);
+              }
               _item.setTransaction_id(_tmpTransaction_id);
               final String _tmpReference_no_Etranzact;
-              _tmpReference_no_Etranzact = cursor.getString(_cursorIndexOfReferenceNoEtranzact);
+              if (cursor.isNull(_cursorIndexOfReferenceNoEtranzact)) {
+                _tmpReference_no_Etranzact = null;
+              } else {
+                _tmpReference_no_Etranzact = cursor.getString(_cursorIndexOfReferenceNoEtranzact);
+              }
               _item.setReference_no_Etranzact(_tmpReference_no_Etranzact);
               final String _tmpTransaction_type;
-              _tmpTransaction_type = cursor.getString(_cursorIndexOfTransactionType);
+              if (cursor.isNull(_cursorIndexOfTransactionType)) {
+                _tmpTransaction_type = null;
+              } else {
+                _tmpTransaction_type = cursor.getString(_cursorIndexOfTransactionType);
+              }
               _item.setTransaction_type(_tmpTransaction_type);
               final String _tmpTransaction_date;
-              _tmpTransaction_date = cursor.getString(_cursorIndexOfTransactionDate);
+              if (cursor.isNull(_cursorIndexOfTransactionDate)) {
+                _tmpTransaction_date = null;
+              } else {
+                _tmpTransaction_date = cursor.getString(_cursorIndexOfTransactionDate);
+              }
               _item.setTransaction_date(_tmpTransaction_date);
               final String _tmpDescription;
-              _tmpDescription = cursor.getString(_cursorIndexOfDescription);
+              if (cursor.isNull(_cursorIndexOfDescription)) {
+                _tmpDescription = null;
+              } else {
+                _tmpDescription = cursor.getString(_cursorIndexOfDescription);
+              }
               _item.setDescription(_tmpDescription);
               final String _tmpBeneficiary_name;
-              _tmpBeneficiary_name = cursor.getString(_cursorIndexOfBeneficiaryName);
+              if (cursor.isNull(_cursorIndexOfBeneficiaryName)) {
+                _tmpBeneficiary_name = null;
+              } else {
+                _tmpBeneficiary_name = cursor.getString(_cursorIndexOfBeneficiaryName);
+              }
               _item.setBeneficiary_name(_tmpBeneficiary_name);
               final Double _tmpAmount;
               if (cursor.isNull(_cursorIndexOfAmount)) {
@@ -197,10 +225,18 @@ public final class TransactionsDao_Impl implements TransactionsDao {
               }
               _item.setAmount(_tmpAmount);
               final String _tmpStatus;
-              _tmpStatus = cursor.getString(_cursorIndexOfStatus);
+              if (cursor.isNull(_cursorIndexOfStatus)) {
+                _tmpStatus = null;
+              } else {
+                _tmpStatus = cursor.getString(_cursorIndexOfStatus);
+              }
               _item.setStatus(_tmpStatus);
               final String _tmpDestination_account;
-              _tmpDestination_account = cursor.getString(_cursorIndexOfDestinationAccount);
+              if (cursor.isNull(_cursorIndexOfDestinationAccount)) {
+                _tmpDestination_account = null;
+              } else {
+                _tmpDestination_account = cursor.getString(_cursorIndexOfDestinationAccount);
+              }
               _item.setDestination_account(_tmpDestination_account);
               _res.add(_item);
             }

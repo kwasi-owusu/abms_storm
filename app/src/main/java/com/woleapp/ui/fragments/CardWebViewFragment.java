@@ -111,6 +111,7 @@ public class CardWebViewFragment extends BaseFragment{
 
         binding.webView.loadData(iframeHtml, "text/html", "utf-8");
         //  binding.webView.loadDataWithBaseURL(null, html, "text/html", "UTF-8",null);
+       // binding.webView.loadUrl(chqUrl);
 
         binding.webView.setWebViewClient(new WebViewClient() {
             @Override
@@ -175,10 +176,10 @@ public class CardWebViewFragment extends BaseFragment{
 
                             if (responses.optString("status").equals("paid")) {
                                // addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
-                                timer.cancel();
                                 dismissProgressBar();
                                 addFragmentWithoutRemove(R.id.container_main, new PaymentCardSuccessfulFragment(ref, amount), PaymentCardSuccessfulFragment.class.getSimpleName());
-                              //  if (!isReceiptPrinted) {
+                                timer.cancel();
+                                //  if (!isReceiptPrinted) {
                                 //    printReceipt(ref);
                                   //  isReceiptPrinted = true;
                                 //}
@@ -193,9 +194,9 @@ public class CardWebViewFragment extends BaseFragment{
                             else if (responses.optString("status").equals("failed")) {
                                 Toast.makeText(context, "Payment Failed", Toast.LENGTH_LONG).show();
                               //  addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
-                                timer.cancel();
                                 dismissProgressBar();
                                 addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());
+                                timer.cancel();
                                 Log.e("TRANS_Status_Failed", "failed " + responses.optString("status"));
                             }
                             else {

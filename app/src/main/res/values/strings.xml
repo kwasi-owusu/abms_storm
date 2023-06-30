@@ -91,6 +91,8 @@
     <string name="hint_choose_ref_type">SELECT REFERENCE</string>
     <string name="hint_choose_purpose_trans">PURPOSE OF TRANSACTION</string>
     <string name="hint_choose_school">SELECT SCHOOL</string>
+    <string name="hint_choose_claim">Please select claim option</string>
+    <string name="hint_choose_cause_of_death">Please select cause of death</string>
 
     <string name="lbl_service_providers">DSTV,GOTV,TRend,MyTV &amp; Many More</string>
 
@@ -105,6 +107,8 @@
     <string name="lbl_no_thanks">No thanks, I don\'t need receipt for this transaction</string>
 
     <string name="title_alert">Alert</string>
+    <string name="disclaimer">Note that submitting false information is considered fraudulent and punishable by law.</string>
+    <string name="thank_you">Thank you for submitting the first part of your claim. We will send you an sms to keep you updated on the status of your claim.</string>
 
 
     <string name="select_bluetooth_device">Select bluetooth device</string>

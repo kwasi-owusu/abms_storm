@@ -63,6 +63,9 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
   public final TextView circleInactive2;
 
   @NonNull
+  public final TextView claimHere;
+
+  @NonNull
   public final EditText contactNumber;
 
   @NonNull
@@ -129,7 +132,7 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
       LinearLayout addressDetails, EditText benContactNumber, EditText benFirstName,
       EditText benSurname, Button btnGetStarted, Button btnJoinNow, Button btnNext,
       Button btnNextMain, Button btnPrevious, Button btnPreviousPage, Button btnSubmit,
-      TextView circleActive, TextView circleInactive1, TextView circleInactive2,
+      TextView circleActive, TextView circleInactive1, TextView circleInactive2, TextView claimHere,
       EditText contactNumber, EditText dateOfBirth, LinearLayout employmentDetails,
       EditText familyContactNumber, EditText familyDateOfBirth, EditText familyFirstName,
       EditText familySurname, EditText firstName, LinearLayout getStarted, EditText ghanaCard,
@@ -152,6 +155,7 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
     this.circleActive = circleActive;
     this.circleInactive1 = circleInactive1;
     this.circleInactive2 = circleInactive2;
+    this.claimHere = claimHere;
     this.contactNumber = contactNumber;
     this.dateOfBirth = dateOfBirth;
     this.employmentDetails = employmentDetails;

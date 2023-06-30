@@ -17,8 +17,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.pixplicity.easyprefs.library.Prefs
-import com.theartofdev.edmodo.cropper.CropImage
-import com.theartofdev.edmodo.cropper.CropImageView
+//import com.theartofdev.edmodo.cropper.CropImage
+//import com.theartofdev.edmodo.cropper.CropImageView
 import com.woleapp.R
 import com.woleapp.adapters.DashboardAdapter
 import com.woleapp.databinding.LayoutMarketplaceStoreBinding
@@ -64,12 +64,12 @@ class MarketplaceStoreDashboard : BaseFragment() {
             }
 
         storeBinding.storeLogo.setOnClickListener {
-            CropImage.activity()
-                .setGuidelines(CropImageView.Guidelines.ON_TOUCH)
-                .setGuidelinesColor(ContextCompat.getColor(requireContext(), R.color.colorPrimary))
-                .setAspectRatio(4, 3)
-                .setAutoZoomEnabled(true)
-                .start(requireContext(), this)
+//            CropImage.activity()
+//                .setGuidelines(CropImageView.Guidelines.ON_TOUCH)
+//                .setGuidelinesColor(ContextCompat.getColor(requireContext(), R.color.colorPrimary))
+//                .setAspectRatio(4, 3)
+//                .setAutoZoomEnabled(true)
+//                .start(requireContext(), this)
         }
         return binding.root
     }
@@ -178,25 +178,26 @@ class MarketplaceStoreDashboard : BaseFragment() {
             }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
-            val result = CropImage.getActivityResult(data)
-            if (resultCode == Activity.RESULT_OK) {
-                val resultUri = result.uri
-                val imagePath = resultUri.path!!
-                viewModel.setImagePath(imagePath)
-                Log.e("resultUri", resultUri.toString())
-                storeBinding.storeLogo.setImageURI(resultUri)
-            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
-                val error = result.error
-                Log.e("Error", error.toString())
-            }
+//        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+//            val result = CropImage.getActivityResult(data)
+//            if (resultCode == Activity.RESULT_OK) {
+//                val resultUri = result.uri
+//                val imagePath = resultUri.path!!
+//                viewModel.setImagePath(imagePath)
+//                Log.e("resultUri", resultUri.toString())
+//                storeBinding.storeLogo.setImageURI(resultUri)
+//            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+//                val error = result.error
+//                Log.e("Error", error.toString())
+//            }
         }
     }
 
     lateinit var mProgressDialog: ProgressDialog
     private fun showProgressDialog() {
-        mProgressDialog = ProgressDialog.show(activity, null, null)
+        mProgressDialog = ProgressDialog.show(null, null, null)
         mProgressDialog.setContentView(R.layout.dialog_progress)
         mProgressDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         mProgressDialog.setCancelable(false)
@@ -207,4 +208,3 @@ class MarketplaceStoreDashboard : BaseFragment() {
             mProgressDialog.dismiss()
         }
     }
-}

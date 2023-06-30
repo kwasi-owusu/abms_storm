@@ -444,19 +444,39 @@ public final class InventoryDao_Impl implements InventoryDao {
             }
             _item.setInventory_id(_tmpInventory_id);
             final String _tmpProductId;
-            _tmpProductId = _cursor.getString(_cursorIndexOfProductId);
+            if (_cursor.isNull(_cursorIndexOfProductId)) {
+              _tmpProductId = null;
+            } else {
+              _tmpProductId = _cursor.getString(_cursorIndexOfProductId);
+            }
             _item.setProductId(_tmpProductId);
             final String _tmpMerchantId;
-            _tmpMerchantId = _cursor.getString(_cursorIndexOfMerchantId);
+            if (_cursor.isNull(_cursorIndexOfMerchantId)) {
+              _tmpMerchantId = null;
+            } else {
+              _tmpMerchantId = _cursor.getString(_cursorIndexOfMerchantId);
+            }
             _item.setMerchantId(_tmpMerchantId);
             final String _tmpProduct_name;
-            _tmpProduct_name = _cursor.getString(_cursorIndexOfProductName);
+            if (_cursor.isNull(_cursorIndexOfProductName)) {
+              _tmpProduct_name = null;
+            } else {
+              _tmpProduct_name = _cursor.getString(_cursorIndexOfProductName);
+            }
             _item.setProduct_name(_tmpProduct_name);
             final String _tmpCategory_name;
-            _tmpCategory_name = _cursor.getString(_cursorIndexOfCategoryName);
+            if (_cursor.isNull(_cursorIndexOfCategoryName)) {
+              _tmpCategory_name = null;
+            } else {
+              _tmpCategory_name = _cursor.getString(_cursorIndexOfCategoryName);
+            }
             _item.setCategory_name(_tmpCategory_name);
             final String _tmpPrice;
-            _tmpPrice = _cursor.getString(_cursorIndexOfPrice);
+            if (_cursor.isNull(_cursorIndexOfPrice)) {
+              _tmpPrice = null;
+            } else {
+              _tmpPrice = _cursor.getString(_cursorIndexOfPrice);
+            }
             _item.setPrice(_tmpPrice);
             final Integer _tmpQuantity;
             if (_cursor.isNull(_cursorIndexOfQuantity)) {
@@ -466,25 +486,49 @@ public final class InventoryDao_Impl implements InventoryDao {
             }
             _item.setQuantity(_tmpQuantity);
             final String _tmpDescription;
-            _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+            if (_cursor.isNull(_cursorIndexOfDescription)) {
+              _tmpDescription = null;
+            } else {
+              _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+            }
             _item.setDescription(_tmpDescription);
             final String _tmpImage_path;
-            _tmpImage_path = _cursor.getString(_cursorIndexOfImagePath);
+            if (_cursor.isNull(_cursorIndexOfImagePath)) {
+              _tmpImage_path = null;
+            } else {
+              _tmpImage_path = _cursor.getString(_cursorIndexOfImagePath);
+            }
             _item.setImage_path(_tmpImage_path);
             final String _tmpImageLocalPath;
-            _tmpImageLocalPath = _cursor.getString(_cursorIndexOfImageLocalPath);
+            if (_cursor.isNull(_cursorIndexOfImageLocalPath)) {
+              _tmpImageLocalPath = null;
+            } else {
+              _tmpImageLocalPath = _cursor.getString(_cursorIndexOfImageLocalPath);
+            }
             _item.setImageLocalPath(_tmpImageLocalPath);
             final String _tmpColor;
-            _tmpColor = _cursor.getString(_cursorIndexOfColor);
+            if (_cursor.isNull(_cursorIndexOfColor)) {
+              _tmpColor = null;
+            } else {
+              _tmpColor = _cursor.getString(_cursorIndexOfColor);
+            }
             _item.setColor(_tmpColor);
             final String _tmpSize;
-            _tmpSize = _cursor.getString(_cursorIndexOfSize);
+            if (_cursor.isNull(_cursorIndexOfSize)) {
+              _tmpSize = null;
+            } else {
+              _tmpSize = _cursor.getString(_cursorIndexOfSize);
+            }
             _item.setSize(_tmpSize);
             final float _tmpDeliveryFee;
             _tmpDeliveryFee = _cursor.getFloat(_cursorIndexOfDeliveryFee);
             _item.setDeliveryFee(_tmpDeliveryFee);
             final String _tmpStoreName;
-            _tmpStoreName = _cursor.getString(_cursorIndexOfStoreName);
+            if (_cursor.isNull(_cursorIndexOfStoreName)) {
+              _tmpStoreName = null;
+            } else {
+              _tmpStoreName = _cursor.getString(_cursorIndexOfStoreName);
+            }
             _item.setStoreName(_tmpStoreName);
             _result.add(_item);
           }
@@ -542,19 +586,39 @@ public final class InventoryDao_Impl implements InventoryDao {
             }
             _item.setInventory_id(_tmpInventory_id);
             final String _tmpProductId;
-            _tmpProductId = _cursor.getString(_cursorIndexOfProductId);
+            if (_cursor.isNull(_cursorIndexOfProductId)) {
+              _tmpProductId = null;
+            } else {
+              _tmpProductId = _cursor.getString(_cursorIndexOfProductId);
+            }
             _item.setProductId(_tmpProductId);
             final String _tmpMerchantId;
-            _tmpMerchantId = _cursor.getString(_cursorIndexOfMerchantId);
+            if (_cursor.isNull(_cursorIndexOfMerchantId)) {
+              _tmpMerchantId = null;
+            } else {
+              _tmpMerchantId = _cursor.getString(_cursorIndexOfMerchantId);
+            }
             _item.setMerchantId(_tmpMerchantId);
             final String _tmpProduct_name;
-            _tmpProduct_name = _cursor.getString(_cursorIndexOfProductName);
+            if (_cursor.isNull(_cursorIndexOfProductName)) {
+              _tmpProduct_name = null;
+            } else {
+              _tmpProduct_name = _cursor.getString(_cursorIndexOfProductName);
+            }
             _item.setProduct_name(_tmpProduct_name);
             final String _tmpCategory_name;
-            _tmpCategory_name = _cursor.getString(_cursorIndexOfCategoryName);
+            if (_cursor.isNull(_cursorIndexOfCategoryName)) {
+              _tmpCategory_name = null;
+            } else {
+              _tmpCategory_name = _cursor.getString(_cursorIndexOfCategoryName);
+            }
             _item.setCategory_name(_tmpCategory_name);
             final String _tmpPrice;
-            _tmpPrice = _cursor.getString(_cursorIndexOfPrice);
+            if (_cursor.isNull(_cursorIndexOfPrice)) {
+              _tmpPrice = null;
+            } else {
+              _tmpPrice = _cursor.getString(_cursorIndexOfPrice);
+            }
             _item.setPrice(_tmpPrice);
             final Integer _tmpQuantity;
             if (_cursor.isNull(_cursorIndexOfQuantity)) {
@@ -564,25 +628,49 @@ public final class InventoryDao_Impl implements InventoryDao {
             }
             _item.setQuantity(_tmpQuantity);
             final String _tmpDescription;
-            _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+            if (_cursor.isNull(_cursorIndexOfDescription)) {
+              _tmpDescription = null;
+            } else {
+              _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+            }
             _item.setDescription(_tmpDescription);
             final String _tmpImage_path;
-            _tmpImage_path = _cursor.getString(_cursorIndexOfImagePath);
+            if (_cursor.isNull(_cursorIndexOfImagePath)) {
+              _tmpImage_path = null;
+            } else {
+              _tmpImage_path = _cursor.getString(_cursorIndexOfImagePath);
+            }
             _item.setImage_path(_tmpImage_path);
             final String _tmpImageLocalPath;
-            _tmpImageLocalPath = _cursor.getString(_cursorIndexOfImageLocalPath);
+            if (_cursor.isNull(_cursorIndexOfImageLocalPath)) {
+              _tmpImageLocalPath = null;
+            } else {
+              _tmpImageLocalPath = _cursor.getString(_cursorIndexOfImageLocalPath);
+            }
             _item.setImageLocalPath(_tmpImageLocalPath);
             final String _tmpColor;
-            _tmpColor = _cursor.getString(_cursorIndexOfColor);
+            if (_cursor.isNull(_cursorIndexOfColor)) {
+              _tmpColor = null;
+            } else {
+              _tmpColor = _cursor.getString(_cursorIndexOfColor);
+            }
             _item.setColor(_tmpColor);
             final String _tmpSize;
-            _tmpSize = _cursor.getString(_cursorIndexOfSize);
+            if (_cursor.isNull(_cursorIndexOfSize)) {
+              _tmpSize = null;
+            } else {
+              _tmpSize = _cursor.getString(_cursorIndexOfSize);
+            }
             _item.setSize(_tmpSize);
             final float _tmpDeliveryFee;
             _tmpDeliveryFee = _cursor.getFloat(_cursorIndexOfDeliveryFee);
             _item.setDeliveryFee(_tmpDeliveryFee);
             final String _tmpStoreName;
-            _tmpStoreName = _cursor.getString(_cursorIndexOfStoreName);
+            if (_cursor.isNull(_cursorIndexOfStoreName)) {
+              _tmpStoreName = null;
+            } else {
+              _tmpStoreName = _cursor.getString(_cursorIndexOfStoreName);
+            }
             _item.setStoreName(_tmpStoreName);
             _result.add(_item);
           }
@@ -612,7 +700,7 @@ public final class InventoryDao_Impl implements InventoryDao {
     return new DataSource.Factory<Integer, Inventory>() {
       @Override
       public LimitOffsetDataSource<Inventory> create() {
-        return new LimitOffsetDataSource<Inventory>(__db, _statement, true , "inventory", "inventoryFts") {
+        return new LimitOffsetDataSource<Inventory>(__db, _statement, true, true , "inventory", "inventoryFts") {
           @Override
           protected List<Inventory> convertRows(Cursor cursor) {
             final int _cursorIndexOfInventoryId = CursorUtil.getColumnIndexOrThrow(cursor, "rowid");
@@ -641,19 +729,39 @@ public final class InventoryDao_Impl implements InventoryDao {
               }
               _item.setInventory_id(_tmpInventory_id);
               final String _tmpProductId;
-              _tmpProductId = cursor.getString(_cursorIndexOfProductId);
+              if (cursor.isNull(_cursorIndexOfProductId)) {
+                _tmpProductId = null;
+              } else {
+                _tmpProductId = cursor.getString(_cursorIndexOfProductId);
+              }
               _item.setProductId(_tmpProductId);
               final String _tmpMerchantId;
-              _tmpMerchantId = cursor.getString(_cursorIndexOfMerchantId);
+              if (cursor.isNull(_cursorIndexOfMerchantId)) {
+                _tmpMerchantId = null;
+              } else {
+                _tmpMerchantId = cursor.getString(_cursorIndexOfMerchantId);
+              }
               _item.setMerchantId(_tmpMerchantId);
               final String _tmpProduct_name;
-              _tmpProduct_name = cursor.getString(_cursorIndexOfProductName);
+              if (cursor.isNull(_cursorIndexOfProductName)) {
+                _tmpProduct_name = null;
+              } else {
+                _tmpProduct_name = cursor.getString(_cursorIndexOfProductName);
+              }
               _item.setProduct_name(_tmpProduct_name);
               final String _tmpCategory_name;
-              _tmpCategory_name = cursor.getString(_cursorIndexOfCategoryName);
+              if (cursor.isNull(_cursorIndexOfCategoryName)) {
+                _tmpCategory_name = null;
+              } else {
+                _tmpCategory_name = cursor.getString(_cursorIndexOfCategoryName);
+              }
               _item.setCategory_name(_tmpCategory_name);
               final String _tmpPrice;
-              _tmpPrice = cursor.getString(_cursorIndexOfPrice);
+              if (cursor.isNull(_cursorIndexOfPrice)) {
+                _tmpPrice = null;
+              } else {
+                _tmpPrice = cursor.getString(_cursorIndexOfPrice);
+              }
               _item.setPrice(_tmpPrice);
               final Integer _tmpQuantity;
               if (cursor.isNull(_cursorIndexOfQuantity)) {
@@ -663,25 +771,49 @@ public final class InventoryDao_Impl implements InventoryDao {
               }
               _item.setQuantity(_tmpQuantity);
               final String _tmpDescription;
-              _tmpDescription = cursor.getString(_cursorIndexOfDescription);
+              if (cursor.isNull(_cursorIndexOfDescription)) {
+                _tmpDescription = null;
+              } else {
+                _tmpDescription = cursor.getString(_cursorIndexOfDescription);
+              }
               _item.setDescription(_tmpDescription);
               final String _tmpImage_path;
-              _tmpImage_path = cursor.getString(_cursorIndexOfImagePath);
+              if (cursor.isNull(_cursorIndexOfImagePath)) {
+                _tmpImage_path = null;
+              } else {
+                _tmpImage_path = cursor.getString(_cursorIndexOfImagePath);
+              }
               _item.setImage_path(_tmpImage_path);
               final String _tmpImageLocalPath;
-              _tmpImageLocalPath = cursor.getString(_cursorIndexOfImageLocalPath);
+              if (cursor.isNull(_cursorIndexOfImageLocalPath)) {
+                _tmpImageLocalPath = null;
+              } else {
+                _tmpImageLocalPath = cursor.getString(_cursorIndexOfImageLocalPath);
+              }
               _item.setImageLocalPath(_tmpImageLocalPath);
               final String _tmpColor;
-              _tmpColor = cursor.getString(_cursorIndexOfColor);
+              if (cursor.isNull(_cursorIndexOfColor)) {
+                _tmpColor = null;
+              } else {
+                _tmpColor = cursor.getString(_cursorIndexOfColor);
+              }
               _item.setColor(_tmpColor);
               final String _tmpSize;
-              _tmpSize = cursor.getString(_cursorIndexOfSize);
+              if (cursor.isNull(_cursorIndexOfSize)) {
+                _tmpSize = null;
+              } else {
+                _tmpSize = cursor.getString(_cursorIndexOfSize);
+              }
               _item.setSize(_tmpSize);
               final float _tmpDeliveryFee;
               _tmpDeliveryFee = cursor.getFloat(_cursorIndexOfDeliveryFee);
               _item.setDeliveryFee(_tmpDeliveryFee);
               final String _tmpStoreName;
-              _tmpStoreName = cursor.getString(_cursorIndexOfStoreName);
+              if (cursor.isNull(_cursorIndexOfStoreName)) {
+                _tmpStoreName = null;
+              } else {
+                _tmpStoreName = cursor.getString(_cursorIndexOfStoreName);
+              }
               _item.setStoreName(_tmpStoreName);
               _res.add(_item);
             }
@@ -705,7 +837,7 @@ public final class InventoryDao_Impl implements InventoryDao {
     return new DataSource.Factory<Integer, Inventory>() {
       @Override
       public LimitOffsetDataSource<Inventory> create() {
-        return new LimitOffsetDataSource<Inventory>(__db, _statement, true , "inventory", "inventoryFts") {
+        return new LimitOffsetDataSource<Inventory>(__db, _statement, true, true , "inventory", "inventoryFts") {
           @Override
           protected List<Inventory> convertRows(Cursor cursor) {
             final int _cursorIndexOfInventoryId = CursorUtil.getColumnIndexOrThrow(cursor, "rowid");
@@ -734,19 +866,39 @@ public final class InventoryDao_Impl implements InventoryDao {
               }
               _item.setInventory_id(_tmpInventory_id);
               final String _tmpProductId;
-              _tmpProductId = cursor.getString(_cursorIndexOfProductId);
+              if (cursor.isNull(_cursorIndexOfProductId)) {
+                _tmpProductId = null;
+              } else {
+                _tmpProductId = cursor.getString(_cursorIndexOfProductId);
+              }
               _item.setProductId(_tmpProductId);
               final String _tmpMerchantId;
-              _tmpMerchantId = cursor.getString(_cursorIndexOfMerchantId);
+              if (cursor.isNull(_cursorIndexOfMerchantId)) {
+                _tmpMerchantId = null;
+              } else {
+                _tmpMerchantId = cursor.getString(_cursorIndexOfMerchantId);
+              }
               _item.setMerchantId(_tmpMerchantId);
               final String _tmpProduct_name;
-              _tmpProduct_name = cursor.getString(_cursorIndexOfProductName);
+              if (cursor.isNull(_cursorIndexOfProductName)) {
+                _tmpProduct_name = null;
+              } else {
+                _tmpProduct_name = cursor.getString(_cursorIndexOfProductName);
+              }
               _item.setProduct_name(_tmpProduct_name);
               final String _tmpCategory_name;
-              _tmpCategory_name = cursor.getString(_cursorIndexOfCategoryName);
+              if (cursor.isNull(_cursorIndexOfCategoryName)) {
+                _tmpCategory_name = null;
+              } else {
+                _tmpCategory_name = cursor.getString(_cursorIndexOfCategoryName);
+              }
               _item.setCategory_name(_tmpCategory_name);
               final String _tmpPrice;
-              _tmpPrice = cursor.getString(_cursorIndexOfPrice);
+              if (cursor.isNull(_cursorIndexOfPrice)) {
+                _tmpPrice = null;
+              } else {
+                _tmpPrice = cursor.getString(_cursorIndexOfPrice);
+              }
               _item.setPrice(_tmpPrice);
               final Integer _tmpQuantity;
               if (cursor.isNull(_cursorIndexOfQuantity)) {
@@ -756,25 +908,49 @@ public final class InventoryDao_Impl implements InventoryDao {
               }
               _item.setQuantity(_tmpQuantity);
               final String _tmpDescription;
-              _tmpDescription = cursor.getString(_cursorIndexOfDescription);
+              if (cursor.isNull(_cursorIndexOfDescription)) {
+                _tmpDescription = null;
+              } else {
+                _tmpDescription = cursor.getString(_cursorIndexOfDescription);
+              }
               _item.setDescription(_tmpDescription);
               final String _tmpImage_path;
-              _tmpImage_path = cursor.getString(_cursorIndexOfImagePath);
+              if (cursor.isNull(_cursorIndexOfImagePath)) {
+                _tmpImage_path = null;
+              } else {
+                _tmpImage_path = cursor.getString(_cursorIndexOfImagePath);
+              }
               _item.setImage_path(_tmpImage_path);
               final String _tmpImageLocalPath;
-              _tmpImageLocalPath = cursor.getString(_cursorIndexOfImageLocalPath);
+              if (cursor.isNull(_cursorIndexOfImageLocalPath)) {
+                _tmpImageLocalPath = null;
+              } else {
+                _tmpImageLocalPath = cursor.getString(_cursorIndexOfImageLocalPath);
+              }
               _item.setImageLocalPath(_tmpImageLocalPath);
               final String _tmpColor;
-              _tmpColor = cursor.getString(_cursorIndexOfColor);
+              if (cursor.isNull(_cursorIndexOfColor)) {
+                _tmpColor = null;
+              } else {
+                _tmpColor = cursor.getString(_cursorIndexOfColor);
+              }
               _item.setColor(_tmpColor);
               final String _tmpSize;
-              _tmpSize = cursor.getString(_cursorIndexOfSize);
+              if (cursor.isNull(_cursorIndexOfSize)) {
+                _tmpSize = null;
+              } else {
+                _tmpSize = cursor.getString(_cursorIndexOfSize);
+              }
               _item.setSize(_tmpSize);
               final float _tmpDeliveryFee;
               _tmpDeliveryFee = cursor.getFloat(_cursorIndexOfDeliveryFee);
               _item.setDeliveryFee(_tmpDeliveryFee);
               final String _tmpStoreName;
-              _tmpStoreName = cursor.getString(_cursorIndexOfStoreName);
+              if (cursor.isNull(_cursorIndexOfStoreName)) {
+                _tmpStoreName = null;
+              } else {
+                _tmpStoreName = cursor.getString(_cursorIndexOfStoreName);
+              }
               _item.setStoreName(_tmpStoreName);
               _res.add(_item);
             }

@@ -259,19 +259,39 @@ public final class BusinessDao_Impl implements BusinessDao {
             }
             _result.setUser_id(_tmpUser_id);
             final String _tmpBusiness_name;
-            _tmpBusiness_name = _cursor.getString(_cursorIndexOfBusinessName);
+            if (_cursor.isNull(_cursorIndexOfBusinessName)) {
+              _tmpBusiness_name = null;
+            } else {
+              _tmpBusiness_name = _cursor.getString(_cursorIndexOfBusinessName);
+            }
             _result.setBusiness_name(_tmpBusiness_name);
             final String _tmpBusiness_address;
-            _tmpBusiness_address = _cursor.getString(_cursorIndexOfBusinessAddress);
+            if (_cursor.isNull(_cursorIndexOfBusinessAddress)) {
+              _tmpBusiness_address = null;
+            } else {
+              _tmpBusiness_address = _cursor.getString(_cursorIndexOfBusinessAddress);
+            }
             _result.setBusiness_address(_tmpBusiness_address);
             final String _tmpBusiness_state;
-            _tmpBusiness_state = _cursor.getString(_cursorIndexOfBusinessState);
+            if (_cursor.isNull(_cursorIndexOfBusinessState)) {
+              _tmpBusiness_state = null;
+            } else {
+              _tmpBusiness_state = _cursor.getString(_cursorIndexOfBusinessState);
+            }
             _result.setBusiness_state(_tmpBusiness_state);
             final String _tmpPassword;
-            _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
+            if (_cursor.isNull(_cursorIndexOfPassword)) {
+              _tmpPassword = null;
+            } else {
+              _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
+            }
             _result.setPassword(_tmpPassword);
             final String _tmpPhone;
-            _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+            if (_cursor.isNull(_cursorIndexOfPhone)) {
+              _tmpPhone = null;
+            } else {
+              _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+            }
             _result.setPhone(_tmpPhone);
           } else {
             _result = null;
@@ -320,19 +340,39 @@ public final class BusinessDao_Impl implements BusinessDao {
         }
         _item.setUser_id(_tmpUser_id);
         final String _tmpBusiness_name;
-        _tmpBusiness_name = _cursor.getString(_cursorIndexOfBusinessName);
+        if (_cursor.isNull(_cursorIndexOfBusinessName)) {
+          _tmpBusiness_name = null;
+        } else {
+          _tmpBusiness_name = _cursor.getString(_cursorIndexOfBusinessName);
+        }
         _item.setBusiness_name(_tmpBusiness_name);
         final String _tmpBusiness_address;
-        _tmpBusiness_address = _cursor.getString(_cursorIndexOfBusinessAddress);
+        if (_cursor.isNull(_cursorIndexOfBusinessAddress)) {
+          _tmpBusiness_address = null;
+        } else {
+          _tmpBusiness_address = _cursor.getString(_cursorIndexOfBusinessAddress);
+        }
         _item.setBusiness_address(_tmpBusiness_address);
         final String _tmpBusiness_state;
-        _tmpBusiness_state = _cursor.getString(_cursorIndexOfBusinessState);
+        if (_cursor.isNull(_cursorIndexOfBusinessState)) {
+          _tmpBusiness_state = null;
+        } else {
+          _tmpBusiness_state = _cursor.getString(_cursorIndexOfBusinessState);
+        }
         _item.setBusiness_state(_tmpBusiness_state);
         final String _tmpPassword;
-        _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
+        if (_cursor.isNull(_cursorIndexOfPassword)) {
+          _tmpPassword = null;
+        } else {
+          _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
+        }
         _item.setPassword(_tmpPassword);
         final String _tmpPhone;
-        _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+        if (_cursor.isNull(_cursorIndexOfPhone)) {
+          _tmpPhone = null;
+        } else {
+          _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+        }
         _item.setPhone(_tmpPhone);
         _result.add(_item);
       }

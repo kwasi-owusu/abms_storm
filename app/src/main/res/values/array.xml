@@ -213,4 +213,17 @@
         <item>MARRIED</item>
     </string-array>
 
+    <string-array name="choose_claim">
+        <item>I am claiming for myself(hospital only)</item>
+        <item> I am claiming for another person</item>
+    </string-array>
+
+    <string-array name="choose_cause_of_death">
+        <item>Illness or sickness</item>
+        <item>Accident</item>
+        <item>Old age/natural</item>
+        <item>Murder</item>
+        <item>War or Unrest</item>
+    </string-array>
+
 </resources>

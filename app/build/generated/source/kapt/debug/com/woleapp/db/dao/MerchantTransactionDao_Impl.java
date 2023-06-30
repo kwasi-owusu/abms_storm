@@ -129,23 +129,59 @@ public final class MerchantTransactionDao_Impl implements MerchantTransactionDao
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             final String _tmpReference;
-            _tmpReference = _cursor.getString(_cursorIndexOfReference);
+            if (_cursor.isNull(_cursorIndexOfReference)) {
+              _tmpReference = null;
+            } else {
+              _tmpReference = _cursor.getString(_cursorIndexOfReference);
+            }
             final String _tmpMerchantId;
-            _tmpMerchantId = _cursor.getString(_cursorIndexOfMerchantId);
+            if (_cursor.isNull(_cursorIndexOfMerchantId)) {
+              _tmpMerchantId = null;
+            } else {
+              _tmpMerchantId = _cursor.getString(_cursorIndexOfMerchantId);
+            }
             final String _tmpPaymentMethod;
-            _tmpPaymentMethod = _cursor.getString(_cursorIndexOfPaymentMethod);
+            if (_cursor.isNull(_cursorIndexOfPaymentMethod)) {
+              _tmpPaymentMethod = null;
+            } else {
+              _tmpPaymentMethod = _cursor.getString(_cursorIndexOfPaymentMethod);
+            }
             final String _tmpCustomerName;
-            _tmpCustomerName = _cursor.getString(_cursorIndexOfCustomerName);
+            if (_cursor.isNull(_cursorIndexOfCustomerName)) {
+              _tmpCustomerName = null;
+            } else {
+              _tmpCustomerName = _cursor.getString(_cursorIndexOfCustomerName);
+            }
             final String _tmpStatus;
-            _tmpStatus = _cursor.getString(_cursorIndexOfStatus);
+            if (_cursor.isNull(_cursorIndexOfStatus)) {
+              _tmpStatus = null;
+            } else {
+              _tmpStatus = _cursor.getString(_cursorIndexOfStatus);
+            }
             final String _tmpAmount;
-            _tmpAmount = _cursor.getString(_cursorIndexOfAmount);
+            if (_cursor.isNull(_cursorIndexOfAmount)) {
+              _tmpAmount = null;
+            } else {
+              _tmpAmount = _cursor.getString(_cursorIndexOfAmount);
+            }
             final String _tmpProductId;
-            _tmpProductId = _cursor.getString(_cursorIndexOfProductId);
+            if (_cursor.isNull(_cursorIndexOfProductId)) {
+              _tmpProductId = null;
+            } else {
+              _tmpProductId = _cursor.getString(_cursorIndexOfProductId);
+            }
             final String _tmpProductCount;
-            _tmpProductCount = _cursor.getString(_cursorIndexOfProductCount);
+            if (_cursor.isNull(_cursorIndexOfProductCount)) {
+              _tmpProductCount = null;
+            } else {
+              _tmpProductCount = _cursor.getString(_cursorIndexOfProductCount);
+            }
             final String _tmpSellerId;
-            _tmpSellerId = _cursor.getString(_cursorIndexOfSellerId);
+            if (_cursor.isNull(_cursorIndexOfSellerId)) {
+              _tmpSellerId = null;
+            } else {
+              _tmpSellerId = _cursor.getString(_cursorIndexOfSellerId);
+            }
             _item = new MerchantTransaction(_tmpId,_tmpReference,_tmpMerchantId,_tmpPaymentMethod,_tmpCustomerName,_tmpStatus,_tmpAmount,_tmpProductId,_tmpProductCount,_tmpSellerId);
             _result.add(_item);
           }

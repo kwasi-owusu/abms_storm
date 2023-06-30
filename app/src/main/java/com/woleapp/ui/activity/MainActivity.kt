@@ -31,7 +31,7 @@ import com.woleapp.network.StormAPIClient
 import com.woleapp.ui.fragments.LoginFragment
 import com.woleapp.util.JWTHelper
 import com.woleapp.util.SharedPrefManager
-import kotlinx.android.synthetic.main.dialog_fragment_bluetooth_list.view.*
+//import kotlinx.android.synthetic.main.dialog_fragment_bluetooth_list.view.*
 import org.json.JSONObject
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,

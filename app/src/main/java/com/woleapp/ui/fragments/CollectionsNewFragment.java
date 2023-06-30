@@ -103,6 +103,8 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
     int len = 0;
     Bitmap bitmap;
     String amount = "";
+    String chargedAmount = "";
+    String chargedAmountVisa = "";
     CardReadResult readResult;
     private String networkType = "";
     String[] networkTypes;
@@ -244,6 +246,8 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
             month = parts[1].substring(2,4);
             year = parts[1].substring(0, 2);
             String cardDateNew = month + "/" + year;
+            chargedAmountVisa = String.valueOf(Double.parseDouble(amount) + 0.025 * Double.parseDouble(amount));
+           // Log.e("Charged Amount", chargedAmountVisa);
             processCardCollections(amount, name, cvv, readResult.d, cardDateNew);
         }
     }
@@ -258,6 +262,8 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
 
         amount = binding.etAmt.getText().toString();
         amount = amount.replace(currency_symbol, "").replaceAll(",", "");
+        chargedAmount = String.valueOf(Double.parseDouble(amount) + 0.01 * Double.parseDouble(amount));
+
         if (TextUtils.isEmpty(amount)) {
             binding.etAmt.setError("Please enter the amount you want to deposit", customErrorDrawable);
             binding.etAmt.requestFocus();
@@ -283,7 +289,8 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
             binding.accountNumber.setError("Number should be 10 digits", customErrorDrawable);
             binding.accountNumber.requestFocus();
         } else {
-            processCollections(amount, name, number, issuer);
+           // Log.e("Total amount", chargedAmount);
+            processCollections(chargedAmount, name, number, issuer);
         }
     }
 

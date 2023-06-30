@@ -11,7 +11,7 @@ import com.woleapp.model.SalesOrder
 import com.woleapp.model.toFieldMap
 import com.woleapp.network.MerchantsApiService
 import com.woleapp.util.*
-import id.zelory.compressor.Compressor
+//import id.zelory.compressor.Compressor
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -96,43 +96,43 @@ class MarketplaceViewModel : ViewModel() {
         )!!
         Log.e("inventory_img_path", "$filePath--")
         val sourceFile = File(imagePath!!)
-        val encoderObservable = Compressor(context)
-            .setQuality(50)
-            .compressToFileAsFlowable(sourceFile)
-            .toObservable()
-            .flatMap<MultipartBody.Part> { file: File? ->
-                saveAndGetMultipart(
-                    "store_logo",
-                    file!!,
-                    File(filePath)
-                )
-            }
-        Single.fromObservable(encoderObservable)
-            .doOnSubscribe { _showProgressDialog.postValue(Event(true)) }
-            .doFinally { _showProgressDialog.postValue(Event(false)) }
-            .flatMap {
-                val payload = marketPlace.value!!
-                merchantApiService.createStore(payload.merchantId, payload.toMap(), it)
-            }.subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe { t1, t2 ->
-                t1?.let {
-                    _merchantStoreExist.value = Event(true)
-                    SharedPrefManager.setMerchantStore(marketPlace.value)
-                    Log.e("TAG", it.toString())
-                }
-                t2?.let {
-                    _message.value = Event("Error ${it.localizedMessage}")
-                    it.printStackTrace()
-                    val httpE : HttpException? = it as? HttpException
-                    httpE?.let {
-                        Log.e("TAG", it.message())
-                        Log.e("TAG", "" + it.code())
-                    }
-                    //Log.e("MarketplaceViewModel", it.localizedMessage!!)
-                }
-            }
-            .disposeWith(compositeDisposable)
+//        val encoderObservable = Compressor(context)
+//            .setQuality(50)
+//            .compressToFileAsFlowable(sourceFile)
+//            .toObservable()
+//            .flatMap<MultipartBody.Part> { file: File? ->
+//                saveAndGetMultipart(
+//                    "store_logo",
+//                    file!!,
+//                    File(filePath)
+//                )
+//            }
+//        Single.fromObservable(encoderObservable)
+//            .doOnSubscribe { _showProgressDialog.postValue(Event(true)) }
+//            .doFinally { _showProgressDialog.postValue(Event(false)) }
+//            .flatMap {
+//                val payload = marketPlace.value!!
+//                merchantApiService.createStore(payload.merchantId, payload.toMap(), it)
+//            }.subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe { t1, t2 ->
+//                t1?.let {
+//                    _merchantStoreExist.value = Event(true)
+//                    SharedPrefManager.setMerchantStore(marketPlace.value)
+//                    Log.e("TAG", it.toString())
+//                }
+//                t2?.let {
+//                    _message.value = Event("Error ${it.localizedMessage}")
+//                    it.printStackTrace()
+//                    val httpE : HttpException? = it as? HttpException
+//                    httpE?.let {
+//                        Log.e("TAG", it.message())
+//                        Log.e("TAG", "" + it.code())
+//                    }
+//                    //Log.e("MarketplaceViewModel", it.localizedMessage!!)
+//                }
+//            }
+        //    .disposeWith(compositeDisposable)
 
     }
 

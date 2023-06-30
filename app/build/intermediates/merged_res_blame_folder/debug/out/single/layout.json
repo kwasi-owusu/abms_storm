@@ -48,12 +48,12 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_invoice_preview.xml"
     },
     {
-        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_sanlam.xml",
-        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sanlam.xml"
-    },
-    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_check_out_page.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_check_out_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_sanlam.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sanlam.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_main.xml",
@@ -84,12 +84,12 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_qr_registration.xml"
     },
     {
-        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_payment_mode.xml",
-        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_payment_mode.xml"
-    },
-    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_home.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_payment_mode.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_payment_mode.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_store_dashboard.xml",
@@ -120,12 +120,12 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\activity_payment_progress.xml"
     },
     {
-        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_qr_activation.xml",
-        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_qr_activation.xml"
-    },
-    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_transactions.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_transactions.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_qr_activation.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_qr_activation.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cashout.xml",
@@ -140,12 +140,12 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_school_fees.xml"
     },
     {
-        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_transaction.xml",
-        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_transaction.xml"
-    },
-    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_collections.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_collections.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_transaction.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_item_list_transaction.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_inventory.xml",
@@ -168,12 +168,12 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_card_webview.xml"
     },
     {
-        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_funeral_donations.xml",
-        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_funeral_donations.xml"
-    },
-    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_scan_to_pay.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_scan_to_pay.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_funeral_donations.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_funeral_donations.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_logout.xml",
@@ -184,12 +184,12 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_bank_details.xml"
     },
     {
-        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_payment_card_successful.xml",
-        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_payment_card_successful.xml"
-    },
-    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_airtime_or_data.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_airtime_or_data.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_payment_card_successful.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_payment_card_successful.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_item_list_inventory_2.xml",
@@ -232,12 +232,12 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_fund_wallet.xml"
     },
     {
-        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_utilities_status.xml",
-        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog_utilities_status.xml"
-    },
-    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_fines_bails.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_fines_bails.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_utilities_status.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\dialog_utilities_status.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_marketplace_item.xml",
@@ -258,6 +258,10 @@
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_payment_successful.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_payment_successful.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_sanlam_claims.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sanlam_claims.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_services_dropdown.xml",
@@ -304,12 +308,12 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_cash_in_options_new.xml"
     },
     {
-        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cable_tv.xml",
-        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_cable_tv.xml"
-    },
-    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_webview.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_webview.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_cable_tv.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_cable_tv.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_card_details.xml",

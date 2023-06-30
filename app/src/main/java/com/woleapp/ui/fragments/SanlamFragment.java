@@ -1,7 +1,10 @@
 package com.woleapp.ui.fragments;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -62,6 +65,7 @@ public class SanlamFragment extends BaseFragment implements View.OnClickListener
         binding.btnPreviousPage.setOnClickListener(this);
         binding.btnGetStarted.setOnClickListener(this);
         binding.btnJoinNow.setOnClickListener(this);
+        binding.claimHere.setOnClickListener(this);
         binding.addressDetails.setVisibility(View.GONE);
         binding.employmentDetails.setVisibility(View.GONE);
         binding.personalDetails.setVisibility(View.GONE);
@@ -123,6 +127,26 @@ public class SanlamFragment extends BaseFragment implements View.OnClickListener
             binding.getStarted.setVisibility(View.GONE);
             binding.policy.setVisibility(View.GONE);
             binding.pageNumber.setVisibility(View.VISIBLE);
+        }
+        else if(v == binding.claimHere){
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setTitle("Disclaimer")
+                    .setMessage(this.getString(R.string.disclaimer))
+                    .setCancelable(false)
+                    .setIcon(R.drawable.caution)
+                    .setPositiveButton("Agree", new DialogInterface.OnClickListener() {
+
+                        public void onClick (DialogInterface dialog, int id) {
+                            addFragmentWithoutRemove(R.id.container_main, new SanlamClaimsFragment(), SanlamClaimsFragment.class.getSimpleName());
+                        }
+
+                    })
+                    .setNegativeButton("Decline", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                        }
+                    });
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
         }
     }
     private void moveToPageTwo() {

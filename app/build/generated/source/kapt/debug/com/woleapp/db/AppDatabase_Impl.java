@@ -1,10 +1,13 @@
 package com.woleapp.db;
 
+import androidx.annotation.NonNull;
 import androidx.room.DatabaseConfiguration;
 import androidx.room.InvalidationTracker;
 import androidx.room.RoomOpenHelper;
 import androidx.room.RoomOpenHelper.Delegate;
 import androidx.room.RoomOpenHelper.ValidationResult;
+import androidx.room.migration.AutoMigrationSpec;
+import androidx.room.migration.Migration;
 import androidx.room.util.DBUtil;
 import androidx.room.util.FtsTableInfo;
 import androidx.room.util.TableInfo;
@@ -90,7 +93,7 @@ public final class AppDatabase_Impl extends AppDatabase {
       }
 
       @Override
-      protected void onCreate(SupportSQLiteDatabase _db) {
+      public void onCreate(SupportSQLiteDatabase _db) {
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onCreate(_db);
@@ -123,7 +126,7 @@ public final class AppDatabase_Impl extends AppDatabase {
       }
 
       @Override
-      protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
+      public RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
         final HashMap<String, TableInfo.Column> _columnsUsers = new HashMap<String, TableInfo.Column>(20);
         _columnsUsers.put("user_id", new TableInfo.Column("user_id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsUsers.put("user_type", new TableInfo.Column("user_type", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -254,7 +257,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         _columnsTransactions.put("destination_account", new TableInfo.Column("destination_account", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysTransactions = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesTransactions = new HashSet<TableInfo.Index>(1);
-        _indicesTransactions.add(new TableInfo.Index("index_transactions_external_reference_our_reference", false, Arrays.asList("external_reference","our_reference")));
+        _indicesTransactions.add(new TableInfo.Index("index_transactions_external_reference_our_reference", false, Arrays.asList("external_reference","our_reference"), Arrays.asList("ASC","ASC")));
         final TableInfo _infoTransactions = new TableInfo("transactions", _columnsTransactions, _foreignKeysTransactions, _indicesTransactions);
         final TableInfo _existingTransactions = TableInfo.read(_db, "transactions");
         if (! _infoTransactions.equals(_existingTransactions)) {
@@ -314,6 +317,18 @@ public final class AppDatabase_Impl extends AppDatabase {
     _typeConvertersMap.put(MerchantTransactionDao.class, MerchantTransactionDao_Impl.getRequiredConverters());
     _typeConvertersMap.put(TransactionsDao.class, TransactionsDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
+  }
+
+  @Override
+  public Set<Class<? extends AutoMigrationSpec>> getRequiredAutoMigrationSpecs() {
+    final HashSet<Class<? extends AutoMigrationSpec>> _autoMigrationSpecsSet = new HashSet<Class<? extends AutoMigrationSpec>>();
+    return _autoMigrationSpecsSet;
+  }
+
+  @Override
+  public List<Migration> getAutoMigrations(
+      @NonNull Map<Class<? extends AutoMigrationSpec>, AutoMigrationSpec> autoMigrationSpecsMap) {
+    return Arrays.asList();
   }
 
   @Override

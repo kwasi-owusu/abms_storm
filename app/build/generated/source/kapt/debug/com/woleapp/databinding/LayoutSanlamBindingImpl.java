@@ -22,32 +22,33 @@ public class LayoutSanlamBindingImpl extends LayoutSanlamBinding  {
         sViewsWithIds.put(R.id.getStarted, 6);
         sViewsWithIds.put(R.id.imageService, 7);
         sViewsWithIds.put(R.id.btn_getStarted, 8);
-        sViewsWithIds.put(R.id.policy, 9);
-        sViewsWithIds.put(R.id.policyTitle, 10);
-        sViewsWithIds.put(R.id.btn_joinNow, 11);
-        sViewsWithIds.put(R.id.personalDetails, 12);
-        sViewsWithIds.put(R.id.tvTitle, 13);
-        sViewsWithIds.put(R.id.firstName, 14);
-        sViewsWithIds.put(R.id.surname, 15);
-        sViewsWithIds.put(R.id.dateOfBirth, 16);
-        sViewsWithIds.put(R.id.contactNumber, 17);
-        sViewsWithIds.put(R.id.ghanaCard, 18);
-        sViewsWithIds.put(R.id.btn_nextMain, 19);
-        sViewsWithIds.put(R.id.addressDetails, 20);
-        sViewsWithIds.put(R.id.tvBank, 21);
-        sViewsWithIds.put(R.id.familyFirstName, 22);
-        sViewsWithIds.put(R.id.familySurname, 23);
-        sViewsWithIds.put(R.id.familyDateOfBirth, 24);
-        sViewsWithIds.put(R.id.familyContactNumber, 25);
-        sViewsWithIds.put(R.id.btn_previous, 26);
-        sViewsWithIds.put(R.id.btn_next, 27);
-        sViewsWithIds.put(R.id.employmentDetails, 28);
-        sViewsWithIds.put(R.id.tvBeneficiary, 29);
-        sViewsWithIds.put(R.id.ben_firstName, 30);
-        sViewsWithIds.put(R.id.ben_surname, 31);
-        sViewsWithIds.put(R.id.ben_contactNumber, 32);
-        sViewsWithIds.put(R.id.btn_previousPage, 33);
-        sViewsWithIds.put(R.id.btn_submit, 34);
+        sViewsWithIds.put(R.id.claimHere, 9);
+        sViewsWithIds.put(R.id.policy, 10);
+        sViewsWithIds.put(R.id.policyTitle, 11);
+        sViewsWithIds.put(R.id.btn_joinNow, 12);
+        sViewsWithIds.put(R.id.personalDetails, 13);
+        sViewsWithIds.put(R.id.tvTitle, 14);
+        sViewsWithIds.put(R.id.firstName, 15);
+        sViewsWithIds.put(R.id.surname, 16);
+        sViewsWithIds.put(R.id.dateOfBirth, 17);
+        sViewsWithIds.put(R.id.contactNumber, 18);
+        sViewsWithIds.put(R.id.ghanaCard, 19);
+        sViewsWithIds.put(R.id.btn_nextMain, 20);
+        sViewsWithIds.put(R.id.addressDetails, 21);
+        sViewsWithIds.put(R.id.tvBank, 22);
+        sViewsWithIds.put(R.id.familyFirstName, 23);
+        sViewsWithIds.put(R.id.familySurname, 24);
+        sViewsWithIds.put(R.id.familyDateOfBirth, 25);
+        sViewsWithIds.put(R.id.familyContactNumber, 26);
+        sViewsWithIds.put(R.id.btn_previous, 27);
+        sViewsWithIds.put(R.id.btn_next, 28);
+        sViewsWithIds.put(R.id.employmentDetails, 29);
+        sViewsWithIds.put(R.id.tvBeneficiary, 30);
+        sViewsWithIds.put(R.id.ben_firstName, 31);
+        sViewsWithIds.put(R.id.ben_surname, 32);
+        sViewsWithIds.put(R.id.ben_contactNumber, 33);
+        sViewsWithIds.put(R.id.btn_previousPage, 34);
+        sViewsWithIds.put(R.id.btn_submit, 35);
     }
     // views
     // variables
@@ -56,45 +57,46 @@ public class LayoutSanlamBindingImpl extends LayoutSanlamBinding  {
     // Inverse Binding Event Handlers
 
     public LayoutSanlamBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 35, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 36, sIncludes, sViewsWithIds));
     }
     private LayoutSanlamBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.LinearLayout) bindings[20]
-            , (android.widget.EditText) bindings[32]
-            , (android.widget.EditText) bindings[30]
+            , (android.widget.LinearLayout) bindings[21]
+            , (android.widget.EditText) bindings[33]
             , (android.widget.EditText) bindings[31]
+            , (android.widget.EditText) bindings[32]
             , (android.widget.Button) bindings[8]
-            , (android.widget.Button) bindings[11]
+            , (android.widget.Button) bindings[12]
+            , (android.widget.Button) bindings[28]
+            , (android.widget.Button) bindings[20]
             , (android.widget.Button) bindings[27]
-            , (android.widget.Button) bindings[19]
-            , (android.widget.Button) bindings[26]
-            , (android.widget.Button) bindings[33]
             , (android.widget.Button) bindings[34]
+            , (android.widget.Button) bindings[35]
             , (android.widget.TextView) bindings[3]
             , (android.widget.TextView) bindings[4]
             , (android.widget.TextView) bindings[5]
-            , (android.widget.EditText) bindings[17]
-            , (android.widget.EditText) bindings[16]
-            , (android.widget.LinearLayout) bindings[28]
-            , (android.widget.EditText) bindings[25]
-            , (android.widget.EditText) bindings[24]
-            , (android.widget.EditText) bindings[22]
-            , (android.widget.EditText) bindings[23]
-            , (android.widget.EditText) bindings[14]
-            , (android.widget.LinearLayout) bindings[6]
+            , (android.widget.TextView) bindings[9]
             , (android.widget.EditText) bindings[18]
+            , (android.widget.EditText) bindings[17]
+            , (android.widget.LinearLayout) bindings[29]
+            , (android.widget.EditText) bindings[26]
+            , (android.widget.EditText) bindings[25]
+            , (android.widget.EditText) bindings[23]
+            , (android.widget.EditText) bindings[24]
+            , (android.widget.EditText) bindings[15]
+            , (android.widget.LinearLayout) bindings[6]
+            , (android.widget.EditText) bindings[19]
             , (android.widget.ImageView) bindings[7]
             , (android.widget.LinearLayout) bindings[2]
-            , (android.widget.LinearLayout) bindings[12]
-            , (android.widget.LinearLayout) bindings[9]
-            , (android.widget.TextView) bindings[10]
+            , (android.widget.LinearLayout) bindings[13]
+            , (android.widget.LinearLayout) bindings[10]
+            , (android.widget.TextView) bindings[11]
             , (android.widget.RelativeLayout) bindings[1]
             , (android.widget.ScrollView) bindings[0]
-            , (android.widget.EditText) bindings[15]
-            , (android.widget.TextView) bindings[21]
-            , (android.widget.TextView) bindings[29]
-            , (android.widget.TextView) bindings[13]
+            , (android.widget.EditText) bindings[16]
+            , (android.widget.TextView) bindings[22]
+            , (android.widget.TextView) bindings[30]
+            , (android.widget.TextView) bindings[14]
             );
         this.scrollView.setTag(null);
         setRootTag(root);

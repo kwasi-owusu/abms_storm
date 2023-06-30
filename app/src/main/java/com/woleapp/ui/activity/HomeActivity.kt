@@ -188,7 +188,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             || currentFragment is AgencyTransactionDetailFragment  || currentFragment is FundWalletFragment || currentFragment is CollectionsNewFragment
             || currentFragment is CardWebViewFragment || currentFragment is TransactionStatusFragment || currentFragment is PaymentFailedFragment || currentFragment is PaymentCardSuccessfulFragment
             || currentFragment is SchoolFeesFragment || currentFragment is PassportFragment || currentFragment is FuneralMerchantFragment || currentFragment is FuneralDonationsFragment
-            || currentFragment is SanlamFragment )
+            || currentFragment is SanlamFragment || currentFragment is SanlamClaimsFragment )
             View.GONE
         else View.VISIBLE
     }
@@ -236,6 +236,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     when (data.getDouble("availableBalance") < 0) {
 //                        true -> setAvailableBalance("0.00")
 //                        false -> setAvailableBalance(data.getDouble("availableBalance").toString())
+                        else -> {}
                     }
 //                    setLedgerBalance(data.getDouble("ledgerBalance").toString())
                 }, {
@@ -413,6 +414,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         dialog2.show()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         Log.e("HomeActivity", "onActivityResult: $requestCode , $resultCode")

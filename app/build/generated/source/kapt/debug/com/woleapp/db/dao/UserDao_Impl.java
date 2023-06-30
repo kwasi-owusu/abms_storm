@@ -38,9 +38,9 @@ public final class UserDao_Impl implements UserDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateWalletAmount;
 
-  private final SharedSQLiteStatement __preparedStmtOfDeleteAll;
-
   private final SharedSQLiteStatement __preparedStmtOfDeleteUser;
+
+  private final SharedSQLiteStatement __preparedStmtOfDeleteAll;
 
   public UserDao_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -102,8 +102,7 @@ public final class UserDao_Impl implements UserDao {
         } else {
           stmt.bindString(10, value.getTerminal_id());
         }
-        final Integer _tmp;
-        _tmp = value.getIs_verified() == null ? null : (value.getIs_verified() ? 1 : 0);
+        final Integer _tmp = value.getIs_verified() == null ? null : (value.getIs_verified() ? 1 : 0);
         if (_tmp == null) {
           stmt.bindNull(11);
         } else {
@@ -119,8 +118,7 @@ public final class UserDao_Impl implements UserDao {
         } else {
           stmt.bindString(13, value.getLedgerBalance());
         }
-        final Integer _tmp_1;
-        _tmp_1 = value.getQRRegistered() == null ? null : (value.getQRRegistered() ? 1 : 0);
+        final Integer _tmp_1 = value.getQRRegistered() == null ? null : (value.getQRRegistered() ? 1 : 0);
         if (_tmp_1 == null) {
           stmt.bindNull(14);
         } else {
@@ -231,8 +229,7 @@ public final class UserDao_Impl implements UserDao {
         } else {
           stmt.bindString(10, value.getTerminal_id());
         }
-        final Integer _tmp;
-        _tmp = value.getIs_verified() == null ? null : (value.getIs_verified() ? 1 : 0);
+        final Integer _tmp = value.getIs_verified() == null ? null : (value.getIs_verified() ? 1 : 0);
         if (_tmp == null) {
           stmt.bindNull(11);
         } else {
@@ -248,8 +245,7 @@ public final class UserDao_Impl implements UserDao {
         } else {
           stmt.bindString(13, value.getLedgerBalance());
         }
-        final Integer _tmp_1;
-        _tmp_1 = value.getQRRegistered() == null ? null : (value.getQRRegistered() ? 1 : 0);
+        final Integer _tmp_1 = value.getQRRegistered() == null ? null : (value.getQRRegistered() ? 1 : 0);
         if (_tmp_1 == null) {
           stmt.bindNull(14);
         } else {
@@ -306,17 +302,17 @@ public final class UserDao_Impl implements UserDao {
         return _query;
       }
     };
-    this.__preparedStmtOfDeleteAll = new SharedSQLiteStatement(__db) {
-      @Override
-      public String createQuery() {
-        final String _query = "DELETE FROM users";
-        return _query;
-      }
-    };
     this.__preparedStmtOfDeleteUser = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
         final String _query = "DELETE FROM users WHERE user_id = ? ";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfDeleteAll = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM users";
         return _query;
       }
     };
@@ -380,8 +376,7 @@ public final class UserDao_Impl implements UserDao {
     __db.assertNotSuspendingTransaction();
     final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateUser.acquire();
     int _argIndex = 1;
-    final int _tmp;
-    _tmp = isVerified ? 1 : 0;
+    final int _tmp = isVerified ? 1 : 0;
     _stmt.bindLong(_argIndex, _tmp);
     _argIndex = 2;
     if (id == null) {
@@ -428,20 +423,6 @@ public final class UserDao_Impl implements UserDao {
   }
 
   @Override
-  public void deleteAll() {
-    __db.assertNotSuspendingTransaction();
-    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteAll.acquire();
-    __db.beginTransaction();
-    try {
-      _stmt.executeUpdateDelete();
-      __db.setTransactionSuccessful();
-    } finally {
-      __db.endTransaction();
-      __preparedStmtOfDeleteAll.release(_stmt);
-    }
-  }
-
-  @Override
   public int deleteUser(final int id) {
     __db.assertNotSuspendingTransaction();
     final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteUser.acquire();
@@ -455,6 +436,20 @@ public final class UserDao_Impl implements UserDao {
     } finally {
       __db.endTransaction();
       __preparedStmtOfDeleteUser.release(_stmt);
+    }
+  }
+
+  @Override
+  public void deleteAll() {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteAll.acquire();
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfDeleteAll.release(_stmt);
     }
   }
 
@@ -506,28 +501,60 @@ public final class UserDao_Impl implements UserDao {
             }
             _item.setUser_type(_tmpUser_type);
             final String _tmpName;
-            _tmpName = _cursor.getString(_cursorIndexOfName);
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _tmpName = null;
+            } else {
+              _tmpName = _cursor.getString(_cursorIndexOfName);
+            }
             _item.setName(_tmpName);
             final String _tmpEmail;
-            _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+            if (_cursor.isNull(_cursorIndexOfEmail)) {
+              _tmpEmail = null;
+            } else {
+              _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+            }
             _item.setEmail(_tmpEmail);
             final String _tmpPassword;
-            _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
+            if (_cursor.isNull(_cursorIndexOfPassword)) {
+              _tmpPassword = null;
+            } else {
+              _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
+            }
             _item.setPassword(_tmpPassword);
             final String _tmpPhone;
-            _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+            if (_cursor.isNull(_cursorIndexOfPhone)) {
+              _tmpPhone = null;
+            } else {
+              _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+            }
             _item.setPhone(_tmpPhone);
             final String _tmpAccount_number;
-            _tmpAccount_number = _cursor.getString(_cursorIndexOfAccountNumber);
+            if (_cursor.isNull(_cursorIndexOfAccountNumber)) {
+              _tmpAccount_number = null;
+            } else {
+              _tmpAccount_number = _cursor.getString(_cursorIndexOfAccountNumber);
+            }
             _item.setAccount_number(_tmpAccount_number);
             final String _tmpBank;
-            _tmpBank = _cursor.getString(_cursorIndexOfBank);
+            if (_cursor.isNull(_cursorIndexOfBank)) {
+              _tmpBank = null;
+            } else {
+              _tmpBank = _cursor.getString(_cursorIndexOfBank);
+            }
             _item.setBank(_tmpBank);
             final String _tmpBvn;
-            _tmpBvn = _cursor.getString(_cursorIndexOfBvn);
+            if (_cursor.isNull(_cursorIndexOfBvn)) {
+              _tmpBvn = null;
+            } else {
+              _tmpBvn = _cursor.getString(_cursorIndexOfBvn);
+            }
             _item.setBvn(_tmpBvn);
             final String _tmpTerminal_id;
-            _tmpTerminal_id = _cursor.getString(_cursorIndexOfTerminalId);
+            if (_cursor.isNull(_cursorIndexOfTerminalId)) {
+              _tmpTerminal_id = null;
+            } else {
+              _tmpTerminal_id = _cursor.getString(_cursorIndexOfTerminalId);
+            }
             _item.setTerminal_id(_tmpTerminal_id);
             final Boolean _tmpIs_verified;
             final Integer _tmp;
@@ -539,10 +566,18 @@ public final class UserDao_Impl implements UserDao {
             _tmpIs_verified = _tmp == null ? null : _tmp != 0;
             _item.setIs_verified(_tmpIs_verified);
             final String _tmpAvailableBalance;
-            _tmpAvailableBalance = _cursor.getString(_cursorIndexOfAvailableBalance);
+            if (_cursor.isNull(_cursorIndexOfAvailableBalance)) {
+              _tmpAvailableBalance = null;
+            } else {
+              _tmpAvailableBalance = _cursor.getString(_cursorIndexOfAvailableBalance);
+            }
             _item.setAvailableBalance(_tmpAvailableBalance);
             final String _tmpLedgerBalance;
-            _tmpLedgerBalance = _cursor.getString(_cursorIndexOfLedgerBalance);
+            if (_cursor.isNull(_cursorIndexOfLedgerBalance)) {
+              _tmpLedgerBalance = null;
+            } else {
+              _tmpLedgerBalance = _cursor.getString(_cursorIndexOfLedgerBalance);
+            }
             _item.setLedgerBalance(_tmpLedgerBalance);
             final Boolean _tmpIsQRRegistered;
             final Integer _tmp_1;
@@ -554,22 +589,46 @@ public final class UserDao_Impl implements UserDao {
             _tmpIsQRRegistered = _tmp_1 == null ? null : _tmp_1 != 0;
             _item.setQRRegistered(_tmpIsQRRegistered);
             final String _tmpState;
-            _tmpState = _cursor.getString(_cursorIndexOfState);
+            if (_cursor.isNull(_cursorIndexOfState)) {
+              _tmpState = null;
+            } else {
+              _tmpState = _cursor.getString(_cursorIndexOfState);
+            }
             _item.setState(_tmpState);
             final String _tmpNetplus_id;
-            _tmpNetplus_id = _cursor.getString(_cursorIndexOfNetplusId);
+            if (_cursor.isNull(_cursorIndexOfNetplusId)) {
+              _tmpNetplus_id = null;
+            } else {
+              _tmpNetplus_id = _cursor.getString(_cursorIndexOfNetplusId);
+            }
             _item.setNetplus_id(_tmpNetplus_id);
             final String _tmpBusiness_name;
-            _tmpBusiness_name = _cursor.getString(_cursorIndexOfBusinessName);
+            if (_cursor.isNull(_cursorIndexOfBusinessName)) {
+              _tmpBusiness_name = null;
+            } else {
+              _tmpBusiness_name = _cursor.getString(_cursorIndexOfBusinessName);
+            }
             _item.setBusiness_name(_tmpBusiness_name);
             final String _tmpBusiness_address;
-            _tmpBusiness_address = _cursor.getString(_cursorIndexOfBusinessAddress);
+            if (_cursor.isNull(_cursorIndexOfBusinessAddress)) {
+              _tmpBusiness_address = null;
+            } else {
+              _tmpBusiness_address = _cursor.getString(_cursorIndexOfBusinessAddress);
+            }
             _item.setBusiness_address(_tmpBusiness_address);
             final String _tmpBusiness_state;
-            _tmpBusiness_state = _cursor.getString(_cursorIndexOfBusinessState);
+            if (_cursor.isNull(_cursorIndexOfBusinessState)) {
+              _tmpBusiness_state = null;
+            } else {
+              _tmpBusiness_state = _cursor.getString(_cursorIndexOfBusinessState);
+            }
             _item.setBusiness_state(_tmpBusiness_state);
             final String _tmpBusiness_phone_number;
-            _tmpBusiness_phone_number = _cursor.getString(_cursorIndexOfBusinessPhoneNumber);
+            if (_cursor.isNull(_cursorIndexOfBusinessPhoneNumber)) {
+              _tmpBusiness_phone_number = null;
+            } else {
+              _tmpBusiness_phone_number = _cursor.getString(_cursorIndexOfBusinessPhoneNumber);
+            }
             _item.setBusiness_phone_number(_tmpBusiness_phone_number);
             _result.add(_item);
           }
@@ -640,28 +699,60 @@ public final class UserDao_Impl implements UserDao {
         }
         _item.setUser_type(_tmpUser_type);
         final String _tmpName;
-        _tmpName = _cursor.getString(_cursorIndexOfName);
+        if (_cursor.isNull(_cursorIndexOfName)) {
+          _tmpName = null;
+        } else {
+          _tmpName = _cursor.getString(_cursorIndexOfName);
+        }
         _item.setName(_tmpName);
         final String _tmpEmail;
-        _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+        if (_cursor.isNull(_cursorIndexOfEmail)) {
+          _tmpEmail = null;
+        } else {
+          _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+        }
         _item.setEmail(_tmpEmail);
         final String _tmpPassword;
-        _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
+        if (_cursor.isNull(_cursorIndexOfPassword)) {
+          _tmpPassword = null;
+        } else {
+          _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
+        }
         _item.setPassword(_tmpPassword);
         final String _tmpPhone;
-        _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+        if (_cursor.isNull(_cursorIndexOfPhone)) {
+          _tmpPhone = null;
+        } else {
+          _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+        }
         _item.setPhone(_tmpPhone);
         final String _tmpAccount_number;
-        _tmpAccount_number = _cursor.getString(_cursorIndexOfAccountNumber);
+        if (_cursor.isNull(_cursorIndexOfAccountNumber)) {
+          _tmpAccount_number = null;
+        } else {
+          _tmpAccount_number = _cursor.getString(_cursorIndexOfAccountNumber);
+        }
         _item.setAccount_number(_tmpAccount_number);
         final String _tmpBank;
-        _tmpBank = _cursor.getString(_cursorIndexOfBank);
+        if (_cursor.isNull(_cursorIndexOfBank)) {
+          _tmpBank = null;
+        } else {
+          _tmpBank = _cursor.getString(_cursorIndexOfBank);
+        }
         _item.setBank(_tmpBank);
         final String _tmpBvn;
-        _tmpBvn = _cursor.getString(_cursorIndexOfBvn);
+        if (_cursor.isNull(_cursorIndexOfBvn)) {
+          _tmpBvn = null;
+        } else {
+          _tmpBvn = _cursor.getString(_cursorIndexOfBvn);
+        }
         _item.setBvn(_tmpBvn);
         final String _tmpTerminal_id;
-        _tmpTerminal_id = _cursor.getString(_cursorIndexOfTerminalId);
+        if (_cursor.isNull(_cursorIndexOfTerminalId)) {
+          _tmpTerminal_id = null;
+        } else {
+          _tmpTerminal_id = _cursor.getString(_cursorIndexOfTerminalId);
+        }
         _item.setTerminal_id(_tmpTerminal_id);
         final Boolean _tmpIs_verified;
         final Integer _tmp;
@@ -673,10 +764,18 @@ public final class UserDao_Impl implements UserDao {
         _tmpIs_verified = _tmp == null ? null : _tmp != 0;
         _item.setIs_verified(_tmpIs_verified);
         final String _tmpAvailableBalance;
-        _tmpAvailableBalance = _cursor.getString(_cursorIndexOfAvailableBalance);
+        if (_cursor.isNull(_cursorIndexOfAvailableBalance)) {
+          _tmpAvailableBalance = null;
+        } else {
+          _tmpAvailableBalance = _cursor.getString(_cursorIndexOfAvailableBalance);
+        }
         _item.setAvailableBalance(_tmpAvailableBalance);
         final String _tmpLedgerBalance;
-        _tmpLedgerBalance = _cursor.getString(_cursorIndexOfLedgerBalance);
+        if (_cursor.isNull(_cursorIndexOfLedgerBalance)) {
+          _tmpLedgerBalance = null;
+        } else {
+          _tmpLedgerBalance = _cursor.getString(_cursorIndexOfLedgerBalance);
+        }
         _item.setLedgerBalance(_tmpLedgerBalance);
         final Boolean _tmpIsQRRegistered;
         final Integer _tmp_1;
@@ -688,22 +787,46 @@ public final class UserDao_Impl implements UserDao {
         _tmpIsQRRegistered = _tmp_1 == null ? null : _tmp_1 != 0;
         _item.setQRRegistered(_tmpIsQRRegistered);
         final String _tmpState;
-        _tmpState = _cursor.getString(_cursorIndexOfState);
+        if (_cursor.isNull(_cursorIndexOfState)) {
+          _tmpState = null;
+        } else {
+          _tmpState = _cursor.getString(_cursorIndexOfState);
+        }
         _item.setState(_tmpState);
         final String _tmpNetplus_id;
-        _tmpNetplus_id = _cursor.getString(_cursorIndexOfNetplusId);
+        if (_cursor.isNull(_cursorIndexOfNetplusId)) {
+          _tmpNetplus_id = null;
+        } else {
+          _tmpNetplus_id = _cursor.getString(_cursorIndexOfNetplusId);
+        }
         _item.setNetplus_id(_tmpNetplus_id);
         final String _tmpBusiness_name;
-        _tmpBusiness_name = _cursor.getString(_cursorIndexOfBusinessName);
+        if (_cursor.isNull(_cursorIndexOfBusinessName)) {
+          _tmpBusiness_name = null;
+        } else {
+          _tmpBusiness_name = _cursor.getString(_cursorIndexOfBusinessName);
+        }
         _item.setBusiness_name(_tmpBusiness_name);
         final String _tmpBusiness_address;
-        _tmpBusiness_address = _cursor.getString(_cursorIndexOfBusinessAddress);
+        if (_cursor.isNull(_cursorIndexOfBusinessAddress)) {
+          _tmpBusiness_address = null;
+        } else {
+          _tmpBusiness_address = _cursor.getString(_cursorIndexOfBusinessAddress);
+        }
         _item.setBusiness_address(_tmpBusiness_address);
         final String _tmpBusiness_state;
-        _tmpBusiness_state = _cursor.getString(_cursorIndexOfBusinessState);
+        if (_cursor.isNull(_cursorIndexOfBusinessState)) {
+          _tmpBusiness_state = null;
+        } else {
+          _tmpBusiness_state = _cursor.getString(_cursorIndexOfBusinessState);
+        }
         _item.setBusiness_state(_tmpBusiness_state);
         final String _tmpBusiness_phone_number;
-        _tmpBusiness_phone_number = _cursor.getString(_cursorIndexOfBusinessPhoneNumber);
+        if (_cursor.isNull(_cursorIndexOfBusinessPhoneNumber)) {
+          _tmpBusiness_phone_number = null;
+        } else {
+          _tmpBusiness_phone_number = _cursor.getString(_cursorIndexOfBusinessPhoneNumber);
+        }
         _item.setBusiness_phone_number(_tmpBusiness_phone_number);
         _result.add(_item);
       }
@@ -813,28 +936,60 @@ public final class UserDao_Impl implements UserDao {
             }
             _result.setUser_type(_tmpUser_type);
             final String _tmpName;
-            _tmpName = _cursor.getString(_cursorIndexOfName);
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _tmpName = null;
+            } else {
+              _tmpName = _cursor.getString(_cursorIndexOfName);
+            }
             _result.setName(_tmpName);
             final String _tmpEmail;
-            _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+            if (_cursor.isNull(_cursorIndexOfEmail)) {
+              _tmpEmail = null;
+            } else {
+              _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+            }
             _result.setEmail(_tmpEmail);
             final String _tmpPassword;
-            _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
+            if (_cursor.isNull(_cursorIndexOfPassword)) {
+              _tmpPassword = null;
+            } else {
+              _tmpPassword = _cursor.getString(_cursorIndexOfPassword);
+            }
             _result.setPassword(_tmpPassword);
             final String _tmpPhone;
-            _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+            if (_cursor.isNull(_cursorIndexOfPhone)) {
+              _tmpPhone = null;
+            } else {
+              _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+            }
             _result.setPhone(_tmpPhone);
             final String _tmpAccount_number;
-            _tmpAccount_number = _cursor.getString(_cursorIndexOfAccountNumber);
+            if (_cursor.isNull(_cursorIndexOfAccountNumber)) {
+              _tmpAccount_number = null;
+            } else {
+              _tmpAccount_number = _cursor.getString(_cursorIndexOfAccountNumber);
+            }
             _result.setAccount_number(_tmpAccount_number);
             final String _tmpBank;
-            _tmpBank = _cursor.getString(_cursorIndexOfBank);
+            if (_cursor.isNull(_cursorIndexOfBank)) {
+              _tmpBank = null;
+            } else {
+              _tmpBank = _cursor.getString(_cursorIndexOfBank);
+            }
             _result.setBank(_tmpBank);
             final String _tmpBvn;
-            _tmpBvn = _cursor.getString(_cursorIndexOfBvn);
+            if (_cursor.isNull(_cursorIndexOfBvn)) {
+              _tmpBvn = null;
+            } else {
+              _tmpBvn = _cursor.getString(_cursorIndexOfBvn);
+            }
             _result.setBvn(_tmpBvn);
             final String _tmpTerminal_id;
-            _tmpTerminal_id = _cursor.getString(_cursorIndexOfTerminalId);
+            if (_cursor.isNull(_cursorIndexOfTerminalId)) {
+              _tmpTerminal_id = null;
+            } else {
+              _tmpTerminal_id = _cursor.getString(_cursorIndexOfTerminalId);
+            }
             _result.setTerminal_id(_tmpTerminal_id);
             final Boolean _tmpIs_verified;
             final Integer _tmp;
@@ -846,10 +1001,18 @@ public final class UserDao_Impl implements UserDao {
             _tmpIs_verified = _tmp == null ? null : _tmp != 0;
             _result.setIs_verified(_tmpIs_verified);
             final String _tmpAvailableBalance;
-            _tmpAvailableBalance = _cursor.getString(_cursorIndexOfAvailableBalance);
+            if (_cursor.isNull(_cursorIndexOfAvailableBalance)) {
+              _tmpAvailableBalance = null;
+            } else {
+              _tmpAvailableBalance = _cursor.getString(_cursorIndexOfAvailableBalance);
+            }
             _result.setAvailableBalance(_tmpAvailableBalance);
             final String _tmpLedgerBalance;
-            _tmpLedgerBalance = _cursor.getString(_cursorIndexOfLedgerBalance);
+            if (_cursor.isNull(_cursorIndexOfLedgerBalance)) {
+              _tmpLedgerBalance = null;
+            } else {
+              _tmpLedgerBalance = _cursor.getString(_cursorIndexOfLedgerBalance);
+            }
             _result.setLedgerBalance(_tmpLedgerBalance);
             final Boolean _tmpIsQRRegistered;
             final Integer _tmp_1;
@@ -861,22 +1024,46 @@ public final class UserDao_Impl implements UserDao {
             _tmpIsQRRegistered = _tmp_1 == null ? null : _tmp_1 != 0;
             _result.setQRRegistered(_tmpIsQRRegistered);
             final String _tmpState;
-            _tmpState = _cursor.getString(_cursorIndexOfState);
+            if (_cursor.isNull(_cursorIndexOfState)) {
+              _tmpState = null;
+            } else {
+              _tmpState = _cursor.getString(_cursorIndexOfState);
+            }
             _result.setState(_tmpState);
             final String _tmpNetplus_id;
-            _tmpNetplus_id = _cursor.getString(_cursorIndexOfNetplusId);
+            if (_cursor.isNull(_cursorIndexOfNetplusId)) {
+              _tmpNetplus_id = null;
+            } else {
+              _tmpNetplus_id = _cursor.getString(_cursorIndexOfNetplusId);
+            }
             _result.setNetplus_id(_tmpNetplus_id);
             final String _tmpBusiness_name;
-            _tmpBusiness_name = _cursor.getString(_cursorIndexOfBusinessName);
+            if (_cursor.isNull(_cursorIndexOfBusinessName)) {
+              _tmpBusiness_name = null;
+            } else {
+              _tmpBusiness_name = _cursor.getString(_cursorIndexOfBusinessName);
+            }
             _result.setBusiness_name(_tmpBusiness_name);
             final String _tmpBusiness_address;
-            _tmpBusiness_address = _cursor.getString(_cursorIndexOfBusinessAddress);
+            if (_cursor.isNull(_cursorIndexOfBusinessAddress)) {
+              _tmpBusiness_address = null;
+            } else {
+              _tmpBusiness_address = _cursor.getString(_cursorIndexOfBusinessAddress);
+            }
             _result.setBusiness_address(_tmpBusiness_address);
             final String _tmpBusiness_state;
-            _tmpBusiness_state = _cursor.getString(_cursorIndexOfBusinessState);
+            if (_cursor.isNull(_cursorIndexOfBusinessState)) {
+              _tmpBusiness_state = null;
+            } else {
+              _tmpBusiness_state = _cursor.getString(_cursorIndexOfBusinessState);
+            }
             _result.setBusiness_state(_tmpBusiness_state);
             final String _tmpBusiness_phone_number;
-            _tmpBusiness_phone_number = _cursor.getString(_cursorIndexOfBusinessPhoneNumber);
+            if (_cursor.isNull(_cursorIndexOfBusinessPhoneNumber)) {
+              _tmpBusiness_phone_number = null;
+            } else {
+              _tmpBusiness_phone_number = _cursor.getString(_cursorIndexOfBusinessPhoneNumber);
+            }
             _result.setBusiness_phone_number(_tmpBusiness_phone_number);
           } else {
             _result = null;
