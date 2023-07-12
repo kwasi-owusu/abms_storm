@@ -289,7 +289,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
             binding.accountNumber.setError("Number should be 10 digits", customErrorDrawable);
             binding.accountNumber.requestFocus();
         } else {
-           // Log.e("Total amount", chargedAmount);
+            //Log.e("Total amount", chargedAmount);
             processCollections(chargedAmount, name, number, issuer);
         }
     }
@@ -357,15 +357,6 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
                // .doOnSubscribe(disposable -> showProgressBar())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-              //  .onErrorResumeNext(throwable -> {
-                //    Log.e("ErrorM", "error " + throwable.getMessage());
-                  //  dismissProgressBar();
-                   // return Observable.empty();
-               // })
-                //.doOnError(throwable -> {
-                  //  Log.e("ErrorM", "error " + throwable.getMessage());
-                   // dismissProgressBar();
-               // })
                 .subscribe(res -> {
                     if (res.code() != 200) {
                         Toast.makeText(context, "Failed to process transaction", Toast.LENGTH_SHORT).show();
@@ -382,7 +373,7 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
                     }
                     transactionId = response.optString("transactionId");
                     Log.e("TRANSACTION_ID_MOMO", "transaction response: " + transactionId);
-                    addFragmentWithoutRemove(R.id.container_main, new TransactionStatusFragment(transactionId, token, name, number, ref, issuer, amount), TransactionStatusFragment.class.getSimpleName());
+                    addFragmentWithoutRemove(R.id.container_main, new TransactionStatusFragment(transactionId, token, name, number, ref, issuer, chargedAmount), TransactionStatusFragment.class.getSimpleName());
                     dismissProgressBar();
                     //transactionStatus();
                 }, err -> {
@@ -456,8 +447,8 @@ public class CollectionsNewFragment extends BaseFragment implements View.OnClick
 
     public void processToken() {
         showProgressBar();
-        String merchantID = "63b59e41530aeeaec59a045f";
-        String apikey = "93064247-4668-4c73-ac43-4dcc28773a86";
+        String merchantID = "644a5642a8d4fb90eebee99d";
+        String apikey = "fa5a363b-a4e1-4cde-a96c-2635941af096";
 
         JsonObject object = new JsonObject();
         object.addProperty("merchantId", merchantID);
