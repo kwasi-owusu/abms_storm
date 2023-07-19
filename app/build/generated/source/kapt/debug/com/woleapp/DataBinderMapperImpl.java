@@ -79,6 +79,7 @@ import com.woleapp.databinding.LayoutQuickTransactionBindingImpl;
 import com.woleapp.databinding.LayoutRiaBindingImpl;
 import com.woleapp.databinding.LayoutSanlamBindingImpl;
 import com.woleapp.databinding.LayoutSanlamClaimsBindingImpl;
+import com.woleapp.databinding.LayoutSanlamPolicyBindingImpl;
 import com.woleapp.databinding.LayoutScanToPayBindingImpl;
 import com.woleapp.databinding.LayoutSchoolFeesBindingImpl;
 import com.woleapp.databinding.LayoutSelectUserTypeBindingImpl;
@@ -251,41 +252,43 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_LAYOUTSANLAMCLAIMS = 72;
 
-  private static final int LAYOUT_LAYOUTSCANTOPAY = 73;
+  private static final int LAYOUT_LAYOUTSANLAMPOLICY = 73;
 
-  private static final int LAYOUT_LAYOUTSCHOOLFEES = 74;
+  private static final int LAYOUT_LAYOUTSCANTOPAY = 74;
 
-  private static final int LAYOUT_LAYOUTSELECTUSERTYPE = 75;
+  private static final int LAYOUT_LAYOUTSCHOOLFEES = 75;
 
-  private static final int LAYOUT_LAYOUTSIGNUP = 76;
+  private static final int LAYOUT_LAYOUTSELECTUSERTYPE = 76;
 
-  private static final int LAYOUT_LAYOUTSIGNUPORIG = 77;
+  private static final int LAYOUT_LAYOUTSIGNUP = 77;
 
-  private static final int LAYOUT_LAYOUTSSNIT = 78;
+  private static final int LAYOUT_LAYOUTSIGNUPORIG = 78;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONFAILURE = 79;
+  private static final int LAYOUT_LAYOUTSSNIT = 79;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONLIST = 80;
+  private static final int LAYOUT_LAYOUTTRANSACTIONFAILURE = 80;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONSTATUS = 81;
+  private static final int LAYOUT_LAYOUTTRANSACTIONLIST = 81;
 
-  private static final int LAYOUT_LAYOUTTRANSACTIONSUCCESS = 82;
+  private static final int LAYOUT_LAYOUTTRANSACTIONSTATUS = 82;
 
-  private static final int LAYOUT_LAYOUTVERIFYOTP = 83;
+  private static final int LAYOUT_LAYOUTTRANSACTIONSUCCESS = 83;
 
-  private static final int LAYOUT_LAYOUTVERIFYUTILITYPAYMENT = 84;
+  private static final int LAYOUT_LAYOUTVERIFYOTP = 84;
 
-  private static final int LAYOUT_LAYOUTWEBVIEW = 85;
+  private static final int LAYOUT_LAYOUTVERIFYUTILITYPAYMENT = 85;
 
-  private static final int LAYOUT_LAYOUTWESTERNUNION = 86;
+  private static final int LAYOUT_LAYOUTWEBVIEW = 86;
 
-  private static final int LAYOUT_PAGEINDICATORLAYOUT = 87;
+  private static final int LAYOUT_LAYOUTWESTERNUNION = 87;
 
-  private static final int LAYOUT_QRBOTTOMSHEETDIALOG = 88;
+  private static final int LAYOUT_PAGEINDICATORLAYOUT = 88;
 
-  private static final int LAYOUT_SPLASH = 89;
+  private static final int LAYOUT_QRBOTTOMSHEETDIALOG = 89;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(89);
+  private static final int LAYOUT_SPLASH = 90;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(90);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.activity_payment_progress, LAYOUT_ACTIVITYPAYMENTPROGRESS);
@@ -360,6 +363,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_ria, LAYOUT_LAYOUTRIA);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_sanlam, LAYOUT_LAYOUTSANLAM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_sanlam_claims, LAYOUT_LAYOUTSANLAMCLAIMS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_sanlam_policy, LAYOUT_LAYOUTSANLAMPOLICY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_scan_to_pay, LAYOUT_LAYOUTSCANTOPAY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_school_fees, LAYOUT_LAYOUTSCHOOLFEES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.woleapp.R.layout.layout_select_user_type, LAYOUT_LAYOUTSELECTUSERTYPE);
@@ -824,6 +828,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for layout_sanlam_claims is invalid. Received: " + tag);
       }
+      case  LAYOUT_LAYOUTSANLAMPOLICY: {
+        if ("layout/layout_sanlam_policy_0".equals(tag)) {
+          return new LayoutSanlamPolicyBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_sanlam_policy is invalid. Received: " + tag);
+      }
       case  LAYOUT_LAYOUTSCANTOPAY: {
         if ("layout/layout_scan_to_pay_0".equals(tag)) {
           return new LayoutScanToPayBindingImpl(component, view);
@@ -1014,7 +1024,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(90);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(91);
 
     static {
       sKeys.put("layout/activity_payment_progress_0", com.woleapp.R.layout.activity_payment_progress);
@@ -1090,6 +1100,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/layout_ria_0", com.woleapp.R.layout.layout_ria);
       sKeys.put("layout/layout_sanlam_0", com.woleapp.R.layout.layout_sanlam);
       sKeys.put("layout/layout_sanlam_claims_0", com.woleapp.R.layout.layout_sanlam_claims);
+      sKeys.put("layout/layout_sanlam_policy_0", com.woleapp.R.layout.layout_sanlam_policy);
       sKeys.put("layout/layout_scan_to_pay_0", com.woleapp.R.layout.layout_scan_to_pay);
       sKeys.put("layout/layout_school_fees_0", com.woleapp.R.layout.layout_school_fees);
       sKeys.put("layout/layout_select_user_type_0", com.woleapp.R.layout.layout_select_user_type);

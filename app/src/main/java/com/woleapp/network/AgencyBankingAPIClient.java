@@ -5,6 +5,8 @@ import static android.content.Context.MODE_PRIVATE;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.woleapp.ui.fragments.CollectionsNewFragment;
 import com.woleapp.util.SessionManager;
@@ -24,16 +26,16 @@ import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class AgencyBankingAPIClient {
     public static final String BASE_URL = "http://abms.viobex.com//";
     public static final String BASE_URL_2 = "https:/peoplespay.com.gh";
+    public static final String BASE_URL_1 = "http://3.128.25.124";
     private static AgencyBankingService agencyAPI;
     private static AgencyBankingService agencyAPIDefault;
-
-   // private static AgencyBankingService retrofit;
     private static AgencyBankingService agencyPPay;
-    private static AgencyBankingService agencyPay;
+    private static AgencyBankingService agencyBanking;
 
     static Context context;
 
@@ -81,6 +83,24 @@ public class AgencyBankingAPIClient {
         }
         return agencyPPay;
     }
+    public static synchronized AgencyBankingService createSanlamUser(Context context){
+        AgencyBankingAPIClient.context = context;
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+        if(agencyBanking == null) {
+            agencyBanking = new Retrofit.Builder()
+                    .baseUrl(BASE_URL_1)
+                    .client(getHttpClient(context, true))
+                    .addConverterFactory(ScalarsConverterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .build()
+                    .create(AgencyBankingService.class);
+        }
+        return agencyBanking;
+    }
 
     public static OkHttpClient getHttpClient(Context context, boolean addTokenInterceptor) {
 
@@ -98,39 +118,7 @@ public class AgencyBankingAPIClient {
 
         return okHttpClient;
     }
-    public void getTokenBearer() {
 
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
-            @Override
-            public okhttp3.Response intercept(Chain chain) throws IOException {
-                Request newRequest = chain.request().newBuilder()
-                        .addHeader("merchantId", "")
-                        .addHeader("apikey", "93064247-4668-4c73-ac43-4dcc28773a86")
-                        .build();
-                return chain.proceed(newRequest);
-            }
-        }).build();
-        Retrofit retrofit = new Retrofit.Builder()
-                .client(client)
-                .baseUrl(BASE_URL_2)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-    }
-//    public static synchronized AgencyBankingService createCollection(Context context) {
-//
-//        AgencyBankingAPIClient.context = context;
-//        if(agencyPPay == null) {
-//            agencyPPay = new Retrofit.Builder()
-//                    .baseUrl(BASE_URL_2)
-//                    .client(client)
-//                    .addConverterFactory(GsonConverterFactory.create())
-//                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-//                    .build()
-//                    .create(AgencyBankingService.class);
-//        }
-//        return agencyPPay;
-////    }
-    //if using token, add it to the arguments
 public static Observable<Response<Object>> agencyLogin(JsonObject payload, Context context) {
     return AgencyBankingAPIClient.createPPay(context).agencyLogin(payload)
             .subscribeOn(Schedulers.io())
@@ -208,6 +196,11 @@ public static Observable<Response<Object>> agencyLogin(JsonObject payload, Conte
     }
     public static Observable<Response<Object>> getBankList(Context context) {
         return AgencyBankingAPIClient.createPPay(context).getBankList()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+    public static Observable<Response<Object>> sanlamSignUp(JsonObject payload, Context context) {
+        return AgencyBankingAPIClient.createSanlamUser(context).sanlamSignUp(payload)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }

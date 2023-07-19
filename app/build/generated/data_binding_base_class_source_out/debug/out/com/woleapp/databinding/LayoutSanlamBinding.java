@@ -99,6 +99,9 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
   public final ImageView imageService;
 
   @NonNull
+  public final TextView memberAlready;
+
+  @NonNull
   public final LinearLayout pageNumber;
 
   @NonNull
@@ -136,10 +139,10 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
       EditText contactNumber, EditText dateOfBirth, LinearLayout employmentDetails,
       EditText familyContactNumber, EditText familyDateOfBirth, EditText familyFirstName,
       EditText familySurname, EditText firstName, LinearLayout getStarted, EditText ghanaCard,
-      ImageView imageService, LinearLayout pageNumber, LinearLayout personalDetails,
-      LinearLayout policy, TextView policyTitle, RelativeLayout relativeOptions,
-      ScrollView scrollView, EditText surname, TextView tvBank, TextView tvBeneficiary,
-      TextView tvTitle) {
+      ImageView imageService, TextView memberAlready, LinearLayout pageNumber,
+      LinearLayout personalDetails, LinearLayout policy, TextView policyTitle,
+      RelativeLayout relativeOptions, ScrollView scrollView, EditText surname, TextView tvBank,
+      TextView tvBeneficiary, TextView tvTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addressDetails = addressDetails;
     this.benContactNumber = benContactNumber;
@@ -167,6 +170,7 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
     this.getStarted = getStarted;
     this.ghanaCard = ghanaCard;
     this.imageService = imageService;
+    this.memberAlready = memberAlready;
     this.pageNumber = pageNumber;
     this.personalDetails = personalDetails;
     this.policy = policy;

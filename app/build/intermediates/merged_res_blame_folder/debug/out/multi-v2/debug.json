@@ -697,7 +697,7 @@
             "outputFile": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13_values-w820dp-v13.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\fcbc91fb190ed52a1eb5f0cb995cb8fa\\transformed\\jetified-androidtoggleswitch-1.2.2\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\1ea1de5c874c941c742536e2eb9979be\\transformed\\jetified-androidtoggleswitch-1.2.2\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -9172,23 +9172,6 @@
             "outputFile": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\c072f2bd85415204fe110900e043adca\\transformed\\jetified-android-gif-drawable-1.2.15\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,211",
-                        "endColumns": "155,147",
-                        "endOffsets": "206,354"
-                    },
-                    "to": {
-                        "startLines": "11652,11653",
-                        "startColumns": "4,4",
-                        "startOffsets": "729467,729623",
-                        "endColumns": "155,147",
-                        "endOffsets": "729618,729766"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\99e67a2d5515ea83a9c7bca98ea9ba32\\transformed\\jetified-viewpager2-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -9314,20 +9297,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\4b129b273a35add26f1d8276cf3aa8ec\\transformed\\jetified-subsampling-scale-image-view-3.10.0\\res\\values\\values.xml",
+                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\7340f474ef3a76a0549421a68b7645e5\\transformed\\jetified-library-1.0.4\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "336",
-                        "endOffsets": "387"
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "173,251,308,363,416",
+                        "endColumns": "77,56,54,52,880",
+                        "endOffsets": "246,303,358,411,1292"
                     },
                     "to": {
-                        "startLines": "13241",
-                        "startColumns": "4",
-                        "startOffsets": "806774",
-                        "endColumns": "336",
-                        "endOffsets": "807106"
+                        "startLines": "838,839,840,841,12814",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "38383,38461,38518,38573,785695",
+                        "endColumns": "77,56,54,52,880",
+                        "endOffsets": "38456,38513,38568,38621,786571"
                     }
                 },
                 {
@@ -9350,23 +9333,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\c00ae6ca4c5dd0519522eab0a572d708\\transformed\\jetified-scanner-1.3.1\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "103",
-                        "endColumns": "62",
-                        "endOffsets": "161"
-                    },
-                    "to": {
-                        "startLines": "2383",
-                        "startColumns": "4",
-                        "startOffsets": "148224",
-                        "endColumns": "62",
-                        "endOffsets": "148282"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\6a7dba51e7318e4987795a7681700dd2\\transformed\\media-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,5,6,7,8,10,11,12,13,14",
@@ -9384,37 +9350,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\fcbc91fb190ed52a1eb5f0cb995cb8fa\\transformed\\jetified-androidtoggleswitch-1.2.2\\res\\values\\values.xml",
+                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\fe6829747262b6e8e8f730ffe3411a07\\transformed\\jetified-debug-db-base-1.0.6\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,9,10,11,14,6",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,94,133,178,972,1016,1058,1215,228",
-                        "endColumns": "38,38,44,49,43,41,46,52,629",
-                        "endOffsets": "89,128,173,223,1011,1053,1100,1263,853"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     },
                     "to": {
-                        "startLines": "788,885,886,887,1737,1738,1739,2113,13740",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "35306,41595,41634,41679,98598,98642,98684,123390,834703",
-                        "endColumns": "38,38,44,49,43,41,46,52,629",
-                        "endOffsets": "35340,41629,41674,41724,98637,98679,98726,123438,835328"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\a2af94d3ec0e4ad9d0f09f6d33c26d3d\\transformed\\jetified-library-1.0.4\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "173,251,308,363,416",
-                        "endColumns": "77,56,54,52,880",
-                        "endOffsets": "246,303,358,411,1292"
-                    },
-                    "to": {
-                        "startLines": "838,839,840,841,12814",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "38383,38461,38518,38573,785695",
-                        "endColumns": "77,56,54,52,880",
-                        "endOffsets": "38456,38513,38568,38621,786571"
+                        "startLines": "1967",
+                        "startColumns": "4",
+                        "startOffsets": "111855",
+                        "endColumns": "65",
+                        "endOffsets": "111916"
                     }
                 },
                 {
@@ -9558,6 +9507,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\eabe5115d43f9959341c69f89b8a4328\\transformed\\jetified-countrypicker-1.2.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,104,203",
+                        "endColumns": "48,47,42",
+                        "endOffsets": "99,147,241"
+                    },
+                    "to": {
+                        "startLines": "1218,1219,2336",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "63868,63917,144900",
+                        "endColumns": "48,47,42",
+                        "endOffsets": "63912,63960,144938"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\fcb1577c512258cf7e40878360cbcdce\\transformed\\jetified-signature-pad-1.3.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -9647,6 +9613,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\d3314245024e7aae5eee9a3d6df7aad8\\transformed\\jetified-scanner-1.3.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "103",
+                        "endColumns": "62",
+                        "endOffsets": "161"
+                    },
+                    "to": {
+                        "startLines": "2383",
+                        "startColumns": "4",
+                        "startOffsets": "148224",
+                        "endColumns": "62",
+                        "endOffsets": "148282"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\netpossdk\\build\\.transforms\\9b54be0c5f7445d7081c09c1086ebfc6\\transformed\\netpossdk-1.0.30\\res\\values\\values.xml",
                     "from": {
                         "startLines": "3,4,5,9,10,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,46,53,68,77,83",
@@ -9721,6 +9704,40 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\f73c0273816d213b17dad9c85a81a995\\transformed\\jetified-subsampling-scale-image-view-3.10.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "336",
+                        "endOffsets": "387"
+                    },
+                    "to": {
+                        "startLines": "13241",
+                        "startColumns": "4",
+                        "startOffsets": "806774",
+                        "endColumns": "336",
+                        "endOffsets": "807106"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\1ea1de5c874c941c742536e2eb9979be\\transformed\\jetified-androidtoggleswitch-1.2.2\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,9,10,11,14,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,94,133,178,972,1016,1058,1215,228",
+                        "endColumns": "38,38,44,49,43,41,46,52,629",
+                        "endOffsets": "89,128,173,223,1011,1053,1100,1263,853"
+                    },
+                    "to": {
+                        "startLines": "788,885,886,887,1737,1738,1739,2113,13740",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "35306,41595,41634,41679,98598,98642,98684,123390,834703",
+                        "endColumns": "38,38,44,49,43,41,46,52,629",
+                        "endOffsets": "35340,41629,41674,41724,98637,98679,98726,123438,835328"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "236,168,198,161,199,203,126,127,143,144,156,176,7,204,184,151,193,1,125,142,120,149,148,192,116,155,154,158,167,179,231,129,177,182,189,190,215,133,219,207,174,197,200,235,109,132,131,128,130,137,223,218,213,214,208,209,230,66,150,85,56,71,78,94,93,76,87,77,88,91,82,90,79,92,89,80,60,53,68,86,57,62,63,58,59,67,69,70,52,72,64,65,54,84,61,55,81,83,74,73,206,217,34,16,29,38,39,22,40,104,28,100,48,18,37,105,20,21,17,152,46,19,106,24,98,33,103,27,45,49,96,30,32,41,42,47,31,26,25,99,102,101,23,35,36,44,118,123,222,10,9,14,13,11,12,164,166,135,233,6,5,4,3,2,212,162,180,232,139,228,165,159,220,216,225,173,224,145,234,185,141,205,157,147,202,117,163,113,160,211,121,194,122,136,119,221,169,172,201,171,188,186,187,146,183,195,138,140,178,175,115,110,108,43,170,181,210,196,227,226,191,153,134,124",
@@ -9754,23 +9771,6 @@
                         "startOffsets": "34701,35221,35263,35345,35922,35967,36021,36064,36116,36159,36706,36752,36796,36841,36887,36984,37126,37173,37224,37275,37327,37378,37524,41729,41777,41824,41892,41954,42013,42066,42118,42173,42231,42283,42340,42400,42450,42638,42682,42728,42774,42821,42868,42917,42963,54538,54591,54647,54694,55494,55542,55589,55627,55668,56118,56172,56225,56283,56342,56759,56808,56859,56909,56964,57024,57074,57121,57175,57347,57390",
                         "endColumns": "40,41,42,50,44,53,42,51,42,51,45,43,44,45,47,43,46,50,50,51,50,45,44,47,46,67,61,58,52,51,54,57,51,56,59,49,52,43,45,45,46,46,48,45,51,52,55,46,50,47,46,37,40,38,53,52,57,58,49,48,50,49,54,59,49,46,53,50,42,47",
                         "endOffsets": "34737,35258,35301,35391,35962,36016,36059,36111,36154,36206,36747,36791,36836,36882,36930,37023,37168,37219,37270,37322,37373,37419,37564,41772,41819,41887,41949,42008,42061,42113,42168,42226,42278,42335,42395,42445,42498,42677,42723,42769,42816,42863,42912,42958,43010,54586,54642,54689,54740,55537,55584,55622,55663,55702,56167,56220,56278,56337,56387,56803,56854,56904,56959,57019,57069,57116,57170,57221,57385,57433"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\fc803b80f46d19ac72c0fb364b9ad5f6\\transformed\\jetified-countrypicker-1.2.0\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,5",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,104,203",
-                        "endColumns": "48,47,42",
-                        "endOffsets": "99,147,241"
-                    },
-                    "to": {
-                        "startLines": "1218,1219,2336",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "63868,63917,144900",
-                        "endColumns": "48,47,42",
-                        "endOffsets": "63912,63960,144938"
                     }
                 },
                 {
@@ -9828,23 +9828,6 @@
                         "endLines": "662,1294,1295,1296,1305,1306,1307,1835,12875",
                         "endColumns": "55,58,47,55,74,75,71,65,24",
                         "endOffsets": "28547,68477,68525,68581,69307,69383,69455,104475,789475"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\210dbe6ceef17da0000a53069b9c11e7\\transformed\\jetified-debug-db-base-1.0.6\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    },
-                    "to": {
-                        "startLines": "1967",
-                        "startColumns": "4",
-                        "startOffsets": "111855",
-                        "endColumns": "65",
-                        "endOffsets": "111916"
                     }
                 },
                 {
@@ -10011,22 +9994,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\e390dd9d4626f62e34335301c6c4bcb6\\transformed\\jetified-drawee-1.13.0\\res\\values\\values.xml",
+                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\704cb93e17d35d8bb3a85cc1a10d8302\\transformed\\jetified-android-gif-drawable-1.2.15\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,141",
+                        "startLines": "2,3",
                         "startColumns": "4,4",
-                        "startOffsets": "55,6070",
-                        "endLines": "140,231",
-                        "endColumns": "22,22",
-                        "endOffsets": "6065,9761"
+                        "startOffsets": "55,211",
+                        "endColumns": "155,147",
+                        "endOffsets": "206,354"
                     },
                     "to": {
-                        "startLines": "11513,13015",
+                        "startLines": "11652,11653",
                         "startColumns": "4,4",
-                        "startOffsets": "723452,795942",
-                        "endLines": "11651,13105",
-                        "endColumns": "22,22",
-                        "endOffsets": "729462,799633"
+                        "startOffsets": "729467,729623",
+                        "endColumns": "155,147",
+                        "endOffsets": "729618,729766"
                     }
                 },
                 {
@@ -10063,6 +10044,25 @@
                         "startOffsets": "62934,62992,67923,81278,81319,81362,81403,81444,81487,81528,81567,81608,81649,81688,81729,81768,81809,81850,81891,97390,97440,98476,98518,98558,99765,99812,99860,99912,99958,100004,100050,100096,100142,100188,100234,100280,100324,100370,100414,100458,100955",
                         "endColumns": "57,55,41,40,42,40,40,42,40,38,40,40,38,40,38,40,40,40,40,49,57,41,39,39,46,47,51,45,45,45,45,45,45,45,45,43,45,43,43,43,46",
                         "endOffsets": "62987,63043,67960,81314,81357,81398,81439,81482,81523,81562,81603,81644,81683,81724,81763,81804,81845,81886,81927,97435,97493,98513,98553,98593,99807,99855,99907,99953,99999,100045,100091,100137,100183,100229,100275,100319,100365,100409,100453,100497,100997"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Meshach\\.gradle\\caches\\transforms-3\\8495be0cd68332c0c3ab9635972ce56e\\transformed\\jetified-drawee-1.13.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,141",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,6070",
+                        "endLines": "140,231",
+                        "endColumns": "22,22",
+                        "endOffsets": "6065,9761"
+                    },
+                    "to": {
+                        "startLines": "11513,13015",
+                        "startColumns": "4,4",
+                        "startOffsets": "723452,795942",
+                        "endLines": "11651,13105",
+                        "endColumns": "22,22",
+                        "endOffsets": "729462,799633"
                     }
                 }
             ]

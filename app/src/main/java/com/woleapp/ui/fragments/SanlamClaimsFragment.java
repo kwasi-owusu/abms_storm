@@ -147,14 +147,14 @@ public class SanlamClaimsFragment extends BaseFragment implements View.OnClickLi
     }
     public void setCauseOfDeathSpinner() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.choose_cause_of_death, R.layout.spinner_view_choose_claim);
-        adapter.setDropDownViewResource(R.layout.spinner_view_choose_claim);
+        adapter.setDropDownViewResource(R.layout.spinner_view_choose_cause_of_death);
         binding.spnCauseOfDeath.setPrompt(context.getResources().getString(R.string.hint_choose_cause_of_death));
 
         binding.spnCauseOfDeath.setAdapter(
                 // adapter
                 new NothingSelectedSpinnerAdapter(
                         adapter,
-                        R.layout.spinner_view_choose_claim,
+                        R.layout.spinner_view_choose_cause_of_death,
                         getActivity()
                 )
         );

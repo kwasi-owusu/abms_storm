@@ -4,12 +4,12 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\anim\\item_animation_from_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_view_color.xml.flat",
-        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\spinner_view_color.xml"
-    },
-    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_payment_progress.xml.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\activity_payment_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_view_color.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\spinner_view_color.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_s_logo.png.flat",
@@ -544,6 +544,10 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_invoice_preview.xml"
     },
     {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_view_choose_cause_of_death.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\spinner_view_choose_cause_of_death.xml"
+    },
+    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_sign_up.xml.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sign_up.xml"
     },
@@ -682,6 +686,10 @@
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\font_quagent_regular.ttf.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\font\\quagent_regular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_sanlam_policy.xml.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sanlam_policy.xml"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vector_smiley_disappointed.xml.flat",
@@ -1258,6 +1266,10 @@
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_view_quantity.xml.flat",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\spinner_view_quantity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mobile_payment.png.flat",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\drawable\\mobile_payment.png"
     },
     {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_sanlam_claims.xml.flat",

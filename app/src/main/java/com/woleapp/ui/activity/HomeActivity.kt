@@ -188,7 +188,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             || currentFragment is AgencyTransactionDetailFragment  || currentFragment is FundWalletFragment || currentFragment is CollectionsNewFragment
             || currentFragment is CardWebViewFragment || currentFragment is TransactionStatusFragment || currentFragment is PaymentFailedFragment || currentFragment is PaymentCardSuccessfulFragment
             || currentFragment is SchoolFeesFragment || currentFragment is PassportFragment || currentFragment is FuneralMerchantFragment || currentFragment is FuneralDonationsFragment
-            || currentFragment is SanlamFragment || currentFragment is SanlamClaimsFragment )
+            || currentFragment is SanlamFragment || currentFragment is SanlamClaimsFragment || currentFragment is SanlamPolicyFragment )
             View.GONE
         else View.VISIBLE
     }

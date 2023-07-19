@@ -131,6 +131,7 @@
                             android:textSize="@dimen/text_size_15sp"
                             android:textStyle="bold"/>
                         <TextView
+                            android:id="@+id/memberAlready"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/questrial"
@@ -364,6 +365,7 @@
                         android:fontFamily="@font/questrial"
                         android:inputType="phone"
                         android:nextFocusDown="@id/ghanaCard"
+                        android:maxLength="10"
                         android:padding="@dimen/margin_10"
                         android:singleLine="true"
                         android:textColor="@color/colorBlack"
@@ -583,6 +585,7 @@
                         android:digits="0123456789"
                         android:fontFamily="@font/questrial"
                         android:inputType="phone"
+                        android:maxLength="10"
                         android:padding="@dimen/margin_10"
                         android:singleLine="true"
                         android:textColor="@color/colorBlack"
@@ -721,6 +724,7 @@
                         android:digits="0123456789"
                         android:fontFamily="@font/questrial"
                         android:inputType="phone"
+                        android:maxLength="10"
                         android:nextFocusDown="@id/ghanaCard"
                         android:padding="@dimen/margin_10"
                         android:singleLine="true"

@@ -61,8 +61,8 @@
 40-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:5-81
 40-->C:\Users\Meshach\Desktop\Backup\bb\25-04-23\agency_netpos_integration\app\src\main\AndroidManifest.xml:36:22-78
 41    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-41-->[com.amitshekhar.android:debug-db-base:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\210dbe6ceef17da0000a53069b9c11e7\transformed\jetified-debug-db-base-1.0.6\AndroidManifest.xml:30:5-76
-41-->[com.amitshekhar.android:debug-db-base:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\210dbe6ceef17da0000a53069b9c11e7\transformed\jetified-debug-db-base-1.0.6\AndroidManifest.xml:30:22-73
+41-->[com.amitshekhar.android:debug-db-base:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\fe6829747262b6e8e8f730ffe3411a07\transformed\jetified-debug-db-base-1.0.6\AndroidManifest.xml:30:5-76
+41-->[com.amitshekhar.android:debug-db-base:1.0.6] C:\Users\Meshach\.gradle\caches\transforms-3\fe6829747262b6e8e8f730ffe3411a07\transformed\jetified-debug-db-base-1.0.6\AndroidManifest.xml:30:22-73
 42    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- Required by older versions of Google Play services to create GCM registration tokens -->
 42-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\93f8a3b646bf1e13f267c32e5b04e868\transformed\sdk-3.2.8\AndroidManifest.xml:17:5-81
 42-->[com.smartpesa:sdk:3.2.8] C:\Users\Meshach\.gradle\caches\transforms-3\93f8a3b646bf1e13f267c32e5b04e868\transformed\sdk-3.2.8\AndroidManifest.xml:17:22-78
@@ -326,11 +326,11 @@
 190        </service>
 191
 192        <meta-data
-192-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\e31ca29048b92afde72adf55a01406f3\transformed\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:11:9-13:43
+192-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\61ba4b856e1b51a96674ba72719886fe\transformed\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:11:9-13:43
 193            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
-193-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\e31ca29048b92afde72adf55a01406f3\transformed\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:12:13-84
+193-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\61ba4b856e1b51a96674ba72719886fe\transformed\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:12:13-84
 194            android:value="GlideModule" />
-194-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\e31ca29048b92afde72adf55a01406f3\transformed\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:13:13-40
+194-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\Meshach\.gradle\caches\transforms-3\61ba4b856e1b51a96674ba72719886fe\transformed\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:13:13-40
 195
 196        <receiver
 196-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Meshach\.gradle\caches\transforms-3\16beddb16625159d038754be386ff0da\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:31:9-38:20

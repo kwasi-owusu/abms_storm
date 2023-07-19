@@ -16,6 +16,10 @@
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\fragment_remittance.xml"
     },
     {
+        "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_sanlam_policy.xml",
+        "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sanlam_policy.xml"
+    },
+    {
         "merged": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_sign_up.xml",
         "source": "C:\\Users\\Meshach\\Desktop\\Backup\\bb\\25-04-23\\agency_netpos_integration\\app\\src\\main\\res\\layout\\layout_sign_up.xml"
     },
