@@ -2840,6 +2840,8 @@ drawable bubble_round
 drawable bubble_small
 drawable bus_ticket
 drawable button_background
+drawable button_background_table
+drawable button_premium
 drawable card_view
 drawable cash_in
 drawable cash_in_new
@@ -2871,6 +2873,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable credit_card
 drawable dd
 drawable design_fab_background
 drawable design_ic_visibility
@@ -3761,6 +3764,7 @@ id adjust_height
 id adjust_width
 id agencyTransactionDetailsRecycler
 id agencyTransactionItems
+id agreement
 id alertTitle
 id aligned
 id all
@@ -3830,6 +3834,9 @@ id btnRetake
 id btnSell
 id btnUpload
 id btnVerify
+id btn_annuallyCover1
+id btn_annuallyCover2
+id btn_annuallyCover3
 id btn_back
 id btn_continue
 id btn_delete
@@ -3839,10 +3846,14 @@ id btn_home
 id btn_joinNow
 id btn_login
 id btn_merchant
+id btn_monthlyCover1
+id btn_monthlyCover2
+id btn_monthlyCover3
 id btn_next
 id btn_nextMain
 id btn_previous
 id btn_previousPage
+id btn_proceed
 id btn_send
 id btn_share
 id btn_submit
@@ -3866,6 +3877,7 @@ id cardCashCollection
 id cardCollection
 id cardExpiry
 id cardItem
+id cardItem1
 id cardMail
 id cardNumber
 id cardOthers
@@ -4155,6 +4167,7 @@ id ivQR
 id ivQRCode
 id ivSeparator
 id ivService
+id ivServiceMomo
 id ivShare
 id ivSmiley
 id ivTick
@@ -4557,6 +4570,7 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id tap
 id telephone
+id terms
 id testAnswer
 id testQuestion
 id test_checkbox_android_button_tint
@@ -4683,6 +4697,7 @@ id tvTaxTitle
 id tvTileScanToPay
 id tvTitle
 id tvTitle1
+id tvTitleMomo
 id tvTotal
 id tvTotalAmt
 id tvTransaction
@@ -4980,6 +4995,7 @@ layout layout_recycler_country_tile
 layout layout_ria
 layout layout_sanlam
 layout layout_sanlam_claims
+layout layout_sanlam_cover
 layout layout_sanlam_policy
 layout layout_scan_to_pay
 layout layout_school_fees
@@ -5272,6 +5288,12 @@ string common_signin_button_text_long
 string confirm_mobile_number
 string continue_as
 string convenience_fee
+string cover_option_annual1
+string cover_option_annual2
+string cover_option_annual3
+string cover_option_month1
+string cover_option_month2
+string cover_option_month3
 string create_store
 string create_store_welcome
 string customer_s_details

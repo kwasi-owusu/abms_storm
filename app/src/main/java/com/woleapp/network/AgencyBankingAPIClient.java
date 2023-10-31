@@ -30,7 +30,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class AgencyBankingAPIClient {
     public static final String BASE_URL = "http://abms.viobex.com//";
-    public static final String BASE_URL_2 = "https:/peoplespay.com.gh";
+    public static final String BASE_URL_2 = "https://peoplespay.com.gh";
     public static final String BASE_URL_1 = "http://3.128.25.124";
     private static AgencyBankingService agencyAPI;
     private static AgencyBankingService agencyAPIDefault;
@@ -201,6 +201,11 @@ public static Observable<Response<Object>> agencyLogin(JsonObject payload, Conte
     }
     public static Observable<Response<Object>> sanlamSignUp(JsonObject payload, Context context) {
         return AgencyBankingAPIClient.createSanlamUser(context).sanlamSignUp(payload)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+    public static Observable<Response<Object>> sanlamClaims(JsonObject payload, Context context) {
+        return AgencyBankingAPIClient.createSanlamUser(context).sanlamClaims(payload)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }

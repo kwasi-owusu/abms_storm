@@ -176,9 +176,9 @@ public class CardWebViewFragment extends BaseFragment{
 
                             if (responses.optString("status").equals("paid")) {
                                // addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                                timer.cancel();
                                 dismissProgressBar();
                                 addFragmentWithoutRemove(R.id.container_main, new PaymentCardSuccessfulFragment(ref, amount), PaymentCardSuccessfulFragment.class.getSimpleName());
-                                timer.cancel();
                                 //  if (!isReceiptPrinted) {
                                 //    printReceipt(ref);
                                   //  isReceiptPrinted = true;
@@ -194,9 +194,9 @@ public class CardWebViewFragment extends BaseFragment{
                             else if (responses.optString("status").equals("failed")) {
                                 Toast.makeText(context, "Payment Failed", Toast.LENGTH_LONG).show();
                               //  addFragmentWithoutRemove(R.id.container_main, new DashboardFragment(), DashboardFragment.class.getSimpleName());
+                                timer.cancel();
                                 dismissProgressBar();
                                 addFragmentWithoutRemove(R.id.container_main, new PaymentFailedFragment(), PaymentFailedFragment.class.getSimpleName());
-                                timer.cancel();
                                 Log.e("TRANS_Status_Failed", "failed " + responses.optString("status"));
                             }
                             else {

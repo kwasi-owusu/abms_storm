@@ -22,10 +22,16 @@ public abstract class LayoutSanlamPolicyBinding extends ViewDataBinding {
   public final CardView cardItem;
 
   @NonNull
+  public final CardView cardItem1;
+
+  @NonNull
   public final LinearLayout contents;
 
   @NonNull
   public final ImageView ivService;
+
+  @NonNull
+  public final ImageView ivServiceMomo;
 
   @NonNull
   public final ScrollView scrollView;
@@ -36,16 +42,23 @@ public abstract class LayoutSanlamPolicyBinding extends ViewDataBinding {
   @NonNull
   public final TextView tvTitle;
 
+  @NonNull
+  public final TextView tvTitleMomo;
+
   protected LayoutSanlamPolicyBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CardView cardItem, LinearLayout contents, ImageView ivService, ScrollView scrollView,
-      TextView textTo, TextView tvTitle) {
+      CardView cardItem, CardView cardItem1, LinearLayout contents, ImageView ivService,
+      ImageView ivServiceMomo, ScrollView scrollView, TextView textTo, TextView tvTitle,
+      TextView tvTitleMomo) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cardItem = cardItem;
+    this.cardItem1 = cardItem1;
     this.contents = contents;
     this.ivService = ivService;
+    this.ivServiceMomo = ivServiceMomo;
     this.scrollView = scrollView;
     this.textTo = textTo;
     this.tvTitle = tvTitle;
+    this.tvTitleMomo = tvTitleMomo;
   }
 
   @NonNull

@@ -1,7 +1,9 @@
 package com.woleapp.ui.fragments;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -181,6 +183,25 @@ public class DashboardFragment extends BaseFragment implements View.OnClickListe
 //        dialog.show();
 //    }
 
+    public void exitApp(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setMessage("Are you sure you want to exit app?")
+                .setCancelable(true)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick (DialogInterface dialog, int id) {
+                        getActivity().finish();
+                        System.exit(0);
+                    }
+
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                    }
+                });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+    }
     private HomeActivity getActivityCast() {
         return (HomeActivity) requireActivity();
     }

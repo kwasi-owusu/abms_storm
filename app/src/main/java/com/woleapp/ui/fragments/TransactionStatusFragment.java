@@ -163,6 +163,7 @@ public class TransactionStatusFragment extends BaseFragment{
                                 dismissProgressBar();
                             }
                         }, err -> {
+                            timer.cancel();
                             Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
                             Log.e("Error", "error " + err.getMessage());
                              dismissProgressBar();

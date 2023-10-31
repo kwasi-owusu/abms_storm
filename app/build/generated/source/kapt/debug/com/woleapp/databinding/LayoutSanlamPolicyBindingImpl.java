@@ -19,6 +19,9 @@ public class LayoutSanlamPolicyBindingImpl extends LayoutSanlamPolicyBinding  {
         sViewsWithIds.put(R.id.cardItem, 3);
         sViewsWithIds.put(R.id.ivService, 4);
         sViewsWithIds.put(R.id.tvTitle, 5);
+        sViewsWithIds.put(R.id.cardItem1, 6);
+        sViewsWithIds.put(R.id.ivServiceMomo, 7);
+        sViewsWithIds.put(R.id.tvTitleMomo, 8);
     }
     // views
     // variables
@@ -27,16 +30,19 @@ public class LayoutSanlamPolicyBindingImpl extends LayoutSanlamPolicyBinding  {
     // Inverse Binding Event Handlers
 
     public LayoutSanlamPolicyBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private LayoutSanlamPolicyBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (androidx.cardview.widget.CardView) bindings[3]
+            , (androidx.cardview.widget.CardView) bindings[6]
             , (android.widget.LinearLayout) bindings[1]
             , (android.widget.ImageView) bindings[4]
+            , (android.widget.ImageView) bindings[7]
             , (android.widget.ScrollView) bindings[0]
             , (android.widget.TextView) bindings[2]
             , (android.widget.TextView) bindings[5]
+            , (android.widget.TextView) bindings[8]
             );
         this.scrollView.setTag(null);
         setRootTag(root);

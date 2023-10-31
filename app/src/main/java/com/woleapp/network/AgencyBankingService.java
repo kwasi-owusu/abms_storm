@@ -79,6 +79,8 @@ public interface AgencyBankingService {
     Observable<Response<Object>> donationCollections(@Body JsonObject payload);
     @POST("/sanlam/grass")
     Observable<Response<Object>> sanlamSignUp(@Body JsonObject payload);
+    @POST("/sanlam/claims")
+    Observable<Response<Object>> sanlamClaims(@Body JsonObject payload);
 
 
 }

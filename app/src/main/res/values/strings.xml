@@ -109,6 +109,12 @@
     <string name="title_alert">Alert</string>
     <string name="disclaimer">Note that submitting false information is considered fraudulent and punishable by law.</string>
     <string name="thank_you">Thank you for submitting the first part of your claim. We will send you an sms to keep you updated on the status of your claim.</string>
+    <string name="cover_option_month1">You have selected a cover option of GH₵2,000 and have chosen a monthly premium frequency payment of GH₵4.00</string>
+    <string name="cover_option_month2">You have selected a cover option of GH₵10,000 and have chosen a monthly premium frequency payment of GH₵14.00</string>
+    <string name="cover_option_month3">You have selected a cover option of GH₵20,000 and have chosen a monthly premium frequency payment of GH₵25.00</string>
+    <string name="cover_option_annual1">You have selected a cover option of GH₵2,000 and have chosen an annual premium frequency payment of GH₵48.00</string>
+    <string name="cover_option_annual2">You have selected a cover option of GH₵10,000 and have chosen an annual premium frequency payment of GH₵168.00</string>
+    <string name="cover_option_annual3">You have selected a cover option of GH₵20,000 and have chosen an annual premium frequency payment of GH₵300.00</string>
 
 
     <string name="select_bluetooth_device">Select bluetooth device</string>

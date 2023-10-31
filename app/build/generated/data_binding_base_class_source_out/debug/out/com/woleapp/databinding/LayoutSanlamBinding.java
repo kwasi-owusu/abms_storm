@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -22,6 +23,9 @@ import java.lang.Object;
 public abstract class LayoutSanlamBinding extends ViewDataBinding {
   @NonNull
   public final LinearLayout addressDetails;
+
+  @NonNull
+  public final CheckBox agreement;
 
   @NonNull
   public final EditText benContactNumber;
@@ -49,6 +53,9 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
 
   @NonNull
   public final Button btnPreviousPage;
+
+  @NonNull
+  public final Button btnProceed;
 
   @NonNull
   public final Button btnSubmit;
@@ -99,7 +106,7 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
   public final ImageView imageService;
 
   @NonNull
-  public final TextView memberAlready;
+  public final LinearLayout memberAlready;
 
   @NonNull
   public final LinearLayout pageNumber;
@@ -123,6 +130,9 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
   public final EditText surname;
 
   @NonNull
+  public final TextView terms;
+
+  @NonNull
   public final TextView tvBank;
 
   @NonNull
@@ -132,19 +142,20 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
   public final TextView tvTitle;
 
   protected LayoutSanlamBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      LinearLayout addressDetails, EditText benContactNumber, EditText benFirstName,
-      EditText benSurname, Button btnGetStarted, Button btnJoinNow, Button btnNext,
-      Button btnNextMain, Button btnPrevious, Button btnPreviousPage, Button btnSubmit,
-      TextView circleActive, TextView circleInactive1, TextView circleInactive2, TextView claimHere,
-      EditText contactNumber, EditText dateOfBirth, LinearLayout employmentDetails,
-      EditText familyContactNumber, EditText familyDateOfBirth, EditText familyFirstName,
-      EditText familySurname, EditText firstName, LinearLayout getStarted, EditText ghanaCard,
-      ImageView imageService, TextView memberAlready, LinearLayout pageNumber,
-      LinearLayout personalDetails, LinearLayout policy, TextView policyTitle,
-      RelativeLayout relativeOptions, ScrollView scrollView, EditText surname, TextView tvBank,
-      TextView tvBeneficiary, TextView tvTitle) {
+      LinearLayout addressDetails, CheckBox agreement, EditText benContactNumber,
+      EditText benFirstName, EditText benSurname, Button btnGetStarted, Button btnJoinNow,
+      Button btnNext, Button btnNextMain, Button btnPrevious, Button btnPreviousPage,
+      Button btnProceed, Button btnSubmit, TextView circleActive, TextView circleInactive1,
+      TextView circleInactive2, TextView claimHere, EditText contactNumber, EditText dateOfBirth,
+      LinearLayout employmentDetails, EditText familyContactNumber, EditText familyDateOfBirth,
+      EditText familyFirstName, EditText familySurname, EditText firstName, LinearLayout getStarted,
+      EditText ghanaCard, ImageView imageService, LinearLayout memberAlready,
+      LinearLayout pageNumber, LinearLayout personalDetails, LinearLayout policy,
+      TextView policyTitle, RelativeLayout relativeOptions, ScrollView scrollView, EditText surname,
+      TextView terms, TextView tvBank, TextView tvBeneficiary, TextView tvTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addressDetails = addressDetails;
+    this.agreement = agreement;
     this.benContactNumber = benContactNumber;
     this.benFirstName = benFirstName;
     this.benSurname = benSurname;
@@ -154,6 +165,7 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
     this.btnNextMain = btnNextMain;
     this.btnPrevious = btnPrevious;
     this.btnPreviousPage = btnPreviousPage;
+    this.btnProceed = btnProceed;
     this.btnSubmit = btnSubmit;
     this.circleActive = circleActive;
     this.circleInactive1 = circleInactive1;
@@ -178,6 +190,7 @@ public abstract class LayoutSanlamBinding extends ViewDataBinding {
     this.relativeOptions = relativeOptions;
     this.scrollView = scrollView;
     this.surname = surname;
+    this.terms = terms;
     this.tvBank = tvBank;
     this.tvBeneficiary = tvBeneficiary;
     this.tvTitle = tvTitle;

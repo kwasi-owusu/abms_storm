@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -83,11 +84,22 @@ public class SanlamFragment extends BaseFragment implements View.OnClickListener
         binding.memberAlready.setOnClickListener(this);
         binding.claimHere.setOnClickListener(this);
         binding.btnSubmit.setOnClickListener(this);
+        binding.btnProceed.setOnClickListener(this);
+        binding.memberAlready.setVisibility(View.GONE);
         binding.addressDetails.setVisibility(View.GONE);
         binding.employmentDetails.setVisibility(View.GONE);
         binding.personalDetails.setVisibility(View.GONE);
         binding.pageNumber.setVisibility(View.GONE);
         binding.policy.setVisibility(View.GONE);
+
+        binding.agreement.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    Log.e("Checked", "Yes");
+                }
+            }
+        });
 
         customErrorDrawable = context.getResources().getDrawable(R.drawable.error_small);
         customErrorDrawable.setBounds(0, 0, customErrorDrawable.getIntrinsicWidth(), customErrorDrawable.getIntrinsicHeight());
@@ -142,14 +154,20 @@ public class SanlamFragment extends BaseFragment implements View.OnClickListener
             binding.getStarted.setVisibility(View.GONE);
             binding.policy.setVisibility(View.VISIBLE);
         }
+        else if(v == binding.btnProceed){
+            validatePersonalDetails();
+        }
         else if(v == binding.btnJoinNow){
-            binding.addressDetails.setVisibility(View.GONE);
-            binding.employmentDetails.setVisibility(View.GONE);
-            binding.personalDetails.setVisibility(View.VISIBLE);
-            binding.pageNumber.setVisibility(View.GONE);
-            binding.getStarted.setVisibility(View.GONE);
-            binding.policy.setVisibility(View.GONE);
-            binding.pageNumber.setVisibility(View.VISIBLE);
+            if (binding.agreement.isChecked()) {
+                binding.addressDetails.setVisibility(View.GONE);
+                binding.employmentDetails.setVisibility(View.GONE);
+                binding.personalDetails.setVisibility(View.VISIBLE);
+                binding.pageNumber.setVisibility(View.GONE);
+                binding.getStarted.setVisibility(View.GONE);
+                binding.policy.setVisibility(View.GONE);
+                binding.pageNumber.setVisibility(View.VISIBLE);
+            } else
+                Toast.makeText(context, "Please check the agreement", Toast.LENGTH_SHORT).show();
         }
         else if(v == binding.btnSubmit){
             validateUserInputs();
@@ -216,6 +234,10 @@ public class SanlamFragment extends BaseFragment implements View.OnClickListener
             binding.ghanaCard.setError("Please enter your Ghana card number", customErrorDrawable);
             binding.ghanaCard.requestFocus();
         }
+        else if(ghanaCardNumber.length() != 15){
+            binding.ghanaCard.setError("Ghana Card Number not valid", customErrorDrawable);
+            binding.ghanaCard.requestFocus();
+        }
         else if (TextUtils.isEmpty(fMemberFName)) {
             binding.familyFirstName.setError("Please enter first name", customErrorDrawable);
             binding.familyFirstName.requestFocus();
@@ -254,9 +276,73 @@ public class SanlamFragment extends BaseFragment implements View.OnClickListener
         }
         else{
           //  Toast.makeText(context, "We're live!!", Toast.LENGTH_SHORT).show();
-            processInputs(firstName, lastName, DOB, contactNumber, ghanaCardNumber, fMemberFName, fMemberLName, fMemberDOB, fMemberPhone, beneficiaryFName, beneficiaryLName, beneficiaryPhone);
+           // processInputs(firstName, lastName, DOB, contactNumber, ghanaCardNumber, fMemberFName, fMemberLName, fMemberDOB, fMemberPhone, beneficiaryFName, beneficiaryLName, beneficiaryPhone);
+            Bundle b1 = new Bundle();
+            b1.putString("first_name", firstName);
+            b1.putString("last_name", lastName);
+            b1.putString("DOB", DOB);
+            b1.putString("contact", contactNumber);
+            b1.putString("ghana_card", ghanaCardNumber);
+            b1.putString("family_first_name", fMemberFName);
+            b1.putString("family_last_name", fMemberLName);
+            b1.putString("family_DOB", fMemberDOB);
+            b1.putString("family_phone", fMemberPhone);
+            b1.putString("ben_first_name", beneficiaryFName);
+            b1.putString("ben_last_name", beneficiaryLName);
+            b1.putString("ben_phone", beneficiaryPhone);
+            SanlamCoverFragment agdf = new SanlamCoverFragment();
+            agdf.setArguments(b1);
+            addFragmentWithoutRemove(R.id.container_main, agdf, SanlamCoverFragment.class.getSimpleName());
         }
 
+    }
+    public void validatePersonalDetails(){
+        String firstName = binding.firstName.getText().toString().trim();
+        String lastName = binding.surname.getText().toString().trim();
+        String DOB = binding.dateOfBirth.getText().toString().trim();
+        String contactNumber = binding.contactNumber.getText().toString().trim();
+        String ghanaCardNumber = binding.ghanaCard.getText().toString().trim();
+
+        if (TextUtils.isEmpty(firstName)) {
+            binding.firstName.setError("Please enter your first name", customErrorDrawable);
+            binding.firstName.requestFocus();
+        }
+        else if (TextUtils.isEmpty(lastName)) {
+            binding.surname.setError("Please enter your last name", customErrorDrawable);
+            binding.surname.requestFocus();
+        }
+        else if (TextUtils.isEmpty(DOB)) {
+            binding.dateOfBirth.setError("Please enter your date of birth", customErrorDrawable);
+            binding.dateOfBirth.requestFocus();
+        }
+        else if (TextUtils.isEmpty(contactNumber)) {
+            binding.contactNumber.setError("Please enter your contact number", customErrorDrawable);
+            binding.contactNumber.requestFocus();
+        }
+        else if (contactNumber.length() != 10) {
+            binding.contactNumber.setError("Contact number should be 10 digits", customErrorDrawable);
+            binding.contactNumber.requestFocus();
+        }
+        else if (TextUtils.isEmpty(ghanaCardNumber)) {
+            binding.ghanaCard.setError("Please enter your Ghana card number", customErrorDrawable);
+            binding.ghanaCard.requestFocus();
+        }
+        else if(ghanaCardNumber.length() != 15){
+            binding.ghanaCard.setError("Ghana Card Number not valid", customErrorDrawable);
+            binding.ghanaCard.requestFocus();
+        }
+        else{
+            Bundle b1 = new Bundle();
+            b1.putString("first_name", firstName);
+            b1.putString("last_name", lastName);
+            b1.putString("DOB", DOB);
+            b1.putString("contact", contactNumber);
+            b1.putString("ghana_card", ghanaCardNumber);
+            SanlamCoverFragment agdf = new SanlamCoverFragment();
+            agdf.setArguments(b1);
+          //  replaceFragmentWithBack(R.id.container_main, agdf, SanlamCoverFragment.class.getSimpleName());
+            addFragmentWithoutRemove(R.id.container_main, agdf, SanlamCoverFragment.class.getSimpleName());
+        }
     }
     public void processInputs(String firstName, String lastName, String dateOfBirth, String phone, String ghanaCard,
                               String famFName, String famLName, String famDOB, String famPhone, String benFName, String benLName, String benPhone) {
@@ -384,7 +470,18 @@ public class SanlamFragment extends BaseFragment implements View.OnClickListener
                     @Override
                     public void onDateSet(DatePicker view, int year,
                                           int monthOfYear, int dayOfMonth) {
-                        binding.dateOfBirth.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                        Calendar selectedDate = Calendar.getInstance();
+                        selectedDate.set(year, monthOfYear, dayOfMonth);
+
+                        Calendar minDate = Calendar.getInstance();
+                        minDate.add(Calendar.YEAR, -18);
+
+                        if (selectedDate.before(minDate)) {
+                            binding.dateOfBirth.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                        } else {
+                            // Show an error message to the user
+                            Toast.makeText(context, "You must be 18 years or older.", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 },
                 year, month, day);

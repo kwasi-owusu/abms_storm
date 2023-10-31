@@ -6,10 +6,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Dialog
 import android.app.ProgressDialog
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
+import android.content.*
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -188,7 +185,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             || currentFragment is AgencyTransactionDetailFragment  || currentFragment is FundWalletFragment || currentFragment is CollectionsNewFragment
             || currentFragment is CardWebViewFragment || currentFragment is TransactionStatusFragment || currentFragment is PaymentFailedFragment || currentFragment is PaymentCardSuccessfulFragment
             || currentFragment is SchoolFeesFragment || currentFragment is PassportFragment || currentFragment is FuneralMerchantFragment || currentFragment is FuneralDonationsFragment
-            || currentFragment is SanlamFragment || currentFragment is SanlamClaimsFragment || currentFragment is SanlamPolicyFragment )
+            || currentFragment is SanlamFragment || currentFragment is SanlamClaimsFragment || currentFragment is SanlamPolicyFragment || currentFragment is SanlamCoverFragment)
             View.GONE
         else View.VISIBLE
     }
@@ -349,11 +346,24 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 supportFragmentManager.popBackStack()
             } else {
                 //showDialog22(applicationContext.getString(R.string.do_you_want_close_the_app), this)
-                finish()
-
+                Log.e("Back Button Home", "pressed")
+                exitApp()
             }
             //super.onBackPressed()
         }
+    }
+
+    fun exitApp() {
+        val builder = android.app.AlertDialog.Builder(this)
+        builder.setMessage("Are you sure you want to exit app?")
+            .setCancelable(true)
+            .setPositiveButton("Yes") { dialog, id ->
+                finish()
+                System.exit(0)
+            }
+            .setNegativeButton("No") { dialog, id -> }
+        val alertDialog = builder.create()
+        alertDialog.show()
     }
 
     override fun onNewIntent(intent: Intent) {

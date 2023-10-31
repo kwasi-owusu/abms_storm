@@ -60,56 +60,113 @@
             android:layout_marginBottom="@dimen/margin_20"
             android:background="@color/red" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardItem"
-            android:layout_width="200dp"
-            android:layout_height="175dp"
-            android:layout_margin="15dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:background="@color/colorWhite"
-            app:cardCornerRadius="@dimen/margin_10"
-            app:cardElevation="3dp">
-            <!--        android:background="?android:attr/selectableItemBackground"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardItem"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/margin_10"
+                app:cardElevation="3dp">
+                <!--        android:background="?android:attr/selectableItemBackground"-->
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="@color/colorPrimary">
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/ivService"
-                        android:layout_width="220dp"
-                        android:layout_height="120dp"
-                        android:padding="10dp"
-                        android:src="@drawable/mobile_payment" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/colorWhite">
 
-                </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/ivService"
+                            android:layout_width="220dp"
+                            android:layout_height="120dp"
+                            android:padding="10dp"
+                            android:src="@drawable/mobile_payment" />
 
-                <TextView
-                    android:id="@+id/tvTitle"
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/questrial"
+                        android:gravity="center"
+                        android:text="PAY WITH MOBILE MONEY"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardItem1"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/margin_10"
+                app:cardElevation="3dp">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="2dp"
-                    android:gravity="center"
-                    android:text="PAY WITH MOBILE MONEY"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp"
-                    android:fontFamily="@font/questrial" />
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/colorWhite">
+
+                        <ImageView
+                            android:id="@+id/ivServiceMomo"
+                            android:layout_width="220dp"
+                            android:layout_height="120dp"
+                            android:padding="10dp"
+                            android:src="@drawable/credit_card" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvTitleMomo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/questrial"
+                        android:gravity="center"
+                        android:text="PAY WITH CARD"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
         </LinearLayout>
 

@@ -117,6 +117,7 @@
                         tools:ignore="TouchTargetSizeCheck" />
 
                     <LinearLayout
+                        android:id="@+id/memberAlready"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_30"
@@ -131,7 +132,6 @@
                             android:textSize="@dimen/text_size_15sp"
                             android:textStyle="bold"/>
                         <TextView
-                            android:id="@+id/memberAlready"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/questrial"
@@ -216,7 +216,7 @@
                         android:layout_gravity="center_horizontal"
                         android:fontFamily="@font/questrial"
                         android:padding="@dimen/margin_10"
-                        android:text="ASSURANCE GROUP WELFARE ECOSYSTEM"
+                        android:text="ASSURANCE GROUP WELFARE"
                         android:textColor="@color/colorBlack"
                         android:textSize="13sp"
                         android:textStyle="bold" />
@@ -227,9 +227,42 @@
                         android:layout_gravity="center_horizontal"
                         android:fontFamily="@font/questrial"
                         android:padding="@dimen/margin_10"
-                        android:text="Policy is a deliberate system of guidelines to guide decisions and achieve rational outcomes. A policy is a statement of intent and is implemented as a procedure or protocol. Policies are generally adopted by a governance body within an organization. Policies can assist in both subjective and objective decision making. Policies used in subjective decision-making usually assist senior management with decisions that must be based on the relative merits of a number of factors, and as a result, are often hard to test objectively, e.g. work–life balance policy... Moreover, Governments and other institutions have policies in the form of laws, regulations, procedures, administrative actions, incentives and voluntary practices. Frequently, resource allocations mirror policy decisions."
+                        android:text="The Assured Group Welfare Policy is a group level term assurance plan providing immediate funds to finance a befitting and dignified funeral of the policyholder and One other nominated family member in the event of death and cash benefit to insured policyholder in the event of permanent total disability and hospitalization of the policyholder."
                         android:textColor="@color/colorBlack"
+                        android:justificationMode="inter_word"
                         android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/questrial"
+                        android:padding="@dimen/margin_10"
+                        android:text="Our Group Welfare policy is designed for individuals and  groups such as churches, football clubs, staff/worker’s unions and various associations with flexibility to customize to the preference, need and preferred scope of benefit of group."
+                        android:textColor="@color/colorBlack"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/agreement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="2dp"/>
+                        <TextView
+                            android:id="@+id/terms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorBlack"
+                            android:text="I am 18 years and above and agree to the terms and conditions of this policy"
+                            android:textSize="13sp"
+                            android:layout_gravity="center_vertical"/>
+
+                    </LinearLayout>
 
                     <Button
                         android:id="@+id/btn_joinNow"
@@ -239,7 +272,7 @@
                         android:fontFamily="@font/questrial"
                         android:minHeight="@dimen/margin_40"
                         android:layout_marginTop="@dimen/margin_30"
-                        android:text="Join now"
+                        android:text="Accept &amp; Continue"
                         android:textAllCaps="true"
                         android:textColor="@color/colorWhite"
                         android:textSize="@dimen/text_size_15sp"
@@ -390,6 +423,7 @@
                         android:fontFamily="@font/questrial"
                         android:inputType="text"
                         android:padding="@dimen/margin_10"
+                        android:maxLength="15"
                         android:singleLine="true"
                         android:textColor="@color/colorBlack"
                         android:textColorHint="@color/colorBlack"
@@ -467,7 +501,22 @@
                         android:textStyle="bold"
                         tools:ignore="TouchTargetSizeCheck" />
 
-               </LinearLayout>
+                    <Button
+                        android:id="@+id/btn_proceed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:fontFamily="@font/questrial"
+                        android:minHeight="@dimen/margin_40"
+                        android:layout_marginTop="15dp"
+                        android:text="PROCEED TO PAYMENT"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="bold"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/addressDetails"
